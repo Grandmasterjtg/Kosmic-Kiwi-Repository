@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://PlanetManager.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PlanetManager.gd" type="Script" id=1]
 [ext_resource path="res://button_scenes/Planet_2_Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://button_scenes/Planet_1_Button.tscn" type="PackedScene" id=3]
 

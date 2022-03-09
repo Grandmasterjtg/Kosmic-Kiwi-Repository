@@ -15,7 +15,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PlanetManager="*res://PlanetManager.gd"
+PlanetManager="*res://Scripts/PlanetManager.gd"
 
 [input]
 
