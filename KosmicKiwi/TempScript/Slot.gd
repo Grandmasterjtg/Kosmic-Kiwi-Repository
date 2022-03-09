@@ -1,12 +1,13 @@
 extends Control
 
 var test = preload("res://TempScene/Item.tscn").instance()
-onready var sprite = $Panel/Sprite
+onready var sprite = $Panel/TextureRect
 var display = true
 
 func _ready():
 #	if test:
 #		get_node("Panel/Sprite").texture = test.m_sprite
+	
 	pass
 		
 func _process(delta):
