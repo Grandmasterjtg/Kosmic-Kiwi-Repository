@@ -9,7 +9,7 @@ const ACTION_LEFT := "move_left"
 const ACTION_RIGHT := "move_right"
 const ACTION_UP := "move_up"
 
-export var m_speed := 100.0
+export var m_speed := 10000.0
 var m_direction := Vector2(0, 1)
 
 func _physics_process(delta) -> void:
@@ -17,8 +17,7 @@ func _physics_process(delta) -> void:
 		(Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT))
 	var vertical_movement = m_speed * delta * \
 		(Input.get_action_strength(ACTION_DOWN) - Input.get_action_strength(ACTION_UP))
-	move_local_x(horizontal_movement)
-	move_local_y(vertical_movement)
+	move_and_slide(Vector2(horizontal_movement, vertical_movement), Vector2.UP)
 	if horizontal_movement != 0 or vertical_movement != 0:
 		m_direction = Vector2(horizontal_movement, vertical_movement).normalized()
 	get_child(0).rotation = get_angle_to(position + m_direction) - PI / 2
