@@ -1,6 +1,7 @@
 extends Control
 
-var test = preload("res://TempScene/Item.tscn").instance()
+var ItemClass = preload("res://TempScene/Item.tscn")
+var item = ItemClass.instance()
 onready var sprite = $Panel/TextureRect
 var display = true
 
@@ -11,9 +12,9 @@ func _ready():
 	pass
 		
 func _process(delta):
-	if Input.is_action_just_pressed("move_down") and test:
+	if Input.is_action_just_pressed("move_down") and item:
 		if display:
-			sprite.texture = test.m_sprite
+			sprite.texture = item.m_sprite
 			display = !display
 		else:
 			sprite.texture = null
