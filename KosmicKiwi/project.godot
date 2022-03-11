@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Kosmic Kiwi"
-run/main_scene="res://TempScene/Slot.tscn"
+run/main_scene="res://Scenes/UI/Inventory/Slot.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+ItemData="*res://Scripts/DataScripts/ItemData.gd"
 
 [input]
 

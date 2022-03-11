@@ -1,6 +1,6 @@
 extends Control
 
-var ItemClass = preload("res://TempScene/Item.tscn")
+var ItemClass = preload("res://Scenes/UI/Inventory/ItemUI.tscn")
 var item = ItemClass.instance()
 onready var sprite = $Panel/TextureRect
 var display = true
