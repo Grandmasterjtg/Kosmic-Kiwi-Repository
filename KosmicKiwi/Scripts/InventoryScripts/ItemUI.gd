@@ -3,18 +3,20 @@ extends TextureRect
 var m_item_name : String
 var m_item_quantity : int
 
-func _ready():
-	if randi() % 2 == 0:
-		m_item_name = "Iron Sword"
-	else:
-		m_item_name = "Tree Branch"
+# takes the name of an item and the amount of that item
+# sets the item UI to display that item with the given amount
+func set_item(item_name: String, item_quantity: int) -> void:
+	# set name and amount
+	m_item_name = item_name
+	m_item_quantity = item_quantity
 	
-	texture = load("res://ArtAssets/Temp/" + m_item_name + ".png")
+	# change the texture
+	texture = load("res://ArtAssets/Temp/" + item_name + ".png")
 	
-	var stack_size = int(ItemData.m_item_data[m_item_name]["StackSize"])
-	m_item_quantity = randi() % stack_size + 1
-	
+	var stack_size = ItemData.get_item(item_name)["StackSize"]
 	if stack_size == 1:
 		$Count.visible = false
 	else:
-		$Count.text = String(m_item_quantity)
+		$Count.visible = true
+		$Count.text = String(item_quantity)
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/InventoryScripts/Slot.gd" type="Script" id=1]
 [ext_resource path="res://ArtAssets/Temp/item_slot_default_background.png" type="Texture" id=3]
@@ -7,11 +7,7 @@
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 18, 18 )
 
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 18, 18 )
-
-[node name="Panel" type="Panel"]
+[node name="Slot" type="Panel"]
 margin_right = 80.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
@@ -20,21 +16,3 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Panel" type="Panel" parent="."]
-visible = false
-margin_left = 53.0
-margin_top = -69.0
-margin_right = 173.0
-margin_bottom = 51.0
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Panel"]
-margin_left = 11.0
-margin_top = 23.0
-margin_right = 110.0
-margin_bottom = 43.0
-text = "Add to hotbar"
