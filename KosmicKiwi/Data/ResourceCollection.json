@@ -1,0 +1,12 @@
+{
+    "Iron Sword Deposit": {
+        "ItemName": "Iron Sword",
+        "Quantity": 1,
+        "RequiredTool": null
+    },
+    "Tree Branch Deposit": {
+        "ItemName": "Tree Branch",
+        "Quantity": 1,
+        "RequiredTool": null
+    }
+}

@@ -17,3 +17,6 @@ func load_data(file_path : String) -> Dictionary:
 
 func get_item(item_name : String) -> Dictionary:
 	return m_item_data[item_name]
+	
+func get_stack_size(item_name: String) -> int:
+	return m_item_data[item_name]["StackSize"]
