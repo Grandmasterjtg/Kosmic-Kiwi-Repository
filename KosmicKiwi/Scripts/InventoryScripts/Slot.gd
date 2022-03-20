@@ -14,3 +14,9 @@ func initialize_item(item_name: String, item_quantity: int) -> void:
 		m_item = ITEM_CLASS.instance()
 		add_child(m_item)
 		m_item.set_item(item_name, item_quantity)
+
+# if an item exists, it deletes the node and sets the variable to null
+func delete_item():
+	if m_item != null:
+		m_item.queue_free()
+		m_item = null

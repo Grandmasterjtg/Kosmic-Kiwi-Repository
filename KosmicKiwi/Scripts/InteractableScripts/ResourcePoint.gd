@@ -23,6 +23,7 @@ func _ready():
 	var resource_data = ResourceData.get_resource_data(m_name)
 	m_item_name = resource_data["ItemName"]
 	m_item_quantity = resource_data["Quantity"]
+	m_required_tool = resource_data["RequiredTool"]
 	
 	# signal setup
 	collection_area.connect("body_entered", self, "_on_body_entered")

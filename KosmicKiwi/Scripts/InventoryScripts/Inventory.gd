@@ -27,26 +27,26 @@ func add_item(item_name: String, item_quantity: int) -> void:
 				item_quantity -= item_quantity
 		
 		index += 1
-	
-	
-	
-	
-#	# if the item exists in the inventory this will return
-#	for item in m_inventory:
-#		if m_inventory[item][0] == item_name:
-#			m_inventory[item][1] += item_quantity
-#			return
-#
-#	# if the item doesn't exist in the inventory this will return	
-#	for i in range(NUM_SLOTS):
-#		if m_inventory.has(i) == false:
-#			m_inventory[i] = [item_name, item_quantity]
-#			return
+		
+# takes an item name
+# removes 1 instance of that item form the inventory
+func remove_item(item_name: String, amount: int = 1) -> bool:
+	for slot in m_inventory:
+		if m_inventory[slot][0] == item_name:
+			if m_inventory[slot][1] >= amount:
+				m_inventory[slot][1] -= amount
+				if m_inventory[slot][1] <= 0:
+					m_inventory.erase(slot)
+				return true
+		
+	return false
+
 
 # takes an index in the inventory
 # returns true if the inventory has an item at that index
-func item_exists(index: int) -> bool:
+func item_exists_at_index(index: int) -> bool:
 	return m_inventory.has(index)
+
 
 # takes an index
 # returns the name of the item at that index
@@ -56,5 +56,8 @@ func get_item_name(index: int) -> String:
 # returns the quantity of the item at that index
 func get_item_quantity(index: int) -> int:
 	return m_inventory[index][1]
+	
+func num_slots() -> int:
+	return NUM_SLOTS
 	
 	
