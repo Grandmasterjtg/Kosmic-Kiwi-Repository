@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "FriendAbility",
+"language": "GDScript",
+"path": "res://Scripts/FriendAbility.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scripts/Friend.gd"
+} ]
+_global_script_class_icons={
+"FriendAbility": "",
+"Player": ""
+}
+
 [application]
 
 config/name="Kosmic Kiwi"

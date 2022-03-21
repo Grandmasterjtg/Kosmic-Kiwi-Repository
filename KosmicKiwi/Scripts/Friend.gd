@@ -1,18 +1,16 @@
 extends KinematicBody2D
 
+class_name Player
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# export var m_speed := 100.0
 const PLAYER_PATH := "Player"
 
 export var m_follow_distance := 200
 export var m_stop_distance := 100
 var should_move := false
 var m_target
+var m_timer
+
+var ability = FriendAbility.new()
 
 func _ready():
 	m_target = get_parent().get_node(PLAYER_PATH)
@@ -29,3 +27,10 @@ func _physics_process(delta):
 		if (should_move):
 			look_at(m_target.position)
 			move_and_slide(target_direction, Vector2.UP)
+			
+func use_ability():
+	print(ability.get_name())
+
+func _on_Button_pressed():
+	use_ability()
+	ability.set_name("used")
