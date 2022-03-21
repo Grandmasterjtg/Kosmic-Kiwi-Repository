@@ -25,29 +25,105 @@ focus_mode = 0
 text = "Back"
 
 [node name="Move Up" parent="." instance=ExtResource( 1 )]
-margin_left = 238.0
-margin_top = 148.0
-margin_right = 338.0
-margin_bottom = 168.0
+margin_left = 397.0
+margin_top = 43.0
+margin_right = 497.0
+margin_bottom = 63.0
+text = "move_up"
 m_action_name = "move_up"
 
 [node name="Move Down" parent="." instance=ExtResource( 1 )]
-margin_left = 235.0
-margin_top = 214.0
-margin_right = 335.0
-margin_bottom = 234.0
+margin_left = 396.0
+margin_top = 89.0
+margin_right = 496.0
+margin_bottom = 109.0
+text = "move_down"
 m_action_name = "move_down"
 
 [node name="Move Left" parent="." instance=ExtResource( 1 )]
-margin_left = 247.0
-margin_top = 263.0
-margin_right = 347.0
-margin_bottom = 283.0
+margin_left = 251.0
+margin_top = 91.0
+margin_right = 351.0
+margin_bottom = 111.0
+text = "move_left"
 m_action_name = "move_left"
 
 [node name="Move Right" parent="." instance=ExtResource( 1 )]
-margin_left = 250.0
-margin_top = 316.0
-margin_right = 350.0
-margin_bottom = 336.0
+margin_left = 550.0
+margin_top = 93.0
+margin_right = 650.0
+margin_bottom = 113.0
+text = "move_right"
 m_action_name = "move_right"
+
+[node name="Hotbar1" parent="." instance=ExtResource( 1 )]
+margin_left = 239.0
+margin_top = 189.0
+margin_right = 339.0
+margin_bottom = 209.0
+text = "hotbar_1"
+m_action_name = "hotbar_1"
+
+[node name="Hotbar2" parent="." instance=ExtResource( 1 )]
+margin_left = 355.0
+margin_top = 197.0
+margin_right = 455.0
+margin_bottom = 217.0
+text = "hotbar_2"
+m_action_name = "hotbar_2"
+
+[node name="Hotbar3" parent="." instance=ExtResource( 1 )]
+margin_left = 474.0
+margin_top = 200.0
+margin_right = 574.0
+margin_bottom = 220.0
+text = "hotbar_3"
+m_action_name = "hotbar_3"
+
+[node name="Hotbar4" parent="." instance=ExtResource( 1 )]
+margin_left = 598.0
+margin_top = 192.0
+margin_right = 698.0
+margin_bottom = 212.0
+text = "hotbar_4"
+m_action_name = "hotbar_4"
+
+[node name="Interact" parent="." instance=ExtResource( 1 )]
+margin_left = 351.0
+margin_top = 289.0
+margin_right = 451.0
+margin_bottom = 309.0
+text = "interact"
+m_action_name = "interact"
+
+[node name="Inventory" parent="." instance=ExtResource( 1 )]
+margin_left = 260.0
+margin_top = 366.0
+margin_right = 360.0
+margin_bottom = 386.0
+text = "inventory"
+m_action_name = "inventory"
+
+[node name="Craft" parent="." instance=ExtResource( 1 )]
+margin_left = 423.0
+margin_top = 367.0
+margin_right = 523.0
+margin_bottom = 387.0
+text = "craft"
+m_action_name = "craft"
+
+[node name="Pause" parent="." instance=ExtResource( 1 )]
+margin_left = 517.0
+margin_top = 288.0
+margin_right = 617.0
+margin_bottom = 308.0
+text = "pause"
+m_action_name = "pause"
+
+[node name="Friend" parent="." instance=ExtResource( 1 )]
+margin_left = 594.0
+margin_top = 360.0
+margin_right = 694.0
+margin_bottom = 380.0
+text = "friend"
+m_action_name = "friend"
