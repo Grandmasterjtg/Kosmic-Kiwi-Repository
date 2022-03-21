@@ -20,3 +20,6 @@ func get_item(item_name : String) -> Dictionary:
 	
 func get_stack_size(item_name: String) -> int:
 	return m_item_data[item_name]["StackSize"]
+	
+func get_category(item_name: String) -> String:
+	return m_item_data[item_name]["ItemCategory"]

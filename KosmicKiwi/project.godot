@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
+ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
 
 [input]
 

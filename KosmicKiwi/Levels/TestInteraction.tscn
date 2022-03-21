@@ -12,6 +12,7 @@ extents = Vector2( 30.75, 29.75 )
 
 [node name="IronSwordCollection" parent="." instance=ExtResource( 2 )]
 position = Vector2( 774, 105 )
+m_name = "Thruster Deposit"
 
 [node name="TreeBranchCollection" parent="." instance=ExtResource( 1 )]
 position = Vector2( 777, 385 )

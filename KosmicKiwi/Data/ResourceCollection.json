@@ -8,5 +8,10 @@
         "ItemName": "Tree Branch",
         "Quantity": 1,
         "RequiredTool": null
+    },
+    "Thruster Deposit": {
+        "ItemName": "Slime Potion",
+        "Quantity": 1,
+        "RequiredTool": null
     }
 }

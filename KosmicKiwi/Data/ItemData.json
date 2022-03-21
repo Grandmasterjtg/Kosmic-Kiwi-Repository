@@ -1,32 +1,17 @@
 {
-    "Rope": {
-        "ItemCategory": "Tool",
-        "StackSize": 16,
-        "ID": 1
-    },
-    "Board": {
-        "ItemCategory": "Tool",
-        "StackSize": 16,
-        "ID": 2
-    },
-    "Shovel": {
-        "ItemCategory": "Gadget",
-        "StackSize": 1,
-        "ID": 3
-    },
     "Iron Sword": {
         "ItemCategory": "Tool",
         "StackSize": 1,
-        "ID": 4
+        "Placeable": false
     },
     "Tree Branch": {
         "ItemCategory": "Resource",
         "StackSize": 16,
-        "ID": 3
+        "Placeable": true
     },
-    "Thruster":{
+    "Slime Potion":{
         "ItemCategory": "ShipPart",
         "StackSize": 1,
-        "ID": 4
+        "Placeable": false
     }
 }
