@@ -11,6 +11,9 @@ extents = Vector2( 30.75, 29.75 )
 [node name="TestInteraction" type="Node2D"]
 
 [node name="IronSwordCollection" parent="." instance=ExtResource( 2 )]
+position = Vector2( 775, 253 )
+
+[node name="SlimeCollection" parent="." instance=ExtResource( 2 )]
 position = Vector2( 774, 105 )
 m_name = "Thruster Deposit"
 

@@ -1,12 +1,23 @@
 extends Node
 
-const NUM_SLOTS := 20
-const RESOURCE_SLOTS := 20
+var m_num_slots := {} # { ItemCategory: NumSlots }
+const NUM_SLOTS := 3
+const RESOURCE_SLOTS := 8
+const TOOL_SLOTS := 8
 const SHIP_SLOTS := 4
 
-var m_inventory := {} # { slot index: [item name, item quantity] }
+var m_inventory := {} # { ItemCategory: { SlotIndex: [ItemName, ItemQuantity] } }
 var m_resources := {}
 var m_ship_parts := {}
+var m_tools := {}
+
+
+func _ready():
+	var categories = ItemCategories.m_categories
+	for _category in categories:
+		m_inventory[_category[0]] = {}
+		m_num_slots[_category[0]] = _category[1]
+		
 
 # takes the name of an item and the amount of that item
 # add that item and amount to the inventory or add the amount to the exisitng item
@@ -66,6 +77,8 @@ func get_inventory(type: String) -> Dictionary:
 			return m_resources
 		"ShipPart":
 			return m_ship_parts
+		"Tool":
+			return m_tools
 		_:
 			return {}
 			
@@ -75,6 +88,8 @@ func get_slots(type: String) -> int:
 			return RESOURCE_SLOTS
 		"ShipPart":
 			return SHIP_SLOTS
+		"Tool":
+			return TOOL_SLOTS
 		_:
 			return 0
 		

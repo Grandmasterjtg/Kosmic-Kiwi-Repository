@@ -1,10 +1,10 @@
 extends Node
 
 var m_categories = [
-	"Resource",
-	"Tool",
-	"ShipPart"
+	["Resource", 8],
+	["Tool", 8],
+	["ShipPart", 4]
 ]
 
 func category(index: int) -> String:
-	return m_categories[index]
+	return m_categories[index][0]
