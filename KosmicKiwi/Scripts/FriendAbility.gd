@@ -11,4 +11,8 @@ func get_name():
 func set_name(new_name):
 	m_ability_name = new_name
 
+func use_ability():
+	print(m_ability_name + " has no functionality yet.")
+	set_name("UsedAbility")
+
 
