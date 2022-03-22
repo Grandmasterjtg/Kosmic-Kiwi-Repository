@@ -18,7 +18,6 @@ var m_current_state
 var m_start_pos
 
 func _ready():
-	print("Character _ready() called for " + self.name)
 	# get the player from the scene
 	m_player_node = get_parent().get_node(PLAYER_PATH)
 	
@@ -87,7 +86,6 @@ func move_home():
 	move_and_slide(move_speed, Vector2.UP)
 	
 	if (home_direction.length_squared() < (m_stop_distance * m_stop_distance)):
-		print("Home reached, setting IDLE...")
 		set_state(CharacterState.IDLE)
 
 func steal_from_player():
@@ -98,10 +96,9 @@ func steal_from_player():
 	move_and_slide(move_speed, Vector2.UP)
 	
 	if (player_direction.length_squared() < (m_stop_distance * m_stop_distance)):
-		print("Player reached, setting HOME...")
+		print("Something was stolen!")
 		set_state(CharacterState.HOME)
 
 func _on_Timer_timeout():
 	m_timer.stop()
 	set_state(CharacterState.STEAL)
-	print("Timer timeout, setting STEAL...")
