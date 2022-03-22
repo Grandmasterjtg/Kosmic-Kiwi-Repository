@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ArtAssets/Temp/default_inventory_background.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/InventoryScripts/InventoryUI.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/UIScripts/UserInterface.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/InventoryScripts/SlotManager.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/InventoryScripts/Hotbar.gd" type="Script" id=6]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 4 )
@@ -47,49 +48,6 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-m_category = "Resource"
-
-[node name="Slot1" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_right = 70.0
-margin_bottom = 70.0
-
-[node name="Slot2" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_right = 156.0
-margin_bottom = 70.0
-
-[node name="Slot3" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_top = 86.0
-margin_right = 70.0
-margin_bottom = 156.0
-
-[node name="Slot4" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_top = 86.0
-margin_right = 156.0
-margin_bottom = 156.0
-
-[node name="Slot5" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_top = 172.0
-margin_right = 70.0
-margin_bottom = 242.0
-
-[node name="Slot6" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_top = 172.0
-margin_right = 156.0
-margin_bottom = 242.0
-
-[node name="Slot7" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_top = 258.0
-margin_right = 70.0
-margin_bottom = 328.0
-
-[node name="Slot8" parent="InventoryUI/Sections/ResourceInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_top = 258.0
-margin_right = 156.0
-margin_bottom = 328.0
 
 [node name="ToolInventory" type="GridContainer" parent="InventoryUI/Sections"]
 margin_left = 417.0
@@ -103,49 +61,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-m_category = "Tool"
-
-[node name="Slot1" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_right = 70.0
-margin_bottom = 70.0
-
-[node name="Slot2" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_right = 156.0
-margin_bottom = 70.0
-
-[node name="Slot3" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_top = 86.0
-margin_right = 70.0
-margin_bottom = 156.0
-
-[node name="Slot4" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_top = 86.0
-margin_right = 156.0
-margin_bottom = 156.0
-
-[node name="Slot5" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_top = 172.0
-margin_right = 70.0
-margin_bottom = 242.0
-
-[node name="Slot6" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_top = 172.0
-margin_right = 156.0
-margin_bottom = 242.0
-
-[node name="Slot7" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_top = 258.0
-margin_right = 70.0
-margin_bottom = 328.0
-
-[node name="Slot8" parent="InventoryUI/Sections/ToolInventory" instance=ExtResource( 1 )]
-margin_left = 86.0
-margin_top = 258.0
-margin_right = 156.0
-margin_bottom = 328.0
+m_category_index = 1
 
 [node name="ShipInventory" type="GridContainer" parent="InventoryUI/Sections"]
 margin_left = 211.0
@@ -158,23 +74,45 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-m_category = "ShipPart"
+m_category_index = 2
 
-[node name="Slot" parent="InventoryUI/Sections/ShipInventory" instance=ExtResource( 1 )]
-margin_right = 70.0
-margin_bottom = 70.0
+[node name="Hotbar" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Slot2" parent="InventoryUI/Sections/ShipInventory" instance=ExtResource( 1 )]
-margin_top = 86.0
-margin_right = 70.0
-margin_bottom = 156.0
+[node name="HotbarSlots" type="HBoxContainer" parent="Hotbar"]
+margin_left = 373.0
+margin_top = 512.0
+margin_right = 661.0
+margin_bottom = 572.0
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Slot3" parent="InventoryUI/Sections/ShipInventory" instance=ExtResource( 1 )]
-margin_top = 172.0
-margin_right = 70.0
-margin_bottom = 242.0
+[node name="Slot" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
 
-[node name="Slot4" parent="InventoryUI/Sections/ShipInventory" instance=ExtResource( 1 )]
-margin_top = 258.0
-margin_right = 70.0
-margin_bottom = 328.0
+[node name="Slot2" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
+margin_left = 76.0
+margin_right = 136.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="Slot3" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
+margin_left = 152.0
+margin_right = 212.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="Slot4" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
+margin_left = 228.0
+margin_right = 288.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )

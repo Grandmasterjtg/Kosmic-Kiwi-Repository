@@ -21,4 +21,10 @@ func set_item(item_name: String, item_quantity: int) -> void:
 	else:
 		$Count.visible = true
 		$Count.text = String(item_quantity)
+		
+func get_item_name() -> String:
+	return m_item_name
+
+func get_item_category() -> String:
+	return ItemData.get_category(m_item_name)
 	

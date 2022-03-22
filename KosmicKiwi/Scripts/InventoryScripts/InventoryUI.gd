@@ -1,13 +1,7 @@
 extends Control
 
-const SLOT_CLASS := preload("res://Scripts/InventoryScripts/Slot.gd")
-
 onready var m_sections = $Sections
 onready var m_inventory_slots = {}
-
-onready var m_resource_slots := $Sections/ResourceInventory
-onready var m_ship_slots := $Sections/ShipInventory
-onready var m_tool_slots := $Sections/ToolInventory
 
 func _ready():
 	var sections = m_sections.get_children()
