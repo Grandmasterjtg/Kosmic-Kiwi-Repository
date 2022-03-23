@@ -12,16 +12,16 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Character",
 "language": "GDScript",
-"path": "res://Scripts/Character.gd"
+"path": "res://Scripts/Character Scripts/Character.gd"
 }, {
-"base": "Node",
-"class": "FriendAbility",
+"base": "Character",
+"class": "Friend",
 "language": "GDScript",
-"path": "res://Scripts/FriendAbility.gd"
+"path": "res://Scripts/Character Scripts/Friend.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
-"FriendAbility": ""
+"Friend": ""
 }
 
 [application]

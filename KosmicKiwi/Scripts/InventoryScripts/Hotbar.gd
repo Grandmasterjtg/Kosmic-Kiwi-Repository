@@ -1,9 +1,15 @@
 extends Control
 
 onready var m_hotbar_slots = $HotbarSlots
+const ITEM_CLASS = preload("res://Levels/Test.tscn")
 
 func _ready() -> void:
 	Inventory.connect("inventory_updated", self, "update_hotbar")
+	
+func _process(delta):
+	# check for input
+	# place_item(index: int) 1 2 3 4
+	pass
 	
 func update_hotbar():
 	var slots = m_hotbar_slots.get_children()
@@ -15,11 +21,16 @@ func update_hotbar():
 		var item_name = items[i][0]
 		var item_quantity = items[i][1]
 		slots[i].initialize_item(item_name, item_quantity)
+		
+func place_item(index: int):
+	pass
+#	var slots = m_hotbar_slots.get_children()
+#	var slot_item = slots[index].get_item()
+#
+#	if slot_item != null:
+#		var item = ITEM_CLASS.instance()
+#		item.set_item(slots[index].get_name())
+#		Inventory.remove_item(item.get_name())
+#		get_tree().root.add_child(item)
+		
 	
-	
-	
-#	for i in range(slots.size()):
-#		if Inventory.hotbar_has_item_at(i):
-#			var item_name = Inventory.get_hotbar_item_name(i)
-#			var item_quantity = Inventory.get_hotbar_item_quantity(i)
-#			slots[i].initialize_item(item_name, item_quantity)
