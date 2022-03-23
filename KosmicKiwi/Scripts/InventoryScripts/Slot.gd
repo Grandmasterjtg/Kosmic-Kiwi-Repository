@@ -42,3 +42,6 @@ func set_slot_number(index: int) -> void:
 	m_slot_number = index
 func set_is_interactable(is_interactable: bool) -> void:
 	m_is_interactable = is_interactable
+	
+func get_item():
+	return m_item
