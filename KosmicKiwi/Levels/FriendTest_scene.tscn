@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Characters/Friend.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Characters/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Character Scripts/StinkyFriend.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/planet_scenes/Nav_Menu.tscn" type="PackedScene" id=5]
 
 [node name="FriendTest_scene" type="Node2D"]
 
@@ -27,3 +28,5 @@ position = Vector2( 129, 527 )
 position = Vector2( 67, 89 )
 m_speed = 100.0
 m_timer_length = 5
+
+[node name="NavMenu" parent="." instance=ExtResource( 5 )]

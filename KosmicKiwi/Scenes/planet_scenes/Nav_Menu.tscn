@@ -1,29 +1,64 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/PlanetScripts/PlanetManager.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PlanetScripts/Nav_Menu.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/button_scenes/Planet_2_Button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/button_scenes/Planet_1_Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
-
-[node name="NavMenu" type="Node2D"]
+[node name="NavMenu" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Panel" type="PanelContainer" parent="."]
+margin_right = 876.0
+margin_bottom = 143.0
 rect_pivot_offset = Vector2( 537, 210 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Planet_1_Button" parent="Control" instance=ExtResource( 3 )]
-margin_left = 300.0
-margin_top = 200.0
-margin_right = 376.0
-margin_bottom = 288.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 869.0
+margin_bottom = 136.0
+alignment = 2
 
-[node name="Planet_2_Button" parent="Control" instance=ExtResource( 2 )]
-margin_left = 600.0
-margin_top = 200.0
-margin_right = 676.0
-margin_bottom = 288.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 41.0
+margin_right = 862.0
+margin_bottom = 129.0
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer/HBoxContainer"]
+margin_right = 284.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+text = "Choose a planet to travel to:
+"
+
+[node name="Planet_1_Button" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 288.0
+margin_right = 573.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+
+[node name="Planet_2_Button" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource( 2 )]
+margin_left = 577.0
+margin_right = 862.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+
+[node name="CloseButton" type="Button" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 833.0
+margin_top = 5.0
+margin_right = 909.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.5, 0.5 )
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

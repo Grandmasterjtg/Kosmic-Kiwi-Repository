@@ -74,30 +74,30 @@ func follow_target(target):
 			m_should_move = false
 			
 		if (m_should_move):
-			look_at(target)
-			var move_speed = target_direction.normalized() * m_speed
-			move_and_slide(move_speed, Vector2.UP)
+			#look_at(target)
+			move(target_direction)
 
 func move_home():
 	var home_direction = m_start_pos - self.global_position
-	look_at(m_start_pos)
-	
-	var move_speed = home_direction.normalized() * m_speed
-	move_and_slide(move_speed, Vector2.UP)
+	#look_at(m_start_pos)
+	move(home_direction)
 	
 	if (home_direction.length_squared() < (m_stop_distance * m_stop_distance)):
 		set_state(CharacterState.IDLE)
 
 func steal_from_player():
 	var player_direction = m_player_node.global_position - self.global_position
-	look_at(player_direction)
-	
-	var move_speed = player_direction.normalized() * m_speed
-	move_and_slide(move_speed, Vector2.UP)
+	#look_at(player_direction)
+	move(player_direction)
 	
 	if (player_direction.length_squared() < (m_stop_distance * m_stop_distance)):
 		print("Something was stolen!")
 		set_state(CharacterState.HOME)
+
+func move(direction: Vector2) -> void:
+	# var isometric_speed = IsometricVector.vector_to_isometric_vectyor(dirction)
+	var move_speed = direction.normalized() * m_speed
+	move_and_slide(move_speed)
 
 func _on_Timer_timeout():
 	m_timer.stop()

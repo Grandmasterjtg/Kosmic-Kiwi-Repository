@@ -10,7 +10,7 @@ var m_detected_bodies = []
 
 func _ready():
 	# connect to DetectionArea
-	m_detection_area = .get_node("DetectionArea")
+	m_detection_area = $DetectionArea
 	if (m_detection_area != null):
 		m_detection_area.connect("body_entered",self,"_on_DetectionArea_body_entered")
 		m_detection_area.connect("body_exited",self,"_on_DetectionArea_body_exited")
