@@ -34,11 +34,9 @@ func delete_item():
 func _gui_input(event):
 	if event.is_action_pressed(CLICK) and m_item != null and m_is_interactable:
 		if Inventory.item_exists_in_hotbar(m_item.get_item_category(), m_slot_number):
-			print("1")
 			Inventory.remove_from_hotbar(m_item.get_item_category(), m_slot_number)
 		else:
 			Inventory.add_to_hotbar(m_item.get_item_category(), m_slot_number)
-			print("2")
 		
 func set_slot_number(index: int) -> void:
 	m_slot_number = index

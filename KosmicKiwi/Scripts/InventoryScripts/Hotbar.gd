@@ -15,11 +15,3 @@ func update_hotbar():
 		var item_name = items[i][0]
 		var item_quantity = items[i][1]
 		slots[i].initialize_item(item_name, item_quantity)
-	
-	
-	
-#	for i in range(slots.size()):
-#		if Inventory.hotbar_has_item_at(i):
-#			var item_name = Inventory.get_hotbar_item_name(i)
-#			var item_quantity = Inventory.get_hotbar_item_quantity(i)
-#			slots[i].initialize_item(item_name, item_quantity)
