@@ -8,20 +8,20 @@ export var m_follow_distance := 200
 export var m_stop_distance := 100
 export var m_speed := 200.0
 export var m_timer_length := 3
+
 enum CharacterState {FOLLOW, HOME, IDLE, STEAL}
 
-var should_move := false
 var m_player_node
 var m_timer
 var m_current_state
-
+var m_should_move := false
 var m_start_pos
 
 func _ready():
 	# get the player from the scene
 	m_player_node = get_parent().get_node(PLAYER_PATH)
 	
-	# setup a timer
+	# setup a timer and connect it
 	m_timer = Timer.new()
 	m_timer.wait_time = m_timer_length
 	m_timer.connect("timeout",self,"_on_Timer_timeout")
@@ -69,11 +69,11 @@ func follow_target(target):
 		var target_direction = target - self.global_position
 		
 		if (target_direction.length_squared() > (m_follow_distance * m_follow_distance)):
-			should_move = true
+			m_should_move = true
 		elif (target_direction.length_squared() < (m_stop_distance * m_stop_distance)):
-			should_move = false
+			m_should_move = false
 			
-		if (should_move):
+		if (m_should_move):
 			look_at(target)
 			var move_speed = target_direction.normalized() * m_speed
 			move_and_slide(move_speed, Vector2.UP)

@@ -25,10 +25,3 @@ margin_top = -35.0
 margin_right = 38.0
 margin_bottom = 35.0
 icon = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="body_entered" from="DetectionArea" to="." method="_on_DetectionArea_body_entered"]
-[connection signal="body_exited" from="DetectionArea" to="." method="_on_DetectionArea_body_exited"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

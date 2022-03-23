@@ -11,7 +11,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-planetPath = "res://planet_scenes/Planet_2_Menu.tscn"
+planetPath = "res://Scenes/planet_scenes/Planet_2_Menu.tscn"
 
 [node name="Label" type="Label" parent="."]
 margin_right = 76.0
