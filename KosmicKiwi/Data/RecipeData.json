@@ -1,0 +1,13 @@
+{
+    "Rope": [
+        {
+            "Recipe": [["Fiber", 5], ["Rock", 2]],
+            "Quantity": 1
+        },
+        {
+            "Recipe": [["Fiber", 10]],
+            "Quantity": 3
+        }
+    ]
+        
+}

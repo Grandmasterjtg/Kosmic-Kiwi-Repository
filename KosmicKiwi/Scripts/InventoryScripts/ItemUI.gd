@@ -1,6 +1,7 @@
 extends TextureRect
 
-const FOLDER_PATH = "res://ArtAssets/Temp/"
+const FILE_PATH = "res://ArtAssets/ItemIcons/"
+const FILE_TYPE = ".png"
 
 var m_item_name : String
 var m_item_quantity : int
@@ -13,7 +14,7 @@ func set_item(item_name: String, item_quantity: int) -> void:
 	m_item_quantity = item_quantity
 	
 	# change the texture
-	texture = load(FOLDER_PATH + item_name + ".png")
+	texture = load(FILE_PATH + item_name + FILE_TYPE)
 	
 	var stack_size = ItemData.get_stack_size(item_name)
 	if stack_size == 1:
