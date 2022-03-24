@@ -8,35 +8,10 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "Character",
-"language": "GDScript",
-"path": "res://Scripts/Character Scripts/Character.gd"
-}, {
-"base": "Character",
-"class": "Friend",
-"language": "GDScript",
-"path": "res://Scripts/Character Scripts/Friend.gd"
-} ]
-_global_script_class_icons={
-"Character": "",
-"Friend": ""
-}
-
 [application]
 
 config/name="Kosmic Kiwi"
-run/main_scene="res://Scenes/UI/Inventory/Slot.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
-ItemData="*res://Scripts/DataScripts/ItemData.gd"
-Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
-ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
-ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
 
 [input]
 
@@ -103,11 +78,6 @@ hotbar_3={
 hotbar_4={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
- ]
-}
-Press={
-"deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 
