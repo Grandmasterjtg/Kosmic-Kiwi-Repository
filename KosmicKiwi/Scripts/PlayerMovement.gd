@@ -9,7 +9,7 @@ const ACTION_LEFT := "move_left"
 const ACTION_RIGHT := "move_right"
 const ACTION_UP := "move_up"
 
-export var m_speed := 10000.0
+export var m_speed : float
 var m_direction := Vector2(0, 1)
 
 func _physics_process(delta) -> void:
@@ -19,7 +19,7 @@ func _physics_process(delta) -> void:
 		rotation = 0
 		var angle = get_angle_to(position + Vector2(x,y).normalized())
 		m_direction = IsometricVector.angle_to_isometric_vector(angle)
-		move_and_slide(m_direction * m_speed * delta, Vector2.UP)
+		move_and_slide(m_direction * m_speed, Vector2.UP)
 		rotation = angle + PI / 2
 
 func instantiate_image(scale) -> void:

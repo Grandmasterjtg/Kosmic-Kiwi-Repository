@@ -13,6 +13,7 @@ extents = Vector2( 30.75, 29.75 )
 
 [node name="MetalDeposit" parent="." instance=ExtResource( 5 )]
 position = Vector2( 159, 218 )
+m_name = "Tree Branch Deposit"
 
 [node name="IronSwordCollection" parent="." instance=ExtResource( 2 )]
 position = Vector2( 775, 253 )
@@ -26,10 +27,11 @@ m_name = "Ship Part Deposit"
 position = Vector2( 777, 385 )
 m_name = "Metal Deposit"
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
+[node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 418, 230 )
+m_speed = 300.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( -0.75, 1.75 )
 shape = SubResource( 1 )
 

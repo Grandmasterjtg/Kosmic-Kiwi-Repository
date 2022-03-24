@@ -9,15 +9,15 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "Data",
-"language": "GDScript",
-"path": "res://Scripts/DataScripts/Data.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "Character",
 "language": "GDScript",
 "path": "res://Scripts/Character Scripts/Character.gd"
+}, {
+"base": "Node",
+"class": "Data",
+"language": "GDScript",
+"path": "res://Scripts/DataScripts/Data.gd"
 }, {
 "base": "Character",
 "class": "Friend",
@@ -25,8 +25,8 @@ _global_script_classes=[ {
 "path": "res://Scripts/Character Scripts/Friend.gd"
 } ]
 _global_script_class_icons={
-"Data": ""
 "Character": "",
+"Data": "",
 "Friend": ""
 }
 
@@ -43,7 +43,6 @@ Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
 ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
 IsometricVector="*res://Scripts/IsometricVector.gd"
-RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
 
 [input]
 

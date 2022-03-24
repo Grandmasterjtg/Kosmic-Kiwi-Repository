@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=2 format=2]
 
-[ext_resource path="res://ArtAssets/Temp/Iron Sword.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/ItemIcons/Chemical.png" type="Texture" id=1]
 
 [resource]
 animations = [ {

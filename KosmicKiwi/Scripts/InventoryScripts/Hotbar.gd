@@ -36,8 +36,8 @@ func place_item(index: int):
 	var slots = m_hotbar_slots.get_children()
 	var slot_item = slots[index].get_item()
 
-	if slot_item != null:
+	if slot_item != null and ItemData.is_placeable(slot_item.get_item_name()):
 		var item = ITEM_CLASS.instance()
-		item.set_item(slot_item.get_item_name())
+		item.set_item(slot_item.get_item_name(), get_viewport().get_mouse_position())
 		Inventory.remove_item(slot_item.get_item_name())
 		get_tree().root.add_child(item)
