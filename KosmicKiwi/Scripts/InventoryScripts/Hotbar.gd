@@ -1,15 +1,25 @@
 extends Control
 
+const ACTION_HOTBAR_1 := "hotbar_1"
+const ACTION_HOTBAR_2 := "hotbar_2"
+const ACTION_HOTBAR_3 := "hotbar_3"
+const ACTION_HOTBAR_4 := "hotbar_4"
+
 onready var m_hotbar_slots = $HotbarSlots
-const ITEM_CLASS = preload("res://Levels/Test.tscn")
+const ITEM_CLASS = preload("res://Scenes/Interactables/Item.tscn")
 
 func _ready() -> void:
 	Inventory.connect("inventory_updated", self, "update_hotbar")
 	
-func _process(delta):
-	# check for input
-	# place_item(index: int) 1 2 3 4
-	pass
+func _input(event):
+	if event.is_action_pressed(ACTION_HOTBAR_1):
+		place_item(0)
+	if event.is_action_pressed(ACTION_HOTBAR_2):
+		place_item(1)
+	if event.is_action_pressed(ACTION_HOTBAR_3):
+		place_item(2)
+	if event.is_action_pressed(ACTION_HOTBAR_4):
+		place_item(3)
 	
 func update_hotbar():
 	var slots = m_hotbar_slots.get_children()
@@ -23,14 +33,11 @@ func update_hotbar():
 		slots[i].initialize_item(item_name, item_quantity)
 		
 func place_item(index: int):
-	pass
-#	var slots = m_hotbar_slots.get_children()
-#	var slot_item = slots[index].get_item()
-#
-#	if slot_item != null:
-#		var item = ITEM_CLASS.instance()
-#		item.set_item(slots[index].get_name())
-#		Inventory.remove_item(item.get_name())
-#		get_tree().root.add_child(item)
-		
-	
+	var slots = m_hotbar_slots.get_children()
+	var slot_item = slots[index].get_item()
+
+	if slot_item != null:
+		var item = ITEM_CLASS.instance()
+		item.set_item(slot_item.get_item_name())
+		Inventory.remove_item(slot_item.get_item_name())
+		get_tree().root.add_child(item)

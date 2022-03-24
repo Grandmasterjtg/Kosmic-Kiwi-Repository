@@ -13,24 +13,14 @@ export var m_speed := 10000.0
 var m_direction := Vector2(0, 1)
 
 func _physics_process(delta) -> void:
-	var horizontal_movement = m_speed * delta * \
-		(Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT))
-	var vertical_movement = m_speed * delta * \
-		(Input.get_action_strength(ACTION_DOWN) - Input.get_action_strength(ACTION_UP))
-	move_and_slide(Vector2(horizontal_movement, vertical_movement), Vector2.UP)
-	if horizontal_movement != 0 or vertical_movement != 0:
-		m_direction = Vector2(horizontal_movement, vertical_movement).normalized()
-	get_child(0).rotation = get_angle_to(position + m_direction) - PI / 2
-
-func _input(event) -> void:
-	if event.is_action_pressed(ACTION_HOTBAR_1):
-		instantiate_image(0.1)
-	elif event.is_action_pressed(ACTION_HOTBAR_2):
-		instantiate_image(0.25)
-	elif event.is_action_pressed(ACTION_HOTBAR_3):
-		instantiate_image(0.5)
-	elif event.is_action_pressed(ACTION_HOTBAR_4):
-		instantiate_image(1)
+	var x = Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT)
+	var y = Input.get_action_strength(ACTION_DOWN) - Input.get_action_strength(ACTION_UP)
+	if x != 0 or y != 0:
+		rotation = 0
+		var angle = get_angle_to(position + Vector2(x,y).normalized())
+		m_direction = IsometricVector.angle_to_isometric_vector(angle)
+		move_and_slide(m_direction * m_speed * delta, Vector2.UP)
+		rotation = angle + PI / 2
 
 func instantiate_image(scale) -> void:
 	var sprite = Sprite.new()
