@@ -4,7 +4,7 @@ onready var collection_area := $CollectionArea
 onready var button_display := $ButtonDisplay
 
 # collection variables
-export var m_name = "Tree Branch Deposit"
+export var m_name := "Tree Branch Deposit"
 var m_item_name := "Tree Branch"
 var m_item_quantity := 1
 var m_required_tool = null
