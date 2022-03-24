@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Data",
+"language": "GDScript",
+"path": "res://Scripts/DataScripts/Data.gd"
+} ]
+_global_script_class_icons={
+"Data": ""
+}
+
 [application]
 
 config/name="Kosmic Kiwi"
@@ -20,6 +30,7 @@ ItemData="*res://Scripts/DataScripts/ItemData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
 ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
+RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
 
 [input]
 

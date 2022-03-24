@@ -1,19 +1,9 @@
-extends Node
+extends Data
 
-var m_resource_data : Dictionary
+const FILE_PATH := "res://Data/ResourceCollection.json"
 
 func _ready():
-	m_resource_data = load_data("res://Data/ResourceCollection.json")
-	
-func load_data(file_path: String) -> Dictionary:
-	var json_data
-	var file_data = File.new()
-	
-	file_data.open(file_path, File.READ)
-	json_data = JSON.parse(file_data.get_as_text())
-	file_data.close()
-	
-	return json_data.result
+	m_data = load_data(FILE_PATH)
 
 func get_resource_data(resource_name: String) -> Dictionary:
-	return m_resource_data[resource_name]
+	return m_data[resource_name]
