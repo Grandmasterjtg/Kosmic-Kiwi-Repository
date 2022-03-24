@@ -13,9 +13,21 @@ _global_script_classes=[ {
 "class": "Data",
 "language": "GDScript",
 "path": "res://Scripts/DataScripts/Data.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://Scripts/Character Scripts/Character.gd"
+}, {
+"base": "Character",
+"class": "Friend",
+"language": "GDScript",
+"path": "res://Scripts/Character Scripts/Friend.gd"
 } ]
 _global_script_class_icons={
 "Data": ""
+"Character": "",
+"Friend": ""
 }
 
 [application]
@@ -26,6 +38,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
