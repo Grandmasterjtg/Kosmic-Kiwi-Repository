@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/MenuScripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://ArtAssets/UI/ScreenUI.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://ArtAssets/Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 6 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+first_level_path = "res://Scenes/Menu_Scenes/Nav_Menu.tscn"
+
+[node name="Panel" type="TextureRect" parent="."]
+margin_right = 4800.0
+margin_bottom = 2700.0
+rect_scale = Vector2( 0.4, 0.4 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="GameNameText" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -356.5
+margin_top = 200.0
+margin_right = 356.5
+margin_bottom = 338.0
+theme = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 5 )
+text = "Kosmic Kiwi"
+
+[node name="CloseButton" type="Button" parent="."]
+margin_left = 1757.0
+margin_top = 89.0
+margin_right = 2369.0
+margin_bottom = 695.0
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 4 )
+
+[node name="StartButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.0
+margin_top = -26.0
+margin_right = -12.0
+margin_bottom = 26.0
+rect_scale = Vector2( 2, 2 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Start"
