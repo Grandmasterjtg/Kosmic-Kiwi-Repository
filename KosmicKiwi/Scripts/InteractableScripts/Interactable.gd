@@ -35,3 +35,6 @@ func _on_body_entered(body) -> void:
 func _on_body_exited(body) -> void:
 	m_in_area = false
 	emit_signal("exited")
+	
+func is_in_area() -> bool:
+	return m_in_area

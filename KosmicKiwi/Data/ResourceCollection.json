@@ -1,47 +1,38 @@
 {
-    "Iron Sword Deposit": {
-        "ItemName": "Iron Sword",
-        "Quantity": 1,
-        "RequiredTool": null
-    },
-    "Tree Branch Deposit": {
-        "ItemName": "Tree Branch",
-        "Quantity": 1,
-        "RequiredTool": null
-    },
-    "Thruster Deposit": {
-        "ItemName": "Slime Potion",
-        "Quantity": 1,
-        "RequiredTool": null
-    },
     "Metal Deposit": {
         "ItemName": "Metal",
         "Quantity": 1,
+        "Cooldown": 30.0,
         "RequiredTool": null
     },
     "Ship Part Deposit": {
         "ItemName": "Ship Part",
         "Quantity": 1,
+        "Cooldown": 30.0,
         "RequiredTool": null
     },
     "Fiber Deposit": {
         "ItemName": "Fiber",
         "Quantity": 1,
+        "Cooldown": 30.0,
         "RequiredTool": null
     },
     "Rock Deposit": {
         "ItemName": "Rock",
         "Quantity": 1,
+        "Cooldown": 30.0,
         "RequiredTool": null
     },
     "Chemical Deposit": {
         "ItemName": "Chemical",
         "Quantity": 1,
+        "Cooldown": 30.0,
         "RequiredTool": null
     },
     "Liquid Deposit": {
         "ItemName": "Liquid",
         "Quantity": 1,
+        "Cooldown": 1.0,
         "RequiredTool": null
     }
 }

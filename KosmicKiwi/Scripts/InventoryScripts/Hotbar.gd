@@ -45,3 +45,4 @@ func place_item(index: int):
 		item.set_item(slot_item.get_item_name(), get_viewport().get_mouse_position())
 		Inventory.remove_item(slot_item.get_item_name())
 		get_tree().root.add_child(item)
+		
