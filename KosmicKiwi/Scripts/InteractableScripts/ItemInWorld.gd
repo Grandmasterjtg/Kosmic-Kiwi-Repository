@@ -10,3 +10,6 @@ func set_item(name : String, pos : Vector2):
 	m_item_name = name
 	frames = load(FOLDER_PATH + name + FILE_TYPE)
 	play("default")
+
+func get_item_name() -> String:
+	return m_item_name
