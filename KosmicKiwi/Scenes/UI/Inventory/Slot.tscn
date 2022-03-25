@@ -5,7 +5,7 @@
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 600, 600 )
+region_rect = Rect2( 20, 21, 559, 558 )
 
 [node name="Slot" type="Panel"]
 margin_right = 70.0

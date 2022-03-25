@@ -36,9 +36,10 @@ func add_item(item_name: String, item_quantity: int) -> void:
 				item_quantity -= item_quantity
 		# if slot is not empty and is the same as the item to add
 		elif inventory[index][0] == item_name:
-			if stack_size - inventory[index][1] < item_quantity:
-				inventory[index][1] += (stack_size - inventory[index][1])
-				item_quantity -= (stack_size - inventory[index][1])
+			var remaining_space = stack_size - inventory[index][1]
+			if remaining_space < item_quantity:
+				inventory[index][1] += remaining_space
+				item_quantity -= remaining_space
 			else:
 				inventory[index][1] += item_quantity
 				item_quantity -= item_quantity
@@ -101,7 +102,7 @@ func item_exists_in_hotbar(category: String, slot: int) -> bool:
 func item_exists_at_index(index: int, category: String) -> bool:
 	return m_inventory[category].has(index)
 
-func item_exists_in_intenvtory(item_name: String, amount: int=0) -> bool:
+func item_exists_in_inventory(item_name: String, amount: int=0) -> bool:
 	var category = ItemData.get_category(item_name)
 	var inventory = m_inventory[category]
 	

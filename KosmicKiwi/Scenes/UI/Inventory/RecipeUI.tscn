@@ -8,11 +8,22 @@
 texture = ExtResource( 2 )
 region_rect = Rect2( 326, 206, 4175, 2160 )
 
-[node name="Panel" type="Panel"]
-margin_right = 1920.0
-margin_bottom = 353.0
+[node name="RecipeUI" type="Panel"]
+margin_right = 721.0
+margin_bottom = 304.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Craft" type="Button" parent="."]
+margin_left = 428.0
+margin_top = 42.0
+margin_right = 502.0
+margin_bottom = 62.0
+rect_scale = Vector2( 3, 3 )
+text = "Craft"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -20,19 +31,16 @@ __meta__ = {
 [node name="ItemToCraft" parent="." instance=ExtResource( 1 )]
 margin_left = 30.0
 margin_top = 15.0
-margin_right = 200.0
-margin_bottom = 185.0
+margin_right = 141.0
+margin_bottom = 126.0
 
 [node name="Recipes" type="HBoxContainer" parent="."]
-margin_left = 205.0
-margin_top = 221.0
-margin_right = 1655.0
-margin_bottom = 321.0
+margin_left = 71.0
+margin_top = 161.0
+margin_right = 645.0
+margin_bottom = 261.0
 rect_min_size = Vector2( 100, 100 )
+custom_constants/separation = 30
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Slot" parent="Recipes" instance=ExtResource( 1 )]
-margin_right = 100.0
-margin_bottom = 100.0
