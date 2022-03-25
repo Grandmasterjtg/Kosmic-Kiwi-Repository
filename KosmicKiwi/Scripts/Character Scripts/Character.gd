@@ -4,18 +4,21 @@ class_name Character
 
 const PLAYER_PATH := "Player"
 
-export var m_follow_distance := 200
-export var m_stop_distance := 100
-export var m_speed := 200.0
-export var m_timer_length := 3
+export var m_follow_distance := 1000.0
+export var m_stop_distance := 700.0
+export var m_speed := 500.0
+export var m_detection_distance := 1800.0
+export var m_timer_length := 6
 
 enum CharacterState {FOLLOW, HOME, IDLE, STEAL}
+export(CharacterState) var m_start_state = CharacterState.IDLE
 
+var m_current_state
 var m_player_node
 var m_timer
-var m_current_state
 var m_should_move := false
-var m_start_pos
+var m_home_pos
+var m_active := true
 
 func _ready():
 	# get the player from the scene
@@ -27,8 +30,11 @@ func _ready():
 	m_timer.connect("timeout",self,"_on_Timer_timeout")
 	add_child(m_timer)
 	
-	# get the starting global_position
-	m_start_pos = self.global_position
+	# get the m_home_pos global_position
+	m_home_pos = $HomePosition.global_position
+	
+	# set the start_state
+	m_current_state = m_start_state
 
 func _physics_process(delta):
 	handle_state()
@@ -74,30 +80,29 @@ func follow_target(target):
 			m_should_move = false
 			
 		if (m_should_move):
-			look_at(target)
-			var move_speed = target_direction.normalized() * m_speed
-			move_and_slide(move_speed, Vector2.UP)
+			#look_at(target)
+			move(target_direction)
 
 func move_home():
-	var home_direction = m_start_pos - self.global_position
-	look_at(m_start_pos)
-	
-	var move_speed = home_direction.normalized() * m_speed
-	move_and_slide(move_speed, Vector2.UP)
+	var home_direction = m_home_pos - self.global_position
+	move(home_direction)
 	
 	if (home_direction.length_squared() < (m_stop_distance * m_stop_distance)):
 		set_state(CharacterState.IDLE)
 
 func steal_from_player():
-	var player_direction = m_player_node.global_position - self.global_position
-	look_at(player_direction)
-	
-	var move_speed = player_direction.normalized() * m_speed
-	move_and_slide(move_speed, Vector2.UP)
-	
-	if (player_direction.length_squared() < (m_stop_distance * m_stop_distance)):
-		print("Something was stolen!")
-		set_state(CharacterState.HOME)
+	if (self.global_position.distance_to(m_player_node.global_position) < m_detection_distance):
+		var player_direction = m_player_node.global_position - self.global_position
+		move(player_direction)
+		
+		if (player_direction.length_squared() < (m_stop_distance * m_stop_distance)):
+			print("Something was stolen!")
+			set_state(CharacterState.HOME)
+
+func move(direction: Vector2) -> void:
+	#var isometric_speed = IsometricVector.vector_to_isometric_vector(direction)
+	var move_speed = direction.normalized() * m_speed
+	move_and_slide(move_speed)
 
 func _on_Timer_timeout():
 	m_timer.stop()

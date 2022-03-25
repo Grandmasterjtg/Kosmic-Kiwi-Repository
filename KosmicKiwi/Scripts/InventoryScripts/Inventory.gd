@@ -4,7 +4,7 @@ var m_num_slots := {} # { ItemCategory: NumSlots }
 const HOTBAR_SLOTS := 4
 
 var m_inventory := {} # { ItemCategory: { SlotIndex: [ItemName, ItemQuantity] } }
-var m_hotbar := {} # { SlotIndex: [ItemName, ItemQuantity] }
+var m_hotbar := {} # { [Category, InventorySlotIndex]: [ItemName, ItemQuantity] }
 
 signal inventory_updated
 
@@ -110,8 +110,13 @@ func get_item_name(index: int, category: String) -> String:
 func get_item_quantity(index: int, category: String) -> int:
 	return m_inventory[category][index][1]
 
+# return the values in the hotbar dictionary
 func get_items_in_hotbar() -> Array:
 	return m_hotbar.values()
+# return the key values form the hotbar dictionary
+# the key values represent the slots form the inventory the item is coming from
+func get_slots_in_hotbar() -> Array:
+	return m_hotbar.keys()
 
 func get_hotbar_item_name(index: int) -> String:
 	return m_hotbar[index][0]
