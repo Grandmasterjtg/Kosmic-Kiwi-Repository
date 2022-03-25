@@ -1,0 +1,75 @@
+[gd_scene format=2]
+
+[node name="PauseMenu" type="Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -60.0
+margin_right = 60.0
+margin_bottom = -40.0
+focus_mode = 0
+text = "Resume Game"
+
+[node name="Save" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -35.0
+margin_right = 60.0
+margin_bottom = -15.0
+focus_mode = 0
+text = "Save Game"
+
+[node name="Controls" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -10.0
+margin_right = 60.0
+margin_bottom = 10.0
+focus_mode = 0
+text = "Controls"
+
+[node name="Settings" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = 15.0
+margin_right = 60.0
+margin_bottom = 35.0
+focus_mode = 0
+text = "Settings"
+
+[node name="Exit" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = 40.0
+margin_right = 60.0
+margin_bottom = 60.0
+focus_mode = 0
+text = "Exit Game"

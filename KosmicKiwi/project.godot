@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Kosmic Kiwi"
-run/main_scene="res://Scenes/UI/Inventory/Slot.tscn"
+run/main_scene="res://Scenes/Menu_Scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -48,7 +48,7 @@ ItemData="*res://Scripts/DataScripts/ItemData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
 ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
-RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
+IsometricVector="*res://Scripts/IsometricVector.gd"
 
 [display]
 
@@ -131,6 +131,10 @@ Press={
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_physics/layer_2="Player"
 
 [physics]
 

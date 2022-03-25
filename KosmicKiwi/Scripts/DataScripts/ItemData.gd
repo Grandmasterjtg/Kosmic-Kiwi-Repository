@@ -13,3 +13,6 @@ func get_stack_size(item_name: String) -> int:
 	
 func get_category(item_name: String) -> String:
 	return m_data[item_name]["ItemCategory"]
+
+func is_placeable(item_name: String) -> bool:
+	return m_data[item_name]["Placeable"]
