@@ -37,7 +37,7 @@ func craft() -> bool:
 
 	# if the items exists in the inventory, remove them from the inventory
 	for item in requirements:
-		Inventory.remove_item(item[0])
+		Inventory.remove_item(item[0], item[1])
 	
 	# add the item to be crafted into the inventory
 	Inventory.add_item(m_recipe.get_item_name(), m_recipe.get_quantity())
