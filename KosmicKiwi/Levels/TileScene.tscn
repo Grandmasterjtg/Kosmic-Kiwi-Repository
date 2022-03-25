@@ -48,7 +48,6 @@ zoom = Vector2( 3, 3 )
 position = Vector2( 5750, 959 )
 scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
-m_start_state = 2
 
 [node name="Enemy" parent="Actors" instance=ExtResource( 8 )]
 position = Vector2( 1490, -527 )
