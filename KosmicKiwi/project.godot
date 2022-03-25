@@ -38,7 +38,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
