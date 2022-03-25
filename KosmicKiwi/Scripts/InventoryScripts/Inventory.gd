@@ -36,9 +36,10 @@ func add_item(item_name: String, item_quantity: int) -> void:
 				item_quantity -= item_quantity
 		# if slot is not empty and is the same as the item to add
 		elif inventory[index][0] == item_name:
-			if stack_size - inventory[index][1] < item_quantity:
-				inventory[index][1] += (stack_size - inventory[index][1])
-				item_quantity -= (stack_size - inventory[index][1])
+			var remaining_space = stack_size - inventory[index][1]
+			if remaining_space < item_quantity:
+				inventory[index][1] += remaining_space
+				item_quantity -= remaining_space
 			else:
 				inventory[index][1] += item_quantity
 				item_quantity -= item_quantity
@@ -51,14 +52,16 @@ func add_item(item_name: String, item_quantity: int) -> void:
 # removes 1 instance of that item form the inventory
 func remove_item(item_name: String, amount: int = 1) -> bool:
 	var category = ItemData.get_category(item_name)
+	var inventory = m_inventory[category]
+	
 	for slot in m_inventory[category]:
 		# if the item name at the slot matches to passed item name and there is enought of the item
-		if m_inventory[category][slot][0] == item_name and m_inventory[category][slot][1] >= amount:
-			m_inventory[category][slot][1] -= amount
+		if inventory[slot][0] == item_name and inventory[slot][1] >= amount:
+			inventory[slot][1] -= amount
 			# if there is no more of the item left in the inventory
-			if m_inventory[category][slot][1] <= 0:
+			if inventory[slot][1] <= 0:
 				# erase the value in the inventory
-				m_inventory[category].erase(slot)
+				inventory.erase(slot)
 				# if item exists in the hotbar, erase it
 				remove_from_hotbar(category, slot)
 				# m_hotbar.erase([category,slot])
@@ -98,6 +101,16 @@ func item_exists_in_hotbar(category: String, slot: int) -> bool:
 # returns true if the inventory has an item at that index
 func item_exists_at_index(index: int, category: String) -> bool:
 	return m_inventory[category].has(index)
+
+func item_exists_in_inventory(item_name: String, amount: int=0) -> bool:
+	var category = ItemData.get_category(item_name)
+	var inventory = m_inventory[category]
+	
+	for slot in inventory:
+		if inventory[slot][0] == item_name and inventory[slot][1] >= amount:
+			return true
+	
+	return false
 
 
 # takes an index

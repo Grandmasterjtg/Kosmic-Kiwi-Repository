@@ -1,13 +1,14 @@
 {
     "Rope": [
         {
-            "Recipe": [["Fiber", 5], ["Rock", 2]],
+            "Recipe": [["Fiber", 4]],
             "Quantity": 1
-        },
+        }
+    ],
+    "Defoilant": [
         {
-            "Recipe": [["Fiber", 10]],
-            "Quantity": 3
+            "Recipe": [["Chemical", 5], ["Liquid", 5]],
+            "Quantity": 1
         }
     ]
-        
 }

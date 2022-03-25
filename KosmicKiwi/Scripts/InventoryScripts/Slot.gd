@@ -2,7 +2,7 @@ extends Control
 
 const CLICK = "Press"
 
-export var m_is_interactable := true
+export var m_is_interactable := false
 
 const ITEM_CLASS = preload("res://Scenes/UI/Inventory/ItemUI.tscn")
 var m_item = null
@@ -22,8 +22,9 @@ func initialize_item(item_name: String, item_quantity: int) -> void:
 		m_item.set_item(item_name, item_quantity)
 		
 		# set the scale of the item to match the size of the slot
-		var scale = rect_size.x / m_item.rect_size.x
+		var scale = rect_min_size.x / m_item.rect_size.x
 		m_item.rect_scale *= scale
+		print(scale)
 
 # if an item exists, it deletes the node and sets the variable to null
 func delete_item():

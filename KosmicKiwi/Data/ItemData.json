@@ -43,5 +43,15 @@
         "ItemCategory": "Resource",
         "StackSize": 16,
         "Placeable": false
+    },
+    "Rope": {
+        "ItemCategory": "Tool",
+        "StackSize": 16,
+        "Placeable": true
+    },
+    "Defoilant": {
+        "ItemCategory": "Tool",
+        "StackSize": 16,
+        "Placeable": true
     }
 }

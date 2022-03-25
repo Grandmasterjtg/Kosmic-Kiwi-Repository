@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/InventoryScripts/ItemUI.gd" type="Script" id=1]
-[ext_resource path="res://ArtAssets/Temp/Iron Sword.png" type="Texture" id=2]
+[ext_resource path="res://ArtAssets/ItemIcons/Chemical.png" type="Texture" id=2]
 
 [node name="ItemUI" type="TextureRect"]
 margin_right = 80.0
