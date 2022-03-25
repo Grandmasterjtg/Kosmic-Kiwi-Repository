@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Character Scripts/Character.gd"
 }, {
+"base": "Node",
+"class": "Data",
+"language": "GDScript",
+"path": "res://Scripts/DataScripts/Data.gd"
+}, {
 "base": "Character",
 "class": "Friend",
 "language": "GDScript",
@@ -21,6 +26,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Character": "",
+"Data": "",
 "Friend": ""
 }
 
@@ -32,11 +38,11 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
 ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
+RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
 
 [display]
 

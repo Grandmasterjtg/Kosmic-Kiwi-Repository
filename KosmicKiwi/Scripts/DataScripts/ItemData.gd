@@ -1,25 +1,15 @@
-extends Node
+extends Data
 
-var m_item_data : Dictionary
+const FILE_PATH = "res://Data/ItemData.json"
 
 func _ready():
-	m_item_data = load_data("res://Data/ItemData.json")
-	
-func load_data(file_path : String) -> Dictionary:
-	var json_data
-	var file_data = File.new()
-	
-	file_data.open(file_path, File.READ)
-	json_data = JSON.parse(file_data.get_as_text())
-	file_data.close()
-	
-	return json_data.result
+	m_data = load_data(FILE_PATH)
 
 func get_item(item_name : String) -> Dictionary:
-	return m_item_data[item_name]
+	return m_data[item_name]
 	
 func get_stack_size(item_name: String) -> int:
-	return m_item_data[item_name]["StackSize"]
+	return m_data[item_name]["StackSize"]
 	
 func get_category(item_name: String) -> String:
-	return m_item_data[item_name]["ItemCategory"]
+	return m_data[item_name]["ItemCategory"]
