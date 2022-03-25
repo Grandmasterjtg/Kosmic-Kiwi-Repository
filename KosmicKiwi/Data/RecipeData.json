@@ -1,0 +1,14 @@
+{
+    "Rope": [
+        {
+            "Recipe": [["Fiber", 4]],
+            "Quantity": 1
+        }
+    ],
+    "Defoilant": [
+        {
+            "Recipe": [["Chemical", 5], ["Liquid", 5]],
+            "Quantity": 1
+        }
+    ]
+}

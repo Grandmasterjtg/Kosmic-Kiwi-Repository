@@ -1,0 +1,42 @@
+{
+    "Metal": {
+        "ItemCategory": "Resource",
+        "StackSize": 16,
+        "Placeable": false
+    },
+    "Ship Part": {
+        "ItemCategory": "ShipPart",
+        "StackSize": 1,
+        "Placeable": false
+    },
+    "Fiber": {
+        "ItemCategory": "Resource",
+        "StackSize": 16,
+        "Placeable": false
+    },
+    "Rock": {
+        "ItemCategory": "Resource",
+        "StackSize": 16,
+        "Placeable": false
+    },
+    "Chemical": {
+        "ItemCategory": "Resource",
+        "StackSize": 16,
+        "Placeable": false
+    },
+    "Liquid": {
+        "ItemCategory": "Resource",
+        "StackSize": 16,
+        "Placeable": false
+    },
+    "Rope": {
+        "ItemCategory": "Tool",
+        "StackSize": 16,
+        "Placeable": true
+    },
+    "Defoilant": {
+        "ItemCategory": "Tool",
+        "StackSize": 16,
+        "Placeable": true
+    }
+}

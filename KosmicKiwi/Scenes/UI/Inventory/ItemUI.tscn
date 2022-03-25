@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/InventoryScripts/ItemUI.gd" type="Script" id=1]
+[ext_resource path="res://ArtAssets/ItemIcons/Chemical.png" type="Texture" id=2]
+
+[node name="ItemUI" type="TextureRect"]
+margin_right = 80.0
+margin_bottom = 80.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Count" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 49.0
+margin_right = 58.0
+margin_bottom = 63.0
+rect_scale = Vector2( 2, 2 )
+text = "99"
+align = 2
+valign = 2

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Character Scripts/Friend.gd" type="Script" id=2]
+[ext_resource path="res://ArtAssets/Characters/friend.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 300.0
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 1500.0
+
+[node name="FriendBody" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+script = ExtResource( 2 )
+m_start_state = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="HomePosition" type="Node2D" parent="."]

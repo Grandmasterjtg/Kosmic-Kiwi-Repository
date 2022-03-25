@@ -9,29 +9,53 @@ const ACTION_LEFT := "move_left"
 const ACTION_RIGHT := "move_right"
 const ACTION_UP := "move_up"
 
-export var m_speed := 100.0
+const ANIMATION_DOWN := "down"
+const ANIMATION_DOWN_LEFT := "down_left"
+const ANIMATION_LEFT := "left"
+const ANIMATION_UP := "up"
+const ANIMATION_UP_LEFT := "up_left"
+
+export var m_speed : float
 var m_direction := Vector2(0, 1)
 
-func _physics_process(delta) -> void:
-	var horizontal_movement = m_speed * delta * \
-		(Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT))
-	var vertical_movement = m_speed * delta * \
-		(Input.get_action_strength(ACTION_DOWN) - Input.get_action_strength(ACTION_UP))
-	move_local_x(horizontal_movement)
-	move_local_y(vertical_movement)
-	if horizontal_movement != 0 or vertical_movement != 0:
-		m_direction = Vector2(horizontal_movement, vertical_movement).normalized()
-	get_child(0).rotation = get_angle_to(position + m_direction) - PI / 2
+onready var animation = $AnimatedSprite
 
-func _input(event) -> void:
-	if event.is_action_pressed(ACTION_HOTBAR_1):
-		instantiate_image(0.1)
-	elif event.is_action_pressed(ACTION_HOTBAR_2):
-		instantiate_image(0.25)
-	elif event.is_action_pressed(ACTION_HOTBAR_3):
-		instantiate_image(0.5)
-	elif event.is_action_pressed(ACTION_HOTBAR_4):
-		instantiate_image(1)
+func _physics_process(delta) -> void:
+	var x = Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT)
+	var y = Input.get_action_strength(ACTION_DOWN) - Input.get_action_strength(ACTION_UP)
+	if x != 0 or y != 0:
+		var angle = get_angle_to(position + Vector2(x,y).normalized())
+		m_direction = IsometricVector.angle_to_isometric_vector(angle)
+		move_and_slide(m_direction * m_speed, Vector2.UP)
+		change_animation()
+
+func change_animation():
+	if m_direction.y < -0.01:
+		if m_direction.x > 0.01:
+			animation.play(ANIMATION_UP_LEFT)
+			animation.flip_h = true
+		elif m_direction.x < -0.01:
+			animation.play(ANIMATION_UP_LEFT)
+			animation.flip_h = false
+		else:
+			animation.play(ANIMATION_UP)
+			animation.flip_h = false
+	elif m_direction.y > 0.01:
+		if m_direction.x > 0.01:
+			animation.play(ANIMATION_DOWN_LEFT)
+			animation.flip_h = true
+		elif m_direction.x < -0.01:
+			animation.play(ANIMATION_DOWN_LEFT)
+			animation.flip_h = false
+		else:
+			animation.play(ANIMATION_DOWN)
+			animation.flip_h = false
+	elif m_direction.x > 0.01:
+		animation.play(ANIMATION_LEFT)
+		animation.flip_h = true
+	elif m_direction.x < -0.01:
+		animation.play(ANIMATION_LEFT)
+		animation.flip_h = false
 
 func instantiate_image(scale) -> void:
 	var sprite = Sprite.new()

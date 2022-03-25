@@ -9,35 +9,56 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "FriendAbility",
-"language": "GDScript",
-"path": "res://Scripts/FriendAbility.gd"
-}, {
-"base": "Node",
-"class": "NPC",
-"language": "GDScript",
-"path": "res://Scripts/Classes/NPC.gd"
-}, {
 "base": "KinematicBody2D",
-"class": "Player",
+"class": "Character",
 "language": "GDScript",
-"path": "res://Scripts/Friend.gd"
+"path": "res://Scripts/Character Scripts/Character.gd"
+}, {
+"base": "Node",
+"class": "Data",
+"language": "GDScript",
+"path": "res://Scripts/DataScripts/Data.gd"
+}, {
+"base": "Character",
+"class": "Friend",
+"language": "GDScript",
+"path": "res://Scripts/Character Scripts/Friend.gd"
+}, {
+"base": "Node",
+"class": "Recipe",
+"language": "GDScript",
+"path": "res://Scripts/DataStructures/Recipe.gd"
 } ]
 _global_script_class_icons={
-"FriendAbility": "",
-"NPC": "",
-"Player": ""
+"Character": "",
+"Data": "",
+"Friend": "",
+"Recipe": ""
 }
 
 [application]
 
 config/name="Kosmic Kiwi"
+run/main_scene="res://Scenes/Menu_Scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-PlanetManager="*res://Scripts/PlanetManager.gd"
+ItemData="*res://Scripts/DataScripts/ItemData.gd"
+Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
+ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
+ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
+IsometricVector="*res://Scripts/IsometricVector.gd"
+RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=1440
+window/size/test_height=810
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [input]
 
@@ -106,6 +127,17 @@ hotbar_4={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+Press={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Ground"
+2d_physics/layer_4="Item"
 
 [physics]
 

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/InteractableScripts/ButtonDisplay.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/InteractableScripts/ResourceDeposit.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/InteractableScripts/Interactable.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 50.0
+height = 70.0
+
+[node name="ResourceDeposit" type="Node2D"]
+z_index = 1
+script = ExtResource( 2 )
+
+[node name="Interactable" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="ButtonDisplay" type="RichTextLabel" parent="."]
+visible = false
+margin_left = -7.0
+margin_top = -92.0
+margin_bottom = -77.0
+rect_scale = Vector2( 3, 3 )
+text = "E"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
