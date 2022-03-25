@@ -7,4 +7,7 @@ func _ready():
 	m_close_button.connect("pressed",self,"_on_CloseButton_pressed")
 
 func _on_CloseButton_pressed():
-	self.queue_free()
+	toggle_nav_menu()
+
+func toggle_nav_menu():
+	visible = !visible

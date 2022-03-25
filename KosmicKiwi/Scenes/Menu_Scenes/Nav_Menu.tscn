@@ -8,6 +8,8 @@
 [ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=6]
 
 [node name="NavMenu" type="Control"]
+margin_left = 340.0
+margin_top = 180.0
 script = ExtResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -24,6 +26,7 @@ margin_top = 371.0
 margin_right = 572.0
 margin_bottom = 561.0
 size_flags_horizontal = 3
+planetPath = "res://Levels/levelone.tscn"
 
 [node name="Planet_2_Button2" parent="." instance=ExtResource( 1 )]
 margin_left = 703.0
@@ -31,9 +34,10 @@ margin_top = 278.0
 margin_right = 860.0
 margin_bottom = 468.0
 size_flags_horizontal = 3
+planetPath = "res://Levels/TileScene.tscn"
 
 [node name="Label" parent="Planet_2_Button2" index="0"]
-text = "Planet 2"
+text = "Test Level"
 
 [node name="Button" parent="Planet_2_Button2" index="1"]
 icon = ExtResource( 4 )

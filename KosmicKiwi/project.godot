@@ -38,10 +38,12 @@ config/icon="res://icon.png"
 
 [autoload]
 
+PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
 ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
+IsometricVector="*res://Scripts/IsometricVector.gd"
 
 [display]
 
@@ -50,7 +52,7 @@ window/size/height=1080
 window/size/test_width=1440
 window/size/test_height=810
 window/stretch/mode="2d"
-window/stretch/aspect="expand"
+window/stretch/aspect="keep"
 
 [input]
 

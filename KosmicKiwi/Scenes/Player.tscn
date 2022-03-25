@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://ArtAssets/Kiwi/WalkBack.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/PlayerMovement.gd" type="Script" id=2]
@@ -260,6 +260,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CircleShape2D" id=47]
+radius = 250.0
+
 [node name="Player" type="KinematicBody2D"]
 z_index = 1
 script = ExtResource( 2 )
@@ -273,3 +276,6 @@ animation = "left"
 current = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 47 )
