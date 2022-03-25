@@ -2,7 +2,7 @@ extends Control
 
 var m_close_button
 var m_start_button
-export var first_level_path = ""
+export var first_level_path = "res://Levels/TestInteraction.tscn"
 
 func _ready():
 	m_close_button = $CloseButton

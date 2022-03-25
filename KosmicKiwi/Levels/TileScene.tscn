@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,3 +18,12 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 1000, 500 )
 format = 1
 tile_data = PoolIntArray( -983040, 1, 0, -983033, 0, 0, -851971, 1, 0, -720900, 1, 0, -786428, 3, 0, -720887, 0, 0, -720884, 0, 0, -589829, 1, 0, -589827, 1, 0, -655359, 3, 0, -524292, 1, 0, -589816, 0, 0, -589812, 0, 0, -458760, 1, 0, -458759, 1, 0, -458758, 1, 0, -458757, 1, 0, -524282, 3, 0, -458741, 9, 0, -393203, 9, 0, -327679, 3, 0, -327668, 9, 0, 5, 8, 0, 7, 8, 0, 131079, 8, 0, 196614, 8, 0 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4664, -595 )
+m_speed = 600.0
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( -12, -9 )
+current = true
+zoom = Vector2( 3, 3 )
