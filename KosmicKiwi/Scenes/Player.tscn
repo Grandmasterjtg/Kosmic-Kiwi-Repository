@@ -142,51 +142,6 @@ flags = 4
 atlas = ExtResource( 6 )
 region = Rect2( 8640, 0, 1080, 1080 )
 
-[sub_resource type="AtlasTexture" id=20]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 1080, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 2160, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=23]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 3240, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=24]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 4320, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=25]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 5400, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=26]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 6480, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=27]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 7560, 0, 1080, 1080 )
-
-[sub_resource type="AtlasTexture" id=28]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 8640, 0, 1080, 1080 )
-
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 3 )
@@ -232,6 +187,51 @@ flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 8640, 0, 1080, 1080 )
 
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1080, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 2160, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3240, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4320, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 5400, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 6480, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 7560, 0, 1080, 1080 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 8640, 0, 1080, 1080 )
+
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
 "frames": [ SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
@@ -249,14 +249,14 @@ animations = [ {
 "name": "down_left",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
-"loop": true,
-"name": "up_left",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
 "loop": true,
 "name": "down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
+"loop": true,
+"name": "up_left",
 "speed": 5.0
 } ]
 
@@ -265,7 +265,7 @@ animations = [ {
 [node name="Player" type="KinematicBody2D"]
 z_index = 1
 script = ExtResource( 2 )
-m_speed = 200.0
+m_speed = 2000.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 10 )
@@ -273,6 +273,7 @@ animation = "left"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 5, 5 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 

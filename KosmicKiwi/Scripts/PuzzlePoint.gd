@@ -10,6 +10,5 @@ func remove_obstacle():
 	m_obstacle.queue_free()
 
 func _on_CollisionShape2D_collided(area : Area2D):
-	if area.get_parent().get_item_name() == m_correct_item:
-		print("test")
-	#remove_obstacle()
+	if m_obstacle != null and area.get_parent().get_item_name() == m_correct_item:
+		remove_obstacle()

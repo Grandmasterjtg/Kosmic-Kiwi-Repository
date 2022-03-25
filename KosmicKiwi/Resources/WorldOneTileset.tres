@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=13 format=2]
+[gd_resource type="TileSet" load_steps=18 format=2]
 
 [ext_resource path="res://TilemapAssets/Briar.png" type="Texture" id=1]
 [ext_resource path="res://TilemapAssets/Ground2.png" type="Texture" id=2]
@@ -13,6 +13,21 @@
 [ext_resource path="res://TilemapAssets/Water.png" type="Texture" id=11]
 [ext_resource path="res://TilemapAssets/Shore.png" type="Texture" id=12]
 
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 527, 45, 575, 58, 657, 80, 725, 123, 789, 156, 837, 197, 867, 294, 894, 376, 900, 490, 860, 632, 799, 750, 654, 826, 494, 855, 403, 841, 293, 830, 212, 733, 176, 700, 117, 654, 105, 586, 91, 504, 97, 403, 130, 201, 253, 101, 336, 53, 396, 43, 397, 41, 401, 42 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 435, 64, 715, 44, 875, 128, 908, 249, 962, 375.625, 977, 572, 805, 741, 723, 808, 579, 910, 504, 908, 363, 850, 196, 748, 135, 628, 25, 489, 27, 320, 62, 186, 208, 105, 214, 106 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 119, 809, 121, 810, 185, 798, 224, 763, 336, 701, 439, 656, 529, 603, 621, 559, 1000, 748, 499, 1000 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 1000, 1000, 6, 1000, 0, 0, 1000, 5 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 999, 247, 998, 753, 498, 1000, 0, 752, 0, 247, 499, 496, 499, 497 )
+
 [resource]
 0/name = "Boulder"
 0/texture = ExtResource( 7 )
@@ -24,9 +39,16 @@
 0/navigation_offset = Vector2( 500, 500 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 0/z_index = 0
 1/name = "Briar"
 1/texture = ExtResource( 1 )
@@ -38,9 +60,16 @@
 1/navigation_offset = Vector2( 500, 500 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 4 )
 1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 1/z_index = 0
 2/name = "Dust"
 2/texture = ExtResource( 5 )
@@ -122,9 +151,16 @@
 7/navigation_offset = Vector2( 500, 500 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 5 )
 7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 7/z_index = 0
 8/name = "Ore"
 8/texture = ExtResource( 6 )
@@ -164,9 +200,16 @@
 10/navigation_offset = Vector2( 500, 500 )
 10/shape_offset = Vector2( 0, 0 )
 10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 6 )
 10/shape_one_way = false
-10/shape_one_way_margin = 0.0
-10/shapes = [  ]
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 10/z_index = 0
 11/name = "Water"
 11/texture = ExtResource( 11 )
@@ -178,7 +221,14 @@
 11/navigation_offset = Vector2( 500, 500 )
 11/shape_offset = Vector2( 0, 0 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 2 )
 11/shape_one_way = false
-11/shape_one_way_margin = 0.0
-11/shapes = [  ]
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 11/z_index = 0

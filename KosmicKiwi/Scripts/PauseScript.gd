@@ -2,7 +2,6 @@ extends Control
 
 const ACTION_PAUSE := "pause"
 
-onready var background := get_node("CanvasLayer/ColorRect")
 onready var pause_menu := get_node("CanvasLayer/PauseMenu")
 onready var controls_menu := get_node("CanvasLayer/ControlsMenu")
 onready var settings_menu := get_node("CanvasLayer/SettingsMenu")
@@ -13,7 +12,6 @@ func _input(event) -> void:
 
 func toggle_paused() -> void:
 	get_tree().paused = !get_tree().paused
-	background.visible = get_tree().paused
 	if get_tree().paused:
 		pause_menu.visible = true
 	else:

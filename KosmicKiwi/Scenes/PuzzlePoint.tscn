@@ -1,14 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scripts/PuzzlePoint.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/PuzzleCollider.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 81.9878
 
 [node name="MainTiles" type="TileMap"]
 mode = 1
-tile_set = ExtResource( 1 )
 cell_size = Vector2( 1000, 500 )
 format = 1
 script = ExtResource( 2 )
