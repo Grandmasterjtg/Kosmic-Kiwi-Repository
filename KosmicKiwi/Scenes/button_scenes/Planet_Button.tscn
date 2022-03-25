@@ -23,5 +23,3 @@ margin_right = 612.0
 margin_bottom = 639.0
 rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 1 )
-
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

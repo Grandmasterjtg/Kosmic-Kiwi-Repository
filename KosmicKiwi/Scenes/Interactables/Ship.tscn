@@ -27,6 +27,7 @@ position = Vector2( 0, 110 )
 shape = SubResource( 1 )
 
 [node name="ButtonDisplay" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 180.0
 margin_top = -92.0
 margin_right = 187.0
@@ -36,6 +37,8 @@ text = "E"
 script = ExtResource( 3 )
 
 [node name="Interactable" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource( 2 )
 interact_radius = 200
 interact_height = 300

@@ -265,6 +265,8 @@ radius = 250.0
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 1
+collision_layer = 2
+collision_mask = 0
 script = ExtResource( 2 )
 m_speed = 200.0
 

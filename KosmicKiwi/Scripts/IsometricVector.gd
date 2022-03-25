@@ -1,7 +1,7 @@
 extends Node
 
 const ELLIPSE_A = 1.0
-const ELLIPSE_B = 0.5
+const ELLIPSE_B = 1.0
 
 func angle_to_isometric_vector(angle : float = 0.0) -> Vector2:
 	var e = sqrt(1-(pow(ELLIPSE_B,2)/pow(ELLIPSE_A,2)))
