@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Friend",
 "language": "GDScript",
 "path": "res://Scripts/Character Scripts/Friend.gd"
+}, {
+"base": "Node",
+"class": "Recipe",
+"language": "GDScript",
+"path": "res://Scripts/DataStructures/Recipe.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
 "Data": "",
-"Friend": ""
+"Friend": "",
+"Recipe": ""
 }
 
 [application]
