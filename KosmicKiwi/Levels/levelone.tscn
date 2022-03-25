@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://Scripts/InteractableScripts/ButtonDisplay.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/InteractableScripts/ResourceDeposit.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/InteractableScripts/Interactable.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Interactables/IndicatorBubble.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ArtAssets/ItemIcons/Defoilant.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=14]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 50.0
@@ -18,11 +22,20 @@ height = 70.0
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
 
-[node name="Pause" parent="." instance=ExtResource( 3 )]
+[node name="Actors" type="Node2D" parent="."]
+
+[node name="Ship" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 642, -2031 )
+z_index = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
+[node name="Pause" parent="." instance=ExtResource( 3 )]
+
 [node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
+
+[node name="NavMenu" parent="CanvasLayer" instance=ExtResource( 14 )]
+visible = false
 
 [node name="firstGround" type="TileMap" parent="."]
 mode = 1
@@ -1209,6 +1222,21 @@ position = Vector2( 25029, -16842 )
 scale = Vector2( 5, 5 )
 m_name = "Rock Deposit"
 
+[node name="IndicatorBubble" parent="." instance=ExtResource( 12 )]
+position = Vector2( 19558, -14463 )
+
+[node name="IndicatorBubble2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 11497, -7319 )
+
+[node name="Sprite" parent="IndicatorBubble2" index="0"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 13 )
+
+[node name="IndicatorBubble3" parent="." instance=ExtResource( 12 )]
+position = Vector2( -2983, -4658 )
+scale = Vector2( 1, 0.946667 )
+
 [editable path="RopeOverWater"]
 [editable path="DefoilantBushes"]
 [editable path="RopeUpCliff"]
+[editable path="IndicatorBubble2"]

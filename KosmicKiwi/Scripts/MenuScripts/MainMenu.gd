@@ -3,7 +3,7 @@ extends Control
 onready var m_close_button = $CloseButton
 onready var m_start_button = $StartButton
 
-const START_LEVEL_PATH = "res://Levels/TileScene.tscn"
+const START_LEVEL_PATH = "res://Levels/levelone.tscn"
 
 func _ready():
 	m_close_button = $CloseButton

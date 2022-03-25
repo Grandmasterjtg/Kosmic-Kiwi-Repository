@@ -42,7 +42,7 @@ func place_item(index: int):
 
 	if slot_item != null and ItemData.is_placeable(slot_item.get_item_name()):
 		var item = ITEM_CLASS.instance()
-		item.set_item(slot_item.get_item_name(), get_viewport().get_mouse_position())
+		item.set_item(slot_item.get_item_name(), get_parent().get_parent().get_child(1).position)
 		Inventory.remove_item(slot_item.get_item_name())
 		get_tree().root.add_child(item)
 		

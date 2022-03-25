@@ -34,7 +34,7 @@ func _ready():
 	m_home_pos = $HomePosition.global_position
 	
 	# set the start_state
-	m_current_state = m_start_state
+	set_state(m_start_state)
 
 func _physics_process(delta):
 	handle_state()
