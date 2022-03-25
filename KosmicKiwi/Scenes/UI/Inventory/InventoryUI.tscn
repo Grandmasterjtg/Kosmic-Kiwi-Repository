@@ -11,6 +11,7 @@
 script = ExtResource( 4 )
 
 [node name="InventoryUI" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 411.0
@@ -23,10 +24,14 @@ __meta__ = {
 }
 
 [node name="Background" type="TextureRect" parent="InventoryUI"]
-margin_left = -248.0
-margin_top = -138.0
-margin_right = 1351.0
-margin_bottom = 726.0
+anchor_left = -0.451
+anchor_top = -0.384
+anchor_right = 1.689
+anchor_bottom = 1.871
+margin_left = 147.096
+margin_top = 46.32
+margin_right = -171.344
+margin_bottom = -172.08
 texture = ExtResource( 2 )
 expand = true
 __meta__ = {
@@ -77,6 +82,74 @@ __meta__ = {
 }
 m_category_index = 2
 
+[node name="Crafting" type="Control" parent="."]
+margin_left = 411.0
+margin_top = 183.0
+margin_right = 451.0
+margin_bottom = 223.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="Crafting"]
+anchor_left = -0.451
+anchor_top = -0.384
+anchor_right = 1.689
+anchor_bottom = 1.871
+margin_left = -238.96
+margin_top = -122.64
+margin_right = 1274.44
+margin_bottom = 651.16
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Crafting"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Crafting/VBoxContainer2"]
+margin_right = 100.0
+margin_bottom = 308.0
+
+[node name="Slot" parent="Crafting/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="Slot2" parent="Crafting/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 104.0
+margin_right = 100.0
+margin_bottom = 204.0
+
+[node name="Slot3" parent="Crafting/VBoxContainer2/VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 208.0
+margin_right = 100.0
+margin_bottom = 308.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Crafting/VBoxContainer2"]
+margin_top = 312.0
+margin_right = 100.0
+margin_bottom = 620.0
+
+[node name="Slot" parent="Crafting/VBoxContainer2/VBoxContainer2" instance=ExtResource( 1 )]
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="Slot2" parent="Crafting/VBoxContainer2/VBoxContainer2" instance=ExtResource( 1 )]
+margin_top = 104.0
+margin_right = 100.0
+margin_bottom = 204.0
+
+[node name="Slot3" parent="Crafting/VBoxContainer2/VBoxContainer2" instance=ExtResource( 1 )]
+margin_top = 208.0
+margin_right = 100.0
+margin_bottom = 308.0
+
 [node name="Hotbar" type="Control" parent="."]
 script = ExtResource( 6 )
 __meta__ = {
@@ -84,10 +157,10 @@ __meta__ = {
 }
 
 [node name="HotbarSlots" type="HBoxContainer" parent="Hotbar"]
-margin_left = 711.0
-margin_top = 946.0
-margin_right = 1159.0
-margin_bottom = 1046.0
+margin_left = 728.0
+margin_top = 914.0
+margin_right = 1176.0
+margin_bottom = 1014.0
 custom_constants/separation = 16
 __meta__ = {
 "_edit_use_anchors_": false
