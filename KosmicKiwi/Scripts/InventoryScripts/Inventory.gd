@@ -102,7 +102,7 @@ func item_exists_in_hotbar(category: String, slot: int) -> bool:
 func item_exists_at_index(index: int, category: String) -> bool:
 	return m_inventory[category].has(index)
 
-func item_exists_in_inventory(item_name: String, amount: int=0) -> bool:
+func item_exists_in_inventory(item_name: String, amount: int=1) -> bool:
 	var category = ItemData.get_category(item_name)
 	var inventory = m_inventory[category]
 	

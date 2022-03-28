@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/Character Scripts/Friend.gd"
 }, {
 "base": "Node",
+"class": "NPC",
+"language": "GDScript",
+"path": "res://Scripts/Classes/NPC.gd"
+}, {
+"base": "Node",
 "class": "Recipe",
 "language": "GDScript",
 "path": "res://Scripts/DataStructures/Recipe.gd"
@@ -33,6 +38,7 @@ _global_script_class_icons={
 "Character": "",
 "Data": "",
 "Friend": "",
+"NPC": "",
 "Recipe": ""
 }
 
