@@ -6,6 +6,7 @@ onready var m_recipe_display = $RecipeDisplay
 func _ready():
 	var items = RecipeData.get_all_items()
 
+	# initiate RecipeUI scene for each recipe that exists
 	for item in items:
 		var recipes = RecipeData.get_item_recipes(item)
 		for recipe in recipes:
