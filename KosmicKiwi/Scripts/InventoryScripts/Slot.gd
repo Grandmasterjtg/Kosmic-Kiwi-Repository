@@ -4,6 +4,16 @@ const CLICK = "Press"
 
 export var m_is_interactable := false
 
+# textures
+const SLOT_PATH := "res://ArtAssets/InventorySlots/"
+const SLOT_TYPE := ".png"
+
+const EMPTY_SLOT = preload("res://ArtAssets/InventorySlots/Empty.png")
+const TOOL_SLOT = preload("res://ArtAssets/InventorySlots/Tool.png")
+const SHIP_SLOT = preload("res://ArtAssets/InventorySlots/ShipPart.png")
+const RESOURCE_SLOT = preload("res://ArtAssets/InventorySlots/Resource.png")
+const SELECTED_SLOT = preload("res://ArtAssets/InventorySlots/Selected.png")
+
 const ITEM_CLASS = preload("res://Scenes/UI/Inventory/ItemUI.tscn")
 var m_item = null
 
@@ -24,7 +34,9 @@ func initialize_item(item_name: String, item_quantity: int) -> void:
 		# set the scale of the item to match the size of the slot
 		var scale = rect_min_size.x / m_item.rect_size.x
 		m_item.rect_scale *= scale
-		print(scale)
+		
+	# set slot style
+	
 
 # if an item exists, it deletes the node and sets the variable to null
 func delete_item():
