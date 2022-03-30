@@ -24,8 +24,9 @@ func initialize_recipe(recipe: Recipe):
 	
 	for item in requirements:
 		var slot = SLOT_CLASS.instance()
-		slot.initialize_item(item[0], item[1])
 		m_recipe_display.add_child(slot)
+		slot.initialize_item(item[0], item[1])
+		
 		
 func craft() -> bool:
 	var requirements = m_recipe.get_recipe()

@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/InventoryScripts/Slot.gd" type="Script" id=1]
-[ext_resource path="res://ArtAssets/OurArt/EmptyFrame.png" type="Texture" id=2]
+[ext_resource path="res://ArtAssets/InventorySlots/Empty.png" type="Texture" id=2]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
-region_rect = Rect2( 20, 21, 559, 558 )
+region_rect = Rect2( 0, 0, 600, 600 )
 
 [node name="Slot" type="Panel"]
 margin_right = 70.0

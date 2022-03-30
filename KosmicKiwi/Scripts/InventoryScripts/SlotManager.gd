@@ -12,9 +12,10 @@ func _ready() -> void:
 	var num_slots = ItemCategories.get_num_slots(m_category_index)
 	for i in range(num_slots):
 		var slot = SLOT_CLASS.instance()
+		add_child(slot)
 		slot.set_slot_number(i)
 		slot.set_is_interactable(ItemCategories.get_is_interactable(m_category_index))
-		add_child(slot)
+		
 
 func get_category() -> String:
 	return m_category
