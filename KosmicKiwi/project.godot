@@ -51,11 +51,11 @@ config/icon="res://icon.png"
 [autoload]
 
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
-Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
+InventoryData="*res://Scripts/DataScripts/InventoryData.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
-ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
 IsometricVector="*res://Scripts/IsometricVector.gd"
 RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
+Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 
 [display]
 

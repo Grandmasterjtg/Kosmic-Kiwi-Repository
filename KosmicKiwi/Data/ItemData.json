@@ -38,5 +38,11 @@
         "ItemCategory": "Tool",
         "StackSize": 16,
         "Placeable": true
+    },
+    "Power Core": {
+
+    },
+    "Solar Sail": {
+        
     }
 }

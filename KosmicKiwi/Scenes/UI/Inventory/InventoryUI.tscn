@@ -91,6 +91,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+m_category = "Resource"
 
 [node name="ToolInventory" type="GridContainer" parent="InventoryUI/Sections"]
 margin_left = 417.0
@@ -104,7 +105,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-m_category_index = 1
+m_category = "Tool"
 
 [node name="ShipInventory" type="GridContainer" parent="InventoryUI/Sections"]
 margin_left = 211.0
@@ -117,7 +118,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-m_category_index = 2
+m_category = "ShipPart"
 
 [node name="Hotbar" type="Control" parent="."]
 script = ExtResource( 6 )

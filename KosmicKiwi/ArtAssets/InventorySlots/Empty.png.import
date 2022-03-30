@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HarvesterFrame.png-80ae07209a99608b9d0b0afca69576ff.stex"
+path="res://.import/Empty.png-30ea67f2678eef0493cd0234679567b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/UI/HarvesterFrame.png"
-dest_files=[ "res://.import/HarvesterFrame.png-80ae07209a99608b9d0b0afca69576ff.stex" ]
+source_file="res://ArtAssets/InventorySlots/Empty.png"
+dest_files=[ "res://.import/Empty.png-30ea67f2678eef0493cd0234679567b5.stex" ]
 
 [params]
 

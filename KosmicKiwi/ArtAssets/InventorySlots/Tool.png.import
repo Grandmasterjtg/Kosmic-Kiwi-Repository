@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fiber.png-19fe0903b58fbdb0518b5096a993550b.stex"
+path="res://.import/Tool.png-1904a836226b80518bbf0d1039d890e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/UI/fiber.png"
-dest_files=[ "res://.import/fiber.png-19fe0903b58fbdb0518b5096a993550b.stex" ]
+source_file="res://ArtAssets/InventorySlots/Tool.png"
+dest_files=[ "res://.import/Tool.png-1904a836226b80518bbf0d1039d890e7.stex" ]
 
 [params]
 
