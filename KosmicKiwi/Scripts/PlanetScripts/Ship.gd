@@ -11,9 +11,6 @@ var m_current_ship_parts = []
 
 signal interacted
 
-# UI variables
-var m_nav_menu
-
 func _ready() -> void:
 	# resource setup
 	interactable.connect("interacted", self, "_on_interact")
@@ -21,8 +18,7 @@ func _ready() -> void:
 	interactable.connect("exited", $ButtonDisplay, "toggle_display")
 	
 	# progression setup
-	connect("ship_part_added",ProgressionManager,"on_ship_part_added")
+	# connect("ship_part_added",ProgressionManager,"on_ship_part_added")
 
 func _on_interact() -> void:
 	emit_signal("interacted")
-	if (Inventory.)
