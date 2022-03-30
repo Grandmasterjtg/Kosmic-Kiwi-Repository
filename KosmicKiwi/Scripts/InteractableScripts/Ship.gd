@@ -3,9 +3,11 @@ extends Node2D
 onready var interactable = $Interactable
 
 # interaction variables
-var m_in_area := false
 const INTERACT := "interact"
 const NAV_MENU := "/root/Node2D/CanvasLayer/NavMenu"
+
+var m_in_area := false
+var m_current_ship_parts = []
 
 signal interacted
 
@@ -18,12 +20,9 @@ func _ready() -> void:
 	interactable.connect("entered", $ButtonDisplay, "toggle_display")
 	interactable.connect("exited", $ButtonDisplay, "toggle_display")
 	
-	# nav menu setup
-	#m_nav_menu = get_node(NAV_MENU)
-	#if (m_nav_menu == null):
-	#	printerr("Nav_Menu was not found!")
-	
+	# progression setup
+	connect("ship_part_added",ProgressionManager,"on_ship_part_added")
+
 func _on_interact() -> void:
 	emit_signal("interacted")
-	#if (m_nav_menu != null):
-	#	m_nav_menu.visible = !m_nav_menu.visible
+	if (Inventory.)

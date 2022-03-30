@@ -43,13 +43,9 @@ func _physics_process(delta):
 func set_state(state):
 	m_current_state = state
 	match state:
-		CharacterState.FOLLOW:
-			pass
-		CharacterState.HOME:
-			pass
 		CharacterState.IDLE:
 			m_timer.start()
-		CharacterState.STEAL:
+		_:
 			pass
 
 func handle_state():
@@ -63,11 +59,8 @@ func handle_state():
 			move_home()
 		CharacterState.IDLE:
 			pass
-		CharacterState.STEAL:
-			if (m_timer.time_left > 0):
-				pass
-			else:
-				steal_from_player()
+		_:
+			set_state(CharacterState.HOME)
 
 # follows a global_position target
 func follow_target(target):
@@ -89,15 +82,6 @@ func move_home():
 	
 	if (home_direction.length_squared() < (m_stop_distance * m_stop_distance)):
 		set_state(CharacterState.IDLE)
-
-func steal_from_player():
-	if (self.global_position.distance_to(m_player_node.global_position) < m_detection_distance):
-		var player_direction = m_player_node.global_position - self.global_position
-		move(player_direction)
-		
-		if (player_direction.length_squared() < (m_stop_distance * m_stop_distance)):
-			print("Something was stolen!")
-			set_state(CharacterState.HOME)
 
 func move(direction: Vector2) -> void:
 	#var isometric_speed = IsometricVector.vector_to_isometric_vector(direction)

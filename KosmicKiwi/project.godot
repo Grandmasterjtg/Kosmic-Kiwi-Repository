@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/Classes/NPC.gd"
 }, {
 "base": "Node",
+"class": "Planet",
+"language": "GDScript",
+"path": "res://Scripts/PlanetScripts/Planet.gd"
+}, {
+"base": "Node",
 "class": "Recipe",
 "language": "GDScript",
 "path": "res://Scripts/DataStructures/Recipe.gd"
@@ -39,6 +44,7 @@ _global_script_class_icons={
 "Data": "",
 "Friend": "",
 "NPC": "",
+"Planet": "",
 "Recipe": ""
 }
 
@@ -56,6 +62,7 @@ ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
 IsometricVector="*res://Scripts/IsometricVector.gd"
 RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
+ProgressionManager="*res://Scripts/PlanetScripts/ProgressionManager.gd"
 
 [display]
 

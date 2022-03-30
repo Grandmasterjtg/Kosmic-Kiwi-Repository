@@ -19,4 +19,4 @@ func update_buttons():
 	for button in m_buttons:
 		if (button.m_item_required):
 			# var thisButton = button.get_node("Button")
-			button.set_active(!Inventory.item_exists_in_inventory(button.m_required_item_name))
+			button.set_active(ProgressionManager.check_for_ship_part(button.m_required_item_name))
