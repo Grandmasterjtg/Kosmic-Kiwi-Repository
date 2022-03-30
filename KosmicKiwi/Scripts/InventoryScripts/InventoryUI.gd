@@ -14,13 +14,13 @@ func _ready():
 	update_inventory()
 
 func update_inventory():
-	var categories = ItemCategories.get_categories()
+	var categories = InventoryData.get_inventory_data()
 	for _category in categories:
-		var slots = m_inventory_slots[_category[0]].get_children()
+		var slots = m_inventory_slots[_category].get_children()
 		for i in range(slots.size()):
-			if Inventory.item_exists_at_index(i, _category[0]):
-				var item_name = Inventory.get_item_name(i, _category[0])
-				var item_quantity = Inventory.get_item_quantity(i, _category[0])
+			if Inventory.item_exists_at_index(i, _category):
+				var item_name = Inventory.get_item_name(i, _category)
+				var item_quantity = Inventory.get_item_quantity(i, _category)
 				slots[i].initialize_item(item_name, item_quantity)
 			else:
 				slots[i].delete_item()

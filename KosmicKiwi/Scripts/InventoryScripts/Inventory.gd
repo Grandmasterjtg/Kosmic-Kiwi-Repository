@@ -10,10 +10,10 @@ signal inventory_updated
 
 
 func _ready() -> void:
-	var categories = ItemCategories.get_categories()
+	var categories = InventoryData.get_inventory_data()
 	for _category in categories:
-		m_inventory[_category[0]] = {}
-		m_num_slots[_category[0]] = _category[1]
+		m_inventory[_category] = {}
+		m_num_slots[_category] = InventoryData.get_num_slots(_category)
 
 
 # takes the name of an item and the amount of that item
