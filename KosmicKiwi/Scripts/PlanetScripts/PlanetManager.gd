@@ -15,16 +15,4 @@ func _ready():
 
 func update_planets():
 	for planet in planets:
-		planet.set_travelable(check_required_items(planet))
-
-func check_required_items(planet : Planet) -> bool:
-	var all_items_found := true
-	for item in planet.m_required_items:
-		if (!Inventory.item_exists_in_inventory(item)):
-			# print(item + " was not found for " + planet.get_planet_name())
-			all_items_found = false
-			break
-		else:
-			# print("Found " + item)
-			pass
-	return all_items_found
+		planet.check_required_items()

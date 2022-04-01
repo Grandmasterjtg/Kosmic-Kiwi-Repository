@@ -14,6 +14,15 @@ func _init(planet_name : String, planet_path : String):
 func add_required_item(item_name : String):
 	self.m_required_items.append(item_name)
 
+func check_required_items() -> bool:
+	var all_items_found := true
+	for item in m_required_items:
+		if (!Inventory.item_exists_in_inventory(item)):
+			all_items_found = false
+			break
+	m_travelable = all_items_found
+	return all_items_found
+
 func get_planet_name() -> String:
 	return self.m_planet_name
 
