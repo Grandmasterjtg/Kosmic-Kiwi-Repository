@@ -5,7 +5,7 @@ const ACTION_HOTBAR_2 := "hotbar_2"
 const ACTION_HOTBAR_3 := "hotbar_3"
 const ACTION_HOTBAR_4 := "hotbar_4"
 
-onready var m_hotbar_slots = $HotbarSlots
+onready var m_hotbar_slots = $HotbarSlots.get_children()
 const ITEM_CLASS = preload("res://Scenes/Interactables/Item.tscn")
 
 func _ready() -> void:
@@ -23,8 +23,8 @@ func _input(event):
 	
 func update_hotbar():
 	var slots = m_hotbar_slots.get_children()
-	for i in range(slots.size()):
-		slots[i].delete_item()
+	for i in range(m_hotbar_slots.size()):
+		m_hotbar_slots[i].delete_item()
 	
 	
 	var items = Inventory.get_items_in_hotbar()

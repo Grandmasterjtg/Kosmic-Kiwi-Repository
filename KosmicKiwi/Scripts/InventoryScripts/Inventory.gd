@@ -4,7 +4,7 @@ var m_num_slots := {} # { ItemCategory: NumSlots }
 const HOTBAR_SLOTS := 4
 
 var m_inventory := {} # { ItemCategory: { SlotIndex: [ItemName, ItemQuantity] } }
-var m_hotbar := {} # { [Category, InventorySlotIndex]: [ItemName, ItemQuantity] }
+var m_hotbar := {} # { [Category, InventorySlotIndex]: [ItemName, ItemQuantity, IsSelected] }
 
 signal inventory_updated
 
@@ -102,6 +102,8 @@ func item_exists_in_hotbar(category: String, slot: int) -> bool:
 func item_exists_at_index(index: int, category: String) -> bool:
 	return m_inventory[category].has(index)
 
+# takes an item name and an item amount
+# if there exists an amount of that item in the inventory, return true
 func item_exists_in_inventory(item_name: String, amount: int=1) -> bool:
 	var category = ItemData.get_category(item_name)
 	var inventory = m_inventory[category]
