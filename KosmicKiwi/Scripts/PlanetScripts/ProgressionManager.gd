@@ -10,3 +10,6 @@ func add_ship_part(part_name : String):
 
 func check_for_ship_part(part_name : String) -> bool:
 	return m_current_ship_parts.has(part_name)
+
+func update_puzzles():
+	pass
