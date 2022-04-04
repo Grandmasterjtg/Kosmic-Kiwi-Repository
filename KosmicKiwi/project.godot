@@ -35,11 +35,6 @@ _global_script_classes=[ {
 "path": "res://Scripts/PlanetScripts/Planet.gd"
 }, {
 "base": "Node",
-"class": "Puzzle",
-"language": "GDScript",
-"path": "res://Scripts/Puzzle Scripts/Puzzle.gd"
-}, {
-"base": "Node",
 "class": "Recipe",
 "language": "GDScript",
 "path": "res://Scripts/DataStructures/Recipe.gd"
@@ -50,7 +45,6 @@ _global_script_class_icons={
 "Friend": "",
 "NPC": "",
 "Planet": "",
-"Puzzle": "",
 "Recipe": ""
 }
 
@@ -70,6 +64,7 @@ RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ProgressionManager="*res://Scripts/PlanetScripts/ProgressionManager.gd"
 PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
+PuzzleManager="*res://Scripts/Puzzle Scripts/PuzzleManager.gd"
 
 [display]
 

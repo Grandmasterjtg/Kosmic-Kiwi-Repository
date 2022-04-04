@@ -13,7 +13,7 @@
 [node name="TileScene" type="Node2D"]
 script = ExtResource( 6 )
 m_ship_node_path = "Actors/Ship"
-m_nav_menu_path = "CanvasLayer/NavMenu"
+m_nav_menu_path = "UI_Layer/NavMenu"
 
 [node name="Map" type="Node" parent="."]
 
