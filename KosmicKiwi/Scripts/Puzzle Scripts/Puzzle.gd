@@ -1,5 +1,7 @@
 extends Node
 
+class_name Puzzle
+
 var m_id : int
 var m_solved := false
 
@@ -13,17 +15,15 @@ func solve_puzzle():
 	# play the solving animation
 	$AnimatedSprite.play("left")
 	
+	# if the puzzle is already solved, play only the last frame of the animation
 	if PuzzleManager.check_puzzle_solved(m_id):
-		# play the last frame of the solving animation
 		$AnimatedSprite.set_frame($AnimatedSprite.get_sprite_frames().get_frame_count("left")-1)
-	
-	PuzzleManager.set_puzzle_solved(m_id, true)
+	else: 
+		PuzzleManager.set_puzzle_solved(m_id, true)
 
 func ready_puzzle():
 	pass
 
 func _process(delta):
 	if Input.is_action_just_pressed("hotbar_1"):
-		solve_puzzle()
-	if Input.is_action_just_pressed("hotbar_2"):
 		solve_puzzle()
