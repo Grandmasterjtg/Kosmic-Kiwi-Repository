@@ -68,7 +68,7 @@ ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
 IsometricVector="*res://Scripts/IsometricVector.gd"
 RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
-ProgressionManager="*res://Scripts/Puzzle Scripts/PuzzleManager.gd"
+ProgressionManager="*res://Scripts/PlanetScripts/ProgressionManager.gd"
 PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
 
 [display]

@@ -7,12 +7,21 @@ func _ready():
 	# set ids?
 	pass
 
-func add_puzzle(part_name : String):
-	# m_current_ship_parts[part_name] = true
+func add_puzzle(puzzle_id: int):
+	m_puzzles[puzzle_id] = false
 	pass
 
-# func check_for_ship_part(part_name : String) -> bool:
-#	return m_current_ship_parts.has(part_name)
+func check_puzzle_solved(puzzle_id: int) -> bool:
+	if (m_puzzles.has(puzzle_id)):
+		return m_puzzles[puzzle_id]
+	else:
+		printerr("No puzzle was found for puzzle_id:")
+		printerr(puzzle_id)
+		return false
 
-# func update_puzzles():
-#	pass
+func set_puzzle_solved(puzzle_id: int, state: bool):
+	if (m_puzzles.has(puzzle_id)):
+		m_puzzles[puzzle_id] = state
+	else:
+		printerr("No puzzle was found for puzzle_id:")
+		printerr(puzzle_id)
