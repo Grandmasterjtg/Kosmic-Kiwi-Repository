@@ -25,6 +25,21 @@ _global_script_classes=[ {
 "path": "res://Scripts/Character Scripts/Friend.gd"
 }, {
 "base": "Node",
+"class": "NPC",
+"language": "GDScript",
+"path": "res://Scripts/Classes/NPC.gd"
+}, {
+"base": "Node",
+"class": "Planet",
+"language": "GDScript",
+"path": "res://Scripts/PlanetScripts/Planet.gd"
+}, {
+"base": "Node",
+"class": "Puzzle",
+"language": "GDScript",
+"path": "res://Scripts/Puzzle Scripts/Puzzle.gd"
+}, {
+"base": "Node",
 "class": "Recipe",
 "language": "GDScript",
 "path": "res://Scripts/DataStructures/Recipe.gd"
@@ -33,6 +48,9 @@ _global_script_class_icons={
 "Character": "",
 "Data": "",
 "Friend": "",
+"NPC": "",
+"Planet": "",
+"Puzzle": "",
 "Recipe": ""
 }
 
@@ -45,11 +63,13 @@ config/icon="res://icon.png"
 [autoload]
 
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
-Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
+InventoryData="*res://Scripts/DataScripts/InventoryData.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
-ItemCategories="*res://Scripts/DataScripts/ItemCategories.gd"
 IsometricVector="*res://Scripts/IsometricVector.gd"
 RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
+Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
+ProgressionManager="*res://Scripts/PlanetScripts/ProgressionManager.gd"
+PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
 
 [display]
 

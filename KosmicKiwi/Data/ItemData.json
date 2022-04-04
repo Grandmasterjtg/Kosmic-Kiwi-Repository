@@ -38,5 +38,20 @@
         "ItemCategory": "Tool",
         "StackSize": 16,
         "Placeable": true
+    },
+    "Engine": {
+        "ItemCategory": "ShipPart",
+        "StackSize": 1,
+        "Placeable": false
+    },
+    "Power Core": {
+        "ItemCategory": "ShipPart",
+        "StackSize": 1,
+        "Placeable": false
+    },
+    "Solar Sail": {
+        "ItemCategory": "ShipPart",
+        "StackSize": 1,
+        "Placeable": false
     }
 }

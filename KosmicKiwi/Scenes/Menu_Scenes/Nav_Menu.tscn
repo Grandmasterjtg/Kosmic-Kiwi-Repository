@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scenes/button_scenes/Planet_Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Menu_Scenes/Planet_Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/PlanetScripts/Nav_Menu.gd" type="Script" id=2]
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=3]
 [ext_resource path="res://ArtAssets/UI/Planet2.png" type="Texture" id=4]
@@ -11,6 +11,9 @@
 margin_left = 340.0
 margin_top = 180.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 7.0
@@ -19,28 +22,6 @@ margin_right = 4807.0
 margin_bottom = 2707.0
 rect_scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 5 )
-
-[node name="Planet_1_Button" parent="." instance=ExtResource( 1 )]
-margin_left = 420.0
-margin_top = 371.0
-margin_right = 572.0
-margin_bottom = 561.0
-size_flags_horizontal = 3
-planetPath = "res://Levels/levelone.tscn"
-
-[node name="Planet_2_Button2" parent="." instance=ExtResource( 1 )]
-margin_left = 703.0
-margin_top = 278.0
-margin_right = 860.0
-margin_bottom = 468.0
-size_flags_horizontal = 3
-planetPath = "res://Levels/TileScene.tscn"
-
-[node name="Label" parent="Planet_2_Button2" index="0"]
-text = "Test Level"
-
-[node name="Button" parent="Planet_2_Button2" index="1"]
-icon = ExtResource( 4 )
 
 [node name="CloseButton" type="Button" parent="."]
 margin_left = 1084.0
@@ -59,4 +40,36 @@ rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 3 )
 text = "Choose a planet to travel to:"
 
-[editable path="Planet_2_Button2"]
+[node name="Buttons" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Planet_0_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 255.0
+margin_top = 280.0
+margin_right = 407.0
+margin_bottom = 470.0
+size_flags_horizontal = 3
+
+[node name="Planet_1_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 343.0
+margin_top = 460.0
+margin_right = 500.0
+margin_bottom = 650.0
+size_flags_horizontal = 3
+m_planet_index = 1
+m_texture = ExtResource( 4 )
+
+[node name="Planet_2_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 613.0
+margin_top = 273.0
+margin_right = 766.0
+margin_bottom = 460.0
+m_planet_index = 2
+
+[node name="Planet_3_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 805.0
+margin_top = 434.0
+margin_right = 958.0
+margin_bottom = 621.0
+m_planet_index = 3
