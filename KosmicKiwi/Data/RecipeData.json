@@ -5,7 +5,7 @@
             "Quantity": 1
         }
     ],
-    "Defoilant": [
+    "Defoliant": [
         {
             "Recipe": [["Chemical", 5], ["Liquid", 5]],
             "Quantity": 1

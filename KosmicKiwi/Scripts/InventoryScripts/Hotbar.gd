@@ -6,7 +6,10 @@ const ACTION_HOTBAR_3 := "hotbar_3"
 const ACTION_HOTBAR_4 := "hotbar_4"
 
 onready var m_hotbar_slots = $HotbarSlots
-const ITEM_CLASS = preload("res://Scenes/Interactables/Item.tscn")
+onready var m_player = get_tree().get_nodes_in_group("player")[0]
+onready var m_ysort = get_tree().get_nodes_in_group("ysort")[0]
+const ITEM_FOLDER = "res://Scenes/Props/Items/"
+const ITEM_FILETYPE = ".tscn"
 
 func _ready() -> void:
 	Inventory.connect("inventory_updated", self, "update_hotbar")
@@ -41,8 +44,9 @@ func place_item(index: int):
 	var slot_item = slots[index].get_item()
 
 	if slot_item != null and ItemData.is_placeable(slot_item.get_item_name()):
-		var item = ITEM_CLASS.instance()
-		item.set_item(slot_item.get_item_name(), get_parent().get_parent().get_child(1).position)
+		var item_class = load(ITEM_FOLDER + slot_item.get_item_name() + ITEM_FILETYPE)
+		var item = item_class.instance()
+		item.global_position = m_player.global_position
 		Inventory.remove_item(slot_item.get_item_name())
-		get_tree().root.add_child(item)
+		m_ysort.add_child(item)
 		

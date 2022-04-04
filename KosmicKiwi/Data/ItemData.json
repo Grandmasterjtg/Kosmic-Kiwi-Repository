@@ -34,7 +34,7 @@
         "StackSize": 16,
         "Placeable": true
     },
-    "Defoilant": {
+    "Defoliant": {
         "ItemCategory": "Tool",
         "StackSize": 16,
         "Placeable": true

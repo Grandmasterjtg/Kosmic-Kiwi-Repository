@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Defoilant.png-46792f0a580cbf57c986ae5613e0caf2.stex"
+path="res://.import/Defoliant.png-ad150efa80b8f2f6f2b5c52322c77739.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/ItemIcons/Defoilant.png"
-dest_files=[ "res://.import/Defoilant.png-46792f0a580cbf57c986ae5613e0caf2.stex" ]
+source_file="res://ArtAssets/ItemIcons/Defoliant.png"
+dest_files=[ "res://.import/Defoliant.png-ad150efa80b8f2f6f2b5c52322c77739.stex" ]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/WorldOne/Boulder.tres" type="SpriteFrames" id=1]
+
+[node name="Boulder" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -412, -27, -386, 159, -230, 324, 25, 363, 280, 276, 406, 15, 256, -129, -77, -147 )
