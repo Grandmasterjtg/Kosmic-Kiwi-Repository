@@ -36,6 +36,7 @@ position = Vector2( 329, -493 )
 z_index = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -247, 937 )
 
 [node name="Pause" parent="." instance=ExtResource( 3 )]
 
@@ -384,7 +385,7 @@ scale = Vector2( 5, 5 )
 [node name="Middle" type="Node2D" parent="ResourceDeposits/Fiber"]
 
 [node name="ResourceDeposit2" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 3049, -433 )
+position = Vector2( 3028, -445 )
 scale = Vector2( 5, 5 )
 m_name = "Fiber Deposit"
 

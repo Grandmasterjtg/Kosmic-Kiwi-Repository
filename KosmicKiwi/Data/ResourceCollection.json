@@ -32,7 +32,7 @@
     "Liquid Deposit": {
         "ItemName": "Liquid",
         "Quantity": 1,
-        "Cooldown": 1.0,
+        "Cooldown": 0.5,
         "RequiredTool": null
     }
 }
