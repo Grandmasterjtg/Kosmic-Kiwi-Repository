@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -9,11 +9,12 @@
 [ext_resource path="res://Scenes/Characters/Friend.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Characters/Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Character Scripts/StinkyFriend.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Puzzles/Puzzle.tscn" type="PackedScene" id=10]
 
 [node name="TileScene" type="Node2D"]
 script = ExtResource( 6 )
 m_ship_node_path = "Actors/Ship"
-m_nav_menu_path = "CanvasLayer/NavMenu"
+m_nav_menu_path = "UI_Layer/NavMenu"
 
 [node name="Map" type="Node" parent="."]
 
@@ -57,6 +58,16 @@ position = Vector2( 1490, -527 )
 
 [node name="Enemy2" parent="Actors" instance=ExtResource( 8 )]
 position = Vector2( 4997, -2734 )
+
+[node name="Puzzles" type="Node2D" parent="Actors"]
+
+[node name="Puzzle" parent="Actors/Puzzles" instance=ExtResource( 10 )]
+position = Vector2( 2291, 1045 )
+z_index = 1
+
+[node name="Puzzle2" parent="Actors/Puzzles" instance=ExtResource( 10 )]
+position = Vector2( 2426, -778 )
+z_index = 1
 
 [node name="UI_Layer" parent="." instance=ExtResource( 4 )]
 

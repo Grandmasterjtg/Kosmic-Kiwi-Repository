@@ -2,17 +2,22 @@ extends Node
 
 var m_puzzles : Dictionary
 
+signal test
+
 func _ready():
-	# gather all of the puzzles?
-	# set ids?
-	pass
+	emit_signal("test")
 
 func add_puzzle(puzzle_id: int):
-	m_puzzles[puzzle_id] = false
-	pass
+	# make sure not to add the same puzzle twice
+	if !m_puzzles.has(puzzle_id):
+		m_puzzles[puzzle_id] = false
+	else:
+#		printerr("Puzzle attempted to add twice:")
+#		printerr(puzzle_id)
+		pass
 
 func check_puzzle_solved(puzzle_id: int) -> bool:
-	if (m_puzzles.has(puzzle_id)):
+	if m_puzzles.has(puzzle_id):
 		return m_puzzles[puzzle_id]
 	else:
 		printerr("No puzzle was found for puzzle_id:")
@@ -20,7 +25,7 @@ func check_puzzle_solved(puzzle_id: int) -> bool:
 		return false
 
 func set_puzzle_solved(puzzle_id: int, state: bool):
-	if (m_puzzles.has(puzzle_id)):
+	if m_puzzles.has(puzzle_id):
 		m_puzzles[puzzle_id] = state
 	else:
 		printerr("No puzzle was found for puzzle_id:")

@@ -2,10 +2,6 @@ extends Node2D
 
 onready var interactable = $Interactable
 
-# interaction variables
-const INTERACT := "interact"
-const NAV_MENU := "/root/Node2D/CanvasLayer/NavMenu"
-
 var m_in_area := false
 var m_current_ship_parts = []
 
