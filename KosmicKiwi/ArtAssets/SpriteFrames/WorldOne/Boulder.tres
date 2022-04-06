@@ -8,4 +8,9 @@ animations = [ {
 "loop": true,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [  ],
+"loop": false,
+"name": "solved",
+"speed": 5.0
 } ]

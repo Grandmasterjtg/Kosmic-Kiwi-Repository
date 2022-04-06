@@ -7,7 +7,6 @@ const ACTION_HOTBAR_4 := "hotbar_4"
 
 onready var m_hotbar_slots = $HotbarSlots
 onready var m_player = get_tree().get_nodes_in_group("player")[0]
-onready var m_ysort = get_tree().get_nodes_in_group("ysort")[0]
 const ITEM_FOLDER = "res://Scenes/Props/Items/"
 const ITEM_FILETYPE = ".tscn"
 
@@ -32,7 +31,7 @@ func _input(event):
 		place_item(3)
 	
 func update_hotbar():
-	# reset items in hotbar to emtpy
+	# reset items in hotbar to empty
 	for i in range(m_hotbar_slots.size()):
 		m_hotbar_slots[i].delete_item()
 	
@@ -51,8 +50,8 @@ func set_selected_slot(index: int) -> void:
 	if selected_slot:
 		selected_slot.set_selected(false)
 	
-	selected_slot = m_hotbar_slots[index]
-	selected_slot.set_selected(true)
+	#selected_slot = m_hotbar_slots[index]
+	#selected_slot.set_selected(true)
 		
 func place_item(index: int):
 	var slot_item = m_hotbar_slots[index].get_item()
@@ -62,5 +61,5 @@ func place_item(index: int):
 		var item = item_class.instance()
 		item.global_position = m_player.global_position
 		Inventory.remove_item(slot_item.get_item_name())
-		m_ysort.add_child(item)
+		get_tree().add_child(item)
 		

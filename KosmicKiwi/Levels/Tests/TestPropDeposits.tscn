@@ -1,47 +1,43 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/UI/PauseScreen.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/PuzzlePoint.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/UI/Inventory/InventoryUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Interactables/ResourceCollection/ResourceDeposit.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=7]
-[ext_resource path="res://Scripts/InteractableScripts/ButtonDisplay.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/InteractableScripts/ResourceDeposit.gd" type="Script" id=9]
-[ext_resource path="res://Scripts/InteractableScripts/Interactable.gd" type="Script" id=10]
-[ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Interactables/IndicatorBubble.tscn" type="PackedScene" id=12]
-[ext_resource path="res://ArtAssets/ItemIcons/Defoliant.png" type="Texture" id=13]
-[ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=14]
-
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 50.0
-height = 70.0
+[ext_resource path="res://Scenes/UI/Inventory/InventoryUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Props/Desert/D_Grass.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Props/Desert/D_Rocks.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Props/Desert/D_Metal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/UI/PauseScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Props/Desert/D_Dust.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=9]
+[ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Props/Forest/F_Metal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Props/Forest/F_Dust.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Props/Forest/F_Rocks.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Props/Forest/F_Grass.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Props/Jungle/J_Grass.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Props/Jungle/J_Dust.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Props/Jungle/J_Rocks.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Props/Jungle/J_Metal.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Props/Wet/W_Metal.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Props/Wet/W_Grass.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Props/Wet/W_Dust.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Props/Wet/W_Rocks.tscn" type="PackedScene" id=22]
 
 [node name="Level" type="Node2D"]
-script = ExtResource( 7 )
+script = ExtResource( 10 )
 m_ship_node_path = "Actors/Ship"
 m_nav_menu_path = "CanvasLayer/NavMenu"
 
-[node name="Actors" type="Node2D" parent="."]
+[node name="Pause" parent="." instance=ExtResource( 7 )]
 
-[node name="Ship" parent="Actors" instance=ExtResource( 11 )]
-position = Vector2( 642, -2031 )
-z_index = 1
+[node name="CanvasLayer" parent="." instance=ExtResource( 1 )]
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-
-[node name="Pause" parent="." instance=ExtResource( 3 )]
-
-[node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
-
-[node name="NavMenu" parent="CanvasLayer" instance=ExtResource( 14 )]
+[node name="NavMenu" parent="CanvasLayer" instance=ExtResource( 2 )]
 visible = false
 
 [node name="firstGround" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -50,7 +46,7 @@ tile_data = PoolIntArray( -4325387, 4, 0, -4325386, 4, 0, -4259852, 4, 0, -42598
 
 [node name="Thingsfirst ground" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -59,7 +55,7 @@ tile_data = PoolIntArray( -4325386, 1, 0, -4259851, 1, 0, -4259850, 0, 0, -42598
 
 [node name="cliff" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -68,7 +64,7 @@ tile_data = PoolIntArray( -3604493, 6, 0, -3538958, 6, 0, -3538957, 6, 0, -35389
 
 [node name="second ground" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -77,959 +73,69 @@ tile_data = PoolIntArray( -3997712, 4, 0, -3997711, 4, 0, -3997710, 4, 0, -39977
 
 [node name="second ground things" type="TileMap" parent="second ground"]
 mode = 1
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
 format = 1
 tile_data = PoolIntArray( -3866637, 1, 0, -3866636, 1, 0, -3866635, 9, 0, -3866634, 9, 0, -3801101, 1, 0, -3801098, 9, 0, -3801096, 3, 0, -3801095, 3, 0, -3801094, 3, 0, -3735568, 3, 0, -3735567, 3, 0, -3735559, 3, 0, -3670032, 3, 0, -3670031, 3, 0, -3670030, 3, 0, -3604496, 3, 0, -3604495, 3, 0, -3604494, 3, 0, -3604493, 3, 0, -3604486, 3, 0, -3538958, 3, 0, -3538952, 2, 0, -3538951, 2, 0, -3473418, 6, 0, -3473415, 2, 0 )
 
-[node name="RopeOverWater" parent="." instance=ExtResource( 4 )]
-tile_set = ExtResource( 1 )
-tile_data = PoolIntArray( -393231, 4, 0, -393230, 4, 0, -393229, 4, 0, -327695, 4, 0, -327694, 4, 0, -327693, 4, 0, -262159, 4, 0, -262158, 4, 0, -262157, 4, 0 )
-m_correct_item = "Rope"
+[node name="YSort" type="YSort" parent="." groups=["ysort"]]
 
-[node name="Obstacle" parent="RopeOverWater" index="0"]
-tile_set = ExtResource( 1 )
-tile_data = PoolIntArray( -393231, 11, 0, -393230, 11, 0, -393229, 11, 0, -327695, 11, 0, -327694, 11, 0, -327693, 11, 0, -262159, 11, 0, -262158, 11, 0, -262157, 11, 0 )
+[node name="Player" parent="YSort" instance=ExtResource( 6 )]
 
-[node name="CollisionShape2D" parent="RopeOverWater/Area2D" index="0"]
-position = Vector2( -2939, -3876 )
-scale = Vector2( 7.04001, 7.04001 )
+[node name="Dusts" type="YSort" parent="YSort"]
 
-[node name="DefoilantBushes" parent="." instance=ExtResource( 4 )]
-m_correct_item = "Defoilant"
+[node name="D_Dust" parent="YSort/Dusts" instance=ExtResource( 8 )]
+position = Vector2( -1000, -250 )
 
-[node name="Obstacle" parent="DefoilantBushes" index="0"]
-tile_set = ExtResource( 1 )
-tile_data = PoolIntArray( -1769476, 1, 0, -1769475, 1, 0, -1703940, 1, 0, -1703939, 1, 0, -1703938, 1, 0, -1638403, 1, 0, -1638402, 1, 0 )
+[node name="F_Dust" parent="YSort/Dusts" instance=ExtResource( 12 )]
+position = Vector2( 3000, -250 )
 
-[node name="CollisionShape2D" parent="DefoilantBushes/Area2D" index="0"]
-position = Vector2( 11344, -6193 )
-scale = Vector2( -10.0619, -10.0619 )
+[node name="J_Dust" parent="YSort/Dusts" instance=ExtResource( 16 )]
+position = Vector2( -1000, 500 )
 
-[node name="RopeUpCliff" parent="." instance=ExtResource( 4 )]
-m_correct_item = "Rope"
+[node name="W_Dust" parent="YSort/Dusts" instance=ExtResource( 21 )]
+position = Vector2( 3000, 500 )
 
-[node name="Obstacle" parent="RopeUpCliff" index="0"]
-tile_set = ExtResource( 1 )
-tile_data = PoolIntArray( -3407885, 4, 0, -3407884, 4, 0, -3342347, 7, 0, -3276811, 7, 0, -3276810, 7, 0, -3211274, 7, 0, -3211273, 7, 0, -3211272, 7, 0, -3145737, 7, 0, -3145736, 7, 0, -3145735, 7, 0 )
+[node name="Grasses" type="YSort" parent="YSort"]
 
-[node name="CollisionShape2D" parent="RopeUpCliff/Area2D" index="0"]
-position = Vector2( 19567, -13599 )
+[node name="D_Grass" parent="YSort/Grasses" instance=ExtResource( 3 )]
+position = Vector2( 0, -250 )
 
-[node name="ResourceDeposits" type="Node2D" parent="."]
+[node name="F_Grass" parent="YSort/Grasses" instance=ExtResource( 14 )]
+position = Vector2( 4000, -250 )
 
-[node name="Chemical" type="Node2D" parent="ResourceDeposits"]
+[node name="J_Grass" parent="YSort/Grasses" instance=ExtResource( 15 )]
+position = Vector2( 0, 500 )
 
-[node name="UppderLeft" type="Node2D" parent="ResourceDeposits/Chemical"]
+[node name="W_Grass" parent="YSort/Grasses" instance=ExtResource( 20 )]
+position = Vector2( 4000, 500 )
 
-[node name="ResourceDeposit" type="Node2D" parent="ResourceDeposits/Chemical/UppderLeft"]
-position = Vector2( -5296, -5831 )
-scale = Vector2( 5, 5 )
-z_index = 1
-script = ExtResource( 9 )
-m_name = "Chemical Deposit"
+[node name="Metals" type="YSort" parent="YSort"]
 
-[node name="Interactable" type="Area2D" parent="ResourceDeposits/Chemical/UppderLeft/ResourceDeposit"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource( 10 )
-interact_radius = 100
-interact_height = 140
+[node name="D_Metal" parent="YSort/Metals" instance=ExtResource( 5 )]
+position = Vector2( 1000, -250 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ResourceDeposits/Chemical/UppderLeft/ResourceDeposit/Interactable"]
-rotation = 1.5708
-shape = SubResource( 1 )
+[node name="F_Metal" parent="YSort/Metals" instance=ExtResource( 11 )]
+position = Vector2( 5000, -250 )
 
-[node name="ButtonDisplay" type="RichTextLabel" parent="ResourceDeposits/Chemical/UppderLeft/ResourceDeposit"]
-visible = false
-margin_left = -7.0
-margin_top = -92.0
-margin_bottom = -77.0
-rect_scale = Vector2( 3, 3 )
-text = "E"
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="J_Metal" parent="YSort/Metals" instance=ExtResource( 18 )]
+position = Vector2( 1000, 500 )
 
-[node name="CooldownTimer" type="Timer" parent="ResourceDeposits/Chemical/UppderLeft/ResourceDeposit"]
-wait_time = 5.0
-one_shot = true
+[node name="W_Metal" parent="YSort/Metals" instance=ExtResource( 19 )]
+position = Vector2( 5000, 500 )
 
-[node name="ResourceDeposit3" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -7230, -5598 )
-m_name = "Chemical Deposit"
+[node name="Rocks" type="YSort" parent="YSort"]
 
-[node name="ResourceDeposit4" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -7463, -7735 )
-m_name = "Chemical Deposit"
+[node name="D_Rocks" parent="YSort/Rocks" instance=ExtResource( 4 )]
+position = Vector2( 2000, -250 )
 
-[node name="ResourceDeposit5" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -4410, -8022 )
-m_name = "Chemical Deposit"
+[node name="F_Rocks" parent="YSort/Rocks" instance=ExtResource( 13 )]
+position = Vector2( 6000, -250 )
 
-[node name="ResourceDeposit6" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -9474, -5598 )
-m_name = "Chemical Deposit"
+[node name="J_Rocks" parent="YSort/Rocks" instance=ExtResource( 17 )]
+position = Vector2( 2000, 500 )
 
-[node name="ResourceDeposit7" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -6511, -7035 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -9973, -9750 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -7914, -11289 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -9521, -12534 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Chemical/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -11490, -5044 )
-m_name = "Chemical Deposit"
-
-[node name="LowerLeft" type="Node2D" parent="ResourceDeposits/Chemical"]
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Chemical/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -2883, 7984 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Chemical/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -3975, 8238 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Chemical/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -5143, 10029 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Chemical/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -2756, 9839 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Chemical/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -1308, 8658 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Chemical/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -825, 9890 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Chemical/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -7022, 10157 )
-m_name = "Chemical Deposit"
-
-[node name="LowerRight" type="Node2D" parent="ResourceDeposits/Chemical"]
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Chemical/LowerRight" instance=ExtResource( 6 )]
-position = Vector2( 17024, 7152 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Chemical/LowerRight" instance=ExtResource( 6 )]
-position = Vector2( 17496, 7462 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Chemical/LowerRight" instance=ExtResource( 6 )]
-position = Vector2( 17536, 6918 )
-m_name = "Chemical Deposit"
-
-[node name="Cliff" type="Node2D" parent="ResourceDeposits/Chemical"]
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Chemical/Cliff" instance=ExtResource( 6 )]
-position = Vector2( 23489, -14501 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Chemical/Cliff" instance=ExtResource( 6 )]
-position = Vector2( 23508, -15043 )
-m_name = "Chemical Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Chemical/Cliff" instance=ExtResource( 6 )]
-position = Vector2( 24012, -14805 )
-m_name = "Chemical Deposit"
-
-[node name="Metal" type="Node2D" parent="ResourceDeposits"]
-
-[node name="Middle" type="Node2D" parent="ResourceDeposits/Metal"]
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Metal/Middle" instance=ExtResource( 6 )]
-position = Vector2( 2422, 1970 )
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Metal/Middle" instance=ExtResource( 6 )]
-position = Vector2( 1471, 2997 )
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Metal/Middle" instance=ExtResource( 6 )]
-position = Vector2( 2479, 2997 )
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Metal/Middle" instance=ExtResource( 6 )]
-position = Vector2( 3545, 2483 )
-
-[node name="BottomLeft" type="Node2D" parent="ResourceDeposits/Metal"]
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -6493, 5025 )
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -7005, 6209 )
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -9517, 4929 )
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -9021, 4241 )
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -8477, 4945 )
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -7021, 3777 )
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -5981, 3233 )
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -8269, 3505 )
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Metal/BottomLeft" instance=ExtResource( 6 )]
-position = Vector2( -7421, 4993 )
-
-[node name="UppderLeft" type="Node2D" parent="ResourceDeposits/Metal"]
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 9075, -13296 )
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 7992, -14251 )
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 7992, -14807 )
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 10886, -14793 )
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 20955, -9826 )
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 19955, -9792 )
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 19972, -10368 )
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 20650, -11131 )
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 21480, -11554 )
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Metal/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 21617, -10675 )
-
-[node name="Fiber" type="Node2D" parent="ResourceDeposits"]
-
-[node name="Middle" type="Node2D" parent="ResourceDeposits/Fiber"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 3049, -433 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit18" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 18569, 6415 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit19" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 18729, 5679 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit20" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 18281, 5071 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit21" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 18921, 4367 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit22" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 15547, 8895 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit23" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 17597, 9365 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit24" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 15055, 10091 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit25" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 16657, 10518 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit26" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 19946, 10582 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit27" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 11843, -4200 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit28" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 10453, -4709 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit29" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 14081, -3455 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit30" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 15471, -4099 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit31" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 21491, 2840 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit32" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 22489, 3326 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit33" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 21539, 3413 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit34" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 22022, 4047 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 5470, -1632 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 7031, 110 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 8004, -1406 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 9565, -1632 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 10063, -2922 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 12009, -1972 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 11964, -3262 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 13480, -2832 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 13955, -1972 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 14905, -2583 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 15018, -3465 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 13547, -4144 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit15" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 14859, -886 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit16" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 14022, 41.9999 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit17" parent="ResourceDeposits/Fiber/Middle" instance=ExtResource( 6 )]
-position = Vector2( 16285, -2854 )
-m_name = "Fiber Deposit"
-
-[node name="LowerLeft" type="Node2D" parent="ResourceDeposits/Fiber"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -8158, 7577 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -9236, 7721 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -8482, 8224 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -11104, 9014 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -11966, 8655 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -13160, 8909 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -13643, 7995 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -14430, 7385 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Fiber/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -12627, 6801 )
-m_name = "Fiber Deposit"
-
-[node name="UppderLeft" type="Node2D" parent="ResourceDeposits/Fiber"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -2999, -11928 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -5959, -12924 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -4506, -13731 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -5636, -14807 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -2676, -14269 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -2784, -15130 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -1492, -14215 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -658, -14646 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -1438, -15615 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -3053, -15965 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -2192, -16530 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -1035, -16530 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -443, -17041 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit15" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -12, -16341 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit16" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 768, -15991 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit17" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 2490, -16179 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit18" parent="ResourceDeposits/Fiber/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( 526, -13138 )
-m_name = "Fiber Deposit"
-
-[node name="UpperRight" type="Node2D" parent="ResourceDeposits/Fiber"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 20530, -6639 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 22559, -9369 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 22020, -10429 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 20394, -9182 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 21547, -8606 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 22937, -7487 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 24564, -6131 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 24801, -8640 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 23886, -9454 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 24903, -9590 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 26056, -9115 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 26259, -7861 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Fiber/UpperRight" instance=ExtResource( 6 )]
-position = Vector2( 23581, -10573 )
-m_name = "Fiber Deposit"
-
-[node name="OnCliff" type="Node2D" parent="ResourceDeposits/Fiber"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Fiber/OnCliff" instance=ExtResource( 6 )]
-position = Vector2( 25649, -15894 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Fiber/OnCliff" instance=ExtResource( 6 )]
-position = Vector2( 26564, -15691 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Fiber/OnCliff" instance=ExtResource( 6 )]
-position = Vector2( 20563, -16810 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Fiber/OnCliff" instance=ExtResource( 6 )]
-position = Vector2( 20563, -17658 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Fiber/OnCliff" instance=ExtResource( 6 )]
-position = Vector2( 21513, -17251 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Fiber/OnCliff" instance=ExtResource( 6 )]
-position = Vector2( 21310, -17929 )
-m_name = "Fiber Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Fiber/OnCliff" instance=ExtResource( 6 )]
-position = Vector2( 25025, -14917 )
-m_name = "Fiber Deposit"
-
-[node name="Liquid" type="Node2D" parent="ResourceDeposits"]
-
-[node name="EastRiver" type="Node2D" parent="ResourceDeposits/Liquid"]
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( -8163, -1090 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( -6154, -1588 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( -4387, -2615 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( -1472, -4005 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( 808, -5108 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( 2273, -6391 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit15" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( 4237, -7825 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit17" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( 4051, -9564 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit19" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( 4721, -11203 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit21" parent="ResourceDeposits/Liquid/EastRiver" instance=ExtResource( 6 )]
-position = Vector2( 5137, -12575 )
-m_name = "Liquid Deposit"
-
-[node name="WestRiver" type="Node2D" parent="ResourceDeposits/Liquid"]
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -11888, -3924 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -13829, -3543 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -15446, -3162 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -17311, -2800 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -9774, -4574 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -7062, -4514 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -4261, -6714 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -2839, -8016 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -1758, -9566 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit16" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( -567, -11121 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit18" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( 740, -12289 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit20" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( 1111, -13999 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit21" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( 2261, -15049 )
-m_name = "Liquid Deposit"
-
-[node name="ResourceDeposit22" parent="ResourceDeposits/Liquid/WestRiver" instance=ExtResource( 6 )]
-position = Vector2( 3401, -16127 )
-m_name = "Liquid Deposit"
-
-[node name="Rock" type="Node2D" parent="ResourceDeposits"]
-
-[node name="LowerLeft" type="Node2D" parent="ResourceDeposits/Rock"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -9479, 3442 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -11999, 4188 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -11535, 3482 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -10547, 2958 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -11494, 2434 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -10486, 1910 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -8994, 2212 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -8994, 1708 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -10002, 1204 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -8954, 801 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -8007, 4268 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -12543, 2938 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -13551, 2938 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit15" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -14539, 2938 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit16" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -15486, 3442 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit17" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -16615, 4954 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit18" parent="ResourceDeposits/Rock/LowerLeft" instance=ExtResource( 6 )]
-position = Vector2( -16454, 5901 )
-m_name = "Rock Deposit"
-
-[node name="Middle" type="Node2D" parent="ResourceDeposits/Rock"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Rock/Middle" instance=ExtResource( 6 )]
-position = Vector2( 8523, 2475 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Rock/Middle" instance=ExtResource( 6 )]
-position = Vector2( 9505, 2460 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Rock/Middle" instance=ExtResource( 6 )]
-position = Vector2( 8961, 1705 )
-m_name = "Rock Deposit"
-
-[node name="UppderLeft" type="Node2D" parent="ResourceDeposits/Rock"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -17482, -4621 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -15972, -6358 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -14960, -7868 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -17482, -7581 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -16969, -8819 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -15504, -9559 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -17528, -9619 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -17573, -10495 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -15036, -10737 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -13435, -12051 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -14507, -12595 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -12468, -12640 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -13223, -13410 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit15" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -11758, -13606 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit16" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -12498, -14406 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit17" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -15171, -13757 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit18" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -13933, -14391 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit19" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -13148, -15161 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit20" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -11094, -14814 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit21" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -9010, -15826 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit22" parent="ResourceDeposits/Rock/UppderLeft" instance=ExtResource( 6 )]
-position = Vector2( -11547, -15554 )
-m_name = "Rock Deposit"
-
-[node name="UpderRigth" type="Node2D" parent="ResourceDeposits/Rock"]
-
-[node name="ResourceDeposit2" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 10983, -9265 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit3" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 12263, -9249 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit4" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 12055, -9873 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit5" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 13239, -9153 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit6" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 13847, -9729 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit7" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 14263, -8929 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit8" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 14439, -8081 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit9" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 15047, -9297 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit10" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 15591, -10033 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit11" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 16551, -10561 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit12" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 16999, -11569 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit13" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 11815, -12625 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit14" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 12983, -12353 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit15" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 9431, -14065 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit16" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 9847, -14625 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit17" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 8871, -14769 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit18" parent="ResourceDeposits/Rock/UpderRigth" instance=ExtResource( 6 )]
-position = Vector2( 10519, -14113 )
-m_name = "Rock Deposit"
-
-[node name="Cliff" type="Node2D" parent="ResourceDeposits/Rock"]
-
-[node name="ResourceDeposit19" parent="ResourceDeposits/Rock/Cliff" instance=ExtResource( 6 )]
-position = Vector2( 24538, -16503 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit20" parent="ResourceDeposits/Rock/Cliff" instance=ExtResource( 6 )]
-position = Vector2( 24487, -17079 )
-m_name = "Rock Deposit"
-
-[node name="ResourceDeposit21" parent="ResourceDeposits/Rock/Cliff" instance=ExtResource( 6 )]
-position = Vector2( 25029, -16842 )
-m_name = "Rock Deposit"
-
-[node name="IndicatorBubble" parent="." instance=ExtResource( 12 )]
-position = Vector2( 19558, -14463 )
-
-[node name="IndicatorBubble2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 11497, -7319 )
-
-[node name="Sprite" parent="IndicatorBubble2" index="0"]
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 13 )
-
-[node name="IndicatorBubble3" parent="." instance=ExtResource( 12 )]
-position = Vector2( -2983, -4658 )
-scale = Vector2( 1, 0.946667 )
-
-[editable path="RopeOverWater"]
-[editable path="DefoilantBushes"]
-[editable path="RopeUpCliff"]
-[editable path="IndicatorBubble2"]
+[node name="W_Rocks" parent="YSort/Rocks" instance=ExtResource( 22 )]
+position = Vector2( 6000, 500 )

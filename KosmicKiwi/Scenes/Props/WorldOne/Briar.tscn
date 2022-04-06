@@ -8,6 +8,7 @@ collision_mask = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
+animation = "solved"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -15, 367, -271, 262, -388, 87, -432, -13, -335, -98, -170, -131, -12, -135, 150, -128, 294, -84, 415, -7, 392, 84, 200, 286 )

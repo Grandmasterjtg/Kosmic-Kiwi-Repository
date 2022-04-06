@@ -1,5 +1,8 @@
 extends Node2D
 
+signal interacted
+signal timeout
+
 # collection variables
 export var m_name : String = "Metal Deposit"
 var m_item_name : String= "Metal"
@@ -39,6 +42,7 @@ func _ready() -> void:
 func _on_timeout() -> void:
 	# no longer in cooldown
 	m_in_cooldown = false
+	emit_signal("timeout")
 	
 	# the button can now change display
 	m_button.set_should_update(true)
@@ -48,7 +52,8 @@ func _on_timeout() -> void:
 	
 func _on_interact() -> void:
 	if !m_in_cooldown:
-		Inventory.add_item(m_item_name, m_item_quantity)
+		#Inventory.add_item(m_item_name, m_item_quantity)
+		emit_signal("interacted")
 		# starts the cooldown timer
 		m_timer.start()
 		m_in_cooldown = true

@@ -9,4 +9,5 @@ func activate():
 	var briars = get_tree().get_nodes_in_group("briar")
 	for briar in briars:
 		if global_position.distance_to(briar.global_position) < RANGE:
-			briar.queue_free()
+			#briar.solve_puzzle()
+			pass
