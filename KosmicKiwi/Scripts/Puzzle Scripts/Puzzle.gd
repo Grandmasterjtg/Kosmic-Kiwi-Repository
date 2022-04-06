@@ -21,6 +21,7 @@ func ready_puzzle():
 
 func solve_puzzle():
 	print("Solved!")
+	var already_solved = PuzzleManager.check_puzzle_solved(m_id)
 	# play the solving animation
 #	$AnimatedSprite.play("solved")
 	
@@ -29,7 +30,14 @@ func solve_puzzle():
 #		$AnimatedSprite.set_frame($AnimatedSprite.get_sprite_frames().get_frame_count("solved")-1)
 #	else: 
 #		PuzzleManager.set_puzzle_solved(m_id, true)
-
+	
+	# testing
+	$AnimatedSprite.modulate = Color(1,0,0)
+	if !already_solved:
+		print("Puzzle solved for the first time!")
+		PuzzleManager.set_puzzle_solved(m_id, true)
+	else:
+		print("Puzzle " + str(m_id) + " already solved.")
 
 func on_interact():
 	solve_puzzle()

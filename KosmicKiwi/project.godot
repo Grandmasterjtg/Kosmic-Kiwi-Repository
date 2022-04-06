@@ -62,10 +62,10 @@ config/icon="res://icon.png"
 
 [autoload]
 
-IsometricVector="*res://Scripts/IsometricVector.gd"
 ItemData="*res://Scripts/DataScripts/ItemData.gd"
 InventoryData="*res://Scripts/DataScripts/InventoryData.gd"
 ResourceData="*res://Scripts/DataScripts/ResourceData.gd"
+IsometricVector="*res://Scripts/IsometricVector.gd"
 RecipeData="*res://Scripts/DataScripts/RecipeData.gd"
 Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 ProgressionManager="*res://Scripts/PlanetScripts/ProgressionManager.gd"
