@@ -1,5 +1,7 @@
 extends Node
 
+# TODO
+# each level needs its own puzzle Dictionary!
 var m_puzzles : Dictionary
 
 signal test
