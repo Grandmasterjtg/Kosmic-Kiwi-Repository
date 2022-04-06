@@ -61,10 +61,7 @@ func delete_item():
 # checks for if the slot has been interacted by the mouse
 # adds the item to the hotbar when interact is detected
 func _gui_input(event):
-	if event.is_action_pressed(CLICK):
-		print("Slot-_gui_input(): " + str(m_is_interactable))
 	if event.is_action_pressed(CLICK) and m_item != null and m_is_interactable:
-		print("Slot-_gui_input(): Success" )
 		if Inventory.item_exists_in_hotbar(m_item.get_item_category(), m_slot_number):
 			Inventory.remove_from_hotbar(m_item.get_item_category(), m_slot_number)
 		else:

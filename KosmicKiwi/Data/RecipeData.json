@@ -10,5 +10,11 @@
             "Recipe": [["Chemical", 5], ["Liquid", 5]],
             "Quantity": 1
         }
+    ],
+    "Metal": [
+        {
+            "Recipe": [["Chemical", 5], ["Liquid", 5]],
+            "Quantity": 1
+        }
     ]
 }

@@ -29,28 +29,35 @@ func add_item(item_name: String, item_quantity: int) -> void:
 		var num_slots = m_num_slots[category]
 		
 		var stack_size = ItemData.get_stack_size(item_name)
-		var index = 0
-		# while there still and amoun to add and the inventory isn't full
-		while(item_quantity > 0 and index < num_slots and stack_size > 0):
-			# if the slot is empty
-			if inventory.has(index) == false:
-				if item_quantity > stack_size:
-					inventory[index] = [item_name, stack_size]
-					item_quantity -= stack_size
-				else:
-					inventory[index] = [item_name, item_quantity]
-					item_quantity -= item_quantity
-			# if slot is not empty and is the same as the item to add
-			elif inventory[index][0] == item_name:
-				var remaining_space = stack_size - inventory[index][1]
-				if remaining_space < item_quantity:
-					inventory[index][1] += remaining_space
-					item_quantity -= remaining_space
-				else:
-					inventory[index][1] += item_quantity
-					item_quantity -= item_quantity
-
-			index += 1
+		
+		# if the item already exists in the inventory add to it
+		if item_exists_in_inventory(item_name):
+			var item_added = false
+			var index = 0
+			while !item_added and index < num_slots:
+				# find the item stack in the inventory
+				if inventory.has(index) and inventory[index][0] == item_name:
+					# if remaining space is greater than the amount to add
+					if stack_size - inventory[index][1] >= item_quantity:
+						inventory[index][1] += item_quantity
+					else:
+						inventory[index][1] = stack_size
+					item_added = true
+				index += 1
+		# if the item doesn't exist in the inventory add to first empty slot
+		else:
+			var item_added = false
+			var index = 0
+			while !item_added and index < num_slots:
+				# if slot is emtpy
+				if !inventory.has(index):
+					# if the amount to add is less than the max stack size
+					if stack_size >= item_quantity:
+						inventory[index] = [item_name, item_quantity]
+					else:
+						inventory[index] = [item_name, stack_size]
+					item_added = true
+				index += 1
 		
 		emit_signal("inventory_updated")
 		
