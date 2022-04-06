@@ -10,7 +10,7 @@ export var m_texture : Texture
 
 func _ready() -> void:
 	# setup planet for this button
-	m_planet = PlanetManager.planets[m_planet_index]
+	m_planet = PlanetManager.m_planets[m_planet_index]
 	
 	# setup button signal and texture
 	m_button.connect("pressed",self,"_on_Button_pressed")
@@ -31,12 +31,12 @@ func update_button():
 		printerr("m_planet is null in " + self.name)
 
 func _on_Button_pressed():
-	var planet_path = m_planet.get_planet_path()
-	if (planet_path != null):
-		get_tree().change_scene(planet_path)
-		print(planet_path)
+	if (m_planet != null):
+		PlanetManager.set_active_planet(m_planet)
+		get_tree().change_scene(m_planet.get_planet_path())
+		print("PlanetManager set_active_planet: " + m_planet.get_planet_path())
 	else:
-		printerr("planet_path is null in " + self.name)
+		printerr("PlanetManager set_active_planet, m_active_planet is NULL")
 
 func set_active(state: bool):
 	m_button.disabled = !state
