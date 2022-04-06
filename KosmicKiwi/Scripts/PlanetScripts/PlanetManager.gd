@@ -10,9 +10,13 @@ var m_active_planet : Planet = m_planets[0]
 
 func _ready():
 	# find the root node and set m_active_planet to it's planet_index
-	var root = get_tree().get_nodes_in_group("level_root")[0]
-	m_active_planet = get_planet_at_index(root.get_planet_index())
 	print("PlanetManager loading: " + m_active_planet.get_planet_name())
+	if (get_tree().get_nodes_in_group("level_root").size() > 0):
+		var root = get_tree().get_nodes_in_group("level_root")[0]
+		m_active_planet = get_planet_at_index(root.get_planet_index())
+	else:
+		printerr("PlanetManager: No node in 'level_root' group")
+	
 	
 	# setup required items for planets
 	m_planets[2].add_required_item("Fiber")
