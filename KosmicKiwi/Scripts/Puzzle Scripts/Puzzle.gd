@@ -1,9 +1,8 @@
-extends Node
+extends KinematicBody2D
 
 class_name Puzzle
 
 var m_id : int
-var m_solved := false
 
 func _ready():
 	# setup puzzle
@@ -22,22 +21,19 @@ func ready_puzzle():
 func solve_puzzle():
 	print("Solved!")
 	var already_solved = PuzzleManager.check_puzzle_solved(m_id)
+	
 	# play the solving animation
-#	$AnimatedSprite.play("solved")
+	$AnimatedSprite.play("solved")
+	$Collider.disabled = true
 	
-	# if the puzzle is already solved, play only the last frame of the animation
-#	if PuzzleManager.check_puzzle_solved(m_id):
-#		$AnimatedSprite.set_frame($AnimatedSprite.get_sprite_frames().get_frame_count("solved")-1)
-#	else: 
-#		PuzzleManager.set_puzzle_solved(m_id, true)
-	
-	# testing
-	$AnimatedSprite.modulate = Color(1,0,0)
-	if !already_solved:
+	if already_solved:
+		# if the puzzle is already solved, play only the last frame of the animation
+		$AnimatedSprite.set_frame($AnimatedSprite.get_sprite_frames().get_frame_count("solved")-1)
+		print("Puzzle " + str(m_id) + " already solved.")
+	else:
+		# set the puzzle solved
 		print("Puzzle solved for the first time!")
 		PuzzleManager.set_puzzle_solved(m_id, true)
-	else:
-		print("Puzzle " + str(m_id) + " already solved.")
 
 func on_interact():
 	solve_puzzle()
