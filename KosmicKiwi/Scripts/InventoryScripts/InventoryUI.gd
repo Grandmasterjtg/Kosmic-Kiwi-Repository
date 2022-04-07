@@ -24,8 +24,11 @@ func update_inventory():
 			var inventory = Inventory.get_inventory(category)
 			
 			# null checks
-			if inventory and m_inventory_slots.has(category):
+			
+			if inventory != null and m_inventory_slots.has(category):
 				var slots = m_inventory_slots[category].get_children()
+				# print(slots.size())
+				# print("InventoryUI update_inventory: " + category + str(slots.size()))
 				
 				var index = 0
 				# add the items in the inventory to the UI
@@ -38,6 +41,12 @@ func update_inventory():
 				# remove any leftover items form the UI
 				for i in range(index, slots.size()):
 					slots[i].delete_item()
+
+func test(var1, var2) -> bool:
+	if var1 and m_inventory_slots.has(var2):
+		return true
+	else:
+		return false
 
 #func update_inventory():
 #	var categories = InventoryData.get_inventory_data()

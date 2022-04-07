@@ -4,29 +4,47 @@ const ACTION_HOTBAR_1 := "hotbar_1"
 const ACTION_HOTBAR_2 := "hotbar_2"
 const ACTION_HOTBAR_3 := "hotbar_3"
 const ACTION_HOTBAR_4 := "hotbar_4"
+const ACTION_HOTBAR := "hotbar_"
+
+const PLACE := "place"
+const CANCEL := "cancel"
 
 onready var m_hotbar_slots = $HotbarSlots.get_children()
 const ITEM_CLASS = preload("res://Scenes/Interactables/Item.tscn")
 
 var m_selected_slot = null
 
+var m_showing_item = false
+
 func _ready() -> void:
 	Inventory.connect("inventory_updated", self, "update_hotbar")
 	set_selected_slot(0)
 	
 func _input(event):
-	if event.is_action_pressed(ACTION_HOTBAR_1):
-		set_selected_slot(0)
-		place_item(0)
-	if event.is_action_pressed(ACTION_HOTBAR_2):
-		set_selected_slot(1)
-		place_item(1)
-	if event.is_action_pressed(ACTION_HOTBAR_3):
-		set_selected_slot(2)
-		place_item(2)
-	if event.is_action_pressed(ACTION_HOTBAR_4):
-		set_selected_slot(3)
-		place_item(3)
+#	if event.is_action_pressed(ACTION_HOTBAR_1):
+#		set_selected_slot(0)
+#		# place_item(0)
+#	if event.is_action_pressed(ACTION_HOTBAR_2):
+#		set_selected_slot(1)
+#		# place_item(1)
+#	if event.is_action_pressed(ACTION_HOTBAR_3):
+#		set_selected_slot(2)
+#		# place_item(2)
+#	if event.is_action_pressed(ACTION_HOTBAR_4):
+#		set_selected_slot(3)
+#		# place_item(3)
+		
+	for i in range(m_hotbar_slots.size()):
+		var action = ACTION_HOTBAR + str(i+1)
+		if event.is_action_pressed(action):
+			set_selected_slot(i)
+		
+	if event.is_action_pressed(PLACE) and !m_showing_item:
+		show_item()
+	if event.is_action_pressed(CANCEL) and m_showing_item:
+		cancel_show()
+	if event.is_action_released(PLACE) and m_showing_item:
+		place_item()
 
 # updates the items displayed in the hotbar to the items in the Inventory's hotbar
 # sets the selected item to the currently selected slot
@@ -67,12 +85,44 @@ func set_selected_slot(index: int) -> void:
 		Inventory.set_selected_item(null)
 
 
-func place_item(index: int):
-	var slot_item = m_hotbar_slots[index].get_item()
+func show_item():
+	if m_selected_slot != null and m_selected_slot.get_item() != null:
+		MouseManager.set_mouse_texture(m_selected_slot.get_item().texture)
+		m_showing_item = true
 
-	if slot_item != null and ItemData.is_placeable(slot_item.get_item_name()):
+
+func cancel_show():
+	MouseManager.reset_mouse_texture()
+	m_showing_item = false
+
+
+func place_item():
+	# null checks
+	if m_selected_slot != null and m_selected_slot.get_item() != null:
+		# the item in the selected slot
+		var slot_item = m_selected_slot.get_item()
+		# the in world item to be created
 		var item = ITEM_CLASS.instance()
-		item.set_item(slot_item.get_item_name(), get_parent().get_parent().get_child(1).position)
-		Inventory.remove_item(slot_item.get_item_name())
+		# add the item to the scene
 		get_tree().root.add_child(item)
+		# initialize the item script to the correct item and position
+		item.set_item(slot_item.get_item_name(), item.get_global_mouse_position())
+		# remove the item from the inventory
+		Inventory.remove_item(slot_item.get_item_name())
+		
+		# reset mouse cursor
+		MouseManager.reset_mouse_texture()
+		m_showing_item = false
+
+
+
+#
+#func place_item(index: int):
+#	var slot_item = m_hotbar_slots[index].get_item()
+#
+#	if slot_item != null and ItemData.is_placeable(slot_item.get_item_name()):
+#		var item = ITEM_CLASS.instance()
+#		get_tree().root.add_child(item)
+#		item.set_item(slot_item.get_item_name(), item.get_global_mouse_position())
+#		Inventory.remove_item(slot_item.get_item_name())
 		

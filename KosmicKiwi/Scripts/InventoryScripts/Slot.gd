@@ -1,6 +1,6 @@
 extends Control
 
-const CLICK = "Press"
+const CLICK = "place"
 
 # textures
 const TEXTURE_PATH := "res://ArtAssets/InventorySlots/"
