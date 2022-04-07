@@ -147,6 +147,8 @@ m_name = "Chemical Deposit"
 collision_layer = 0
 collision_mask = 2
 script = ExtResource( 10 )
+interact_radius = 100
+interact_height = 140
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ResourceDeposits/Chemical/UppderLeft/ResourceDeposit/Interactable"]
 rotation = 1.5708
