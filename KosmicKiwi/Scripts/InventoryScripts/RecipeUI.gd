@@ -50,6 +50,8 @@ func craft() -> bool:
 		# add the item to be crafted into the inventory
 		Inventory.add_item(m_recipe.get_item_name(), m_recipe.get_quantity())
 		
+		$CraftSFX.play()
+		
 		return true
 	else:
 		return false
