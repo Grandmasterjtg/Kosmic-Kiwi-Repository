@@ -13,12 +13,10 @@ func _ready():
 
 func add_puzzle(puzzle_id: int):
 	var active_planet_name = PlanetManager.get_active_planet().get_planet_name()
-	print("Puzzle Manager: " + str(m_puzzles))
 	
 	# make sure not to add the same puzzle twice
 	if m_puzzles.has(active_planet_name) and !m_puzzles[active_planet_name].has(puzzle_id):
 		m_puzzles[active_planet_name][puzzle_id] = false
-	print("Puzzle Manager: " + str(m_puzzles))
 
 func check_puzzle_solved(puzzle_id: int) -> bool:
 	var active_planet = PlanetManager.get_active_planet().get_planet_name()
