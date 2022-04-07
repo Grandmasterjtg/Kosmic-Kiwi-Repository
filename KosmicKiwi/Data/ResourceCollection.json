@@ -3,7 +3,7 @@
         "ItemName": "Metal",
         "Quantity": 1,
         "Cooldown": 30.0,
-        "RequiredTool": null
+        "RequiredTool": "T'Hermite"
     },
     "Ship Part Deposit": {
         "ItemName": "Ship Part",
@@ -27,12 +27,12 @@
         "ItemName": "Chemical",
         "Quantity": 1,
         "Cooldown": 30.0,
-        "RequiredTool": null
+        "RequiredTool": "Pipette"
     },
     "Liquid Deposit": {
         "ItemName": "Liquid",
         "Quantity": 1,
         "Cooldown": 0.5,
-        "RequiredTool": null
+        "RequiredTool": "Pipette"
     }
 }

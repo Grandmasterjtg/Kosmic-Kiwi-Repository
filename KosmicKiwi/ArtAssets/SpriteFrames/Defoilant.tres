@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=2 format=2]
 
-[ext_resource path="res://ArtAssets/ItemIcons/Defoilant.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/ItemIcons/Defoilant1.png" type="Texture" id=1]
+
 
 [resource]
 animations = [ {
