@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ArtAssets/OurArt/ScreenUI.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/InventoryScripts/RecipeUI.gd" type="Script" id=3]
+[ext_resource path="res://Sound/SFX/Crafting_SFX.wav" type="AudioStream" id=4]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
@@ -44,3 +45,6 @@ custom_constants/separation = 30
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CraftSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

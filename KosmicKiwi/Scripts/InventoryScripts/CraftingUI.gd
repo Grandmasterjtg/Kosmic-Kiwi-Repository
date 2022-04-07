@@ -14,5 +14,4 @@ func _ready():
 			var recipe_ui = RECIPE_UI_CLASS.instance()
 			m_recipe_display.add_child(recipe_ui)
 			recipe_ui.initialize_recipe(recipe)
-			print("CraftingUI _ready(): " + str(index))
 			index += 1

@@ -2,7 +2,7 @@ extends Node2D
 
 # collection variables
 export var m_name : String = "Metal Deposit"
-var m_item_name : String= "Metal"
+var m_item_name : String = "Metal"
 var m_item_quantity := 1
 var m_required_tool = null
 
@@ -47,7 +47,7 @@ func _on_timeout() -> void:
 		m_button.set_display(true)
 	
 func _on_interact() -> void:
-	if !m_in_cooldown:
+	if !m_in_cooldown and (!m_required_tool or Inventory.check_selected_item(m_required_tool)):
 		Inventory.add_item(m_item_name, m_item_quantity)
 		# starts the cooldown timer
 		m_timer.start()
@@ -56,3 +56,6 @@ func _on_interact() -> void:
 		# modify button display
 		m_button.set_display(false)
 		m_button.set_should_update(false)
+		
+		if m_required_tool:
+			Inventory.remove_item(m_required_tool)
