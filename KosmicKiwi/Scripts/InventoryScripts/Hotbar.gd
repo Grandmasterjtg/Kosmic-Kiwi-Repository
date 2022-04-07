@@ -21,25 +21,12 @@ func _ready() -> void:
 	set_selected_slot(0)
 	
 func _input(event):
-#	if event.is_action_pressed(ACTION_HOTBAR_1):
-#		set_selected_slot(0)
-#		# place_item(0)
-#	if event.is_action_pressed(ACTION_HOTBAR_2):
-#		set_selected_slot(1)
-#		# place_item(1)
-#	if event.is_action_pressed(ACTION_HOTBAR_3):
-#		set_selected_slot(2)
-#		# place_item(2)
-#	if event.is_action_pressed(ACTION_HOTBAR_4):
-#		set_selected_slot(3)
-#		# place_item(3)
-		
 	for i in range(m_hotbar_slots.size()):
 		var action = ACTION_HOTBAR + str(i+1)
 		if event.is_action_pressed(action):
 			set_selected_slot(i)
-		
-	if event.is_action_pressed(PLACE) and !m_showing_item:
+	
+	if event.is_action_pressed(PLACE) and !m_showing_item and UIManager.menus_closed():
 		show_item()
 	if event.is_action_pressed(CANCEL) and m_showing_item:
 		cancel_show()
