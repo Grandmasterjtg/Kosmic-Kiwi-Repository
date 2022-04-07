@@ -1,43 +1,51 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/InventoryUI.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Props/Desert/D_Grass.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Props/Desert/D_Rocks.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Props/Desert/D_Metal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/UI/PauseScreen.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Props/Desert/D_Dust.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=9]
-[ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=10]
-[ext_resource path="res://Scenes/Props/Forest/F_Metal.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Props/Forest/F_Dust.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Props/Forest/F_Rocks.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Props/Forest/F_Grass.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/Props/Jungle/J_Grass.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Props/Forest/F_Dust.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Props/Forest/F_Grass.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Props/Wet/W_Grass.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Props/Wet/W_Rocks.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Props/Wet/W_Boulder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Props/Jungle/J_Grass.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Props/Jungle/J_Metal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Props/Forest/F_Rocks.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Props/Wet/W_Metal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Props/Wet/W_Dust.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Props/Jungle/J_Briar.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Props/Forest/F_Metal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Props/Desert/D_Briar.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Props/Forest/F_Briar.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Props/Jungle/J_Dust.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Props/Jungle/J_Rocks.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/Props/Jungle/J_Metal.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scenes/Props/Wet/W_Metal.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/Props/Wet/W_Grass.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/Props/Wet/W_Dust.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/Props/Wet/W_Rocks.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Props/Desert/D_Grass.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Props/Desert/D_Metal.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Props/Desert/D_Rocks.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Props/Jungle/J_Rocks.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Props/Desert/D_Boulder.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Props/Forest/F_Boulder.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Props/Desert/D_Dust.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Props/Jungle/J_Boulder.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Props/Wet/W_Briar.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/UI/PauseScreen.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=29]
+[ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=30]
 
 [node name="Level" type="Node2D"]
-script = ExtResource( 10 )
+script = ExtResource( 29 )
 m_ship_node_path = "Actors/Ship"
 m_nav_menu_path = "CanvasLayer/NavMenu"
 
-[node name="Pause" parent="." instance=ExtResource( 7 )]
+[node name="Pause" parent="." instance=ExtResource( 27 )]
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 1 )]
 
-[node name="NavMenu" parent="CanvasLayer" instance=ExtResource( 2 )]
+[node name="NavMenu" parent="CanvasLayer" instance=ExtResource( 24 )]
 visible = false
 
 [node name="firstGround" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 30 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -46,7 +54,7 @@ tile_data = PoolIntArray( -4325387, 4, 0, -4325386, 4, 0, -4259852, 4, 0, -42598
 
 [node name="Thingsfirst ground" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 30 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -55,7 +63,7 @@ tile_data = PoolIntArray( -4325386, 1, 0, -4259851, 1, 0, -4259850, 0, 0, -42598
 
 [node name="cliff" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 30 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -64,7 +72,7 @@ tile_data = PoolIntArray( -3604493, 6, 0, -3538958, 6, 0, -3538957, 6, 0, -35389
 
 [node name="second ground" type="TileMap" parent="."]
 mode = 1
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 30 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -73,7 +81,7 @@ tile_data = PoolIntArray( -3997712, 4, 0, -3997711, 4, 0, -3997710, 4, 0, -39977
 
 [node name="second ground things" type="TileMap" parent="second ground"]
 mode = 1
-tile_set = ExtResource( 9 )
+tile_set = ExtResource( 30 )
 cell_size = Vector2( 1000, 500 )
 collision_layer = 4
 collision_mask = 0
@@ -82,60 +90,88 @@ tile_data = PoolIntArray( -3866637, 1, 0, -3866636, 1, 0, -3866635, 9, 0, -38666
 
 [node name="YSort" type="YSort" parent="." groups=["ysort"]]
 
-[node name="Player" parent="YSort" instance=ExtResource( 6 )]
+[node name="Player" parent="YSort" instance=ExtResource( 28 )]
 
 [node name="Dusts" type="YSort" parent="YSort"]
 
-[node name="D_Dust" parent="YSort/Dusts" instance=ExtResource( 8 )]
+[node name="D_Dust" parent="YSort/Dusts" instance=ExtResource( 23 )]
 position = Vector2( -1000, -250 )
 
-[node name="F_Dust" parent="YSort/Dusts" instance=ExtResource( 12 )]
+[node name="F_Dust" parent="YSort/Dusts" instance=ExtResource( 2 )]
 position = Vector2( 3000, -250 )
 
 [node name="J_Dust" parent="YSort/Dusts" instance=ExtResource( 16 )]
 position = Vector2( -1000, 500 )
 
-[node name="W_Dust" parent="YSort/Dusts" instance=ExtResource( 21 )]
+[node name="W_Dust" parent="YSort/Dusts" instance=ExtResource( 11 )]
 position = Vector2( 3000, 500 )
 
 [node name="Grasses" type="YSort" parent="YSort"]
 
-[node name="D_Grass" parent="YSort/Grasses" instance=ExtResource( 3 )]
+[node name="D_Grass" parent="YSort/Grasses" instance=ExtResource( 17 )]
 position = Vector2( 0, -250 )
 
-[node name="F_Grass" parent="YSort/Grasses" instance=ExtResource( 14 )]
+[node name="F_Grass" parent="YSort/Grasses" instance=ExtResource( 3 )]
 position = Vector2( 4000, -250 )
 
-[node name="J_Grass" parent="YSort/Grasses" instance=ExtResource( 15 )]
+[node name="J_Grass" parent="YSort/Grasses" instance=ExtResource( 7 )]
 position = Vector2( 0, 500 )
 
-[node name="W_Grass" parent="YSort/Grasses" instance=ExtResource( 20 )]
+[node name="W_Grass" parent="YSort/Grasses" instance=ExtResource( 4 )]
 position = Vector2( 4000, 500 )
 
 [node name="Metals" type="YSort" parent="YSort"]
 
-[node name="D_Metal" parent="YSort/Metals" instance=ExtResource( 5 )]
+[node name="D_Metal" parent="YSort/Metals" instance=ExtResource( 18 )]
 position = Vector2( 1000, -250 )
 
-[node name="F_Metal" parent="YSort/Metals" instance=ExtResource( 11 )]
+[node name="F_Metal" parent="YSort/Metals" instance=ExtResource( 13 )]
 position = Vector2( 5000, -250 )
 
-[node name="J_Metal" parent="YSort/Metals" instance=ExtResource( 18 )]
+[node name="J_Metal" parent="YSort/Metals" instance=ExtResource( 8 )]
 position = Vector2( 1000, 500 )
 
-[node name="W_Metal" parent="YSort/Metals" instance=ExtResource( 19 )]
+[node name="W_Metal" parent="YSort/Metals" instance=ExtResource( 10 )]
 position = Vector2( 5000, 500 )
 
 [node name="Rocks" type="YSort" parent="YSort"]
 
-[node name="D_Rocks" parent="YSort/Rocks" instance=ExtResource( 4 )]
+[node name="D_Rocks" parent="YSort/Rocks" instance=ExtResource( 19 )]
 position = Vector2( 2000, -250 )
 
-[node name="F_Rocks" parent="YSort/Rocks" instance=ExtResource( 13 )]
+[node name="F_Rocks" parent="YSort/Rocks" instance=ExtResource( 9 )]
 position = Vector2( 6000, -250 )
 
-[node name="J_Rocks" parent="YSort/Rocks" instance=ExtResource( 17 )]
+[node name="J_Rocks" parent="YSort/Rocks" instance=ExtResource( 20 )]
 position = Vector2( 2000, 500 )
 
-[node name="W_Rocks" parent="YSort/Rocks" instance=ExtResource( 22 )]
+[node name="W_Rocks" parent="YSort/Rocks" instance=ExtResource( 5 )]
 position = Vector2( 6000, 500 )
+
+[node name="Boulders" type="YSort" parent="YSort"]
+
+[node name="D_Boulder" parent="YSort/Boulders" instance=ExtResource( 21 )]
+position = Vector2( -1000, 1250 )
+
+[node name="F_Boulder" parent="YSort/Boulders" instance=ExtResource( 22 )]
+position = Vector2( 1000, 1250 )
+
+[node name="J_Boulder" parent="YSort/Boulders" instance=ExtResource( 25 )]
+position = Vector2( 3000, 1250 )
+
+[node name="W_Boulder" parent="YSort/Boulders" instance=ExtResource( 6 )]
+position = Vector2( 5000, 1250 )
+
+[node name="Briars" type="YSort" parent="YSort"]
+
+[node name="D_Briar" parent="YSort/Briars" instance=ExtResource( 14 )]
+position = Vector2( 0, 1250 )
+
+[node name="F_Briar" parent="YSort/Briars" instance=ExtResource( 15 )]
+position = Vector2( 2000, 1250 )
+
+[node name="J_Briar" parent="YSort/Briars" instance=ExtResource( 12 )]
+position = Vector2( 4000, 1250 )
+
+[node name="W_Briar" parent="YSort/Briars" instance=ExtResource( 26 )]
+position = Vector2( 6000, 1250 )

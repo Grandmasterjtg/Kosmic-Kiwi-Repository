@@ -104,7 +104,8 @@ func place_item():
 		# the item in the selected slot
 		var slot_item = m_selected_slot.get_item()
 		# the in world item to be created
-		var item = ITEM_CLASS.instance()
+		var item_class = load(ITEM_FOLDER + slot_item.get_item_name() + ITEM_FILETYPE)
+		var item = item_class.instance()
 		# add the item to the scene
 		get_tree().root.add_child(item)
 		# initialize the item script to the correct item and position
