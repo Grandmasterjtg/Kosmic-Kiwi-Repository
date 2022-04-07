@@ -1,7 +1,7 @@
 extends Node
 
 
-const DEFAULT_TEXTURE = preload("res://icon.png")
+const DEFAULT_TEXTURE = null
 var m_mouse_texture
 
 signal mouse_updated(texture)
