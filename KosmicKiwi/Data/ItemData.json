@@ -4,11 +4,6 @@
         "StackSize": 99,
         "Placeable": false
     },
-    "Ship Part": {
-        "ItemCategory": "ShipPart",
-        "StackSize": 1,
-        "Placeable": false
-    },
     "Fiber": {
         "ItemCategory": "Resource",
         "StackSize": 99,
@@ -44,7 +39,7 @@
         "StackSize": 1,
         "Placeable": false
     },
-    "Power Core": {
+    "Shield": {
         "ItemCategory": "ShipPart",
         "StackSize": 1,
         "Placeable": false

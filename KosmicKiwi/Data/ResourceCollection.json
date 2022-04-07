@@ -34,5 +34,23 @@
         "Quantity": 1,
         "Cooldown": 0.5,
         "RequiredTool": "Pipette"
+    },
+    "Engine": {
+        "ItemName": "Engine",
+        "Quantity": 1,
+        "Cooldown": 0,
+        "RequiredTool": null
+    },
+    "Solar Sail": {
+        "ItemName": "Solar Sail",
+        "Quantity": 1,
+        "Cooldown": 0,
+        "RequiredTool": null
+    },
+    "Shield": {
+        "ItemName": "Shield",
+        "Quantity": 1,
+        "Cooldown": 0,
+        "RequiredTool": null
     }
 }
