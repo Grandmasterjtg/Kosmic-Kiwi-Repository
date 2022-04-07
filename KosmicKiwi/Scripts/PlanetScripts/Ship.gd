@@ -13,8 +13,9 @@ func _ready() -> void:
 	interactable.connect("entered", $ButtonDisplay, "toggle_display")
 	interactable.connect("exited", $ButtonDisplay, "toggle_display")
 	
-	# progression setup
-	# connect("ship_part_added",ProgressionManager,"on_ship_part_added")
+	# indicator setup
+	interactable.connect("entered", $IndicatorBubble, "open_bubble")
+	interactable.connect("exited", $IndicatorBubble, "close_bubble")
 
 func _on_interact() -> void:
 	emit_signal("interacted")

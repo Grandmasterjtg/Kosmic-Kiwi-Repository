@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ArtAssets/Characters/ship/ship_0.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/InteractableScripts/Interactable.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/InteractableScripts/ButtonDisplay.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/PlanetScripts/Ship.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Interactables/IndicatorBubble.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ArtAssets/UI/ScreenUI.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -61,3 +63,13 @@ interact_height = 800
 position = Vector2( 0, 200 )
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[node name="IndicatorBubble" parent="." instance=ExtResource( 5 )]
+position = Vector2( 240.5, -104.5 )
+
+[node name="Sprite" parent="IndicatorBubble" index="0"]
+visible = true
+scale = Vector2( 0.075, 0.075 )
+texture = ExtResource( 6 )
+
+[editable path="IndicatorBubble"]
