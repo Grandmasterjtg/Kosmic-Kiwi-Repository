@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Defoilant.png-46792f0a580cbf57c986ae5613e0caf2.stex"
+path="res://.import/W_Rocks_Stage3.png-125a41da43dc99528ebd1b5569483e5a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/ItemIcons/Defoilant.png"
-dest_files=[ "res://.import/Defoilant.png-46792f0a580cbf57c986ae5613e0caf2.stex" ]
+source_file="res://ArtAssets/Environment/Wet/W_Rocks_Stage3.png"
+dest_files=[ "res://.import/W_Rocks_Stage3.png-125a41da43dc99528ebd1b5569483e5a.stex" ]
 
 [params]
 

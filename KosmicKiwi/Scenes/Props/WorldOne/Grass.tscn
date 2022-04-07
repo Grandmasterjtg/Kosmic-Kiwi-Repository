@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/WorldOne/Grass.tres" type="SpriteFrames" id=1]
+
+[node name="Grass" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -13, 377, -224, 309, -228, 185, -20, 143, 233, 185, 233, 298 )
+disabled = true

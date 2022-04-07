@@ -9,8 +9,10 @@ const ACTION_HOTBAR := "hotbar_"
 const PLACE := "place"
 const CANCEL := "cancel"
 
-onready var m_hotbar_slots = $HotbarSlots.get_children()
-const ITEM_CLASS = preload("res://Scenes/Interactables/Item.tscn")
+onready var m_hotbar_slots = $HotbarSlots
+onready var m_player = get_tree().get_nodes_in_group("player")[0]
+const ITEM_FOLDER = "res://Scenes/Props/Items/"
+const ITEM_FILETYPE = ".tscn"
 
 var m_selected_slot = null
 
@@ -36,7 +38,7 @@ func _input(event):
 # updates the items displayed in the hotbar to the items in the Inventory's hotbar
 # sets the selected item to the currently selected slot
 func update_hotbar():
-	# reset items in hotbar to emtpy
+	# reset items in hotbar to empty
 	for i in range(m_hotbar_slots.size()):
 		m_hotbar_slots[i].delete_item()
 	
@@ -89,7 +91,8 @@ func place_item():
 		# the item in the selected slot
 		var slot_item = m_selected_slot.get_item()
 		# the in world item to be created
-		var item = ITEM_CLASS.instance()
+		var item_class = load(ITEM_FOLDER + slot_item.get_item_name() + ITEM_FILETYPE)
+		var item = item_class.instance()
 		# add the item to the scene
 		get_tree().root.add_child(item)
 		# initialize the item script to the correct item and position
