@@ -24,7 +24,6 @@ func _ready():
 	self.connect("body_exited", self, "_on_body_exited")
 	
 func _process(delta):
-	# add the resources item to the inventory if the player interacts with it
 	if m_in_area and Input.is_action_just_pressed(INTERACT):
 		emit_signal("interacted")
 	

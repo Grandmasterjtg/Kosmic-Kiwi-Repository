@@ -1,6 +1,6 @@
 extends Control
 
-const CLICK = "Press"
+const CLICK = "place"
 
 # textures
 const TEXTURE_PATH := "res://ArtAssets/InventorySlots/"
@@ -15,7 +15,7 @@ var selected_style : StyleBoxTexture = null
 
 # item variables
 const ITEM_CLASS = preload("res://Scenes/UI/Inventory/ItemUI.tscn")
-var m_item = null
+var m_item_ui = null
 
 # data variables
 var m_slot_number := 0
@@ -34,17 +34,17 @@ func _ready():
 # sets the slots ItemUI to the inputted item
 func initialize_item(item_name: String, item_quantity: int) -> void:
 	# if item already exists
-	if m_item != null:
-		m_item.set_item(item_name, item_quantity)
+	if m_item_ui != null:
+		m_item_ui.set_item(item_name, item_quantity)
 	# if no item exists
 	else:
-		m_item = ITEM_CLASS.instance()
-		add_child(m_item)
-		m_item.set_item(item_name, item_quantity)
+		m_item_ui = ITEM_CLASS.instance()
+		add_child(m_item_ui)
+		m_item_ui.set_item(item_name, item_quantity)
 		
 		# set the scale of the item to match the size of the slot
-		var scale = rect_min_size.x / m_item.rect_size.x
-		m_item.rect_scale *= scale
+		var scale = rect_min_size.x / m_item_ui.rect_size.x
+		m_item_ui.rect_scale *= scale
 		
 	# set slot style
 	var item_texture = load(TEXTURE_PATH + ItemData.get_category(item_name) + TEXTURE_TYPE)
@@ -53,22 +53,19 @@ func initialize_item(item_name: String, item_quantity: int) -> void:
 
 # if an item exists, it deletes the node and sets the variable to null
 func delete_item():
-	if m_item != null:
-		m_item.queue_free()
-		m_item = null
+	if m_item_ui != null:
+		m_item_ui.queue_free()
+		m_item_ui = null
 		default_style.texture = EMPTY_SLOT
 
 # checks for if the slot has been interacted by the mouse
 # adds the item to the hotbar when interact is detected
 func _gui_input(event):
-	if event.is_action_pressed(CLICK):
-		print("Slot-_gui_input(): " + str(m_is_interactable))
-	if event.is_action_pressed(CLICK) and m_item != null and m_is_interactable:
-		print("Slot-_gui_input(): Success" )
-		if Inventory.item_exists_in_hotbar(m_item.get_item_category(), m_slot_number):
-			Inventory.remove_from_hotbar(m_item.get_item_category(), m_slot_number)
+	if event.is_action_pressed(CLICK) and m_item_ui != null and m_is_interactable:
+		if Inventory.item_exists_in_hotbar(m_item_ui.get_item_name()):
+			Inventory.remove_from_hotbar(m_item_ui.get_item_name())
 		else:
-			Inventory.add_to_hotbar(m_item.get_item_category(), m_slot_number)
+			Inventory.add_to_hotbar(m_item_ui.get_item_name())
 
 # setter for slot number
 func set_slot_number(index: int) -> void:
@@ -86,4 +83,4 @@ func set_selected(is_selected: bool) -> void:
 		set("custom_styles/panel", default_style)
 	
 func get_item():
-	return m_item
+	return m_item_ui
