@@ -30,7 +30,7 @@ func _input(event):
 		show_item()
 	if event.is_action_pressed(CANCEL) and m_showing_item:
 		cancel_show()
-	if event.is_action_released(PLACE) and m_showing_item:
+	if event.is_action_released(PLACE) and m_showing_item and UIManager.menus_closed():
 		place_item()
 
 # updates the items displayed in the hotbar to the items in the Inventory's hotbar
@@ -100,16 +100,4 @@ func place_item():
 		# reset mouse cursor
 		MouseManager.reset_mouse_texture()
 		m_showing_item = false
-
-
-
-#
-#func place_item(index: int):
-#	var slot_item = m_hotbar_slots[index].get_item()
-#
-#	if slot_item != null and ItemData.is_placeable(slot_item.get_item_name()):
-#		var item = ITEM_CLASS.instance()
-#		get_tree().root.add_child(item)
-#		item.set_item(slot_item.get_item_name(), item.get_global_mouse_position())
-#		Inventory.remove_item(slot_item.get_item_name())
 		
