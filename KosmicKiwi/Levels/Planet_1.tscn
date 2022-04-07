@@ -20,10 +20,11 @@
 radius = 50.0
 height = 70.0
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" groups=["level_root"]]
 script = ExtResource( 7 )
 m_ship_node_path = "Actors/Ship"
 m_nav_menu_path = "CanvasLayer/NavMenu"
+m_planet_index = 1
 
 [node name="Actors" type="Node2D" parent="."]
 
@@ -31,8 +32,10 @@ m_nav_menu_path = "CanvasLayer/NavMenu"
 position = Vector2( 642, -2031 )
 z_index = 1
 
-[node name="Puzzle" parent="Actors" instance=ExtResource( 15 )]
-position = Vector2( 329, -493 )
+[node name="Puzzles" type="Node2D" parent="Actors"]
+
+[node name="Puzzle" parent="Actors/Puzzles" instance=ExtResource( 15 )]
+position = Vector2( 985, 395 )
 z_index = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
