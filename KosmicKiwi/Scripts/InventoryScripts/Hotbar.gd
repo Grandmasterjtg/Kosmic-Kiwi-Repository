@@ -1,9 +1,5 @@
 extends Control
 
-const ACTION_HOTBAR_1 := "hotbar_1"
-const ACTION_HOTBAR_2 := "hotbar_2"
-const ACTION_HOTBAR_3 := "hotbar_3"
-const ACTION_HOTBAR_4 := "hotbar_4"
 const ACTION_HOTBAR := "hotbar_"
 
 const PLACE := "place"
@@ -21,19 +17,6 @@ func _ready() -> void:
 	set_selected_slot(0)
 	
 func _input(event):
-#	if event.is_action_pressed(ACTION_HOTBAR_1):
-#		set_selected_slot(0)
-#		# place_item(0)
-#	if event.is_action_pressed(ACTION_HOTBAR_2):
-#		set_selected_slot(1)
-#		# place_item(1)
-#	if event.is_action_pressed(ACTION_HOTBAR_3):
-#		set_selected_slot(2)
-#		# place_item(2)
-#	if event.is_action_pressed(ACTION_HOTBAR_4):
-#		set_selected_slot(3)
-#		# place_item(3)
-		
 	for i in range(m_hotbar_slots.size()):
 		var action = ACTION_HOTBAR + str(i+1)
 		if event.is_action_pressed(action):
@@ -113,16 +96,4 @@ func place_item():
 		# reset mouse cursor
 		MouseManager.reset_mouse_texture()
 		m_showing_item = false
-
-
-
-#
-#func place_item(index: int):
-#	var slot_item = m_hotbar_slots[index].get_item()
-#
-#	if slot_item != null and ItemData.is_placeable(slot_item.get_item_name()):
-#		var item = ITEM_CLASS.instance()
-#		get_tree().root.add_child(item)
-#		item.set_item(slot_item.get_item_name(), item.get_global_mouse_position())
-#		Inventory.remove_item(slot_item.get_item_name())
 		
