@@ -1,15 +1,11 @@
 extends Control
 
-const ACTION_HOTBAR_1 := "hotbar_1"
-const ACTION_HOTBAR_2 := "hotbar_2"
-const ACTION_HOTBAR_3 := "hotbar_3"
-const ACTION_HOTBAR_4 := "hotbar_4"
 const ACTION_HOTBAR := "hotbar_"
 
 const PLACE := "place"
 const CANCEL := "cancel"
 
-onready var m_hotbar_slots = $HotbarSlots
+onready var m_hotbar_slots = $HotbarSlots.get_children()
 onready var m_player = get_tree().get_nodes_in_group("player")[0]
 const ITEM_FOLDER = "res://Scenes/Props/Items/"
 const ITEM_FILETYPE = ".tscn"
@@ -28,12 +24,13 @@ func _input(event):
 		if event.is_action_pressed(action):
 			set_selected_slot(i)
 	
-	if event.is_action_pressed(PLACE) and !m_showing_item and UIManager.menus_closed():
-		show_item()
-	if event.is_action_pressed(CANCEL) and m_showing_item:
-		cancel_show()
-	if event.is_action_released(PLACE) and m_showing_item and UIManager.menus_closed():
-		place_item()
+	if m_selected_slot.get_item() != null and ItemData.is_placeable(m_selected_slot.get_item().get_item_name()):
+		if event.is_action_pressed(PLACE) and !m_showing_item and UIManager.menus_closed():
+			show_item()
+		if event.is_action_pressed(CANCEL) and m_showing_item:
+			cancel_show()
+		if event.is_action_released(PLACE) and m_showing_item and UIManager.menus_closed():
+			place_item()
 
 # updates the items displayed in the hotbar to the items in the Inventory's hotbar
 # sets the selected item to the currently selected slot
@@ -92,14 +89,15 @@ func place_item():
 		var slot_item = m_selected_slot.get_item()
 		# the in world item to be created
 		var item_class = load(ITEM_FOLDER + slot_item.get_item_name() + ITEM_FILETYPE)
-		var item = item_class.instance()
-		# add the item to the scene
-		get_tree().root.add_child(item)
-		# initialize the item script to the correct item and position
-		item.set_item(slot_item.get_item_name(), item.get_global_mouse_position())
-		# remove the item from the inventory
-		Inventory.remove_item(slot_item.get_item_name())
-		
+		if item_class != null:
+			var item = item_class.instance()
+			# add the item to the scene
+			get_tree().root.add_child(item)
+			# initialize the item script to the correct item and position
+			item.set_item(slot_item.get_item_name(), item.get_global_mouse_position())
+			# remove the item from the inventory
+			Inventory.remove_item(slot_item.get_item_name())
+			
 		# reset mouse cursor
 		MouseManager.reset_mouse_texture()
 		m_showing_item = false
