@@ -47,9 +47,9 @@ func initialize_item(item_name: String, item_quantity: int) -> void:
 		m_item_ui.rect_scale *= scale
 		
 	# set slot style
-#	var item_texture = load(TEXTURE_PATH + ItemData.get_category(item_name) + TEXTURE_TYPE)
-#	if item_texture and default_style:
-#		default_style.texture = item_texture
+	var item_texture = load(TEXTURE_PATH + ItemData.get_category(item_name) + TEXTURE_TYPE)
+	if item_texture and default_style:
+		default_style.texture = item_texture
 
 # if an item exists, it deletes the node and sets the variable to null
 func delete_item():

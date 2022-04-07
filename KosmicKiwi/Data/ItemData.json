@@ -68,5 +68,10 @@
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": true
+    },
+    "Sonic Charge": {
+        "ItemCategory": "Tool",
+        "StackSize": 99,
+        "Placeable": true
     }
 }
