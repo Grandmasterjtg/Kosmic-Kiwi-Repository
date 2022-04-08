@@ -47,7 +47,6 @@ func update_hotbar():
 	for i in range(items.size()):
 		var item_name = items[i][0]
 		var item_quantity = items[i][1]
-		print(item_name)
 		m_hotbar_slots[i].initialize_item(item_name, item_quantity)
 	
 	# set the Inventory's selected item to the selected slot's item
@@ -95,8 +94,8 @@ func place_item():
 			# add the item to the scene
 			get_tree().root.add_child(item)
 			# initialize the item script to the correct item and position
-			# item.set_item(slot_item.get_item_name(), item.get_global_mouse_position())
-			item.position = item.get_global_mouse_position()
+			item.global_position = item.get_global_mouse_position()
+			item.activate()
 			# remove the item from the inventory
 			Inventory.remove_item(slot_item.get_item_name())
 			

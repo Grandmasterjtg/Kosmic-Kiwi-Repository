@@ -1,0 +1,76 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver5.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver6.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver2.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver1.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver4.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver3.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 1000, 1000 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": false,
+"name": "solved",
+"speed": 5.0
+} ]
+
+[node name="D_RopeCliff" type="StaticBody2D" groups=["river"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 8 )
+playing = true
+flip_h = true
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -282, 241, -18, 101, 222, 213, -33, 378 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -100, 54, -388, 196, -286, 239, -22, 98 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 224, 217, -30, 381, 100, 449, 398, 301 )

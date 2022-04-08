@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scenes/Puzzles/Puzzle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Mouse/Mouse.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Props/ShipParts/ShipPart.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Props/Forest/F_RiverLeft.tscn" type="PackedScene" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 50.0
@@ -42,8 +43,6 @@ z_index = 1
 
 [node name="ShipPart" parent="Actors" instance=ExtResource( 17 )]
 position = Vector2( 2655, 545 )
-
-[node name="AnimatedSprite" parent="Actors/ShipPart" index="0"]
 z_index = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -1048,6 +1047,9 @@ texture = ExtResource( 13 )
 [node name="IndicatorBubble3" parent="." instance=ExtResource( 12 )]
 position = Vector2( -2983, -4658 )
 scale = Vector2( 1, 0.946667 )
+
+[node name="F_RopeCliff" parent="." instance=ExtResource( 18 )]
+position = Vector2( -3005, 380 )
 
 [editable path="RopeOverWater"]
 [editable path="DefoilantBushes"]
