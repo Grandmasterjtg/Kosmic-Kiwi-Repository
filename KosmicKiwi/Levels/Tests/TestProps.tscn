@@ -164,11 +164,11 @@ position = Vector2( 5000, 1250 )
 
 [node name="Briars" type="YSort" parent="YSort"]
 
-[node name="D_Briar" parent="YSort/Briars" instance=ExtResource( 14 )]
-position = Vector2( 0, 1250 )
-
 [node name="F_Briar" parent="YSort/Briars" instance=ExtResource( 15 )]
 position = Vector2( 2000, 1250 )
+
+[node name="D_Briar" parent="YSort/Briars" instance=ExtResource( 14 )]
+position = Vector2( 0, 1250 )
 
 [node name="J_Briar" parent="YSort/Briars" instance=ExtResource( 12 )]
 position = Vector2( 4000, 1250 )
