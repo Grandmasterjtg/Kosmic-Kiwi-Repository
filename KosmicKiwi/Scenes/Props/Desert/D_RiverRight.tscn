@@ -68,13 +68,7 @@ playing = true
 flip_h = true
 
 [node name="Collider" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -282, 241, -18, 101, 222, 213, -33, 378 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -100, 54, -388, 196, -286, 239, -22, 98 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 224, 217, -30, 381, 100, 449, 398, 301 )
+polygon = PoolVector2Array( -398, 199, -103, 49, 395, 300, 101, 448 )
 
 [node name="F_Liquid2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 142, 159 )

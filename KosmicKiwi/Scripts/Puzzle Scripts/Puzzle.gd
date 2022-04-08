@@ -2,14 +2,15 @@ extends Node2D
 
 class_name Puzzle
 
-var m_id : int
+var m_id : Vector2
+export var type : String
 
 func _ready():
 	# setup puzzle
 	ready_puzzle()
 
 func ready_puzzle():
-	m_id = self.get_index()
+	m_id = self.get_global_position()
 	PuzzleManager.add_puzzle(m_id)
 	if PuzzleManager.check_puzzle_solved(m_id):
 		solve_puzzle()

@@ -14,15 +14,6 @@ frames = ExtResource( 2 )
 playing = true
 flip_h = true
 
-[node name="Collider" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -282, 241, -18, 101, 222, 213, -33, 378 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -100, 54, -388, 196, -286, 239, -22, 98 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 224, 217, -30, 381, 100, 449, 398, 301 )
-
 [node name="F_Liquid2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 142, 159 )
 
@@ -39,6 +30,9 @@ position = Vector2( 1.6, 1.60001 )
 [node name="Interactable" parent="F_Liquid/ResourceDeposit" index="0"]
 rotation = 0.523599
 scale = Vector2( 0.6, 0.2 )
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -398, 199, -103, 49, 395, 300, 101, 448 )
 
 [editable path="F_Liquid2"]
 [editable path="F_Liquid2/ResourceDeposit"]
