@@ -51,6 +51,9 @@ func _on_timeout() -> void:
 		m_button.set_display(true)
 	
 func _on_interact() -> void:
+	if !m_in_cooldown and m_required_tool != null:
+		PlayerManager.show_bubble(m_required_tool, load("res://ArtAssets/ItemIcons/" + m_required_tool + ".png"))
+	
 	if !m_in_cooldown and (!m_required_tool or Inventory.check_selected_item(m_required_tool)):
 		Inventory.add_item(m_item_name, m_item_quantity)
 		emit_signal("interacted")
@@ -65,3 +68,4 @@ func _on_interact() -> void:
 		
 		if m_required_tool:
 			Inventory.remove_item(m_required_tool)
+			

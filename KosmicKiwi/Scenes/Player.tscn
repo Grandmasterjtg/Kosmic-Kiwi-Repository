@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ArtAssets/SpriteFrames/Kiwi.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/PlayerMovement.gd" type="Script" id=2]
+[ext_resource path="res://ArtAssets/ItemIcons/Chemical.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/UI/IndicatorBubble.png" type="Texture" id=4]
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 collision_layer = 2
@@ -11,7 +13,7 @@ m_speed = 2000.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
-animation = "left"
+animation = "walking_left"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -8, -55, -70, -33, -101, -5, -91, 20, -51, 45, -4, 53, 42, 41, 71, 21, 87, 2, 59, -32 )
@@ -21,3 +23,22 @@ current = true
 zoom = Vector2( 5, 5 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+
+[node name="Bubble" type="Sprite" parent="."]
+visible = false
+position = Vector2( -32, -527 )
+texture = ExtResource( 4 )
+
+[node name="Texture" type="TextureRect" parent="Bubble"]
+margin_left = -203.0
+margin_top = -238.0
+margin_right = 397.0
+margin_bottom = 362.0
+rect_scale = Vector2( 0.65, 0.65 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BubbleTime" type="Timer" parent="."]
+one_shot = true

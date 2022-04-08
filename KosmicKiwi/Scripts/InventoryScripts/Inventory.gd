@@ -69,7 +69,6 @@ func remove_item(item_name: String, amount: int = 1) -> bool:
 					inventory.erase(slot)
 					# if item exists in the hotbar, erase it
 					remove_from_hotbar(item_name)
-				print("Inventory remove_item: " + item_name)
 				emit_signal("inventory_updated")
 				return true
 		

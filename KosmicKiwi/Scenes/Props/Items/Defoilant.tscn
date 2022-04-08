@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ArtAssets/SpriteFrames/Defoliant.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://ArtAssets/SpriteFrames/PlaceableTools/Defoliant.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/PropScripts/Consumable.gd" type="Script" id=2]
 
 [node name="Defoliant" type="StaticBody2D"]
