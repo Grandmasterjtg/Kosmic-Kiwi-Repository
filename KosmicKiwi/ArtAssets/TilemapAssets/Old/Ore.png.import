@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground1.png-c67ba658d8abfbb7f62c58ed64019f3b.stex"
+path="res://.import/Ore.png-5484018fd2d2b98fcdea5a3860dcb97c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilemapAssets/Ground1.png"
-dest_files=[ "res://.import/Ground1.png-c67ba658d8abfbb7f62c58ed64019f3b.stex" ]
+source_file="res://ArtAssets/TilemapAssets/Old/Ore.png"
+dest_files=[ "res://.import/Ore.png-5484018fd2d2b98fcdea5a3860dcb97c.stex" ]
 
 [params]
 

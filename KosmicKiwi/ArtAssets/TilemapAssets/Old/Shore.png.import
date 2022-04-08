@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Briar.png-2d6ea310e20c661548c06a0a46e83535.stex"
+path="res://.import/Shore.png-461ff8fdadd2d1e394494d29488e6cd8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilemapAssets/Briar.png"
-dest_files=[ "res://.import/Briar.png-2d6ea310e20c661548c06a0a46e83535.stex" ]
+source_file="res://ArtAssets/TilemapAssets/Old/Shore.png"
+dest_files=[ "res://.import/Shore.png-461ff8fdadd2d1e394494d29488e6cd8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Shore.png-5e892ac217712d59654ab523a3bd231c.stex"
+path="res://.import/Dust.png-1d2fa6f39fb72a9dc6661a188081d059.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilemapAssets/Shore.png"
-dest_files=[ "res://.import/Shore.png-5e892ac217712d59654ab523a3bd231c.stex" ]
+source_file="res://ArtAssets/TilemapAssets/Old/Dust.png"
+dest_files=[ "res://.import/Dust.png-1d2fa6f39fb72a9dc6661a188081d059.stex" ]
 
 [params]
 

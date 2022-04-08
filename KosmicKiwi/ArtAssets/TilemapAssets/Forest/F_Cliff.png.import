@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Boulder.png-820ad49e7331a5a2179fb69931264480.stex"
+path="res://.import/F_Cliff.png-2e548ace014f0d8dba0e763c66ee4357.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilemapAssets/Boulder.png"
-dest_files=[ "res://.import/Boulder.png-820ad49e7331a5a2179fb69931264480.stex" ]
+source_file="res://ArtAssets/TilemapAssets/Forest/F_Cliff.png"
+dest_files=[ "res://.import/F_Cliff.png-2e548ace014f0d8dba0e763c66ee4357.stex" ]
 
 [params]
 

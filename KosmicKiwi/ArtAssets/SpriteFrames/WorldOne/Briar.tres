@@ -1,6 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=2 format=2]
 
-[ext_resource path="res://TilemapAssets/Briar.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/TilemapAssets/Old/Briar.png" type="Texture" id=1]
+
 
 [resource]
 animations = [ {

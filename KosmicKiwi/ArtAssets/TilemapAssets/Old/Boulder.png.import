@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rocks.png-0f80f175be7e4f713eefb0a481e5cf60.stex"
+path="res://.import/Boulder.png-758417fef1403cab8705d6c06d50142a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilemapAssets/Rocks.png"
-dest_files=[ "res://.import/Rocks.png-0f80f175be7e4f713eefb0a481e5cf60.stex" ]
+source_file="res://ArtAssets/TilemapAssets/Old/Boulder.png"
+dest_files=[ "res://.import/Boulder.png-758417fef1403cab8705d6c06d50142a.stex" ]
 
 [params]
 
