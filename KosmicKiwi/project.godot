@@ -71,6 +71,7 @@ Inventory="*res://Scripts/InventoryScripts/Inventory.gd"
 PlanetManager="*res://Scripts/PlanetScripts/PlanetManager.gd"
 PuzzleManager="*res://Scripts/Puzzle Scripts/PuzzleManager.gd"
 MouseManager="*res://Scripts/Mouse/MouseManager.gd"
+ProgressionManager="*res://Scripts/PlanetScripts/ProgressionManager.gd"
 UIManager="*res://Scripts/UIScripts/UIManager.gd"
 PlayerManager="*res://Scripts/PlayerScripts/PlayerManager.gd"
 

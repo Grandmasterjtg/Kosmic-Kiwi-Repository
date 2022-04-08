@@ -7,6 +7,7 @@ var m_planets = [ # setup each planet in this array, index is important
 	Planet.new("Planet 3", "res://Levels/Tests/Test.tscn")
 ]
 var m_active_planet : Planet = m_planets[0]
+var m_ship_visual_index := 0
 
 func _ready():
 	# find the root node and set m_active_planet to it's planet_index
@@ -17,19 +18,18 @@ func _ready():
 	else:
 		printerr("PlanetManager: No node in 'level_root' group")
 	
-	
 	# setup required items for planets
 	m_planets[2].add_required_item("Fiber")
 	m_planets[3].add_required_item("Liquid")
 	m_planets[3].add_required_item("Metal")
 	
-	# update planet's requirements
+	# update planets and ship
 	update_planets()
 
 func update_planets():
 	for planet in m_planets:
 		planet.check_required_items()
-		
+
 func get_planets() -> Array:
 	return m_planets.duplicate()
 

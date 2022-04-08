@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Interactables/ResourceCollection/ResourceDeposit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ArtAssets/Characters/ship/ShipEngine.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="ShipPart" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="ResourceDeposit" parent="." instance=ExtResource( 1 )]
+m_name = "Engine"

@@ -1,15 +1,46 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://ArtAssets/Characters/ship/ship_0.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/Characters/ship/ship_states/ship_0.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/InteractableScripts/Interactable.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/InteractableScripts/ButtonDisplay.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/PlanetScripts/Ship.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Interactables/IndicatorBubble.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ArtAssets/UI/ScreenUI.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Characters/ship/ship_states/ship_1.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Characters/ship/ship_states/ship_3.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/Characters/ship/ship_states/ship_2.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/Characters/ship/ship_states/ship_4.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [  ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "ship_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "ship_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "ship_2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "ship_4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "ship_3",
 "speed": 5.0
 } ]
 
@@ -25,8 +56,9 @@ height = 800.0
 scale = Vector2( 2, 2 )
 script = ExtResource( 4 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
+animation = "ship_0"
 playing = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -61,3 +93,13 @@ interact_height = 800
 position = Vector2( 0, 200 )
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[node name="IndicatorBubble" parent="." instance=ExtResource( 5 )]
+position = Vector2( 240.5, -104.5 )
+
+[node name="Sprite" parent="IndicatorBubble" index="0"]
+visible = true
+scale = Vector2( 0.075, 0.075 )
+texture = ExtResource( 6 )
+
+[editable path="IndicatorBubble"]
