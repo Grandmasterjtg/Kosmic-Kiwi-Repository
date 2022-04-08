@@ -21,7 +21,7 @@ extents = Vector2( 1000, 10 )
 
 [node name="Level_1_Planet_1" type="Node2D" groups=["level_root"]]
 script = ExtResource( 13 )
-m_planet_index = 1
+m_planet_index = 2
 
 [node name="Map" type="Node2D" parent="."]
 
@@ -162,27 +162,6 @@ position = Vector2( -12500, 7331 )
 
 [node name="F_Grass12" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 3 )]
 position = Vector2( -8235, 7735 )
-
-[node name="F_Dust" parent="Actors/ResourcePoints/Grass/F_Grass12" instance=ExtResource( 5 )]
-position = Vector2( 735, 515 )
-
-[node name="F_Dust2" parent="Actors/ResourcePoints/Grass/F_Grass12" instance=ExtResource( 5 )]
-position = Vector2( 2235, 2015 )
-
-[node name="F_Metal" parent="Actors/ResourcePoints/Grass/F_Grass12/F_Dust2" instance=ExtResource( 4 )]
-position = Vector2( -500, -750 )
-
-[node name="F_Metal2" parent="Actors/ResourcePoints/Grass/F_Grass12/F_Dust2" instance=ExtResource( 4 )]
-position = Vector2( -3500, -250 )
-
-[node name="F_Dust3" parent="Actors/ResourcePoints/Grass/F_Grass12" instance=ExtResource( 5 )]
-position = Vector2( -1265, 2515 )
-
-[node name="F_Dust4" parent="Actors/ResourcePoints/Grass/F_Grass12" instance=ExtResource( 5 )]
-position = Vector2( 235, 2515 )
-
-[node name="F_Metal" parent="Actors/ResourcePoints/Grass/F_Grass12/F_Dust4" instance=ExtResource( 4 )]
-position = Vector2( -500, 500 )
 
 [node name="F_Grass13" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 3 )]
 position = Vector2( 19771, 4591 )
@@ -380,20 +359,32 @@ position = Vector2( -1500, -5750 )
 [node name="F_Dust8" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
 position = Vector2( -3000, -5000 )
 
+[node name="F_Dust10" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( -9500, -10250 )
+
+[node name="F_Dust11" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( -9000, -9750 )
+
+[node name="F_Dust12" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( 1000, -12000 )
+
+[node name="F_Dust13" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( 1500, -12500 )
+
 [node name="F_Dust9" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
 position = Vector2( -1500, -4750 )
 
-[node name="F_Dust" parent="Actors/ResourcePoints/Chemical/F_Dust9" instance=ExtResource( 5 )]
-position = Vector2( -8000, -5500 )
+[node name="F_Dust14" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( -7500, 8250 )
 
-[node name="F_Dust2" parent="Actors/ResourcePoints/Chemical/F_Dust9" instance=ExtResource( 5 )]
-position = Vector2( -7500, -5000 )
+[node name="F_Dust15" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( -6000, 9750 )
 
-[node name="F_Dust3" parent="Actors/ResourcePoints/Chemical/F_Dust9" instance=ExtResource( 5 )]
-position = Vector2( 2500, -7250 )
+[node name="F_Dust16" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( -9500, 10250 )
 
-[node name="F_Dust4" parent="Actors/ResourcePoints/Chemical/F_Dust9" instance=ExtResource( 5 )]
-position = Vector2( 3000, -7750 )
+[node name="F_Dust17" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
+position = Vector2( -8000, 10250 )
 
 [node name="Liquid" type="YSort" parent="Actors/ResourcePoints"]
 
@@ -425,6 +416,15 @@ position = Vector2( 13500, 4000 )
 
 [node name="F_Metal9" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 4 )]
 position = Vector2( 11500, 4250 )
+
+[node name="F_Metal10" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 4 )]
+position = Vector2( -6500, 9000 )
+
+[node name="F_Metal11" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 4 )]
+position = Vector2( -9500, 9500 )
+
+[node name="F_Metal12" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 4 )]
+position = Vector2( -8500, 10750 )
 
 [node name="Puzzles" type="YSort" parent="Actors"]
 position = Vector2( 13, -215 )

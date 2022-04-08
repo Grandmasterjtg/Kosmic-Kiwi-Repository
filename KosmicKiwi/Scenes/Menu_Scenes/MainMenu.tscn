@@ -26,6 +26,9 @@ rect_scale = Vector2( 0.4, 0.4 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="GameNameText" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -59,3 +62,6 @@ rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}

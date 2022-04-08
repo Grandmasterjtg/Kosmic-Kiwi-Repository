@@ -5,6 +5,7 @@ export var m_planet_index := 0
 func _ready() -> void:
 	# setup ship
 	setup_ship()
+	UIManager.close_all_menus()
 
 func setup_ship():
 	var ship = $Actors/Ship

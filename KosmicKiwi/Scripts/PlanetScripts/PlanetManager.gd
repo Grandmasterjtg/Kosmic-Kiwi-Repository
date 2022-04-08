@@ -3,6 +3,7 @@ extends Node
 var m_planets = [ # setup each planet in this array, index is important
 	Planet.new("Planet 0", "res://Levels/Level_1_Planet_1.tscn"),
 	Planet.new("Planet 1", "res://Levels/Planet_1.tscn"),
+	Planet.new("Planet 1", "res://Levels/Level_1_Planet_1.tscn"),
 	Planet.new("Planet 2", "res://Levels/Tests/FriendTest_scene.tscn"),
 	Planet.new("Planet 3", "res://Levels/Tests/Test.tscn")
 ]

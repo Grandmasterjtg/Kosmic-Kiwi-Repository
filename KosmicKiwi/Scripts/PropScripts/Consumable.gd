@@ -11,8 +11,6 @@ func _ready():
 func activate():
 	var items = get_tree().get_nodes_in_group(item_to_destroy)
 	for item in items:
-		print("Consumable: " + str(global_position.distance_to(item.global_position)))
-		print(position)
 		if global_position.distance_to(item.global_position) < m_range:
 			item.solve_puzzle()
 
