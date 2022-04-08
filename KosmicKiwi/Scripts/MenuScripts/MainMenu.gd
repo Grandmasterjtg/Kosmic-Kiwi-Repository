@@ -3,7 +3,7 @@ extends Control
 onready var m_close_button = $CloseButton
 onready var m_start_button = $StartButton
 
-const START_LEVEL_PATH = "res://Levels/Planet_1.tscn"
+const START_LEVEL_PATH = "res://Levels/Level_1_Planet_1.tscn"
 
 func _ready():
 	m_close_button = $CloseButton
@@ -17,5 +17,5 @@ func _on_CloseButton_pressed():
 
 func _on_StartButton_pressed():
 	print("StartButton pressed.")
-	PlanetManager.set_active_planet(PlanetManager.get_planet_at_index(1))
+	PlanetManager.set_active_planet(PlanetManager.get_planet_at_index(2))
 	get_tree().change_scene(START_LEVEL_PATH)

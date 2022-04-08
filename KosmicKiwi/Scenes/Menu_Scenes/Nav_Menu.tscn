@@ -57,7 +57,7 @@ margin_top = 460.0
 margin_right = 500.0
 margin_bottom = 650.0
 size_flags_horizontal = 3
-m_planet_index = 1
+m_planet_index = 2
 m_texture = ExtResource( 4 )
 
 [node name="Planet_2_Button" parent="Buttons" instance=ExtResource( 1 )]

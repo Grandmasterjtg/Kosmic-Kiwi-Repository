@@ -12,6 +12,11 @@ func _on_CloseButton_pressed():
 	toggle_nav_menu()
 
 func toggle_nav_menu():
+	if visible:
+		UIManager.close_menu()
+	else:
+		UIManager.open_menu()
+	
 	visible = !visible
 	update_buttons()
 

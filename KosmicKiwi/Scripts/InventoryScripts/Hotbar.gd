@@ -17,6 +17,7 @@ var m_showing_item = false
 func _ready() -> void:
 	Inventory.connect("inventory_updated", self, "update_hotbar")
 	set_selected_slot(0)
+	update_hotbar()
 	
 func _input(event):
 	for i in range(m_hotbar_slots.size()):
