@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=1]
-[ext_resource path="res://ArtAssets/SpriteFrames/Forest/F_River.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://ArtAssets/SpriteFrames/Wet/W_River.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://Scenes/Props/Forest/F_Liquid.tscn" type="PackedScene" id=3]
 
-[node name="F_RopeCliff" type="StaticBody2D" groups=["river"]]
+[node name="W_RopeCliff" type="StaticBody2D" groups=["river"]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 1 )
