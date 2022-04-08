@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/PlaceableTools/Foam.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/PropScripts/Consumable.gd" type="Script" id=2]
+
+[node name="Foam" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource( 2 )
+m_range = 300
+item_to_destroy = "river"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -19, 186, -131, 152, -175, 84, -195, 10, -77, -50, 49, -48, 177, 0, 149, 94, 79, 164 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true

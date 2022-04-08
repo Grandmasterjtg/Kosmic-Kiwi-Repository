@@ -7,7 +7,6 @@
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB3-5-7-9.png" type="Texture" id=5]
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB6.png" type="Texture" id=6]
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB1-11.png" type="Texture" id=7]
-[ext_resource path="res://ArtAssets/UI/IndicatorBubble.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -41,3 +40,4 @@ texture = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
+autostart = true

@@ -1,10 +1,6 @@
 extends KinematicBody2D
 
 const ACTION_DOWN := "move_down"
-const ACTION_HOTBAR_1 := "hotbar_1"
-const ACTION_HOTBAR_2 := "hotbar_2"
-const ACTION_HOTBAR_3 := "hotbar_3"
-const ACTION_HOTBAR_4 := "hotbar_4"
 const ACTION_LEFT := "move_left"
 const ACTION_RIGHT := "move_right"
 const ACTION_UP := "move_up"
@@ -25,6 +21,10 @@ export var m_speed : float
 var m_direction := Vector2(0, 1)
 
 onready var animation = $AnimatedSprite
+
+func _ready():
+	$BubbleTime.connect("timeout", self, "hide_bubble")
+	PlayerManager.set_player(self)
 
 func _physics_process(delta) -> void:
 	var x = Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT)
@@ -104,3 +104,11 @@ func instantiate_image(scale) -> void:
 	sprite.position.x += m_direction.x * size_x
 	sprite.position.y += m_direction.y * size_y
 	get_parent().add_child(sprite)
+	
+func show_bubble(item_name: String, texture) -> void:
+	$Bubble.visible = true;
+	$Bubble/Texture.texture = texture
+	$BubbleTime.start()
+		
+func hide_bubble() -> void:
+	$Bubble.visible = false

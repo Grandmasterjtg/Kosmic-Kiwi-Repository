@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/Forest/F_River.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Props/Forest/F_Liquid.tscn" type="PackedScene" id=3]
+
+[node name="F_RopeCliff" type="StaticBody2D" groups=["river"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+playing = true
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -391, 300, 106, 52, 396, 197, -100, 448 )
+
+[node name="F_Liquid" parent="." instance=ExtResource( 3 )]
+position = Vector2( 149, 321 )
+
+[node name="ResourceDeposit" parent="F_Liquid" index="1"]
+position = Vector2( 1.6, 1.60001 )
+
+[node name="Interactable" parent="F_Liquid/ResourceDeposit" index="0"]
+rotation = -0.523599
+scale = Vector2( 0.6, 0.2 )
+
+[node name="F_Liquid2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -142, 159 )
+
+[node name="Interactable" parent="F_Liquid2/ResourceDeposit" index="0"]
+rotation = -0.523599
+scale = Vector2( 0.6, 0.2 )
+
+[editable path="F_Liquid"]
+[editable path="F_Liquid/ResourceDeposit"]
+[editable path="F_Liquid2"]
+[editable path="F_Liquid2/ResourceDeposit"]
