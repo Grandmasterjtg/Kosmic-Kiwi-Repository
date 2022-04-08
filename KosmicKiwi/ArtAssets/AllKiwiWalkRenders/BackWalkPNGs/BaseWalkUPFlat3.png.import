@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walkDownFlat4.png-5071ce5448b327910901f6dc27c65a9f.stex"
+path="res://.import/BaseWalkUPFlat3.png-0224a5c997cd7fe1d27b85dd2d55bb19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/AllKiwiWalkRenders/BackWalkPNGs/walkDownFlat4.png"
-dest_files=[ "res://.import/walkDownFlat4.png-5071ce5448b327910901f6dc27c65a9f.stex" ]
+source_file="res://ArtAssets/AllKiwiWalkRenders/BackWalkPNGs/BaseWalkUPFlat3.png"
+dest_files=[ "res://.import/BaseWalkUPFlat3.png-0224a5c997cd7fe1d27b85dd2d55bb19.stex" ]
 
 [params]
 

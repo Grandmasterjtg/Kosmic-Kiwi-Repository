@@ -1,16 +1,16 @@
-[gd_resource type="SpriteFrames" load_steps=34 format=2]
+[gd_resource type="SpriteFrames" load_steps=30 format=2]
 
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/FrontWalkPNGs/walkDownFlat1.png" type="Texture" id=1]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Backish/0015.png" type="Texture" id=2]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Backish/0035.png" type="Texture" id=3]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0005.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/BackWalkPNGs/BaseWalkUPFlat4.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/FrontWalkPNGs/walkDownFlat2.png" type="Texture" id=5]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0000.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/BackWalkPNGs/BaseWalkUPFlat2.png" type="Texture" id=6]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/FrontWalkPNGs/walkDownFlat4.png" type="Texture" id=7]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/sideWalkPNGs/sideWalktake3.png" type="Texture" id=8]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/sideWalkPNGs/sideWalktake4.png" type="Texture" id=9]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/sideWalkPNGs/sideWalktake5.png" type="Texture" id=10]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0010.png" type="Texture" id=11]
+[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/BackWalkPNGs/BaseWalkUPFlat1.png" type="Texture" id=11]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Frontish/0015.png" type="Texture" id=12]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Backish/0030.png" type="Texture" id=13]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/sideWalkPNGs/sideWalktake1.png" type="Texture" id=14]
@@ -18,15 +18,11 @@
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Backish/0000.png" type="Texture" id=16]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/sideWalkPNGs/sideWalktake2.png" type="Texture" id=17]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Frontish/0020.png" type="Texture" id=18]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0015.png" type="Texture" id=19]
+[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/BackWalkPNGs/BaseWalkUPFlat3.png" type="Texture" id=19]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Frontish/0030.png" type="Texture" id=20]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0020.png" type="Texture" id=21]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0025.png" type="Texture" id=22]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0030.png" type="Texture" id=23]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Frontish/0010.png" type="Texture" id=24]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Backish/0025.png" type="Texture" id=25]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Frontish/0025.png" type="Texture" id=26]
-[ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Back/0035.png" type="Texture" id=27]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Frontish/0035.png" type="Texture" id=30]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Backish/0010.png" type="Texture" id=33]
 [ext_resource path="res://ArtAssets/AllKiwiWalkRenders/Backish/0020.png" type="Texture" id=35]
@@ -36,9 +32,34 @@
 
 [resource]
 animations = [ {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 37 ), ExtResource( 24 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "walking_down_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 14 ), ExtResource( 17 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "walking_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 19 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "walking_up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 40 ), ExtResource( 33 ), ExtResource( 2 ), ExtResource( 35 ), ExtResource( 25 ), ExtResource( 13 ), ExtResource( 3 ) ],
@@ -56,33 +77,8 @@ animations = [ {
 "name": "idle_down_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 38 ), ExtResource( 37 ), ExtResource( 24 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "walking_down_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "walking_up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "idle_up",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 15 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "walking_down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "idle_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "idle_down",
 "speed": 5.0
 } ]
