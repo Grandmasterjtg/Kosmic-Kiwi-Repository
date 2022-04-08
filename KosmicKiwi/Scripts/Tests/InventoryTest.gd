@@ -26,18 +26,18 @@ func _ready():
 	# Expected: add an amount up to the stack size
 	Inventory.add_item("Fiber", 100)
 	if Inventory.get_item_quantity("Fiber") == ItemData.get_stack_size("Fiber"):
-		print("AddMoreThanStackSize" + PASS + " Inventory: " + str(Inventory.m_inventory))
+		print("AddMoreThanStackSize" + PASS + " - Inventory: " + str(Inventory.m_inventory))
 	else:
-		print("AddMoreThanStackSize" + FAIL + " Inventory: " + str(Inventory.m_inventory))
+		print("AddMoreThanStackSize" + FAIL + " - Inventory: " + str(Inventory.m_inventory))
 		
 	# Add item with negative amount
 	# Expected to not add item
 	Inventory.clear_inventory()
 	Inventory.add_item("Fiber", -1)
 	if !Inventory.item_exists_in_inventory("Fiber", -1):
-		print("AddNegativeAmount" + PASS + " Inventory: " + str(Inventory.m_inventory))
+		print("AddNegativeAmount" + PASS + " - Inventory: " + str(Inventory.m_inventory))
 	else:
-		print("AddNegativeAmount" + FAIL + " Inventory: " + str(Inventory.m_inventory))
+		print("AddNegativeAmount" + FAIL + " - Inventory: " + str(Inventory.m_inventory))
 		
 	# Simple add item when it exists in inventory
 	Inventory.clear_inventory()
@@ -45,11 +45,11 @@ func _ready():
 	if Inventory.get_item_quantity("Fiber") == 1:
 		Inventory.add_item("Fiber", 1)
 		if Inventory.get_item_quantity("Fiber") == 2:
-			print("SimpleAddTwice" + PASS + " Inventory: " + str(Inventory.m_inventory))
+			print("SimpleAddTwice" + PASS + " - Inventory: " + str(Inventory.m_inventory))
 		else:
-			print("SimpleAddTwice" + FAIL + " Item did not stack " + " Inventory: " + str(Inventory.m_inventory))
+			print("SimpleAddTwice" + FAIL + " - Item did not stack - " + " Inventory: " + str(Inventory.m_inventory))
 	else:
-		print("SimpleAddTwice" + FAIL + " No item was added " + " Inventory: " + str(Inventory.m_inventory))
+		print("SimpleAddTwice" + FAIL + " - No item was added - " + " Inventory: " + str(Inventory.m_inventory))
 		
 	# Add twice with when the item will go past stack size
 	Inventory.clear_inventory()
@@ -57,8 +57,13 @@ func _ready():
 	if Inventory.get_item_quantity("Fiber") == 98:
 		Inventory.add_item("Fiber", 100)
 		if Inventory.get_item_quantity("Fiber") == 99:
-			print("AddTiceOverStack" + PASS + " Inventory: " + str(Inventory.m_inventory))
+			print("AddTwiceOverStack" + PASS + " - Inventory: " + str(Inventory.m_inventory))
 		else:
-			print("AddTiceOverStack" + FAIL + " Second item add wrong " + " Inventory: " + str(Inventory.m_inventory))
+			print("AddTwiceOverStack" + FAIL + " - Second item added wrong - " + " Inventory: " + str(Inventory.m_inventory))
 	else:
-		print("AddTiceOverStack" + FAIL + " No item was added " + " Inventory: " + str(Inventory.m_inventory))
+		print("AddTwiceOverStack" + FAIL + " - No item was added - " + " Inventory: " + str(Inventory.m_inventory))
+
+	
+
+
+
