@@ -15,40 +15,24 @@
         {
             "Recipe": [["Fiber", 5]],
             "Quantity": 1
-        },
-        {
-            "Recipe": [["Fiber", 1]],
-            "Quantity": 5
         }
     ],
     "Foam": [
         {
             "Recipe": [["Liquid", 3], ["Rock", 2]],
             "Quantity": 2
-        },
-        {
-            "Recipe": [["Fiber", 1]],
-            "Quantity": 5
         }
     ],
     "Defoilant": [
         {
             "Recipe": [["Chemical", 2], ["Metal", 2]],
             "Quantity": 2
-        },
-        {
-            "Recipe": [["Fiber", 1]],
-            "Quantity": 5
         }
     ],
     "Sonic Charge": [
         {
             "Recipe": [["Chemical", 1], ["Metal", 3], ["Rock", 1]],
             "Quantity": 1
-        },
-        {
-            "Recipe": [["Fiber", 1]],
-            "Quantity": 5
         }
     ],
     "Metal": [
