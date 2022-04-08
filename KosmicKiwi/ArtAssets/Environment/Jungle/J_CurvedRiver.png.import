@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WalkFrontish.png-9f44063bfe4fab07da213a0bb572927f.stex"
+path="res://.import/J_CurvedRiver.png-f8595b824e05ab73fa4a0c540ff40317.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/Kiwi/WalkFrontish.png"
-dest_files=[ "res://.import/WalkFrontish.png-9f44063bfe4fab07da213a0bb572927f.stex" ]
+source_file="res://ArtAssets/Environment/Jungle/J_CurvedRiver.png"
+dest_files=[ "res://.import/J_CurvedRiver.png-f8595b824e05ab73fa4a0c540ff40317.stex" ]
 
 [params]
 
