@@ -1,13 +1,37 @@
 {
+    "Pipette": [
+        {
+            "Recipe": [["Fiber", 3]],
+            "Quantity": 3
+        }
+    ],
+    "T'Hermite": [
+        {
+            "Recipe": [["Liquid", 2], ["Chemical", 2]],
+            "Quantity": 2
+        }
+    ],
     "Rope": [
         {
-            "Recipe": [["Fiber", 4]],
+            "Recipe": [["Fiber", 5]],
             "Quantity": 1
+        }
+    ],
+    "Foam": [
+        {
+            "Recipe": [["Liquid", 3], ["Rock", 2]],
+            "Quantity": 2
         }
     ],
     "Defoilant": [
         {
-            "Recipe": [["Chemical", 5], ["Liquid", 5]],
+            "Recipe": [["Chemical", 2], ["Metal", 2]],
+            "Quantity": 2
+        }
+    ],
+    "Sonic Charge": [
+        {
+            "Recipe": [["Chemical", 1], ["Metal", 3], ["Rock", 1]],
             "Quantity": 1
         }
     ],
