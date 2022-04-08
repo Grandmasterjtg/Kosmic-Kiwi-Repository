@@ -20,7 +20,6 @@
 [ext_resource path="res://Scenes/Props/Forest/F_RopeCliffLeft.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Props/Forest/F_RopeCliffRight.tscn" type="PackedScene" id=19]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1000, 10 )
 
@@ -203,11 +202,13 @@ tile_data = PoolIntArray( -3932171, 8, 0, -3866635, 8, 0, -3866633, 8, 0, -38666
 [node name="Actors" type="YSort" parent="."]
 
 [node name="Player" parent="Actors" instance=ExtResource( 6 )]
-position = Vector2( 14500, -7250 )
-m_speed = 4000.0
+position = Vector2( -1500, 3500 )
 
 [node name="Ship" parent="Actors" instance=ExtResource( 9 )]
 position = Vector2( -2095, 1321 )
+
+[node name="ShipPart" parent="Actors" instance=ExtResource( 15 )]
+position = Vector2( -3500, 3500 )
 
 [node name="ResourcePoints" type="YSort" parent="Actors"]
 
@@ -1543,6 +1544,3 @@ position = Vector2( 3487, 1465 )
 visible = false
 
 [node name="Mouse" parent="UI_Layer" instance=ExtResource( 11 )]
-
-[node name="ShipPart" parent="." instance=ExtResource( 15 )]
-position = Vector2( -10000, 4750 )

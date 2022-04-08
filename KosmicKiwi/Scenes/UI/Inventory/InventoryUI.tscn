@@ -8,7 +8,7 @@
 [ext_resource path="res://Scripts/InventoryScripts/Hotbar.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/InventoryScripts/CraftingUI.gd" type="Script" id=8]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="UI_Layer" type="CanvasLayer"]
 script = ExtResource( 4 )
 
 [node name="CraftingUI" type="Control" parent="."]
