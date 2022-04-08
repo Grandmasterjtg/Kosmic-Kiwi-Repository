@@ -16,6 +16,9 @@ func _ready() -> void:
 	# indicator setup
 	interactable.connect("entered", $IndicatorBubble, "open_bubble")
 	interactable.connect("exited", $IndicatorBubble, "close_bubble")
+	
+	# setup shit (for between scenes)
+	check_ship_parts()
 
 func _on_interact() -> void:
 	emit_signal("interacted")
