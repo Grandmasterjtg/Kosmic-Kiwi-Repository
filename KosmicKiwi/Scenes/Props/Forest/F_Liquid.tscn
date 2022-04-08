@@ -9,9 +9,13 @@ scale = Vector2( 5, 5 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -247 )
+position = Vector2( 0, -25.4 )
+scale = Vector2( 0.1, 0.1 )
 frames = ExtResource( 1 )
 
 [node name="ResourceDeposit" parent="." instance=ExtResource( 3 )]
 scale = Vector2( 1, 1 )
-m_name = "Chemical Deposit"
+m_name = "Liquid Deposit"
+
+[connection signal="interacted" from="ResourceDeposit" to="." method="_on_ResourceDeposit_interacted"]
+[connection signal="timeout" from="ResourceDeposit" to="." method="_on_ResourceDeposit_timeout"]

@@ -13,10 +13,11 @@ m_speed = 2000.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
-animation = "walking_down"
+animation = "walking_up_left"
+flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 11, -214, -163, -182, -157, 194, 11, 266, 179, 200, 183, -168 )
+polygon = PoolVector2Array( -11, -72, -147, -38, -143, 182, 3, 216, 147, 174, 143, -30 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

@@ -67,13 +67,7 @@ frames = SubResource( 8 )
 playing = true
 
 [node name="Collider" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -222, 218, 19, 102, 280, 239, 36, 367 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -229, 223, -392, 299, -100, 448, 28, 370 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 104, 53, 23, 99, 289, 237, 397, 199 )
+polygon = PoolVector2Array( -391, 300, 106, 52, 396, 197, -100, 448 )
 
 [node name="F_Liquid" parent="." instance=ExtResource( 8 )]
 position = Vector2( 149, 321 )
