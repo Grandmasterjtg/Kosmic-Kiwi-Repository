@@ -24,8 +24,6 @@ height = 70.0
 
 [node name="Level" type="Node2D" groups=["level_root"]]
 script = ExtResource( 7 )
-m_ship_node_path = "Actors/Ship"
-m_nav_menu_path = "CanvasLayer/NavMenu"
 m_planet_index = 1
 
 [node name="Actors" type="Node2D" parent="."]

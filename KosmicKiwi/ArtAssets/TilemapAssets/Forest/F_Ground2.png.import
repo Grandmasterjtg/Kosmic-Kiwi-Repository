@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dust.png-e9f58d140eea125059e6d03176d29281.stex"
+path="res://.import/F_Ground2.png-5365370cb15e5ac84b87e21e7a94fab5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilemapAssets/Dust.png"
-dest_files=[ "res://.import/Dust.png-e9f58d140eea125059e6d03176d29281.stex" ]
+source_file="res://ArtAssets/TilemapAssets/Forest/F_Ground2.png"
+dest_files=[ "res://.import/F_Ground2.png-5365370cb15e5ac84b87e21e7a94fab5.stex" ]
 
 [params]
 
