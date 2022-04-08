@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/MenuScripts/MainMenu.gd" type="Script" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://ArtAssets/Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://ArtAssets/UI/ship_genaric.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/UI/Planet1.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/UI/Planet2.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/UI/IndicatorBubble.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -15,9 +19,6 @@ font_data = ExtResource( 6 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="TextureRect" parent="."]
 margin_right = 4800.0
@@ -29,6 +30,36 @@ texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 827.5
+margin_top = 1682.5
+margin_right = 1427.5
+margin_bottom = 2282.5
+texture = ExtResource( 8 )
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+margin_left = 3377.5
+margin_top = 1665.0
+margin_right = 3977.5
+margin_bottom = 2265.0
+texture = ExtResource( 9 )
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+margin_left = 1790.0
+margin_top = 940.0
+margin_right = 2390.0
+margin_bottom = 1540.0
+rect_scale = Vector2( 2, 1.5 )
+texture = ExtResource( 10 )
+
+[node name="TextureRect4" type="TextureRect" parent="Panel"]
+margin_left = 2797.5
+margin_top = 1835.0
+margin_right = 3397.5
+margin_bottom = 2538.0
+rect_rotation = 90.0
+texture = ExtResource( 7 )
 
 [node name="GameNameText" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -54,10 +85,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -130.0
-margin_top = -26.0
-margin_right = -12.0
-margin_bottom = 26.0
+margin_left = -128.0
+margin_top = -69.0
+margin_right = -10.0
+margin_bottom = -17.0
 rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 1 )
 custom_fonts/font = SubResource( 1 )

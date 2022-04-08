@@ -10,6 +10,8 @@ radius = 200.0
 z_index = 1
 script = ExtResource( 2 )
 m_stop_distance = 600.0
+m_speed = 1800.0
+m_detection_distance = 2000.0
 m_start_state = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

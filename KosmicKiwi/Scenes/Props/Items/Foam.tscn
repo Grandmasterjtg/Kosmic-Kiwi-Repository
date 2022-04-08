@@ -7,7 +7,7 @@
 collision_layer = 8
 collision_mask = 2
 script = ExtResource( 2 )
-m_range = 300
+m_range = 1000
 item_to_destroy = "river"
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

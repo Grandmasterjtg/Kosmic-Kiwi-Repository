@@ -22,7 +22,11 @@ var m_active := true
 
 func _ready():
 	# get the player from the scene
-	m_player_node = get_parent().get_node(PLAYER_PATH)
+	if (get_tree().get_nodes_in_group("level_root").size() > 0):
+		var root = get_tree().get_nodes_in_group("level_root")[0]
+		m_player_node = root.get_node("Actors").get_node("Player")
+	if m_player_node == null:
+		printerr("Character: Player node not found!")
 	
 	# setup a timer and connect it
 	m_timer = Timer.new()

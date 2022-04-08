@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Resources/WorldOneTileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/UI/Inventory/InventoryUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=5]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Characters/Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Character Scripts/StinkyFriend.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Puzzles/Puzzle.tscn" type="PackedScene" id=10]
+
 
 [node name="TileScene" type="Node2D" groups=["level_root"]]
 script = ExtResource( 6 )
