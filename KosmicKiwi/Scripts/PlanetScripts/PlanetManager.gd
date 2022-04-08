@@ -1,11 +1,10 @@
 extends Node
 
 var m_planets = [ # setup each planet in this array, index is important
-	Planet.new("Planet 0", "res://Levels/Level_1_Planet_1.tscn"),
-	Planet.new("Planet 1", "res://Levels/Planet_1.tscn"),
-	Planet.new("Planet 1", "res://Levels/Level_1_Planet_1.tscn"),
-	Planet.new("Planet 2", "res://Levels/Tests/FriendTest_scene.tscn"),
-	Planet.new("Planet 3", "res://Levels/Tests/Test.tscn")
+	Planet.new("Forest Planet", "res://Levels/Level_1_Planet_1.tscn"),
+	Planet.new("Jungle Planet", "res://Levels/Level_1_Planet_1.tscn"),
+	Planet.new("Wet Planet", "res://Levels/Level_1_Planet_1.tscn"),
+	Planet.new("Desert Planet", "res://Levels/Level_1_Planet_1.tscn")
 ]
 var m_active_planet : Planet = m_planets[0]
 var m_ship_visual_index := 0

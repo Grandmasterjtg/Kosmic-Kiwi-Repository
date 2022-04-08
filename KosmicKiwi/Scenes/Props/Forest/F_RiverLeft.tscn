@@ -5,6 +5,7 @@
 [ext_resource path="res://Scenes/Props/Forest/F_Liquid.tscn" type="PackedScene" id=3]
 
 [node name="F_RiverLeft" type="StaticBody2D" groups=["river"]]
+scale = Vector2( 3, 3 )
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 2 )

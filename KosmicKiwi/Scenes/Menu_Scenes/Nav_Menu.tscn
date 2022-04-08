@@ -45,31 +45,35 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Planet_0_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 255.0
-margin_top = 280.0
-margin_right = 407.0
-margin_bottom = 470.0
+margin_left = 189.0
+margin_top = 328.0
+margin_right = 341.0
+margin_bottom = 518.0
 size_flags_horizontal = 3
 
 [node name="Planet_1_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 343.0
-margin_top = 460.0
-margin_right = 500.0
-margin_bottom = 650.0
+modulate = Color( 0.576471, 0.572549, 0.733333, 1 )
+margin_left = 517.0
+margin_top = 472.0
+margin_right = 674.0
+margin_bottom = 662.0
 size_flags_horizontal = 3
 m_planet_index = 1
 m_texture = ExtResource( 4 )
 
 [node name="Planet_2_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 613.0
-margin_top = 273.0
-margin_right = 766.0
-margin_bottom = 460.0
+modulate = Color( 0.588235, 0.419608, 0.345098, 1 )
+margin_left = 592.0
+margin_top = 255.0
+margin_right = 745.0
+margin_bottom = 442.0
 m_planet_index = 2
+m_texture = ExtResource( 4 )
 
 [node name="Planet_3_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 805.0
-margin_top = 434.0
-margin_right = 958.0
-margin_bottom = 621.0
+modulate = Color( 0.52549, 0.407843, 0.745098, 1 )
+margin_left = 919.0
+margin_top = 344.0
+margin_right = 1072.0
+margin_bottom = 531.0
 m_planet_index = 3
