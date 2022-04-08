@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WalkBackish.png-3333a6801f8bea25e6693b8624d3a3bf.stex"
+path="res://.import/J_Edge.png-7381e1e3b8c1afe940d9db5551a3d8cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/Kiwi/WalkBackish.png"
-dest_files=[ "res://.import/WalkBackish.png-3333a6801f8bea25e6693b8624d3a3bf.stex" ]
+source_file="res://ArtAssets/Environment/Jungle/J_Edge.png"
+dest_files=[ "res://.import/J_Edge.png-7381e1e3b8c1afe940d9db5551a3d8cb.stex" ]
 
 [params]
 
