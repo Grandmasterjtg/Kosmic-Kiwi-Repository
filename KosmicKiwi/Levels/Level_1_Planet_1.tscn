@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Props/Forest/F_Grass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Props/Forest/F_Metal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Props/Forest/F_Dust.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Props/Forest/F_Boulder.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Resources/Forest_Tileset.tres" type="TileSet" id=8]
 [ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=9]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/Props/Forest/F_RiverRight.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Props/Forest/F_RopeCliffLeft.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Props/Forest/F_RopeCliffRight.tscn" type="PackedScene" id=19]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1000, 10 )
