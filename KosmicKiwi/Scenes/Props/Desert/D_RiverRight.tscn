@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver5.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver1.png" type="Texture" id=5]
 [ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver4.png" type="Texture" id=6]
 [ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver3.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Props/Forest/F_Liquid.tscn" type="PackedScene" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -74,3 +75,49 @@ polygon = PoolVector2Array( -100, 54, -388, 196, -286, 239, -22, 98 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 224, 217, -30, 381, 100, 449, 398, 301 )
+
+[node name="F_Liquid2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 142, 159 )
+
+[node name="Interactable" parent="F_Liquid2/ResourceDeposit" index="0"]
+rotation = 0.523599
+scale = Vector2( 0.6, 0.2 )
+
+[node name="VScrollBar2" type="VScrollBar" parent="F_Liquid2/ResourceDeposit/ButtonDisplay" index="0"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="VScrollBar3" type="VScrollBar" parent="F_Liquid2/ResourceDeposit/ButtonDisplay" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="F_Liquid" parent="." instance=ExtResource( 8 )]
+position = Vector2( -149, 321 )
+
+[node name="ResourceDeposit" parent="F_Liquid" index="1"]
+position = Vector2( 1.6, 1.60001 )
+
+[node name="Interactable" parent="F_Liquid/ResourceDeposit" index="0"]
+rotation = 0.523599
+scale = Vector2( 0.6, 0.2 )
+
+[node name="VScrollBar2" type="VScrollBar" parent="F_Liquid/ResourceDeposit/ButtonDisplay" index="0"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="VScrollBar3" type="VScrollBar" parent="F_Liquid/ResourceDeposit/ButtonDisplay" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[editable path="F_Liquid2"]
+[editable path="F_Liquid2/ResourceDeposit"]
+[editable path="F_Liquid"]
+[editable path="F_Liquid/ResourceDeposit"]
