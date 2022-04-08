@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WalkSide.png-c7d94bfbfec0f0dc4dd65253fbe48039.stex"
+path="res://.import/J_HarvestRiver3.png-83285c5f6b26a16da95e0734db3c2e6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/Kiwi/WalkSide.png"
-dest_files=[ "res://.import/WalkSide.png-c7d94bfbfec0f0dc4dd65253fbe48039.stex" ]
+source_file="res://ArtAssets/Environment/Jungle/J_HarvestRiver3.png"
+dest_files=[ "res://.import/J_HarvestRiver3.png-83285c5f6b26a16da95e0734db3c2e6c.stex" ]
 
 [params]
 

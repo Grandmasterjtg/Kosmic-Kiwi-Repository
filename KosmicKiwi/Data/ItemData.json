@@ -68,5 +68,15 @@
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": true
+    },
+    "No Category": {
+        "StackSize": 99,
+        "Placeable": true
+    },
+    "Null Category": {
+        "ItemCategory": null,
+        "StackSize": 99,
+        "Placeable": true
     }
+
 }

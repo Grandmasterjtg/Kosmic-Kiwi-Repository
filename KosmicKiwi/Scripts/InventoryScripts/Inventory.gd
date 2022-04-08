@@ -26,7 +26,7 @@ func add_item(item_name: String, item_quantity: int) -> bool:
 	var category = ItemData.get_category(item_name)
 	
 	# if the inventory has data for the category
-	if category and m_inventory.has(category) and m_num_slots.has(category):
+	if category and m_inventory.has(category) and m_num_slots.has(category) and item_quantity > 0:
 		var inventory = m_inventory[category]
 		var num_slots = m_num_slots[category]
 		
@@ -56,7 +56,7 @@ func add_item(item_name: String, item_quantity: int) -> bool:
 func remove_item(item_name: String, amount: int = 1) -> bool:
 	var category = ItemData.get_category(item_name)
 	
-	if category and m_inventory.has(category):
+	if category and m_inventory.has(category) and amount > 0:
 		var inventory = m_inventory[category]
 		
 		for slot in m_inventory[category]:
@@ -178,3 +178,7 @@ func get_items_in_hotbar() -> Array:
 # the key values represent the slots from the inventory that an item is comeing from
 func _get_sslots_in_hotbar() -> Array:
 	return m_hotbar.keys()
+	
+func clear_inventory() -> void:
+	for category in m_inventory:
+		m_inventory[category] = {}
