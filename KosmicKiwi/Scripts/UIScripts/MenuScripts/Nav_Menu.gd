@@ -13,12 +13,18 @@ func _on_CloseButton_pressed():
 
 func toggle_nav_menu():
 	if visible:
-		UIManager.close_menu()
-	else:
-		UIManager.open_menu()
+		close_menu()
+	elif UIManager.menus_closed():
+		open_menu()
 	
-	visible = !visible
+func open_menu():
+	UIManager.open_menu()
+	visible = true
 	update_buttons()
+	
+func close_menu():
+	UIManager.close_menu()
+	visible = false
 
 func update_buttons():
 	PlanetManager.update_planets()
