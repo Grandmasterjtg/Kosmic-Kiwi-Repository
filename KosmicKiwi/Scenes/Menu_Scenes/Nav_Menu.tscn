@@ -8,6 +8,7 @@
 [ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=6]
 
 [node name="NavMenu" type="Control"]
+visible = false
 margin_left = 340.0
 margin_top = 180.0
 script = ExtResource( 2 )
