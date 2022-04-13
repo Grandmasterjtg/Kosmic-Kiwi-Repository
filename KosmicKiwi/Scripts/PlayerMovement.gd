@@ -6,16 +6,12 @@ const ACTION_RIGHT := "move_right"
 const ACTION_UP := "move_up"
 
 const ANIMATION_IDLE_DOWN := "idle_down"
-const ANIMATION_IDLE_DOWN_LEFT := "idle_down_left"
 const ANIMATION_IDLE_LEFT := "idle_left"
 const ANIMATION_IDLE_UP := "idle_up"
-const ANIMATION_IDLE_UP_LEFT := "idle_up_left"
 
 const ANIMATION_WALKING_DOWN := "walking_down"
-const ANIMATION_WALKING_DOWN_LEFT := "walking_down_left"
 const ANIMATION_WALKING_LEFT := "walking_left"
 const ANIMATION_WALKING_UP := "walking_up"
-const ANIMATION_WALKING_UP_LEFT := "walking_up_left"
 
 export var m_speed : float
 var m_direction := Vector2(0, 1)
@@ -39,23 +35,11 @@ func _physics_process(delta) -> void:
 
 func change_idle_animation():
 	if m_direction.y < -0.01:
-		if m_direction.x > 0.01:
-			animation.play(ANIMATION_IDLE_UP_LEFT)
-			animation.flip_h = true
-		elif m_direction.x < -0.01:
-			animation.play(ANIMATION_IDLE_UP_LEFT)
-			animation.flip_h = false
-		else:
+		if m_direction.x < 0.01 and m_direction.x > -0.01:
 			animation.play(ANIMATION_IDLE_UP)
 			animation.flip_h = false
 	elif m_direction.y > 0.01:
-		if m_direction.x > 0.01:
-			animation.play(ANIMATION_IDLE_DOWN_LEFT)
-			animation.flip_h = true
-		elif m_direction.x < -0.01:
-			animation.play(ANIMATION_IDLE_DOWN_LEFT)
-			animation.flip_h = false
-		else:
+		if m_direction.x < 0.01 and m_direction.x > -0.01:
 			animation.play(ANIMATION_IDLE_DOWN)
 			animation.flip_h = false
 	elif m_direction.x > 0.01:
@@ -67,23 +51,11 @@ func change_idle_animation():
 
 func change_walking_animation():
 	if m_direction.y < -0.01:
-		if m_direction.x > 0.01:
-			animation.play(ANIMATION_WALKING_UP_LEFT)
-			animation.flip_h = true
-		elif m_direction.x < -0.01:
-			animation.play(ANIMATION_WALKING_UP_LEFT)
-			animation.flip_h = false
-		else:
+		if m_direction.x < 0.01 and m_direction.x > -0.01:
 			animation.play(ANIMATION_WALKING_UP)
 			animation.flip_h = false
 	elif m_direction.y > 0.01:
-		if m_direction.x > 0.01:
-			animation.play(ANIMATION_WALKING_DOWN_LEFT)
-			animation.flip_h = true
-		elif m_direction.x < -0.01:
-			animation.play(ANIMATION_WALKING_DOWN_LEFT)
-			animation.flip_h = false
-		else:
+		if m_direction.x < 0.01 and m_direction.x > -0.01:
 			animation.play(ANIMATION_WALKING_DOWN)
 			animation.flip_h = false
 	elif m_direction.x > 0.01:
