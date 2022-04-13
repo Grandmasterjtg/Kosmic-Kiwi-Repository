@@ -6,7 +6,6 @@
 [node name="ItemUI" type="TextureRect"]
 margin_right = 80.0
 margin_bottom = 80.0
-mouse_filter = 2
 texture = ExtResource( 2 )
 expand = true
 script = ExtResource( 1 )
@@ -15,6 +14,7 @@ __meta__ = {
 }
 
 [node name="Count" type="Label" parent="."]
+visible = false
 margin_left = 42.0
 margin_top = 49.0
 margin_right = 58.0

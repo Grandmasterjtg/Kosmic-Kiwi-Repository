@@ -3,95 +3,95 @@
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Fiber": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "Fiber is good"
     },
     "Rock": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Chemical": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Liquid": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Rope": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Defoilant": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Engine": {
         "ItemCategory": "ShipPart",
         "StackSize": 1,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Shield": {
         "ItemCategory": "ShipPart",
         "StackSize": 1,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Solar Sail": {
         "ItemCategory": "ShipPart",
         "StackSize": 1,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Pipette": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "T'Hermite": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Foam": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Sonic Charge": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "No Category": {
         "StackSize": 99,
         "Placeable": true,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     },
     "Null Category": {
         "ItemCategory": null,
         "StackSize": 99,
         "Placeable": true,
-        "ToolTipe": "test"
+        "ToolTip": "test"
     }
 }

@@ -3,8 +3,15 @@ extends TextureRect
 const FILE_PATH = "res://ArtAssets/ItemIcons/"
 const FILE_TYPE = ".png"
 
+const TOOL_TIP_CLASS = preload("res://Scenes/UI/Inventory/ToolTip.tscn")
+
 var m_item_name : String
 var m_item_quantity : int
+
+
+func _ready():
+	connect("mouse_entered", self, "_on_mouse_entered")
+	connect("mouse_exited", self, "_on_mouse_exited")
 
 # takes the name of an item and the amount of that item
 # sets the item UI to display the given item with the given amount
@@ -29,3 +36,10 @@ func get_item_name() -> String:
 func get_item_category() -> String:
 	return ItemData.get_category(m_item_name)
 	
+func _on_mouse_entered():
+	var tool_tip = TOOL_TIP_CLASS.instance()
+	tool_tip.initialize_tip(m_item_name)
+	MouseManager.set_mouse_object(tool_tip)
+	
+func _on_mouse_exited():
+	MouseManager.reset_mouse_texture()
