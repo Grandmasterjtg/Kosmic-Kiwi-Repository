@@ -9,40 +9,36 @@ onready var m_crafting_ui = $CraftingUI
 func _process(delta: float) -> void:
 	# player toggles inventory panel
 	if Input.is_action_just_pressed(INVENTORY):
-		toggle_inventory()
-		close_crafting()
+		toggle_menu(m_inventory_ui)
+		close_menu(m_crafting_ui)
+#		toggle_inventory()
+#		close_crafting()
 	if Input.is_action_just_pressed(CRAFT):
-		toggle_crafting()
-		close_inventory()
-		
-func open_inventory() -> void:
-	if !m_inventory_ui.visible:
-		m_inventory_ui.visible = true
+		toggle_menu(m_crafting_ui)
+		close_menu(m_inventory_ui)
+#		toggle_crafting()
+#		close_inventory()
+
+# takes a UI menu
+# if the menu is closed, it sets the menu's visibility to true
+func open_menu(menu) -> void:
+	if menu != null and !menu.visible:
+		menu.visible = true
 		UIManager.open_menu()
 
-func close_inventory() -> void:
-	if m_inventory_ui.visible:
-		m_inventory_ui.visible = false
+# takes a UI menu
+# if the menu is opend, it sets the menu's visibility to false
+func close_menu(menu) -> void:
+	if menu != null and menu.visible:
+		menu.visible = false
 		UIManager.close_menu()
-		
-func toggle_inventory() -> void:
-	if m_inventory_ui.visible:
-		close_inventory()
-	else:
-		open_inventory()
+		MouseManager.reset_mouse_texture()
 
-func open_crafting() -> void:
-	if !m_crafting_ui.visible:
-		m_crafting_ui.visible = true
-		UIManager.open_menu()
-		
-func close_crafting() -> void:
-	if m_crafting_ui.visible:
-		m_crafting_ui.visible = false
-		UIManager.close_menu()
-		
-func toggle_crafting() -> void:
-	if m_crafting_ui.visible:
-		close_crafting()
-	else:
-		open_crafting()
+# takes a UI menu
+# opens or closes the menu based on whether it is already opened or closed
+func toggle_menu(menu) -> void:
+	if menu != null:
+		if menu.visible:
+			close_menu(menu)
+		else:
+			open_menu(menu)
