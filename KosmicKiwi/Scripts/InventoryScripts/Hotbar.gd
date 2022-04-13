@@ -74,11 +74,13 @@ func set_selected_slot(index: int) -> void:
 func show_item():
 	if m_selected_slot != null and m_selected_slot.get_item() != null:
 		MouseManager.set_mouse_texture(m_selected_slot.get_item().texture)
+		MouseManager.set_clamp(true)
 		m_showing_item = true
 
 
 func cancel_show():
 	MouseManager.reset_mouse_texture()
+	MouseManager.set_clamp(false)
 	m_showing_item = false
 
 
@@ -95,12 +97,13 @@ func place_item():
 			# add the item to the scene
 			get_tree().root.add_child(item)
 			# initialize the item script to the correct item and position
-			item.global_position = item.get_global_mouse_position()
+			item.global_position = MouseManager.get_mouse_pos()
 			item.activate()
 			# remove the item from the inventory
 			Inventory.remove_item(slot_item.get_item_name())
 			
 		# reset mouse cursor
 		MouseManager.reset_mouse_texture()
+		MouseManager.set_clamp(false)
 		m_showing_item = false
 		
