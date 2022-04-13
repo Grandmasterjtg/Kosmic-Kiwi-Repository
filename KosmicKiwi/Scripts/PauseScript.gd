@@ -2,9 +2,9 @@ extends Control
 
 const ACTION_PAUSE := "pause"
 
-onready var pause_menu := get_node("CanvasLayer/PauseMenu")
-onready var controls_menu := get_node("CanvasLayer/ControlsMenu")
-onready var settings_menu := get_node("CanvasLayer/SettingsMenu")
+onready var pause_menu := get_node("PauseMenu")
+onready var controls_menu := get_node("ControlsMenu")
+onready var settings_menu := get_node("SettingsMenu")
 
 func _input(event) -> void:
 	if event.is_action_pressed(ACTION_PAUSE):

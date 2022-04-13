@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Props/Forest/F_Briar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Props/Forest/F_Rocks.tscn" type="PackedScene" id=2]
@@ -9,11 +9,8 @@
 [ext_resource path="res://Scenes/Props/Forest/F_Boulder.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Resources/Forest_Tileset.tres" type="TileSet" id=8]
 [ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Mouse/Mouse.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/UI/Inventory/InventoryUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI_Control.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
-[ext_resource path="res://Scenes/UI/PauseScreen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Props/ShipParts/ShipPart.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Props/Forest/F_RiverLeft.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Props/Forest/F_RiverRight.tscn" type="PackedScene" id=17]
@@ -208,7 +205,7 @@ position = Vector2( -1500, 3500 )
 position = Vector2( -2095, 1321 )
 
 [node name="ShipPart" parent="Actors" instance=ExtResource( 15 )]
-position = Vector2( -3500, 3500 )
+position = Vector2( -9500, 5250 )
 
 [node name="ResourcePoints" type="YSort" parent="Actors"]
 
@@ -1536,11 +1533,4 @@ position = Vector2( 3487, 1465 )
 
 [node name="Cliffs" type="YSort" parent="Actors/Puzzles"]
 
-[node name="Pause" parent="." instance=ExtResource( 14 )]
-
-[node name="UI_Layer" parent="." instance=ExtResource( 12 )]
-
-[node name="NavMenu" parent="UI_Layer" instance=ExtResource( 10 )]
-visible = false
-
-[node name="Mouse" parent="UI_Layer" instance=ExtResource( 11 )]
+[node name="UI_Layer" parent="." instance=ExtResource( 10 )]

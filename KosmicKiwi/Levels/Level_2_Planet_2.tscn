@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Props/Jungle/J_Briar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Props/Jungle/J_Dust.tscn" type="PackedScene" id=2]
@@ -6,15 +6,13 @@
 [ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Props/Jungle/J_Boulder.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Props/Jungle/J_Metal.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/UI/PauseScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI_Control.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Props/Jungle/J_Rocks.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/UI/Inventory/InventoryUI.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Characters/Friend.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Props/Jungle/J_Grass.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
 [ext_resource path="res://Resources/WorldTwoTileset.tres" type="TileSet" id=14]
-[ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -112,6 +110,33 @@ position = Vector2( -2500, 3000 )
 [node name="J_Grass" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
 position = Vector2( 1500, 3750 )
 
+[node name="J_Grass4" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 5000, 3250 )
+
+[node name="J_Grass5" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 4000, 3250 )
+
+[node name="J_Grass6" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 4000, 3750 )
+
+[node name="J_Grass7" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 5000, 3750 )
+
+[node name="J_Grass8" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 6000, 3250 )
+
+[node name="J_Grass9" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 6500, 2250 )
+
+[node name="J_Grass10" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 6500, 1250 )
+
+[node name="J_Grass11" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 6500, 500 )
+
+[node name="J_Grass12" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
+position = Vector2( 6500, 0 )
+
 [node name="J_Grass2" parent="Actors/ResourcePoints/Grasses" instance=ExtResource( 12 )]
 position = Vector2( 2500, 3500 )
 
@@ -176,9 +201,4 @@ position = Vector2( 4500, 250 )
 [node name="J_Briar5" parent="Actors/Puzzles/Briars" instance=ExtResource( 1 )]
 position = Vector2( 5000, 1000 )
 
-[node name="Pause" parent="." instance=ExtResource( 7 )]
-
-[node name="UI_Layer" parent="." instance=ExtResource( 10 )]
-
-[node name="NavMenu" parent="UI_Layer" instance=ExtResource( 15 )]
-visible = false
+[node name="UI_Layer" parent="." instance=ExtResource( 7 )]
