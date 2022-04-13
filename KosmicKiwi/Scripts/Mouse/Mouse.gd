@@ -30,6 +30,7 @@ func _process(delta):
 	else:
 		self.position = self.get_global_mouse_position()
 
+
 # takes a texture
 # sets the mouse's sprite texture to the texture
 # if a mouse object exists, delete it and set it to null
