@@ -22,7 +22,6 @@ func _process(delta):
 		get_viewport().warp_mouse(self.position)
 	else:
 		self.position = self.get_global_mouse_position()
-	print(self.position)
 	
 func set_cursor(texture):
 	if texture == null:
