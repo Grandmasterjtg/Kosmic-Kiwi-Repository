@@ -20,7 +20,6 @@ onready var animation = $AnimatedSprite
 
 func _ready():
 	$BubbleTime.connect("timeout", self, "hide_bubble")
-	PlayerManager.set_player(self)
 
 func _physics_process(delta) -> void:
 	var x = Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT)

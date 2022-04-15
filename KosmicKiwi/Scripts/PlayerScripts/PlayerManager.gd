@@ -7,7 +7,7 @@ var m_thinking_texture
 var m_success_texture
 var m_fail_texture
 
-enum Emote {HAPPY, SAD, THINKING}
+enum Emote {HAPPY, SAD, THINKING, SUCCESS, FAIL}
 
 func get_player():
 	if !get_tree().get_nodes_in_group("player").empty():
@@ -28,14 +28,20 @@ func show_bubble(item_name: String, texture) -> void:
 		player.show_bubble(item_name, texture)
 
 func emote_with_texture(texture: Texture):
-	pass
+	var player = get_player()
+	if player != null and player.bubble != null:
+		player.bubble.open_bubble_with_texture(texture)
 
-func play_emote(emote: int):
+func player_emote(emote: int): # 0: happy, 1: sad, 2: thinking, 3: success, 4: fail
 	# decide the texture for the emote
 	match emote:
 		Emote.HAPPY:
-			pass
+			emote_with_texture(m_happy_texture)
 		Emote.SAD:
-			pass
+			emote_with_texture(m_sad_texture)
 		Emote.THINKING:
-			pass
+			emote_with_texture(m_thinking_texture)
+		Emote.SUCCESS:
+			emote_with_texture(m_success_texture)
+		Emote.FAIL:
+			emote_with_texture(m_fail_texture)

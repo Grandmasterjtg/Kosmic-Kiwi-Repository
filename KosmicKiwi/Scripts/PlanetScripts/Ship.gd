@@ -14,8 +14,8 @@ func _ready() -> void:
 	interactable.connect("exited", $ButtonDisplay, "toggle_display")
 	
 	# indicator setup
-	interactable.connect("entered", $IndicatorBubble, "open_bubble")
-	interactable.connect("exited", $IndicatorBubble, "close_bubble")
+	interactable.connect("entered", $EmoteBubble, "open_bubble")
+	interactable.connect("exited", $EmoteBubble, "close_bubble")
 	
 	# setup shit (for between scenes)
 	check_ship_parts()

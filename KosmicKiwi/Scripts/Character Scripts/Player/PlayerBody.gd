@@ -18,6 +18,9 @@ var m_direction := Vector2(0, 1)
 
 onready var animation = $AnimatedSprite
 
+func set_speed(speed: float):
+	m_speed = speed
+
 func _physics_process(delta) -> void:
 	var x = Input.get_action_strength(ACTION_RIGHT) - Input.get_action_strength(ACTION_LEFT)
 	var y = Input.get_action_strength(ACTION_DOWN) - Input.get_action_strength(ACTION_UP)
@@ -60,6 +63,3 @@ func change_walking_animation():
 	elif m_direction.x < -0.01:
 		animation.play(ANIMATION_WALKING_LEFT)
 		animation.flip_h = false
-	
-func set_speed(speed: float):
-	m_speed = speed

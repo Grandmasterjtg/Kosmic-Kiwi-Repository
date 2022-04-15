@@ -5,8 +5,6 @@
 [ext_resource path="res://ArtAssets/ItemIcons/Chemical.png" type="Texture" id=3]
 [ext_resource path="res://ArtAssets/UI/IndicatorBubble.png" type="Texture" id=4]
 
-
-
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 collision_layer = 2
 collision_mask = 4

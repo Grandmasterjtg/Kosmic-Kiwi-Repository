@@ -42,31 +42,6 @@ animations = [ {
 "name": "idle_up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 15 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 14 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "walking_up_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ) ],
-"loop": true,
-"name": "idle_down_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 26 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "walking_up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "walking_down_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 18 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "walking_left",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 29 ) ],
 "loop": true,
 "name": "idle_up_left",
@@ -77,8 +52,33 @@ animations = [ {
 "name": "idle_down",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 8 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 15 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 14 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walking_up_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "idle_down_left",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
 "name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 18 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walking_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "walking_down_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 2 ), ExtResource( 26 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "walking_up",
 "speed": 5.0
 } ]
