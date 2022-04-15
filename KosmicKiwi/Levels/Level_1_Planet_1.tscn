@@ -1529,3 +1529,5 @@ position = Vector2( 3487, 1465 )
 [node name="Cliffs" type="YSort" parent="Actors/Puzzles"]
 
 [node name="UI_Layer" parent="." instance=ExtResource( 10 )]
+
+[editable path="Actors/Player2"]

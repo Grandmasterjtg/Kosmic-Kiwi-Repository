@@ -33,35 +33,33 @@ func _physics_process(delta) -> void:
 		change_idle_animation()
 
 func change_idle_animation():
-	if m_direction.y < -0.01:
-		if m_direction.x < 0.01 and m_direction.x > -0.01:
-			animation.play(ANIMATION_IDLE_UP)
-			animation.flip_h = false
-	elif m_direction.y > 0.01:
-		if m_direction.x < 0.01 and m_direction.x > -0.01:
-			animation.play(ANIMATION_IDLE_DOWN)
-			animation.flip_h = false
-	elif m_direction.x > 0.01:
+	if m_direction.x > 0.01:
 		animation.play(ANIMATION_IDLE_LEFT)
 		animation.flip_h = true
 	elif m_direction.x < -0.01:
 		animation.play(ANIMATION_IDLE_LEFT)
 		animation.flip_h = false
+	elif m_direction.y < -0.01:
+		#if m_direction.x < 0.01 and m_direction.x > -0.01:
+		animation.play(ANIMATION_IDLE_UP)
+		animation.flip_h = false
+	elif m_direction.y > 0.01:
+		#if m_direction.x < 0.01 and m_direction.x > -0.01:
+		animation.play(ANIMATION_IDLE_DOWN)
+		animation.flip_h = false
 
 func change_walking_animation():
-	if m_direction.y < -0.01:
-		if m_direction.x < 0.01 and m_direction.x > -0.01:
-			animation.play(ANIMATION_WALKING_UP)
-			animation.flip_h = false
-	elif m_direction.y > 0.01:
-		if m_direction.x < 0.01 and m_direction.x > -0.01:
-			animation.play(ANIMATION_WALKING_DOWN)
-			animation.flip_h = false
-	elif m_direction.x > 0.01:
+	if m_direction.x > 0.01:
 		animation.play(ANIMATION_WALKING_LEFT)
 		animation.flip_h = true
 	elif m_direction.x < -0.01:
 		animation.play(ANIMATION_WALKING_LEFT)
+		animation.flip_h = false
+	elif m_direction.y < -0.01:
+		animation.play(ANIMATION_WALKING_UP)
+		animation.flip_h = false
+	elif m_direction.y > 0.01:
+		animation.play(ANIMATION_WALKING_DOWN)
 		animation.flip_h = false
 
 func instantiate_image(scale) -> void:
