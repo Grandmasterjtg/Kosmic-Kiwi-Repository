@@ -198,8 +198,9 @@ tile_data = PoolIntArray( -3932171, 8, 0, -3866635, 8, 0, -3866633, 8, 0, -38666
 
 [node name="Actors" type="YSort" parent="."]
 
-[node name="Player2" parent="Actors" groups=["player"] instance=ExtResource( 11 )]
-position = Vector2( -2500, -5000 )
+[node name="Player2" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( -4000, -2250 )
+m_player_speed = 2000.0
 
 [node name="Ship" parent="Actors" instance=ExtResource( 9 )]
 position = Vector2( -2095, 1321 )
@@ -438,7 +439,7 @@ position = Vector2( 7500, -13000 )
 position = Vector2( -1500, -5750 )
 
 [node name="F_Dust8" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
-position = Vector2( -3000, -5000 )
+position = Vector2( -3000, -4000 )
 
 [node name="F_Dust10" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 5 )]
 position = Vector2( -9500, -10250 )
@@ -1370,13 +1371,13 @@ position = Vector2( 8487, -6035 )
 position = Vector2( 21487, -9535 )
 
 [node name="F_Boulder110" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
-position = Vector2( 23987, -2759 )
+position = Vector2( 23487, -2785 )
 
 [node name="F_Boulder112" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
-position = Vector2( 24234, 91 )
+position = Vector2( 23987, 215 )
 
 [node name="F_Boulder113" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
-position = Vector2( 23850, 497 )
+position = Vector2( 23487, 715 )
 
 [node name="F_Boulder114" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
 position = Vector2( 23487, -80 )
@@ -1384,14 +1385,8 @@ position = Vector2( 23487, -80 )
 [node name="F_Boulder116" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
 position = Vector2( 23987, -1535 )
 
-[node name="F_Boulder119" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
-position = Vector2( 24234, 91 )
-
 [node name="F_Boulder120" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
-position = Vector2( 23487, 1215 )
-
-[node name="F_Boulder121" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
-position = Vector2( 23487, -80 )
+position = Vector2( 23487, 1465 )
 
 [node name="F_Boulder122" parent="Actors/Puzzles/Boulders" instance=ExtResource( 7 )]
 position = Vector2( 22987, -1785 )
