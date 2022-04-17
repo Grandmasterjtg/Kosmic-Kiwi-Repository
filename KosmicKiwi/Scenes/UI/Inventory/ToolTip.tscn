@@ -10,10 +10,11 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [node name="PanelContainer" type="PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 21.0
-margin_bottom = 50.0
+anchor_right = 0.007
+anchor_bottom = 0.04
+margin_right = 0.559999
+margin_bottom = -0.200005
+mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource( 1 )
@@ -24,10 +25,9 @@ __meta__ = {
 [node name="ToolTip" type="Label" parent="."]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 262.0
+margin_right = 7.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 1 )
-text = "aaaaaaaaaaaaaaa"
 __meta__ = {
 "_edit_use_anchors_": false
 }

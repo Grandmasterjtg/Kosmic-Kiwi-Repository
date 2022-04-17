@@ -9,13 +9,13 @@
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "aaaaaaaaaaaaaaa"
+        "ToolTip": "Fiber is Good"
     },
     "Rock": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "aaaaaaaaaaaaaaaaaaaaa"
+        "ToolTip": "aaaaaaaaaaaaaaa aaaaa"
     },
     "Chemical": {
         "ItemCategory": "Resource",
@@ -30,13 +30,13 @@
         "ToolTip": "test"
     },
     "Rope": {
-        "ItemCategory": "Tool",
+        "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
         "ToolTip": "test"
     },
     "Defoilant": {
-        "ItemCategory": "Tool",
+        "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
         "ToolTip": "test"
@@ -72,13 +72,13 @@
         "ToolTip": "test"
     },
     "Foam": {
-        "ItemCategory": "Tool",
+        "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
         "ToolTip": "test"
     },
     "Sonic Charge": {
-        "ItemCategory": "Tool",
+        "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
         "ToolTip": "test"
