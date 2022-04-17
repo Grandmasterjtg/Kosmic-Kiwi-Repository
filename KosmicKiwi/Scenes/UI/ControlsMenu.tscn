@@ -8,10 +8,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -512.0
-margin_top = -300.0
-margin_right = 512.0
-margin_bottom = 300.0
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -127,3 +127,19 @@ margin_right = 694.0
 margin_bottom = 380.0
 text = "friend"
 m_action_name = "friend"
+
+[node name="Place" parent="." instance=ExtResource( 1 )]
+margin_left = 346.0
+margin_top = 439.0
+margin_right = 446.0
+margin_bottom = 459.0
+text = "place"
+m_action_name = "place"
+
+[node name="Cancel" parent="." instance=ExtResource( 1 )]
+margin_left = 495.0
+margin_top = 440.0
+margin_right = 595.0
+margin_bottom = 460.0
+text = "cancel"
+m_action_name = "cancel"
