@@ -9,13 +9,13 @@
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "Fiber is good"
+        "ToolTip": "aaaaaaaaaaaaaaa"
     },
     "Rock": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "aaaaaaaaaaaaaaaaaaaaa"
     },
     "Chemical": {
         "ItemCategory": "Resource",
