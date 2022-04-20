@@ -9,11 +9,11 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, 500 )
+position = Vector2( 0, 1000 )
 frames = ExtResource( 1 )
 playing = true
 flip_h = true
 
 [node name="Collider" type="CollisionPolygon2D" parent="."]
 position = Vector2( 0, 500 )
-polygon = PoolVector2Array( -3, 0, 492, -242, 489, 257, -3, 503 )
+polygon = PoolVector2Array( 0, 26, 500, -223, 499, 1250, 2, 1499 )

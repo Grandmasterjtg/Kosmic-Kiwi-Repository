@@ -30,6 +30,5 @@ func initialize_tip(item_name: String):
 		$ToolTip.text = text
 	
 		if tool_tip.length() > 15:
-			print("ToolTip: Big")
 			$ToolTip.autowrap = true
 			rect_size.x = 260
