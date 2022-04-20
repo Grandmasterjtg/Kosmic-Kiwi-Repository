@@ -23,7 +23,6 @@ var m_active := true
 func _ready():
 	# get the player from the scene
 	if (get_tree().get_nodes_in_group("player").size() > 0):
-#		var root = get_tree().get_nodes_in_group("level_root")[0]
 		m_player_node = get_tree().get_nodes_in_group("player")[0]
 		print(name + " _ready(): " + m_player_node.name + " was found.")
 	if m_player_node == null:
@@ -55,7 +54,6 @@ func handle_state():
 
 # follows a global_position target
 func follow_target(target):
-	print(name + " follow_target(player) called.")
 	if (target != null):
 		var target_direction = target - self.global_position
 		
