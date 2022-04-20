@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=14 format=2]
+[gd_resource type="SpriteFrames" load_steps=25 format=2]
 
 [ext_resource path="res://ArtAssets/Environment/Forest/River/F_FoamRiver2.png" type="Texture" id=1]
 [ext_resource path="res://ArtAssets/Environment/Forest/River/F_FoamRiver6.png" type="Texture" id=2]
@@ -6,81 +6,64 @@
 [ext_resource path="res://ArtAssets/Environment/Forest/River/F_FoamRiver1.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/Environment/Forest/River/F_FoamRiver3.png" type="Texture" id=5]
 [ext_resource path="res://ArtAssets/Environment/Forest/River/F_FoamRiver4.png" type="Texture" id=6]
-
-[sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 1000, 1000 )
-
-[sub_resource type="AtlasTexture" id=2]
-flags = 4
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 1000, 1000 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 1000, 1000 )
-
-[sub_resource type="AtlasTexture" id=4]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 1000, 1000 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 1000, 1000 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 1000, 1000 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 1000, 1000 )
+[ext_resource path="res://ArtAssets/Environment/Jungle/J_FoamRiver2.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Environment/W_FoamRiver2.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/Environment/W_FoamRiver6.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/Environment/W_FoamRiver4.png" type="Texture" id=10]
+[ext_resource path="res://ArtAssets/Environment/W_FoamRiver1.png" type="Texture" id=11]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver2.png" type="Texture" id=12]
+[ext_resource path="res://ArtAssets/Environment/Jungle/J_FoamRiver6.png" type="Texture" id=13]
+[ext_resource path="res://ArtAssets/Environment/W_FoamRiver5.png" type="Texture" id=14]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver6.png" type="Texture" id=15]
+[ext_resource path="res://ArtAssets/Environment/Jungle/J_FoamRiver1.png" type="Texture" id=16]
+[ext_resource path="res://ArtAssets/Environment/W_FoamRiver3.png" type="Texture" id=17]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver5.png" type="Texture" id=18]
+[ext_resource path="res://ArtAssets/Environment/Jungle/J_FoamRiver3.png" type="Texture" id=19]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver1.png" type="Texture" id=20]
+[ext_resource path="res://ArtAssets/Environment/Jungle/J_FoamRiver4.png" type="Texture" id=21]
+[ext_resource path="res://ArtAssets/Environment/Jungle/J_FoamRiver5.png" type="Texture" id=22]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver3.png" type="Texture" id=23]
+[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver4.png" type="Texture" id=24]
 
 [resource]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
-"loop": true,
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
 "name": "default_Forest",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
+"frames": [ ExtResource( 16 ) ],
+"loop": false,
+"name": "default_Jungle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 18 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "solved_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": false,
 "name": "default_Desert",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
+"frames": [ ExtResource( 8 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 9 ) ],
+"loop": false,
 "name": "solved_Wet",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
+"frames": [ ExtResource( 7 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 13 ) ],
+"loop": false,
 "name": "solved_Jungle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": false,
 "name": "solved_Forest",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
 "name": "default_Wet",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "default_Jungle",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "solved_Desert",
 "speed": 5.0
 } ]

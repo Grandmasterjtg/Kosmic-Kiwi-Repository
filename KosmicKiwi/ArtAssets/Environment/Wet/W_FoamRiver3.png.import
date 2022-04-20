@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/D_FoamRiver2.png-a60c72b49e60d66327ecd53d31dc69f8.stex"
+path="res://.import/W_FoamRiver3.png-8bd6ce9cbff9ca88eefb6ab1f901e791.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/Environment/Desert/River/D_FoamRiver2.png"
-dest_files=[ "res://.import/D_FoamRiver2.png-a60c72b49e60d66327ecd53d31dc69f8.stex" ]
+source_file="res://ArtAssets/Environment/W_FoamRiver3.png"
+dest_files=[ "res://.import/W_FoamRiver3.png-8bd6ce9cbff9ca88eefb6ab1f901e791.stex" ]
 
 [params]
 
