@@ -6,6 +6,8 @@ func _ready() -> void:
 	# setup ship
 	setup_ship()
 	UIManager.close_all_menus()
+	var dialog = Dialogic.start("testConvo")
+	add_child(dialog)
 
 func setup_ship():
 	var ship = $Actors/Ship

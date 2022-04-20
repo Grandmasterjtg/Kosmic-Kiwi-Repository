@@ -1,0 +1,21 @@
+{
+	"color": "#ff5674ff",
+	"description": "My special power is that I'm small!",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1650464990.json",
+	"mirror_portraits": false,
+	"name": "Penguin",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ArtAssets/Environment/Jungle/J_Brair_Stage1.png"
+		}
+	],
+	"scale": 100,
+	"theme": "default-theme.cfg"
+}

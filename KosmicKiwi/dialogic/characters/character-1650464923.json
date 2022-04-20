@@ -1,0 +1,21 @@
+{
+	"color": "#ffff5656",
+	"description": "The kosmos awaits!",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1650464923.json",
+	"mirror_portraits": false,
+	"name": "Kiwi",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ArtAssets/Environment/Forest/F_Rocks_Stage4.png"
+		}
+	],
+	"scale": 100,
+	"theme": "default-theme.cfg"
+}

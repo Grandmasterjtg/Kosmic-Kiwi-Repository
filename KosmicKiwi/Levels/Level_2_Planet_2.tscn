@@ -14,7 +14,6 @@
 [ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
 [ext_resource path="res://Resources/WorldTwoTileset.tres" type="TileSet" id=14]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Level_2_Planet_2" type="Node2D" groups=["level_root"]]

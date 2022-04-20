@@ -1,0 +1,21 @@
+{
+	"color": "#ffffa700",
+	"description": "My special power is LARGE.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1650465497.json",
+	"mirror_portraits": false,
+	"name": "Seal",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ArtAssets/Environment/Forest/F_Boulder_Stage4.png"
+		}
+	],
+	"scale": 100,
+	"theme": "default-theme.cfg"
+}
