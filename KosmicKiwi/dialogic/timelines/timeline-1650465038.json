@@ -140,6 +140,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "D sdfl ladfjk lelf kel eladskf! :)"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
