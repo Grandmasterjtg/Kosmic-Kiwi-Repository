@@ -7,6 +7,10 @@
         "NumSlots": 8,
         "Interactable": true
     },
+    "Gadget": {
+        "NumSlots": 8,
+        "Interactable": true
+    },
     "ShipPart": {
         "NumSlots": 4,
         "Interactable": false

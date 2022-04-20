@@ -81,4 +81,14 @@ animations = [ {
 "loop": true,
 "name": "walking_down_left",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "idle_up_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
 } ]

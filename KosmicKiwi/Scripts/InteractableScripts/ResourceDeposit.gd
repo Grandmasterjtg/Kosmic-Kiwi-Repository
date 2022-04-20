@@ -2,12 +2,14 @@ extends Node2D
 
 signal interacted
 signal timeout
+signal destroy
 
 # collection variables
 export var m_name : String = "Metal Deposit"
 var m_item_name : String = "Metal"
 var m_item_quantity := 1
 var m_required_tool = null
+var m_once := false
 
 # interactable area
 onready var m_interactable = $Interactable
@@ -23,12 +25,15 @@ var m_cooldown_time : float = 1.0
 onready var m_timer := $CooldownTimer
 
 func _ready() -> void:
-	# resource setup
+	# set up the internal variables for the funcionality 
+	# of the resource deposit with information form
+	# the ResourceData script
 	var resource_data = ResourceData.get_resource_data(m_name)
-	m_item_name = resource_data["ItemName"]
-	m_item_quantity = resource_data["Quantity"]
-	m_cooldown_time = resource_data["Cooldown"]
-	m_required_tool = resource_data["RequiredTool"]
+	m_item_name = ResourceData.get_item_name(m_name)
+	m_item_quantity = ResourceData.get_quantity(m_name)
+	m_cooldown_time = ResourceData.get_cooldown(m_name)
+	m_required_tool = ResourceData.get_tool(m_name)
+	m_once = ResourceData.is_one_time(m_name)
 	
 	# timer setup
 	m_timer.wait_time = (m_cooldown_time)
@@ -51,21 +56,32 @@ func _on_timeout() -> void:
 		m_button.set_display(true)
 	
 func _on_interact() -> void:
+	# show the required tool bubble
 	if !m_in_cooldown and m_required_tool != null:
 		PlayerManager.emote_with_texture(load("res://ArtAssets/ItemIcons/" + m_required_tool + ".png"))
 	
+	# if the player interacts with the deposit with all requirments met
 	if !m_in_cooldown and (!m_required_tool or Inventory.check_selected_item(m_required_tool)):
+		# add the deposit's item to the inventory
 		Inventory.add_item(m_item_name, m_item_quantity)
 		emit_signal("interacted")
 		
-		# starts the cooldown timer
-		m_timer.start()
-		m_in_cooldown = true
+		# if the resource depsoit is a one time use
+		if m_once:
+			emit_signal("destroy")
+		# set respawn and animations
+		else:
+			# starts the cooldown timer
+			m_timer.start()
+			m_in_cooldown = true
+			
+			# modify interact button display
+			m_button.set_display(false)
+			m_button.set_should_update(false)
+			
+			# if the depsoit required a tool, remove it form the inventory
+			if m_required_tool:
+				Inventory.remove_item(m_required_tool)
 		
-		# modify button display
-		m_button.set_display(false)
-		m_button.set_should_update(false)
 		
-		if m_required_tool:
-			Inventory.remove_item(m_required_tool)
 			

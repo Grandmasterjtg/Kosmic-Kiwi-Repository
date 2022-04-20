@@ -5,6 +5,11 @@ const PICKUP_ANIMATION = "collect"
 
 onready var m_animator = $AnimatedSprite
 
+func _ready():
+	$ResourceDeposit.connect("interacted", self, "pickup")
+	$ResourceDeposit.connect("timeout", self, "reset")
+	$ResourceDeposit.connect("destroy", self, "queue_free")
+
 func _on_ResourceDeposit_interacted():
 	pick_up()
 

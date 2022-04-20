@@ -89,10 +89,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="ResourceInventory" type="GridContainer" parent="InventoryUI/Sections"]
-margin_left = 683.0
-margin_top = 141.0
-margin_right = 839.0
-margin_bottom = 469.0
+margin_left = 932.0
+margin_top = 134.0
+margin_right = 1088.0
+margin_bottom = 462.0
 custom_constants/vseparation = 16
 custom_constants/hseparation = 16
 columns = 2
@@ -103,10 +103,10 @@ __meta__ = {
 m_category = "Resource"
 
 [node name="ToolInventory" type="GridContainer" parent="InventoryUI/Sections"]
-margin_left = 417.0
-margin_top = 137.0
-margin_right = 573.0
-margin_bottom = 465.0
+margin_left = 626.0
+margin_top = 134.0
+margin_right = 782.0
+margin_bottom = 462.0
 custom_constants/vseparation = 16
 custom_constants/hseparation = 16
 columns = 2
@@ -116,11 +116,25 @@ __meta__ = {
 }
 m_category = "Tool"
 
+[node name="GadgetInventory" type="GridContainer" parent="InventoryUI/Sections"]
+margin_left = 308.0
+margin_top = 134.0
+margin_right = 464.0
+margin_bottom = 462.0
+custom_constants/vseparation = 16
+custom_constants/hseparation = 16
+columns = 2
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+m_category = "Gadget"
+
 [node name="ShipInventory" type="GridContainer" parent="InventoryUI/Sections"]
-margin_left = 211.0
-margin_top = 135.0
-margin_right = 281.0
-margin_bottom = 463.0
+margin_left = -92.0
+margin_top = 134.0
+margin_right = -22.0
+margin_bottom = 462.0
 custom_constants/vseparation = 16
 custom_constants/hseparation = 16
 script = ExtResource( 5 )

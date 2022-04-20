@@ -1,12 +1,12 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver5.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/Environment/Desert/River/D_FoamRiver5.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
-[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver6.png" type="Texture" id=3]
-[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver2.png" type="Texture" id=4]
-[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver1.png" type="Texture" id=5]
-[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver4.png" type="Texture" id=6]
-[ext_resource path="res://ArtAssets/Environment/Desert/D_FoamRiver3.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Environment/Desert/River/D_FoamRiver6.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Environment/Desert/River/D_FoamRiver2.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Environment/Desert/River/D_FoamRiver1.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/Environment/Desert/River/D_FoamRiver4.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Environment/Desert/River/D_FoamRiver3.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Props/Forest/F_Liquid.tscn" type="PackedScene" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -47,7 +47,7 @@ region = Rect2( 0, 0, 1000, 1000 )
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ SubResource( 1 ) ],
-"loop": true,
+"loop": false,
 "name": "default",
 "speed": 5.0
 }, {

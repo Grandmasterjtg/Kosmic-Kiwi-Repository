@@ -6,6 +6,7 @@ const ITEM = "ItemName"
 const QUANTITY = "Quantity"
 const COOLDOWN = "Cooldown"
 const TOOL = "RequiredTool"
+const ONCE = "OneTime"
 
 func _ready():
 	m_data = load_data(FILE_PATH)
@@ -37,6 +38,12 @@ func get_cooldown(resource_name: String):
 func get_tool(resource_name: String):
 	if m_data and m_data.has(resource_name) and m_data[resource_name].has(TOOL):
 		return m_data[resource_name][TOOL]
+	else:
+		return null
+		
+func is_one_time(resource_name: String):
+	if m_data and m_data.has(resource_name) and m_data[resource_name].has(ONCE):
+		return m_data[resource_name][ONCE]
 	else:
 		return null
 	
