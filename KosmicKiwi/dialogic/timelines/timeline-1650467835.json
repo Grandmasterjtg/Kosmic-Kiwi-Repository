@@ -34,7 +34,7 @@
 			"character": "character-1650465535.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "Default",
+			"portrait": "friendhappy",
 			"portrait_definition": "",
 			"position": {
 				"0": false,
@@ -49,61 +49,61 @@
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwihappy",
 			"text": "There!"
 		},
 		{
 			"character": "character-1650465535.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "friendhappy",
 			"text": "[shake rate=10 level=10]Yay new friends![/shake]"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwi thinking",
 			"text": "Uh... Hello?"
 		},
 		{
 			"character": "character-1650465535.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Default",
 			"text": "[shake rate=10 level=10]Hello! You must be new here![/shake]"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwi thinking",
 			"text": "Who are you?"
 		},
 		{
 			"character": "character-1650465535.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "friendthinking",
 			"text": "[shake rate=10 level=10]My name is Stinky, I live here.[/shake]"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Default",
 			"text": "I don't understand your language, but do you want to be friends?"
 		},
 		{
 			"character": "character-1650465535.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "[shake rate=10 level=10]Yes!\nIt's been so lonely here.\nIt's nice to make a new friend![/shake]"
+			"portrait": "friendhappy",
+			"text": "[shake rate=10 level=10]Yes![/shake]\n[shake rate=10 level=10]It's been so lonely here.[/shake]\n[shake rate=10 level=10]It's nice to make a new friend![/shake]"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwihappy",
 			"text": "I'll take that as a yes. Let's go!"
 		},
 		{
 			"character": "character-1650465535.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "friendthinking",
 			"text": "Yay!"
 		}
 	],

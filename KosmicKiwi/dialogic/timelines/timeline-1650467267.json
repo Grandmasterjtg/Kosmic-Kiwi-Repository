@@ -27,8 +27,8 @@
 			"change_z_index": false,
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "Default",
+			"mirror_portrait": true,
+			"portrait": "penguinhappy",
 			"portrait_definition": "",
 			"position": {
 				"0": false,
@@ -49,43 +49,43 @@
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwihappy",
 			"text": "Penguin! I'm so glad you are okay!"
 		},
 		{
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "penguinthinking",
 			"text": "Me too! Oh, I mean uh... I'm glad you're okay too!"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwi thinking",
 			"text": "Now how are we going to get you out of there?"
 		},
 		{
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "penguinsad",
 			"text": "I can't, quite, squeeze through..."
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwi thinking",
 			"text": "Hummmm... I'll go around and see if we can find another way to get you out."
 		},
 		{
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Default",
 			"text": "Okay!\nJust hurry back!!"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwihappy",
 			"text": "We'll get you out!"
 		},
 		{

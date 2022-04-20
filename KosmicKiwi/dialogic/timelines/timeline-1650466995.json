@@ -8,7 +8,7 @@
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "Default",
+			"portrait": "kiwisad",
 			"portrait_definition": "",
 			"position": {
 				"0": true,
@@ -23,31 +23,31 @@
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "(Don't change)",
 			"text": "W... whh... what.... Where am I...?\nOh NO!! PENGUIN!! SEAL!! Where did my friends go?"
 		},
 		{
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "penguinhappy",
 			"text": "*static* KIWI!! ...I'm okay! .......*puzzt*"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "(Don't change)",
 			"text": "PENGUIN! Where are you?"
 		},
 		{
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "penguinsad",
 			"text": "There's.....orange boulders....*static*....Here...Come find me! *puzzt*\nIt's.... scary out here..... *puzzt*"
 		},
 		{
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "kiwi thinking",
 			"text": "Phew, at least Penguin is okay.\nI gotta find a way out of here, let's see what might help us out of this pit..."
 		},
 		{

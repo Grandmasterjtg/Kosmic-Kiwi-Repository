@@ -19,6 +19,7 @@ func set_state(state):
 	m_current_state = state
 	match state:
 		CharacterState.IDLE:
+			.change_idle_animation()
 			m_timer.start()
 		_:
 			pass
@@ -45,14 +46,16 @@ func handle_state():
 func steal_from_player():
 	if (Inventory.item_exists_in_inventory(TARGET_ITEM)):
 		if (self.global_position.distance_to(m_player_node.global_position) < m_detection_distance):
-			var player_direction = m_player_node.global_position - self.global_position
-			move(player_direction)
+			m_direction = m_player_node.global_position - self.global_position
+			move(m_direction)
 			
-			if (player_direction.length_squared() < (m_stop_distance * m_stop_distance)):
+			if (m_direction.length_squared() < (m_stop_distance * m_stop_distance)):
 				scale += Vector2(0.1,0.1)
 				emote.open_bubble_with_texture(item_texture)
 				Inventory.remove_item(TARGET_ITEM)
 				set_state(CharacterState.HOME)
+		else:
+			.change_idle_animation()
 
 func stink_detected():
 	set_state(CharacterState.HOME)

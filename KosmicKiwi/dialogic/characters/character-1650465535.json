@@ -8,14 +8,26 @@
 	"name": "Stinky",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
+	"offset_x": 300,
 	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://ArtAssets/Characters/friend.png"
+			"path": "res://ArtAssets/Characters/emotes/friendneutral.png"
+		},
+		{
+			"name": "friendhappy",
+			"path": "res://ArtAssets/Characters/emotes/friendhappy.png"
+		},
+		{
+			"name": "friendsad",
+			"path": "res://ArtAssets/Characters/emotes/friendsad.png"
+		},
+		{
+			"name": "friendthinking",
+			"path": "res://ArtAssets/Characters/emotes/friendthinking.png"
 		}
 	],
-	"scale": 100,
+	"scale": 80,
 	"theme": ""
 }

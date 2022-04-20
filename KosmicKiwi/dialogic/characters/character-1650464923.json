@@ -8,14 +8,26 @@
 	"name": "Kiwi",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
+	"offset_x": -300,
 	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://ArtAssets/Environment/Forest/F_Rocks_Stage4.png"
+			"path": "res://ArtAssets/Characters/emotes/kiwineutral.png"
+		},
+		{
+			"name": "kiwihappy",
+			"path": "res://ArtAssets/Characters/emotes/kiwihappy.png"
+		},
+		{
+			"name": "kiwi thinking",
+			"path": "res://ArtAssets/Characters/emotes/kiwi thinking.png"
+		},
+		{
+			"name": "kiwisad",
+			"path": "res://ArtAssets/Characters/emotes/kiwisad.png"
 		}
 	],
-	"scale": 100,
+	"scale": 80,
 	"theme": "default-theme.cfg"
 }

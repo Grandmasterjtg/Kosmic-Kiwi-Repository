@@ -61,23 +61,3 @@ func change_walking_animation():
 	elif m_direction.y > 0.01:
 		animation.play(ANIMATION_WALKING_DOWN)
 		animation.flip_h = false
-
-func instantiate_image(scale) -> void:
-	var sprite = Sprite.new()
-	sprite.texture = get_child(0).texture
-	sprite.position = position
-	sprite.scale *= scale
-	sprite.z_index = 0
-	var size_x = sprite.scale.x * sprite.texture.get_size().x / 2 + get_child(0).texture.get_size().x / 2 + 10
-	var size_y = sprite.scale.y * sprite.texture.get_size().y / 2 + get_child(0).texture.get_size().y / 2 + 10
-	sprite.position.x += m_direction.x * size_x
-	sprite.position.y += m_direction.y * size_y
-	get_parent().add_child(sprite)
-	
-func show_bubble(item_name: String, texture) -> void:
-	$Bubble.visible = true;
-	$Bubble/Texture.texture = texture
-	$BubbleTime.start()
-		
-func hide_bubble() -> void:
-	$Bubble.visible = false

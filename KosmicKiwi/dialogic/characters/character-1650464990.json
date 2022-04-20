@@ -8,14 +8,26 @@
 	"name": "Penguin",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": 0,
+	"offset_x": 300,
 	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://ArtAssets/Environment/Jungle/J_Brair_Stage1.png"
+			"path": "res://ArtAssets/Characters/emotes/penguin neutral.png"
+		},
+		{
+			"name": "penguinhappy",
+			"path": "res://ArtAssets/Characters/emotes/penguinhappy.png"
+		},
+		{
+			"name": "penguinsad",
+			"path": "res://ArtAssets/Characters/emotes/penguinsad.png"
+		},
+		{
+			"name": "penguinthinking",
+			"path": "res://ArtAssets/Characters/emotes/penguinthinking.png"
 		}
 	],
-	"scale": 100,
+	"scale": 80,
 	"theme": "default-theme.cfg"
 }
