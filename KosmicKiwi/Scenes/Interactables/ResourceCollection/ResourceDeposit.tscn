@@ -23,7 +23,6 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="ButtonDisplay" type="RichTextLabel" parent="."]
-visible = false
 margin_left = -7.0
 margin_top = -92.0
 margin_bottom = -77.0

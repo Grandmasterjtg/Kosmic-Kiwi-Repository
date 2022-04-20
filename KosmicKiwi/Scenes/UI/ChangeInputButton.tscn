@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/ChangeInput.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/UIScripts/ChangeInput.gd" type="Script" id=1]
 [ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://ArtAssets/UI_4-13-22/Button.png" type="Texture" id=3]
 
