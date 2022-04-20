@@ -6,7 +6,6 @@ const PLACE := "place"
 const CANCEL := "cancel"
 
 onready var m_hotbar_slots = $HotbarSlots.get_children()
-onready var m_player = get_tree().get_nodes_in_group("player")[0]
 const ITEM_FOLDER = "res://Scenes/Props/Items/"
 const ITEM_FILETYPE = ".tscn"
 
