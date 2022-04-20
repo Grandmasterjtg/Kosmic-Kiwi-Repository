@@ -3,54 +3,63 @@
         "ItemName": "Metal",
         "Quantity": 1,
         "Cooldown": 30.0,
-        "RequiredTool": "T'Hermite"
+        "RequiredTool": "T'Hermite",
+        "OneTime": false
     },
     "Ship Part Deposit": {
         "ItemName": "Ship Part",
         "Quantity": 1,
         "Cooldown": 30.0,
-        "RequiredTool": null
+        "RequiredTool": null,
+        "OneTime": false
     },
     "Fiber Deposit": {
         "ItemName": "Fiber",
         "Quantity": 1,
         "Cooldown": 30.0,
-        "RequiredTool": null
+        "RequiredTool": null,
+        "OneTime": false
     },
     "Rock Deposit": {
         "ItemName": "Rock",
         "Quantity": 1,
         "Cooldown": 30.0,
-        "RequiredTool": null
+        "RequiredTool": null,
+        "OneTime": false
     },
     "Chemical Deposit": {
         "ItemName": "Chemical",
         "Quantity": 1,
         "Cooldown": 30.0,
-        "RequiredTool": "Pipette"
+        "RequiredTool": "Pipette",
+        "OneTime": false
     },
     "Liquid Deposit": {
         "ItemName": "Liquid",
         "Quantity": 1,
         "Cooldown": 0.5,
-        "RequiredTool": "Pipette"
+        "RequiredTool": "Pipette",
+        "OneTime": false
     },
     "Engine": {
         "ItemName": "Engine",
         "Quantity": 1,
         "Cooldown": 0.0,
-        "RequiredTool": null
+        "RequiredTool": null,
+        "OneTime": true
     },
     "Solar Sail": {
         "ItemName": "Solar Sail",
         "Quantity": 1,
         "Cooldown": 0.0,
-        "RequiredTool": null
+        "RequiredTool": null,
+        "OneTime": true
     },
     "Shield": {
         "ItemName": "Shield",
         "Quantity": 1,
         "Cooldown": 0.0,
-        "RequiredTool": null
+        "RequiredTool": null,
+        "OneTime": true
     }
 }

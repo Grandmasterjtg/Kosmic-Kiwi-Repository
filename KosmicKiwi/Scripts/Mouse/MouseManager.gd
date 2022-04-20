@@ -1,7 +1,7 @@
 extends Node2D
 
 
-const DEFAULT_TEXTURE = null
+const DEFAULT_TEXTURE = preload("res://ArtAssets/UI/Cursor.png")
 const RANGE = 1000
 var m_mouse_texture
 
