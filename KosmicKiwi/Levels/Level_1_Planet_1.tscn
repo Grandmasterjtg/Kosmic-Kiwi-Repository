@@ -17,7 +17,6 @@
 [ext_resource path="res://Scenes/Props/Forest/F_RopeCliffLeft_old.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Props/Forest/F_RopeCliffRight_old.tscn" type="PackedScene" id=19]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1000, 10 )
 

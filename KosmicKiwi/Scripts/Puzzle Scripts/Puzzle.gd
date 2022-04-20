@@ -4,7 +4,7 @@ class_name Puzzle
 
 const FILE_PATH = "res://ArtAssets/SpriteFrames/"
 const FILE_TYPE = ".tres"
-const DEFAULT_ANIM = "default"
+const DEFAULT_ANIM = "default_"
 const SOLVED_ANIM = "solved_"
 
 var m_id : Vector2
@@ -22,6 +22,8 @@ func ready_puzzle():
 	PuzzleManager.add_puzzle(m_id)
 	if PuzzleManager.check_puzzle_solved(m_id):
 		solve_puzzle()
+	else:
+		m_animator.play(DEFAULT_ANIM + m_planet)
 
 func solve_puzzle():
 	var already_solved = PuzzleManager.check_puzzle_solved(m_id)

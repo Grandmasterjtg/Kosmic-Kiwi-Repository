@@ -1,19 +1,61 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=2]
+[gd_resource type="SpriteFrames" load_steps=17 format=2]
 
 [ext_resource path="res://ArtAssets/Environment/Forest/Metal/F_Metal_Stage3.png" type="Texture" id=1]
 [ext_resource path="res://ArtAssets/Environment/Forest/Metal/F_Metal_Stage2.png" type="Texture" id=2]
 [ext_resource path="res://ArtAssets/Environment/Forest/Metal/F_Metal_Stage4.png" type="Texture" id=3]
 [ext_resource path="res://ArtAssets/Environment/Forest/Metal/F_Metal_Stage1.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Environment/Desert/Metal/D_Metal_Stage2.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/Environment/Desert/Metal/D_Metal_Stage4.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Environment/Desert/Metal/D_Metal_Stage1.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Environment/Desert/Metal/D_Metal_Stage3.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Metal/J_Metal_Stage1.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Metal/J_Metal_Stage4.png" type="Texture" id=10]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Metal/J_Metal_Stage2.png" type="Texture" id=11]
+[ext_resource path="res://ArtAssets/Environment/Wet/Metal/W_Metal_Stage1.png" type="Texture" id=12]
+[ext_resource path="res://ArtAssets/Environment/Wet/Metal/W_Metal_Stage2.png" type="Texture" id=13]
+[ext_resource path="res://ArtAssets/Environment/Wet/Metal/W_Metal_Stage3.png" type="Texture" id=14]
+[ext_resource path="res://ArtAssets/Environment/Wet/Metal/W_Metal_Stage4.png" type="Texture" id=15]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Metal/J_Metal_Stage3.png" type="Texture" id=16]
 
 [resource]
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": false,
-"name": "default",
+"name": "default_Forest",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "default_Jungle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": false,
+"name": "default_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "default_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "collect_Desert",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 4 ) ],
 "loop": false,
-"name": "collect",
+"name": "collect_Forest",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "collect_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "collect_Jungle",
 "speed": 5.0
 } ]

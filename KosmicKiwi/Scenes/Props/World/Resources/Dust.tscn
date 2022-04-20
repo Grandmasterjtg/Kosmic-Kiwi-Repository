@@ -1,24 +1,24 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://ArtAssets/SpriteFrames/Forest/Rocks.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://ArtAssets/SpriteFrames/Props/Dust.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/PropScripts/ResourceProp.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Interactables/ResourceCollection/ResourceDeposit.tscn" type="PackedScene" id=3]
 
-
-[node name="F_Rocks" type="StaticBody2D"]
+[node name="Dust" type="StaticBody2D"]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -203 )
+position = Vector2( 0, -247 )
 frames = ExtResource( 1 )
+animation = "default_Forest"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -159, 104, -227, 6, -147, -73, -8, -84, 128, -66, 204, -5, 192, 112, 79, 146 )
+polygon = PoolVector2Array( -192, 6, -134, 82, -39, 112, 7, 117, 80, 112, 138, 97, 201, 42, 203, -6, 158, -32, 75, -49, -3, -54, -71, -49, -145, -32 )
 
 [node name="ResourceDeposit" parent="." instance=ExtResource( 3 )]
-m_name = "Rock Deposit"
+m_name = "Chemical Deposit"
 
 [connection signal="interacted" from="ResourceDeposit" to="." method="_on_ResourceDeposit_interacted"]
 [connection signal="timeout" from="ResourceDeposit" to="." method="_on_ResourceDeposit_timeout"]

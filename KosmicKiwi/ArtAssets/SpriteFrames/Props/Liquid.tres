@@ -22,12 +22,42 @@ region = Rect2( 0, 0, 1000, 1000 )
 [resource]
 animations = [ {
 "frames": [  ],
-"loop": true,
-"name": "default",
+"loop": false,
+"name": "default_Forest",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": false,
+"name": "default_Jungle",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": false,
+"name": "default_Desert",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": false,
+"name": "desert_Wet",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": false,
+"name": "collect_Desert",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "collect",
+"loop": false,
+"name": "collect_Forest",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": false,
+"name": "collect_Wet",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": false,
+"name": "collect_Jungle",
 "speed": 5.0
 } ]
