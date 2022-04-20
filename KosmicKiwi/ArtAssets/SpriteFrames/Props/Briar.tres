@@ -1,0 +1,61 @@
+[gd_resource type="SpriteFrames" load_steps=17 format=2]
+
+[ext_resource path="res://ArtAssets/Environment/Forest/Briar/F_Briar_stage1.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/Environment/Forest/Briar/F_Briar_stage2.png" type="Texture" id=2]
+[ext_resource path="res://ArtAssets/Environment/Forest/Briar/F_Briar_stage4.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Environment/Forest/Briar/F_Briar_stage3.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Environment/Wet/Briar/W_Briar_Stage2.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Briar/J_Brair_Stage3.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Briar/J_Brair_Stage1.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Environment/Wet/Briar/W_Briar_Stage4.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/Environment/Wet/Briar/W_Briar_Stage1.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/Environment/Desert/Briar/D_Briar_Stage3.png" type="Texture" id=10]
+[ext_resource path="res://ArtAssets/Environment/Desert/Briar/D_Briar_Stage4.png" type="Texture" id=11]
+[ext_resource path="res://ArtAssets/Environment/Wet/Briar/W_Briar_Stage3.png" type="Texture" id=12]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Briar/J_Briar_Stage4.png" type="Texture" id=13]
+[ext_resource path="res://ArtAssets/Environment/Desert/Briar/D_Briar_Stage1.png" type="Texture" id=14]
+[ext_resource path="res://ArtAssets/Environment/Jungle/Briar/J_Brair_Stage2.png" type="Texture" id=15]
+[ext_resource path="res://ArtAssets/Environment/Desert/Briar/D_Briar_Stage2.png" type="Texture" id=16]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "default_Forest",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": false,
+"name": "default_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 12 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "solved_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "solved_Jungle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "solved_Forest",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "default_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "default_Jungle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "solved_Desert",
+"speed": 5.0
+} ]

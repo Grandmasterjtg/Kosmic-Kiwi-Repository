@@ -1,15 +1,16 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ArtAssets/SpriteFrames/Forest/Boulder.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://ArtAssets/SpriteFrames/Props/Briar.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
 
-[node name="F_Boulder" type="StaticBody2D" groups=["boulder"]]
+[node name="Briar" type="StaticBody2D" groups=["briar"]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
+animation = "default_Forest"
 
 [node name="Collider" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -199, 339, -371, 181, -411, 49, -345, -46, -120, -119, 97, -121, 252, -82, 395, -10, 373, 135, 292, 283, 110, 360 )
+polygon = PoolVector2Array( -27, 295, -236, 215, -418, 10, -283, -71, -18, -118, 193, -77, 381, 1, 258, 208 )

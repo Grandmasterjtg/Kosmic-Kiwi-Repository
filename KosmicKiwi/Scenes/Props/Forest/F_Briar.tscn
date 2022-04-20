@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ArtAssets/SpriteFrames/Forest/F_Briar.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://ArtAssets/SpriteFrames/Forest/Briar.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
 
 [node name="F_Briar" type="StaticBody2D" groups=["briar"]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource( 2 )
+m_type = "briar"
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
