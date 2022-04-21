@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Forest_Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Resources/Forest_Tileset_Old.tres" type="TileSet" id=8]
+[ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI_Control.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
+
+[node name="Planet_1" type="Node2D" groups=["level_root"]]
+script = ExtResource( 13 )
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Bounds" type="Node2D" parent="Map"]
+scale = Vector2( 0.999159, 1 )
+
+[node name="Tilemaps" type="Node2D" parent="Map"]
+
+[node name="Ground" type="TileMap" parent="Map/Tilemaps"]
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 1000, 500 )
+collision_layer = 4
+collision_mask = 0
+format = 1
+
+[node name="Rivers" type="Node2D" parent="Map/Tilemaps/Ground"]
+position = Vector2( 13, -215 )
+
+[node name="Cliffs" type="TileMap" parent="Map/Tilemaps"]
+mode = 1
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 1000, 500 )
+collision_layer = 4
+collision_mask = 0
+format = 1
+
+[node name="Clifftops" type="TileMap" parent="Map/Tilemaps"]
+mode = 1
+cell_size = Vector2( 1000, 500 )
+collision_layer = 4
+collision_mask = 0
+format = 1
+
+[node name="Decor" type="TileMap" parent="Map/Tilemaps"]
+mode = 1
+cell_size = Vector2( 1000, 500 )
+collision_layer = 4
+collision_mask = 0
+format = 1
+
+[node name="Actors" type="YSort" parent="."]
+
+[node name="Player" parent="Actors" instance=ExtResource( 6 )]
+position = Vector2( -1500, 3500 )
+
+[node name="Ship" parent="Actors" instance=ExtResource( 9 )]
+position = Vector2( -2095, 1321 )
+
+[node name="ResourcePoints" type="YSort" parent="Actors"]
+
+[node name="Chemical" type="YSort" parent="Actors/ResourcePoints"]
+
+[node name="Grass" type="YSort" parent="Actors/ResourcePoints"]
+
+[node name="Liquid" type="YSort" parent="Actors/ResourcePoints"]
+
+[node name="Metal" type="YSort" parent="Actors/ResourcePoints"]
+
+[node name="Rocks" type="YSort" parent="Actors/ResourcePoints"]
+
+[node name="Puzzles" type="YSort" parent="Actors"]
+position = Vector2( 13, -215 )
+
+[node name="Briars" type="YSort" parent="Actors/Puzzles"]
+
+[node name="Boulders" type="YSort" parent="Actors/Puzzles"]
+
+[node name="Cliffs" type="YSort" parent="Actors/Puzzles"]
+
+[node name="UI_Layer" parent="." instance=ExtResource( 10 )]
