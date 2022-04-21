@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=1]
-[ext_resource path="res://Scripts/MenuScripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/UIScripts/MenuScripts/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://ArtAssets/UI/ScreenUI.png" type="Texture" id=3]
 [ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
@@ -19,9 +19,6 @@ font_data = ExtResource( 6 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="TextureRect" parent="."]
 margin_right = 4800.0
