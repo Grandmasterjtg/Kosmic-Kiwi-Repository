@@ -41,21 +41,6 @@ animations = [ {
 "name": "default_Desert",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": false,
-"name": "solved_Wet",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 26 ), ExtResource( 17 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 18 ) ],
-"loop": false,
-"name": "solved_Jungle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 1 ) ],
-"loop": false,
-"name": "solved_Forest",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 19 ) ],
 "loop": false,
 "name": "default_Wet",
@@ -66,8 +51,23 @@ animations = [ {
 "name": "default_Jungle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 14 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "solved_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 26 ), ExtResource( 17 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "solved_Jungle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 15 ) ],
 "loop": false,
 "name": "solved_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "solved_Forest",
 "speed": 5.0
 } ]

@@ -24,16 +24,6 @@ animations = [ {
 "name": "default_Forest",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
-"loop": false,
-"name": "default_Jungle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 16 ) ],
-"loop": false,
-"name": "default_Wet",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": false,
 "name": "default_Desert",
@@ -42,6 +32,16 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "collect_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": false,
+"name": "default_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "default_Jungle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ) ],
