@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://ArtAssets/SpriteFrames/Forest/F_River.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://ArtAssets/SpriteFrames/Forest/River.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Props/Forest/F_Liquid.tscn" type="PackedScene" id=3]
+
 
 [node name="F_RiverLeft" type="StaticBody2D" groups=["river"]]
 scale = Vector2( 3, 3 )

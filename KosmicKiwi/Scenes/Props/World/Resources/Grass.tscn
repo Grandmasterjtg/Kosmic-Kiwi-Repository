@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/Props/Grass.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/PropScripts/ResourceProp.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Interactables/ResourceCollection/ResourceDeposit.tscn" type="PackedScene" id=3]
+
+[node name="Grass" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -82 )
+frames = ExtResource( 1 )
+animation = "default_Forest"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -11, 215, -152, 152, -209, 47, -179, -25, -68, -52, 25, -52, 127, -31, 202, 17, 181, 89, 97, 188 )
+disabled = true
+
+[node name="ResourceDeposit" parent="." instance=ExtResource( 3 )]
+m_name = "Fiber Deposit"
+
+[connection signal="interacted" from="ResourceDeposit" to="." method="_on_ResourceDeposit_interacted"]
+[connection signal="timeout" from="ResourceDeposit" to="." method="_on_ResourceDeposit_timeout"]

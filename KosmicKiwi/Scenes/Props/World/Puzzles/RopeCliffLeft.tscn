@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/Props/RopeCliff.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
+
+[node name="RopeCliff" type="StaticBody2D" groups=["cliff"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 1000 )
+frames = ExtResource( 1 )
+animation = "default_Forest"
+playing = true
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 500 )
+polygon = PoolVector2Array( -499, -222, -2, 26, 0, 1499, -499, 1256 )

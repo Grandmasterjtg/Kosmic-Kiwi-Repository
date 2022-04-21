@@ -2,7 +2,8 @@
 
 [ext_resource path="res://Scenes/Interactables/ResourceCollection/ResourceDeposit.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/PropScripts/ResourceProp.gd" type="Script" id=2]
-[ext_resource path="res://ArtAssets/SpriteFrames/Wet/W_Rocks.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://ArtAssets/SpriteFrames/Wet/Rocks.tres" type="SpriteFrames" id=3]
+
 
 [node name="W_Rocks" type="StaticBody2D"]
 collision_layer = 4
