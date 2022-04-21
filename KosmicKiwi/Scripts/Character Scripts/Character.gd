@@ -18,6 +18,7 @@ export var m_detection_distance := 2200.0
 
 enum CharacterState {FOLLOW, HOME, IDLE, STEAL}
 export(CharacterState) var m_start_state = CharacterState.IDLE
+export var m_transition_time = 0.2
 
 onready var m_home_pos = $HomePosition.global_position
 onready var emote = $EmoteBubble
@@ -28,6 +29,7 @@ var m_player_node
 var m_should_move := false
 var m_active := true
 var m_direction := Vector2(0, 1)
+var m_idle_timer
 
 func _ready():
 	# get the player from the scene
@@ -36,6 +38,13 @@ func _ready():
 		print(name + " _ready(): " + m_player_node.name + " was found.")
 	if m_player_node == null:
 		printerr("Character: Player node not found!")
+	
+	#setup m_idle_timer
+	m_idle_timer = Timer.new()
+	m_idle_timer.connect("timeout",self,"transition_to_idle") 
+	m_idle_timer.wait_time = m_transition_time
+	m_idle_timer.one_shot = true
+	add_child(m_idle_timer)
 	
 	# set the start_state
 	set_state(m_start_state)
@@ -71,7 +80,8 @@ func follow_target(target):
 		if (m_direction.length_squared() > (m_follow_distance * m_follow_distance)):
 			move(m_direction)
 		else:
-			change_idle_animation()
+			if m_idle_timer.time_left <= 0:
+				m_idle_timer.start(m_transition_time)
 
 func move_home():
 	m_direction = m_home_pos - self.global_position
@@ -116,5 +126,11 @@ func change_walking_animation():
 		elif m_direction.y > 0.1:
 			animation.play(ANIMATION_WALKING_DOWN)
 			animation.flip_h = false
+
+func transition_to_idle():
+	change_idle_animation()
+
+
+
 
 

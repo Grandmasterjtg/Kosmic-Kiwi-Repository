@@ -14,6 +14,8 @@ const penguin_found_dialog = "Find_Penguin"
 const seal_found_dialog = "Find_Seal"
 const stinky_found_dialog = "Find_Stinky"
 
+var m_current_friend_id: int
+
 func check_friend_found(friend_id: int) -> bool:
 	match friend_id:
 		FriendID.PENGUIN:
@@ -61,3 +63,12 @@ func join_friend(friend_id: int):
 		FriendID.STINKY:
 			joined_stinky = true
 
+func switch_friend(friend_id: int):
+	m_current_friend_id = friend_id
+	match friend_id:
+		FriendID.PENGUIN:
+			joined_penguin = true
+		FriendID.SEAL:
+			joined_seal = true
+		FriendID.STINKY:
+			joined_stinky = true

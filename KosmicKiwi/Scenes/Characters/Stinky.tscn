@@ -33,20 +33,15 @@ animations = [ {
 "name": "walking_back",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "idle_front",
+"name": "idle_side",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walking_front",
 "speed": 8.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "idle_side",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
@@ -57,6 +52,11 @@ animations = [ {
 "loop": true,
 "name": "walking_side",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "idle_front",
+"speed": 5.0
 } ]
 
 [node name="Stinky" type="KinematicBody2D"]

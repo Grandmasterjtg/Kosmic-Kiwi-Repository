@@ -16,7 +16,7 @@ func _ready():
 
 func _on_DetectionArea_body_entered(body: Node) -> void:
 	m_detected_bodies.append(body)
-	print(body.name + " entered.")
+#	print(body.name + " entered.")
 	if (body.is_in_group("player") and !ProgressionManager.check_friend_found(friend_id)):
 		meet_player()
 
@@ -24,6 +24,5 @@ func _on_DetectionArea_body_exited(body: Node) -> void:
 	m_detected_bodies.erase(body)
 
 func meet_player():
-	print("Friend .meet_player() called.")
 	if !ProgressionManager.check_friend_found(friend_id):
 			ProgressionManager.find_friend(friend_id)

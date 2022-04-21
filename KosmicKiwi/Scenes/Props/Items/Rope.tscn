@@ -8,6 +8,7 @@ collision_layer = 8
 collision_mask = 2
 script = ExtResource( 2 )
 item_to_destroy = "cliff"
+only_one = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )

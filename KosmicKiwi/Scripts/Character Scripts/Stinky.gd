@@ -1,9 +1,7 @@
 extends Friend
 
-
 func _ready() -> void:
 	friend_id = 2
-	print(friend_id)
 
 func _input(event):
 	if event.is_action_pressed(FRIEND_ACTION):
@@ -19,10 +17,5 @@ func be_stinky():
 		print("No enemies nearby.")
 
 func meet_player():
-	print(name + " meet_player() called.")
 	.meet_player()
-	print("state before:")
-	print(m_current_state)
 	set_state(CharacterState.FOLLOW)
-	print("state after:")
-	print(m_current_state)

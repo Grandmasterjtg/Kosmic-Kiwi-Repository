@@ -1,17 +1,15 @@
 extends Friend
 
-const FRIEND := "friend"
+func _ready() -> void:
+	friend_id = 1
 
-func _process(delta):
-	if Input.is_action_just_pressed(FRIEND):
-		print("Being stinky...")
-		be_stinky()
+func _input(event):
+	if event.is_action_pressed(FRIEND_ACTION):
+			pass
 
-func be_stinky():
-	if (!m_detected_bodies.empty()):
-		for body in m_detected_bodies:
-			if (body.is_in_group("Enemy")):
-				print(body.name + " thinks your friend is stinky!")
-				body.set_state(body.CharacterState.HOME)
-	else:
-		print("No enemies nearby.")
+func boulder_smash():
+	pass
+
+func meet_player():
+	.meet_player()
+	set_state(CharacterState.FOLLOW)
