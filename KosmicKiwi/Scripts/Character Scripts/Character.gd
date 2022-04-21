@@ -92,20 +92,20 @@ func move(direction: Vector2) -> void:
 	change_walking_animation()
 
 func change_idle_animation():
-	if m_direction.x > 0.1:
-		animation.play(ANIMATION_IDLE_LEFT)
-		animation.flip_h = true
-	elif m_direction.x < -0.1:
-		animation.play(ANIMATION_IDLE_LEFT)
-		animation.flip_h = false
-	elif m_direction.y < -0.1:
-		#if m_direction.x < 0.01 and m_direction.x > -0.01:
-		animation.play(ANIMATION_IDLE_UP)
-		animation.flip_h = false
-	elif m_direction.y > 0.1:
-		#if m_direction.x < 0.01 and m_direction.x > -0.01:
-		animation.play(ANIMATION_IDLE_DOWN)
-		animation.flip_h = false
+	if abs(m_direction.x + 0.1) > abs(m_direction.y):
+		if m_direction.x > 0.1:
+			animation.play(ANIMATION_IDLE_LEFT)
+			animation.flip_h = true
+		elif m_direction.x < -0.1:
+			animation.play(ANIMATION_IDLE_LEFT)
+			animation.flip_h = false
+	elif abs(m_direction.x - 0.1) <= abs(m_direction.y):
+		if m_direction.y < -0.1:
+			animation.play(ANIMATION_IDLE_UP)
+			animation.flip_h = false
+		elif m_direction.y > 0.1:
+			animation.play(ANIMATION_IDLE_DOWN)
+			animation.flip_h = false
 
 func change_walking_animation():
 	if abs(m_direction.x + 0.1) > abs(m_direction.y):
@@ -126,7 +126,8 @@ func change_walking_animation():
 func transition_to_idle():
 	change_idle_animation()
 
-
+func teleport_home():
+	pass
 
 
 

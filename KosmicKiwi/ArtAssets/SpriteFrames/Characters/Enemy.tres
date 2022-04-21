@@ -20,6 +20,21 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 2 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "idle_back",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle_front",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "walking_side",
+"speed": 8.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "walking_back",
@@ -34,19 +49,4 @@ animations = [ {
 "loop": true,
 "name": "walking_front",
 "speed": 8.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "idle_back",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "walking_side",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "idle_front",
-"speed": 1.0
 } ]

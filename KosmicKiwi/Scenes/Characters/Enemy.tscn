@@ -4,8 +4,8 @@
 [ext_resource path="res://Scripts/Character Scripts/Enemy.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Characters/EmoteBubble.tscn" type="PackedScene" id=3]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 200.0
+[sub_resource type="CircleShape2D" id=1]
+radius = 100.0
 
 [node name="Enemy" type="KinematicBody2D" groups=["Enemy"]]
 z_index = 1
@@ -16,9 +16,10 @@ m_speed = 1800.0
 m_start_state = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
 frames = ExtResource( 1 )
 animation = "idle_side"
 
