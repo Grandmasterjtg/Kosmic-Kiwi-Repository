@@ -3,12 +3,8 @@ extends Friend
 func _ready() -> void:
 	friend_id = 1
 
-func _input(event):
-	if event.is_action_pressed(FRIEND_ACTION):
-			pass
-
-func boulder_smash():
-	pass
+func use_ability():
+	print("Seal ability used!")
 
 func meet_player():
 	.meet_player()

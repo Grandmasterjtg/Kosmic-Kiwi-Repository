@@ -1,13 +1,10 @@
 extends Friend
 
 func _ready() -> void:
-	friend_id = 2
+	self.friend_id = 2
 
-func _input(event):
-	if event.is_action_pressed(FRIEND_ACTION):
-			be_stinky()
-
-func be_stinky():
+func use_ability():
+	print("Stinky ability used!")
 	if (!m_detected_bodies.empty()):
 		for body in m_detected_bodies:
 			if (body.is_in_group("Enemy")):

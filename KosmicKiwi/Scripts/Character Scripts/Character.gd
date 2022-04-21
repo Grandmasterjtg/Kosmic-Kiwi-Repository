@@ -18,18 +18,17 @@ export var m_detection_distance := 2200.0
 
 enum CharacterState {FOLLOW, HOME, IDLE, STEAL}
 export(CharacterState) var m_start_state = CharacterState.IDLE
-export var m_transition_time = 0.2
 
 onready var m_home_pos = $HomePosition.global_position
 onready var emote = $EmoteBubble
 onready var animation = $AnimatedSprite
+onready var transition_timer = $TransitionTimer
+onready var stuck_timer = $StuckTimer
 
 var m_current_state
 var m_player_node
 var m_should_move := false
-var m_active := true
 var m_direction := Vector2(0, 1)
-var m_idle_timer
 
 func _ready():
 	# get the player from the scene
@@ -39,12 +38,9 @@ func _ready():
 	if m_player_node == null:
 		printerr("Character: Player node not found!")
 	
-	#setup m_idle_timer
-	m_idle_timer = Timer.new()
-	m_idle_timer.connect("timeout",self,"transition_to_idle") 
-	m_idle_timer.wait_time = m_transition_time
-	m_idle_timer.one_shot = true
-	add_child(m_idle_timer)
+	#setup timers
+	transition_timer.connect("timeout",self,"transition_to_idle")
+	stuck_timer.connect("timeout",self,"teleport_home")
 	
 	# set the start_state
 	set_state(m_start_state)
@@ -80,8 +76,8 @@ func follow_target(target):
 		if (m_direction.length_squared() > (m_follow_distance * m_follow_distance)):
 			move(m_direction)
 		else:
-			if m_idle_timer.time_left <= 0:
-				m_idle_timer.start(m_transition_time)
+			if transition_timer.time_left <= 0:
+				transition_timer.start()
 
 func move_home():
 	m_direction = m_home_pos - self.global_position

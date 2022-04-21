@@ -134,7 +134,7 @@ MouseManager="*res://Scripts/UIScripts/Mouse/MouseManager.gd"
 UIManager="*res://Scripts/UIScripts/UIManager.gd"
 PlayerManager="*res://Scripts/PlayerScripts/PlayerManager.gd"
 Cheat="*res://Scripts/Cheat.gd"
-ProgressionManager="*res://Scripts/PlanetScripts/ProgressionManager.gd"
+ProgressionManager="*res://Scripts/PlanetScripts/FriendManager.gd"
 SoundManager="*res://Scripts/Sound/SoundManager.gd"
 
 [display]

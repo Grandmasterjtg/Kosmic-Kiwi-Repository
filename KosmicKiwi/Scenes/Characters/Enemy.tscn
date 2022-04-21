@@ -26,3 +26,11 @@ animation = "idle_side"
 
 [node name="EmoteBubble" parent="." instance=ExtResource( 3 )]
 position = Vector2( 3, -537 )
+
+[node name="TransitionTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="StuckTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
