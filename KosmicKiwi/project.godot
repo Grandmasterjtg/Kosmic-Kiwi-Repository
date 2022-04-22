@@ -136,6 +136,7 @@ Cheat="*res://Scripts/Cheat.gd"
 SoundManager="*res://Scripts/Sound/SoundManager.gd"
 MouseManager="*res://Scripts/UIScripts/Mouse/MouseManager.gd"
 IsometricVector="*res://Scripts/PlayerScripts/IsometricVector.gd"
+ResourceManager="*res://Scripts/InteractableScripts/ResourceManager.gd"
 
 [display]
 
