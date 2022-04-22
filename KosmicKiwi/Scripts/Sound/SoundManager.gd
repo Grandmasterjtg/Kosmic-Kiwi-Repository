@@ -6,10 +6,12 @@ const SFX = "SFX"
 var m_sound = preload("res://Sound/SFX/Crafting_SFX.wav")
 var m_current_player = null
 var m_musics = {
-	"Forest": preload("res://Sound/Music/ForestRev1.mp3"),
-	"Jungle": preload("res://Sound/Music/JungleLoopV2.mp3"),
-	"Desert": preload("res://Sound/Music/DesertLoopV6.mp3"),
-	"Chill": preload("res://Sound/Music/ChillLoopV7.mp3")
+	"Forest": preload("res://Sound/Music/ForestRev2.wav"),
+	"Jungle": preload("res://Sound/Music/JungleLoopV2.wav"),
+	"Desert": preload("res://Sound/Music/DesertLoopV6.wav"),
+	"Wet": preload("res://Sound/Music/WaterLoopV7.wav"),
+	"Main": preload("res://Sound/Music/MelloBasic.wav"),
+	"Synth": preload("res://Sound/Music/SynthBasic.wav")
 }
 
 
@@ -21,6 +23,7 @@ func play_loop(music_name: String) -> void:
 	if m_current_player == null:
 		m_current_player = AudioStreamPlayer.new()
 		m_current_player.set_bus(MUSIC)
+		m_current_player.pause_mode = Node.PAUSE_MODE_PROCESS
 		add_child(m_current_player)
 	
 	# if the song exists

@@ -61,5 +61,12 @@
         "Cooldown": 0.0,
         "RequiredTool": null,
         "OneTime": true
+    },
+    "Warp Core": {
+        "ItemName": "Warp Core",
+        "Quantity": 1,
+        "Cooldown": 0.0,
+        "RequiredTool": null,
+        "OneTime": true
     }
 }

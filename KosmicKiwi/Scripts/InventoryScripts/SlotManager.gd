@@ -1,4 +1,4 @@
-extends GridContainer
+extends Control
 
 const SLOT_CLASS = preload("res://Scenes/UI/Inventory/Slot.tscn")
 

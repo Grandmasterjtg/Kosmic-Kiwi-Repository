@@ -1,17 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=1]
-[ext_resource path="res://ArtAssets/OurArt/ScreenUI.png" type="Texture" id=2]
+[ext_resource path="res://ArtAssets/Menu/CraftItem.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/InventoryScripts/RecipeUI.gd" type="Script" id=3]
 [ext_resource path="res://Sound/SFX/Crafting_SFX.wav" type="AudioStream" id=4]
+[ext_resource path="res://ArtAssets/Menu/IngCraftBox.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/Fonts/Themes/tool_tip_font.tres" type="DynamicFont" id=6]
 
 [sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 2 )
-region_rect = Rect2( 326, 206, 4175, 2160 )
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 1900, 650 )
 
 [node name="RecipeUI" type="Panel"]
-margin_right = 721.0
-margin_bottom = 304.0
+margin_right = 744.0
+margin_bottom = 136.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -19,27 +21,32 @@ __meta__ = {
 }
 
 [node name="Craft" type="Button" parent="."]
-margin_left = 428.0
-margin_top = 42.0
-margin_right = 502.0
-margin_bottom = 62.0
-rect_scale = Vector2( 3, 3 )
-text = "Craft"
+margin_left = 452.0
+margin_top = 12.0
+margin_right = 855.0
+margin_bottom = 564.0
+rect_min_size = Vector2( 1, 1 )
+rect_scale = Vector2( 0.2, 0.2 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 6 )
+enabled_focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ItemToCraft" parent="." instance=ExtResource( 1 )]
-margin_left = 30.0
-margin_top = 15.0
-margin_right = 141.0
-margin_bottom = 126.0
+margin_left = 600.0
+margin_top = 13.0
+margin_right = 710.0
+margin_bottom = 123.0
 
 [node name="Recipes" type="HBoxContainer" parent="."]
-margin_left = 71.0
-margin_top = 161.0
-margin_right = 645.0
-margin_bottom = 261.0
+margin_left = 34.0
+margin_top = 18.0
+margin_right = 394.0
+margin_bottom = 118.0
 rect_min_size = Vector2( 100, 100 )
 custom_constants/separation = 30
 __meta__ = {
@@ -48,3 +55,4 @@ __meta__ = {
 
 [node name="CraftSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+bus = "SFX"

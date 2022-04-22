@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/JungleLoopV2.wav-61369563116d719655ba77ceb367f685.sample"
+
+[deps]
+
+source_file="res://Sound/Music/JungleLoopV2.wav"
+dest_files=[ "res://.import/JungleLoopV2.wav-61369563116d719655ba77ceb367f685.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

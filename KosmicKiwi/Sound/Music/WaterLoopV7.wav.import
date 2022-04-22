@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WaterLoopV7.wav-072578ed3af9f336e79d030666e6f57d.sample"
+
+[deps]
+
+source_file="res://Sound/Music/WaterLoopV7.wav"
+dest_files=[ "res://.import/WaterLoopV7.wav-072578ed3af9f336e79d030666e6f57d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

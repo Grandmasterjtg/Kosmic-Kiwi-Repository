@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ForestRev2.wav-45ab60dfdb37b3a6e3926b42b03be0ba.sample"
+
+[deps]
+
+source_file="res://Sound/Music/ForestRev2.wav"
+dest_files=[ "res://.import/ForestRev2.wav-45ab60dfdb37b3a6e3926b42b03be0ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
