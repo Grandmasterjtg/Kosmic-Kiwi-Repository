@@ -87,7 +87,7 @@ func join_friend(friend_id: int):
 
 func switch_friend(friend_id: int):
 	# check current friend base case
-	print("switch_friend called")
+#	print("switch_friend called")
 	print(m_current_friend_id)
 	if m_current_friend_id < 0:
 		m_current_friend_id = friend_id
@@ -100,7 +100,7 @@ func switch_friend(friend_id: int):
 		# home old friend and start their StuckTimer
 		var friend = get_current_friend_node()
 		if friend != null:
-			print("Setting HOME state and starting StuckTimer")
+#			print("Setting HOME state and starting StuckTimer")
 			friend.set_state(friend.CharacterState.HOME)
 			friend.get_node("StuckTimer").start()
 		
@@ -110,7 +110,7 @@ func switch_friend(friend_id: int):
 		update_friend_ability()
 
 func current_friend_follow_player():
-	print("Calling current_friend_follow_player")
+#	print("Calling current_friend_follow_player")
 	if m_current_friend_id == null:
 		return
 

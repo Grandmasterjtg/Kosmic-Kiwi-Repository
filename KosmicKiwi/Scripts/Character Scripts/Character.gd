@@ -19,7 +19,6 @@ export var m_detection_distance := 2200.0
 enum CharacterState {FOLLOW, HOME, IDLE, STEAL}
 export(CharacterState) var m_start_state = CharacterState.IDLE
 
-onready var m_home_pos = $HomePosition.global_position
 onready var emote = $EmoteBubble
 onready var animation = $AnimatedSprite
 onready var transition_timer = $TransitionTimer
@@ -78,7 +77,7 @@ func follow_target(target):
 				transition_timer.start()
 
 func move_home():
-	m_direction = m_home_pos - self.global_position
+	m_direction = $HomePosition.global_position - self.global_position
 	move(m_direction)
 	
 	if (m_direction.length_squared() < (m_stop_distance * m_stop_distance)):
