@@ -7,6 +7,7 @@
 [ext_resource path="res://ArtAssets/Menu/IngCraftBox.png" type="Texture" id=5]
 [ext_resource path="res://ArtAssets/Fonts/Themes/tool_tip_font.tres" type="DynamicFont" id=6]
 
+
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 1900, 650 )

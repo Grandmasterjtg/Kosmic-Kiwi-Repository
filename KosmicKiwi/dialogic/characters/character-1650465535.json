@@ -1,0 +1,33 @@
+{
+	"color": "#ffeb00ff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1650465535.json",
+	"mirror_portraits": false,
+	"name": "Stinky",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 300,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ArtAssets/Characters/emotes/friendneutral.png"
+		},
+		{
+			"name": "friendhappy",
+			"path": "res://ArtAssets/Characters/emotes/friendhappy.png"
+		},
+		{
+			"name": "friendsad",
+			"path": "res://ArtAssets/Characters/emotes/friendsad.png"
+		},
+		{
+			"name": "friendthinking",
+			"path": "res://ArtAssets/Characters/emotes/friendthinking.png"
+		}
+	],
+	"scale": 80,
+	"theme": ""
+}

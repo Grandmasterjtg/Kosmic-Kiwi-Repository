@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ArtAssets/SpriteFrames/Desert/D_Boulder.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://ArtAssets/SpriteFrames/Desert/Boulder.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
 
 [node name="D_Boulder" type="StaticBody2D" groups=["boulder"]]

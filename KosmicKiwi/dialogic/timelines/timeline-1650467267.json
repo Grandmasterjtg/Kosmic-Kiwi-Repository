@@ -1,0 +1,101 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "penguinhappy",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "KIWI!! YOU FOUND ME!!!"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "Penguin! I'm so glad you are okay!"
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "penguinthinking",
+			"text": "Me too! Oh, I mean uh... I'm glad you're okay too!"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwi thinking",
+			"text": "Now how are we going to get you out of there?"
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "penguinsad",
+			"text": "I can't, quite, squeeze through..."
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwi thinking",
+			"text": "Hummmm... I'll go around and see if we can find another way to get you out."
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Okay!\nJust hurry back!!"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "We'll get you out!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1650467267.json",
+		"name": "Find_Penguin"
+	}
+}

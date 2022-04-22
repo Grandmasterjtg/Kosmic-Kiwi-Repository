@@ -9,6 +9,8 @@ var m_planets = [ # setup each planet in this array, index is important
 var m_active_planet : Planet = m_planets[0]
 var m_ship_visual_index := 0
 
+var m_forest_visited
+
 func _ready():
 	# find the root node and set m_active_planet to it's planet_index
 	print("PlanetManager loading: " + m_active_planet.get_planet_name())

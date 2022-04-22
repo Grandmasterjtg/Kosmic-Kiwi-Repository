@@ -1,0 +1,33 @@
+{
+	"color": "#ffffa700",
+	"description": "My special power is LARGE.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1650465497.json",
+	"mirror_portraits": false,
+	"name": "Seal",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 300,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://ArtAssets/Characters/emotes/sealneutral.png"
+		},
+		{
+			"name": "sealhappy",
+			"path": "res://ArtAssets/Characters/emotes/sealhappy.png"
+		},
+		{
+			"name": "sealsad",
+			"path": "res://ArtAssets/Characters/emotes/sealsad.png"
+		},
+		{
+			"name": "sealthinking",
+			"path": "res://ArtAssets/Characters/emotes/sealthinking.png"
+		}
+	],
+	"scale": 80,
+	"theme": "default-theme.cfg"
+}

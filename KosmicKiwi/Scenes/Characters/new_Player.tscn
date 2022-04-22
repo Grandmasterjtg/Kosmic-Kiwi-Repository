@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/Kiwi/Kiwi2.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/PlayerScripts/Player.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Characters/EmoteBubble.tscn" type="PackedScene" id=4]
+
+[node name="Player" type="KinematicBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "walking_up"
+frame = 3
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -11, -72, -147, -38, -143, 182, 3, 216, 147, 174, 143, -30 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 5, 5 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+
+[node name="EmoteBubble" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7, -445 )

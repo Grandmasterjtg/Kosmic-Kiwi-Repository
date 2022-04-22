@@ -33,11 +33,10 @@ frames = SubResource( 1 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( -6, -65.999 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( -28.5, -95.4993 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
-autostart = true
+one_shot = true

@@ -58,7 +58,7 @@ func _on_timeout() -> void:
 func _on_interact() -> void:
 	# show the required tool bubble
 	if !m_in_cooldown and m_required_tool != null:
-		PlayerManager.show_bubble(m_required_tool, load("res://ArtAssets/ItemIcons/" + m_required_tool + ".png"))
+		PlayerManager.emote_with_texture(load("res://ArtAssets/ItemIcons/" + m_required_tool + ".png"))
 	
 	# if the player interacts with the deposit with all requirments met
 	if !m_in_cooldown and (!m_required_tool or Inventory.check_selected_item(m_required_tool)):

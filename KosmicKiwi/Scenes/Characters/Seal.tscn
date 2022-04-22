@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ArtAssets/Characters/emotes/sealneutral.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Character Scripts/Friend.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Characters/EmoteBubble.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 300.0
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 1500.0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="FriendBody" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
+z_index = 1
+script = ExtResource( 2 )
+m_speed = 2000.0
+m_start_state = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+
+[node name="HomePosition" type="Node2D" parent="."]
+
+[node name="EmoteBubble" parent="." instance=ExtResource( 3 )]
+position = Vector2( 18, -684 )
+
+[node name="TransitionTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="StuckTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true

@@ -19,8 +19,9 @@ func activate():
 			if distance < min_distance:
 				min_distance = distance
 				min_index = i
-		if global_position.distance_to(items[min_index].global_position) < m_range:
-			items[min_index].solve_puzzle()
+		if min_distance < INF:
+			if global_position.distance_to(items[min_index].global_position) < m_range:
+				items[min_index].solve_puzzle()
 	else:
 		for item in items:
 			if global_position.distance_to(item.global_position) < m_range:
