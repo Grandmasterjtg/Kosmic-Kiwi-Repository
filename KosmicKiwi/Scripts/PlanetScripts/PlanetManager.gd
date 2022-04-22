@@ -2,7 +2,7 @@ extends Node
 
 var m_planets = [ # setup each planet in this array, index is important
 	Planet.new("Forest", "res://Levels/Level_1_Planet_1.tscn"),
-	Planet.new("Jungle", "res://Levels/Level_2_Planet_2.tscn"),
+	Planet.new("Jungle", "res://Levels/Old/Level_2_Planet_2.tscn"),
 	Planet.new("Wet", "res://Levels/Level_1_Planet_1.tscn"),
 	Planet.new("Desert", "res://Levels/Level_1_Planet_1.tscn")
 ]

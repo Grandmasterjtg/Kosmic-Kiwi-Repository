@@ -33,7 +33,7 @@ func update_button():
 func _on_Button_pressed():
 	if (m_planet != null):
 		PlanetManager.set_active_planet(m_planet)
-		get_tree().change_scene(m_planet.get_planet_path())
+		LoadingManager.load_new_scene(m_planet.get_planet_path())
 		print("PlanetManager set_active_planet: " + m_planet.get_planet_path())
 	else:
 		printerr("PlanetManager set_active_planet, m_active_planet is NULL")
