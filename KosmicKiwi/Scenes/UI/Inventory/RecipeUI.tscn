@@ -2,11 +2,10 @@
 
 [ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ArtAssets/Menu/CraftItem.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/InventoryScripts/RecipeUI.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/UIScripts/InventoryScripts/RecipeUI.gd" type="Script" id=3]
 [ext_resource path="res://Sound/SFX/Crafting_SFX.wav" type="AudioStream" id=4]
 [ext_resource path="res://ArtAssets/Menu/IngCraftBox.png" type="Texture" id=5]
 [ext_resource path="res://ArtAssets/Fonts/Themes/tool_tip_font.tres" type="DynamicFont" id=6]
-
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 5 )

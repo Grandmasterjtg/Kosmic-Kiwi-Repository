@@ -12,7 +12,7 @@
 [ext_resource path="res://Scenes/UI/UI_Control.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverRight.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
-[ext_resource path="res://Scenes/Props/ShipParts/ShipPart.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Props/ShipParts/Engine.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
