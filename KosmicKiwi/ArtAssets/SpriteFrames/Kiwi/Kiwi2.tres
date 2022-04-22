@@ -20,19 +20,9 @@ animations = [ {
 "name": "walking_up",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
-"name": "walking_left",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walking_down",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "idle_up",
+"name": "idle_down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
@@ -40,8 +30,18 @@ animations = [ {
 "name": "idle_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "idle_down",
+"name": "walking_left",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "idle_up",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walking_down",
+"speed": 8.0
 } ]
