@@ -18,7 +18,7 @@ const stinky_image = preload("res://ArtAssets/Characters/emotes/friendthinking.p
 const seal_image = preload("res://ArtAssets/Characters/emotes/sealthinking.png")
 
 var m_current_friend_id = -1
-var m_dialog_disabled := true
+var m_dialog_disabled := false
 
 func check_friend_found(friend_id: int) -> bool:
 	match friend_id:
