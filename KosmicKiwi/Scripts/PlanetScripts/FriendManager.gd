@@ -63,17 +63,17 @@ func find_friend(friend_id: int):
 			if !found_penguin:
 				found_penguin = true
 				var dialog = Dialogic.start(penguin_found_dialog)
-				add_child(dialog)
+				get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 		FriendID.SEAL:
 			if !found_seal:
 				found_seal = true
 				var dialog = Dialogic.start(seal_found_dialog)
-				add_child(dialog)
+				get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 		FriendID.STINKY:
 			if !found_stinky:
 				found_stinky = true
 				var dialog = Dialogic.start(stinky_found_dialog)
-				add_child(dialog)
+				get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 
 func join_friend(friend_id: int):
 	match friend_id:

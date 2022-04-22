@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/UI/Inventory/InventoryControl.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Mouse/Mouse.tscn" type="PackedScene" id=4]
 
-[node name="UI_Layer" type="CanvasLayer"]
+[node name="UI_Layer" type="CanvasLayer" groups=["canvas"]]
 
 [node name="NavMenu" parent="." instance=ExtResource( 2 )]
 

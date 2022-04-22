@@ -132,7 +132,7 @@ tile_data = PoolIntArray( -3211293, 6, 0, -3211292, 6, 0, -3145758, 6, 0, -31457
 position = Vector2( 1326, -16442 )
 
 [node name="Player" parent="Actors" instance=ExtResource( 6 )]
-position = Vector2( 1500, 1750 )
+position = Vector2( -2068, 3464 )
 m_player_speed = 2000.0
 
 [node name="Penguin" parent="Actors" instance=ExtResource( 12 )]
