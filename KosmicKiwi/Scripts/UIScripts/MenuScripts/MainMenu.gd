@@ -5,7 +5,7 @@ onready var m_start_button = $StartButton
 
 const LOOP = "Main"
 
-const START_LEVEL_PATH = "res://Levels/Level_1_Planet_1.tscn"
+const START_LEVEL_PATH = "res://Levels/Planet_1.tscn"
 
 
 func _process(delta):
