@@ -27,9 +27,9 @@ func _input(event):
 	if m_selected_slot.get_item() != null and ItemData.is_placeable(m_selected_slot.get_item().get_item_name()):
 		if event.is_action_pressed(PLACE) and !m_showing_item and UIManager.menus_closed():
 			show_item()
-		if event.is_action_pressed(CANCEL) and m_showing_item:
+		elif event.is_action_pressed(CANCEL) and m_showing_item:
 			cancel_show()
-		if event.is_action_released(PLACE) and m_showing_item and UIManager.menus_closed():
+		elif event.is_action_pressed(PLACE) and m_showing_item and UIManager.menus_closed():
 			place_item()
 
 # updates the items displayed in the hotbar to the items in the Inventory's hotbar
