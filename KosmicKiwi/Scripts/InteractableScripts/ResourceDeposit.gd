@@ -48,12 +48,12 @@ func _ready() -> void:
 	m_interactable.connect("entered", m_button, "set_display", [true])
 	m_interactable.connect("exited", m_button, "set_display", [false])
 	
-	# add resource to resource manager if it is a one time use
-	if m_once:
-		m_id = self.get_global_position()
-		ResourceManager.add_resource(m_id)
-		if ResourceManager.check_resource_destroyed(m_id):
-			m_should_destroy = true
+#	# add resource to resource manager if it is a one time use
+#	if m_once:
+#		m_id = self.get_global_position()
+#		ResourceManager.add_resource(m_id)
+#		if ResourceManager.check_resource_destroyed(m_id):
+#			m_should_destroy = true
 			
 func _process(delta):
 	# if the resource have previousely been destroyed
