@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/UIScripts/FriendUI/FriendDisplay.gd" type="Script" id=1]
+[ext_resource path="res://ArtAssets/Menu/ScalableBackground.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 4698, 2459 )
+
+[node name="FriendDisplay" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = -860.0
+margin_bottom = -440.0
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 100.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel"]
+margin_left = 6.0
+margin_top = 10.0
+margin_right = 46.0
+margin_bottom = 50.0
+rect_scale = Vector2( 2.20308, 2.0328 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel/AspectRatioContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+expand = true

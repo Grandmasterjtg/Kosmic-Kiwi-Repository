@@ -1,55 +1,65 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/UIScripts/MenuScripts/MainMenu.gd" type="Script" id=2]
-[ext_resource path="res://ArtAssets/UI/ScreenUI.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Menu/ScalableBackground.png" type="Texture" id=3]
 [ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
-[ext_resource path="res://ArtAssets/Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://ArtAssets/UI/ship_genaric.png" type="Texture" id=7]
-[ext_resource path="res://ArtAssets/UI/Planet1.png" type="Texture" id=8]
-[ext_resource path="res://ArtAssets/UI/Planet2.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/Menu/Planets/F_Planet.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Menu/Planets/J_Planet.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/Characters/ship/ship solar with engine.png" type="Texture" id=9]
 [ext_resource path="res://ArtAssets/UI/IndicatorBubble.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Mouse/Mouse.tscn" type="PackedScene" id=11]
+[ext_resource path="res://ArtAssets/Characters/emotes/penguinhappy.png" type="Texture" id=12]
+[ext_resource path="res://ArtAssets/Characters/emotes/kiwihappy.png" type="Texture" id=13]
+[ext_resource path="res://ArtAssets/Characters/emotes/sealhappy.png" type="Texture" id=14]
+[ext_resource path="res://ArtAssets/Characters/emotes/friendhappy.png" type="Texture" id=15]
 
-[sub_resource type="DynamicFont" id=1]
-size = 45
-font_data = ExtResource( 6 )
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 4698, 2459 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Panel" type="TextureRect" parent="."]
+[node name="BackPanel" type="Panel" parent="."]
+self_modulate = Color( 0.572549, 0.529412, 0.639216, 1 )
+margin_left = -29.0
+margin_top = -27.0
+margin_right = 4771.0
+margin_bottom = 2673.0
+rect_scale = Vector2( 0.412148, 0.420036 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
 margin_right = 4800.0
 margin_bottom = 2700.0
 rect_scale = Vector2( 0.4, 0.4 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_styles/panel = SubResource( 2 )
 
-[node name="TextureRect" type="TextureRect" parent="Panel"]
-margin_left = 827.5
-margin_top = 1682.5
-margin_right = 1427.5
-margin_bottom = 2282.5
+[node name="Planet1" type="TextureRect" parent="Panel"]
+margin_left = 250.0
+margin_top = 1200.0
+margin_right = 850.0
+margin_bottom = 1800.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="Planet2" type="TextureRect" parent="Panel"]
+margin_left = 3350.0
+margin_top = 1200.0
+margin_right = 3950.0
+margin_bottom = 1800.0
+rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 8 )
 
-[node name="TextureRect2" type="TextureRect" parent="Panel"]
-margin_left = 3377.5
-margin_top = 1665.0
-margin_right = 3977.5
-margin_bottom = 2265.0
-texture = ExtResource( 9 )
-
-[node name="TextureRect3" type="TextureRect" parent="Panel"]
+[node name="StartBubble" type="TextureRect" parent="Panel"]
 margin_left = 1790.0
 margin_top = 940.0
 margin_right = 2390.0
@@ -57,15 +67,50 @@ margin_bottom = 1540.0
 rect_scale = Vector2( 2, 1.5 )
 texture = ExtResource( 10 )
 
-[node name="TextureRect4" type="TextureRect" parent="Panel"]
-margin_left = 2797.5
-margin_top = 1835.0
-margin_right = 3397.5
-margin_bottom = 2538.0
+[node name="Ship" type="TextureRect" parent="Panel"]
+margin_left = 2765.0
+margin_top = 1655.0
+margin_right = 4265.0
+margin_bottom = 3155.0
 rect_rotation = 90.0
-texture = ExtResource( 7 )
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
 
-[node name="GameNameText" type="RichTextLabel" parent="."]
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+visible = false
+margin_left = 3742.5
+margin_top = 1125.0
+margin_right = 4342.5
+margin_bottom = 1725.0
+texture = ExtResource( 13 )
+flip_h = true
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+visible = false
+margin_left = 4030.0
+margin_top = 1922.5
+margin_right = 4630.0
+margin_bottom = 2522.5
+texture = ExtResource( 15 )
+flip_h = true
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+visible = false
+margin_left = 162.501
+margin_top = 1927.5
+margin_right = 762.501
+margin_bottom = 2527.5
+texture = ExtResource( 12 )
+
+[node name="TextureRect4" type="TextureRect" parent="Panel"]
+visible = false
+margin_left = 555.0
+margin_top = 1125.0
+margin_right = 1155.0
+margin_bottom = 1725.0
+texture = ExtResource( 14 )
+
+[node name="GameNameText" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -356.5
@@ -73,7 +118,7 @@ margin_top = 200.0
 margin_right = 356.5
 margin_bottom = 338.0
 theme = ExtResource( 1 )
-custom_fonts/normal_font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 5 )
 text = "Kosmic Kiwi"
 
 [node name="CloseButton" type="Button" parent="."]
@@ -92,13 +137,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -128.0
-margin_top = -69.0
-margin_right = -10.0
-margin_bottom = -17.0
-rect_scale = Vector2( 2, 2 )
+margin_left = -162.0
+margin_top = -82.0
+margin_right = 153.0
+margin_bottom = 53.0
 theme = ExtResource( 1 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 5 )
 text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false

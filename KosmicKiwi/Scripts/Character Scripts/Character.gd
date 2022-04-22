@@ -27,17 +27,21 @@ var m_current_state
 var m_player_node
 var m_should_move := false
 var m_direction := Vector2(0, 1)
+var m_home_pos : Vector2
 
 func _ready():
 	# get the player from the scene
 	if (get_tree().get_nodes_in_group("player").size() > 0):
 		m_player_node = get_tree().get_nodes_in_group("player")[0]
-		print(name + " _ready(): " + m_player_node.name + " was found.")
+#		print(name + " _ready(): " + m_player_node.name + " was found.")
 	if m_player_node == null:
 		printerr("Character: Player node not found!")
 	
-	#setup transition_timer
+	# setup transition_timer
 	transition_timer.connect("timeout",self,"transition_to_idle")
+	
+	# setup m_home_pos
+	m_home_pos = global_position
 	
 	# set the start_state
 	set_state(m_start_state)
@@ -77,7 +81,7 @@ func follow_target(target):
 				transition_timer.start()
 
 func move_home():
-	m_direction = $HomePosition.global_position - self.global_position
+	m_direction = m_home_pos - self.global_position
 	move(m_direction)
 	
 	if (m_direction.length_squared() < (m_stop_distance * m_stop_distance)):

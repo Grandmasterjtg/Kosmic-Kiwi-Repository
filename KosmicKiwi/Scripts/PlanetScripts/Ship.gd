@@ -64,16 +64,18 @@ func setup_friend_homes():
 	
 	# setup stinky
 	if !get_tree().get_nodes_in_group("stinky").empty():
-		get_tree().get_nodes_in_group("stinky")[0].set_home_position($SealHome.global_position)
+		get_tree().get_nodes_in_group("stinky")[0].set_home_position($StinkyHome.global_position)
 	
 	# setup seal
 	if !get_tree().get_nodes_in_group("seal").empty():
-		get_tree().get_nodes_in_group("seal")[0].set_home_position($StinkyHome.global_position)
+		get_tree().get_nodes_in_group("seal")[0].set_home_position($SealHome.global_position)
 
 func check_friend_placement():
 	# penguin check
+	print("Ship check_friend_placement() for Penguin...")
 	if FriendManager.check_friend_joined(FriendManager.FriendID.PENGUIN):
 		if get_tree().get_nodes_in_group("penguin").empty():
+#			print("creating penguin instance...")
 			var friend = penguin_scene.instance()
 			get_tree().get_nodes_in_group("level_root")[0].get_node("Actors").add_child(friend)
 			friend.global_position = $PenguinHome.global_position
@@ -84,8 +86,10 @@ func check_friend_placement():
 			friend.set_home_position($PenguinHome.global_position)
 	
 	# stinky check
-	if (FriendManager.check_friend_joined(FriendManager.FriendID.STINKY)):
+	print("Ship check_friend_placement() for Stinky...")
+	if FriendManager.check_friend_joined(FriendManager.FriendID.STINKY):
 		if get_tree().get_nodes_in_group("stinky").empty():
+#			print("creating penguin instance...")
 			var friend = stinky_scene.instance()
 			get_tree().get_nodes_in_group("level_root")[0].get_node("Actors").add_child(friend)
 			friend.global_position = $StinkyHome.global_position
@@ -96,6 +100,7 @@ func check_friend_placement():
 			friend.set_home_position($StinkyHome.global_position)
 	
 	# seal check
+	print("Ship check_friend_placement() for Seal...")
 	if (FriendManager.check_friend_joined(FriendManager.FriendID.SEAL)):
 		if get_tree().get_nodes_in_group("seal").empty():
 			var friend = seal_scene.instance()
