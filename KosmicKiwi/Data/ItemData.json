@@ -39,7 +39,7 @@
         "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTip": "It seems extremely hungary. Good thing it's vegan."
+        "ToolTip": "It seems extremely hungry. Good thing it's vegan."
     },
     "Engine": {
         "ItemCategory": "ShipPart",

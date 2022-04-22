@@ -23,19 +23,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": false,
-"name": "ship_2",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": false,
 "name": "ship_4",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": false,
-"name": "ship_3",
+"name": "ship_2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
@@ -46,6 +41,11 @@ animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "ship_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "ship_3",
 "speed": 5.0
 } ]
 

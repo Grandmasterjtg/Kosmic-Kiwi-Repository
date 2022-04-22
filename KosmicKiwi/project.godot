@@ -138,7 +138,6 @@ MouseManager="*res://Scripts/UIScripts/Mouse/MouseManager.gd"
 IsometricVector="*res://Scripts/PlayerScripts/IsometricVector.gd"
 ResourceManager="*res://Scripts/InteractableScripts/ResourceManager.gd"
 FriendManager="*res://Scripts/PlanetScripts/FriendManager.gd"
-<<<<<<<HEADFriendManager="*res://Scripts/PlanetScripts/FriendManager.gd"
 
 [display]
 
