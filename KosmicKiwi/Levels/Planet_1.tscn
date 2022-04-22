@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Props/World/Resources/Grass.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Props/World/Puzzles/RopeCliffLeft.tscn" type="PackedScene" id=2]
@@ -11,7 +11,9 @@
 [ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/UI/UI_Control.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverRight.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Characters/Penguin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/Characters/Stinky.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Props/ShipParts/Engine.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -130,8 +132,14 @@ tile_data = PoolIntArray( -3211293, 6, 0, -3211292, 6, 0, -3145758, 6, 0, -31457
 position = Vector2( 1326, -16442 )
 
 [node name="Player" parent="Actors" instance=ExtResource( 6 )]
-position = Vector2( -1448, 3872 )
+position = Vector2( 1500, 1750 )
 m_player_speed = 2000.0
+
+[node name="Penguin" parent="Actors" instance=ExtResource( 12 )]
+position = Vector2( 3000, 2500 )
+
+[node name="Stinky" parent="Actors" instance=ExtResource( 14 )]
+position = Vector2( 6000, 3750 )
 
 [node name="Ship" parent="Actors" instance=ExtResource( 9 )]
 position = Vector2( -2095, 1321 )
@@ -287,23 +295,47 @@ position = Vector2( -6013, -8285 )
 [node name="Boulder3" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
 position = Vector2( -5513, -8035 )
 
-[node name="Boulder4" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
-position = Vector2( -5013, -8035 )
-
 [node name="Boulder5" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
-position = Vector2( -4513, -8285 )
+position = Vector2( -4513, -7785 )
+
+[node name="Boulder4" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -5013, -7785.87 )
 
 [node name="Boulder6" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
-position = Vector2( -4013, -8535 )
+position = Vector2( -4013, -8035 )
 
 [node name="Boulder7" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
-position = Vector2( -3513, -8785 )
+position = Vector2( -3013, -8535 )
 
 [node name="Boulder8" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
-position = Vector2( -3013, -9035 )
+position = Vector2( -3513, -8285 )
 
 [node name="Boulder9" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
-position = Vector2( -3013, -9535 )
+position = Vector2( -2513, -8785 )
+
+[node name="Boulder10" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -2513, -9285 )
+
+[node name="Boulder11" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -2513, -9785 )
+
+[node name="Boulder12" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -1513, -10035 )
+
+[node name="Boulder13" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -2013, -9535 )
+
+[node name="Boulder14" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -7013, -8285 )
+
+[node name="Boulder15" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -6013, -7285 )
+
+[node name="Boulder16" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -6013, -7785 )
+
+[node name="Boulder17" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
+position = Vector2( -513, -9285 )
 
 [node name="Cliffs" type="YSort" parent="Actors/Puzzles"]
 

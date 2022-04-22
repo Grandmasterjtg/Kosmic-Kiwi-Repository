@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Character Scripts/Stinky.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Characters/EmoteBubble.tscn" type="PackedScene" id=2]
@@ -33,15 +33,20 @@ animations = [ {
 "name": "idle_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "idle_front",
-"speed": 5.0
+"name": "walking_front",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "walking_side",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "idle_front",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 12 ) ],
 "loop": true,
@@ -52,17 +57,14 @@ animations = [ {
 "loop": true,
 "name": "idle_side",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "walking_front",
-"speed": 8.0
 } ]
 
-[node name="Stinky" type="KinematicBody2D"]
-z_index = 1
-collision_layer = 3
-collision_mask = 3
+[sub_resource type="CircleShape2D" id=4]
+radius = 500.0
+
+[node name="Stinky" type="KinematicBody2D" groups=["friend", "stinky"]]
+collision_layer = 4
+collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -91,3 +93,9 @@ one_shot = true
 [node name="StuckTimer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource( 4 )

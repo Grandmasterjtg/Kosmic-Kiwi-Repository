@@ -12,7 +12,7 @@
 		},
 		{
 			"animation": "1-fade_in.gd",
-			"animation_length": 0,
+			"animation_length": 1,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1650464923.json",
@@ -31,72 +31,75 @@
 			"z_index": 0
 		},
 		{
-			"animation": "bouncing_in.gd",
+			"animation": "2-fade_in_up.gd",
 			"animation_length": 1,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_002",
-			"mirror_portrait": true,
+			"mirror_portrait": false,
+			"portrait": "penguinthinking",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650465497.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "*Static* hello...Kiwi?...Penguin?...*puzzt*"
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
 			"portrait": "penguinhappy",
+			"text": "It's Seal!"
+		},
+		{
+			"animation": "bounce.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
 				"0": false,
 				"1": false,
 				"2": false,
 				"3": false,
-				"4": true
+				"4": false
 			},
-			"type": 0,
+			"type": 2,
 			"z_index": 0
 		},
 		{
-			"character": "character-1650464990.json",
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "Seal! Where are you?"
+		},
+		{
+			"character": "character-1650465497.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "KIWI!! YOU FOUND ME!!!"
+			"text": "*Static*...Uh...very... high up.... *puzzt*......*Click!*"
 		},
 		{
 			"character": "character-1650464923.json",
-			"event_id": "dialogic_001",
-			"portrait": "kiwihappy",
-			"text": "Penguin! I'm so glad you are okay!"
-		},
-		{
-			"character": "character-1650464990.json",
-			"event_id": "dialogic_001",
-			"portrait": "penguinthinking",
-			"text": "Me too! Oh, I mean uh... I'm glad you're okay too!"
-		},
-		{
-			"character": "character-1650464923.json",
-			"event_id": "dialogic_001",
-			"portrait": "kiwi thinking",
-			"text": "Now how are we going to get you out of there?"
-		},
-		{
-			"character": "character-1650464990.json",
-			"event_id": "dialogic_001",
-			"portrait": "penguinsad",
-			"text": "I can't, quite, squeeze through..."
-		},
-		{
-			"character": "character-1650464923.json",
-			"event_id": "dialogic_001",
-			"portrait": "kiwi thinking",
-			"text": "Hummmm... I'll go around and see if we can find another way to get you out."
-		},
-		{
-			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
 			"portrait": "Default",
-			"text": "Okay!\nJust hurry back!!"
-		},
-		{
-			"character": "character-1650464923.json",
-			"event_id": "dialogic_001",
-			"portrait": "kiwihappy",
-			"text": "We'll get you out!"
+			"text": "Seal is on this planet! Let's go find them."
 		},
 		{
 			"call_node": {
@@ -115,7 +118,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1650467267.json",
-		"name": "Find_Penguin"
+		"file": "timeline-1650597511.json",
+		"name": "Arrive_Desert"
 	}
 }

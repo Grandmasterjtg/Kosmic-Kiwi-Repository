@@ -33,6 +33,11 @@ animations = [ {
 "name": "ship_4",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "ship_3",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 7 ) ],
 "loop": false,
 "name": "ship_1",
@@ -41,11 +46,6 @@ animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": false,
 "name": "ship_0",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "ship_3",
 "speed": 5.0
 } ]
 
@@ -109,8 +109,6 @@ collision_layer = 0
 collision_mask = 2
 gravity = 0.0
 script = ExtResource( 2 )
-interact_radius = 400
-interact_height = 800
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 position = Vector2( 0, 200 )
@@ -146,3 +144,12 @@ one_shot = true
 
 [node name="OpenTimer" type="Timer" parent="EmoteBubble"]
 one_shot = true
+
+[node name="StinkyHome" type="Node2D" parent="."]
+position = Vector2( 829.5, 630 )
+
+[node name="SealHome" type="Node2D" parent="."]
+position = Vector2( 713.5, 913 )
+
+[node name="PenguinHome" type="Node2D" parent="."]
+position = Vector2( 380.5, 976.5 )

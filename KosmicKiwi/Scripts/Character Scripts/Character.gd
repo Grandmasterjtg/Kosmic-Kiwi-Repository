@@ -23,7 +23,6 @@ onready var m_home_pos = $HomePosition.global_position
 onready var emote = $EmoteBubble
 onready var animation = $AnimatedSprite
 onready var transition_timer = $TransitionTimer
-onready var stuck_timer = $StuckTimer
 
 var m_current_state
 var m_player_node
@@ -38,9 +37,8 @@ func _ready():
 	if m_player_node == null:
 		printerr("Character: Player node not found!")
 	
-	#setup timers
+	#setup transition_timer
 	transition_timer.connect("timeout",self,"transition_to_idle")
-	stuck_timer.connect("timeout",self,"teleport_home")
 	
 	# set the start_state
 	set_state(m_start_state)
@@ -125,9 +123,6 @@ func change_walking_animation():
 
 func transition_to_idle():
 	change_idle_animation()
-
-func teleport_home():
-	pass
 
 
 
