@@ -190,6 +190,36 @@ position = Vector2( 3000, -2250 )
 [node name="Grass16" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
 position = Vector2( 3000, -3500 )
 
+[node name="Grass7" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( 1000, -12500 )
+
+[node name="Grass17" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( 3000, -12750 )
+
+[node name="Grass18" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( 3500, -11250 )
+
+[node name="Grass19" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( 5500, -11750 )
+
+[node name="Grass20" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( -500, -14000 )
+
+[node name="Grass21" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( -3500, -12500 )
+
+[node name="Grass22" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( -6000, -11250 )
+
+[node name="Grass23" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( 3500, -7000 )
+
+[node name="Grass24" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( -1500, -8000 )
+
+[node name="Grass25" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 1 )]
+position = Vector2( 1500, -7500 )
+
 [node name="Liquid" type="YSort" parent="Actors/ResourcePoints"]
 
 [node name="Metal" type="YSort" parent="Actors/ResourcePoints"]
@@ -278,6 +308,228 @@ position = Vector2( 4987, -8035 )
 
 [node name="Briar22" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
 position = Vector2( 5487, -10285 )
+
+[node name="Briar23" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -8513, 6215 )
+
+[node name="Briar28" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -9013, 3215 )
+
+[node name="Briar29" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -5013, 5715 )
+
+[node name="Briar30" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -4513, 2465 )
+
+[node name="Briar31" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -1013, 6215 )
+
+[node name="Briar32" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -1013, 4715 )
+
+[node name="Briar33" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 987, 5465 )
+
+[node name="Briar34" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 1987, 6715 )
+
+[node name="Briar35" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 3487, 5465 )
+
+[node name="Briar36" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 4987, 6465 )
+
+[node name="Briar37" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7487, 5965 )
+
+[node name="Briar38" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8487, 4465 )
+
+[node name="Briar39" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 2487, 4215 )
+
+[node name="Briar40" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 987, 1465 )
+
+[node name="Briar41" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -1013, 715 )
+
+[node name="Briar42" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 3987, 1965 )
+
+[node name="Briar43" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 4487, 3465 )
+
+[node name="Briar44" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 5487, 4965 )
+
+[node name="Briar45" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 4487, -2285 )
+
+[node name="Briar46" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 5487, -785 )
+
+[node name="Briar47" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 6487, -1535 )
+
+[node name="Briar48" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 6987, -535 )
+
+[node name="Briar49" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7987, 715 )
+
+[node name="Briar50" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7987, -1535 )
+
+[node name="Briar51" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -8013, -7035 )
+
+[node name="Briar52" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -7013, -6285 )
+
+[node name="Briar53" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -8513, -6035 )
+
+[node name="Briar54" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -8513, -5285 )
+
+[node name="Briar55" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -9513, -6285 )
+
+[node name="Briar56" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -9513, -5285 )
+
+[node name="Briar57" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 487, -9285 )
+
+[node name="Briar58" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 487, -8285 )
+
+[node name="Briar59" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 1987, -8285 )
+
+[node name="Briar60" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 2987, -7785 )
+
+[node name="Briar61" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8487, -4285 )
+
+[node name="Briar62" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8487, -5285 )
+
+[node name="Briar63" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7987, -4785 )
+
+[node name="Briar64" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7487, -6035 )
+
+[node name="Briar65" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 6487, -5285 )
+
+[node name="Briar66" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 4987, -5535 )
+
+[node name="Briar67" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 5987, -6035 )
+
+[node name="Briar68" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8987, -7035 )
+
+[node name="Briar69" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7987, -7785 )
+
+[node name="Briar70" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8987, -8285 )
+
+[node name="Briar71" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 9487, -9285 )
+
+[node name="Briar72" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8487, -10035 )
+
+[node name="Briar73" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7987, -9035 )
+
+[node name="Briar74" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7987, -6785 )
+
+[node name="Briar75" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8987, -10785 )
+
+[node name="Briar76" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 7487, -12035 )
+
+[node name="Briar77" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8987, -12785 )
+
+[node name="Briar78" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 6987, -13535 )
+
+[node name="Briar79" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 5987, -13035 )
+
+[node name="Briar80" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 8487, -13785 )
+
+[node name="Briar81" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 5487, -14785 )
+
+[node name="Briar82" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( 4487, -13535 )
+
+[node name="Briar83" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -10013, -12535 )
+
+[node name="Briar84" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -10513, -11535 )
+
+[node name="Briar85" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -10013, -10535 )
+
+[node name="Briar86" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -9513, -11285 )
+
+[node name="Briar87" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -11013, -12285 )
+
+[node name="Briar88" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -10013, -9535 )
+
+[node name="Briar89" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -9013, -10285 )
+
+[node name="Briar90" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -8513, -12285 )
+
+[node name="Briar91" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -9013, -13535 )
+
+[node name="Briar92" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -7513, -10785 )
+
+[node name="Briar93" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -7013, -11785 )
+
+[node name="Briar94" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -6013, -13035 )
+
+[node name="Briar95" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -7513, -13035 )
+
+[node name="Briar96" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -4013, -13535 )
+
+[node name="Briar97" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -2513, -14285 )
+
+[node name="Briar98" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -3013, -13535 )
+
+[node name="Briar99" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -5013, -12785 )
+
+[node name="Briar100" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -1513, -12785 )
 
 [node name="Boulders" type="YSort" parent="Actors/Puzzles"]
 

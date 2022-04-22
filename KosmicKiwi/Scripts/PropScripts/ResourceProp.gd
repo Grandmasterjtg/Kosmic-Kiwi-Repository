@@ -5,6 +5,7 @@ const PICKUP_ANIM = "collect_"
 
 var m_planet : String
 onready var m_animator = $AnimatedSprite
+onready var m_collider = $CollisionPolygon2D
 
 func _ready():
 	$ResourceDeposit.connect("interacted", self, "pickup")
@@ -21,6 +22,8 @@ func _on_ResourceDeposit_timeout():
 
 func pick_up():
 	m_animator.play(PICKUP_ANIM + m_planet)
+	m_collider.disabled = true
 
 func reset():
 	m_animator.play(DEFAULT_ANIM + m_planet)
+	m_collider.disabled = false

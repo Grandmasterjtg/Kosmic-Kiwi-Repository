@@ -15,7 +15,6 @@ frames = ExtResource( 1 )
 animation = "default_Forest"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -11, 215, -152, 152, -209, 47, -179, -25, -68, -52, 25, -52, 127, -31, 202, 17, 181, 89, 97, 188 )
 disabled = true
 
 [node name="ResourceDeposit" parent="." instance=ExtResource( 3 )]
