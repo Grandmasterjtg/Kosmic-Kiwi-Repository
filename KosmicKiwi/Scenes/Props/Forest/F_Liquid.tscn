@@ -4,7 +4,6 @@
 [ext_resource path="res://Scripts/PropScripts/ResourceProp.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Interactables/ResourceCollection/ResourceDeposit.tscn" type="PackedScene" id=3]
 
-
 [node name="F_Liquid" type="Node2D"]
 scale = Vector2( 5, 5 )
 script = ExtResource( 2 )

@@ -11,6 +11,7 @@ func _ready():
 	$ResourceDeposit.connect("timeout", self, "reset")
 	$ResourceDeposit.connect("destroy", self, "queue_free")
 	m_planet = PlanetManager.get_active_planet().get_planet_name()
+	m_animator.play(DEFAULT_ANIM + m_planet)
 
 func _on_ResourceDeposit_interacted():
 	pick_up()
