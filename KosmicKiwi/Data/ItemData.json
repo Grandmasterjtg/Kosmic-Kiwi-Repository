@@ -59,6 +59,12 @@
         "Placeable": false,
         "ToolTip": "test"
     },
+    "Warp Core": {
+        "ItemCategory": "ShipPart",
+        "StackSize": 1,
+        "Placeable": false,
+        "ToolTip": "test"
+    },
     "Pipette": {
         "ItemCategory": "Tool",
         "StackSize": 99,

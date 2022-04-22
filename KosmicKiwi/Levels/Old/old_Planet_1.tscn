@@ -16,8 +16,9 @@
 [ext_resource path="res://Scenes/Menu_Scenes/Nav_Menu.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Puzzles/Puzzle.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Mouse/Mouse.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Props/ShipParts/ShipPart.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Props/ShipParts/Engine.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Props/Forest/F_RiverLeft.tscn" type="PackedScene" id=18]
+
 
 
 [sub_resource type="CapsuleShape2D" id=1]

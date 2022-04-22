@@ -13,29 +13,15 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
+animation = "solved"
+frame = 5
 playing = true
 
 [node name="Collider" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -391, 300, 106, 52, 396, 197, -100, 448 )
 
 [node name="F_Liquid" parent="." instance=ExtResource( 3 )]
-position = Vector2( 149, 321 )
-
-[node name="ResourceDeposit" parent="F_Liquid" index="1"]
-position = Vector2( 1.6, 1.60001 )
-
-[node name="Interactable" parent="F_Liquid/ResourceDeposit" index="0"]
-rotation = -0.523599
-scale = Vector2( 0.6, 0.2 )
-
-[node name="F_Liquid2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -142, 159 )
-
-[node name="Interactable" parent="F_Liquid2/ResourceDeposit" index="0"]
-rotation = -0.523599
-scale = Vector2( 0.6, 0.2 )
+position = Vector2( -12, 233 )
+scale = Vector2( 2, 2 )
 
 [editable path="F_Liquid"]
-[editable path="F_Liquid/ResourceDeposit"]
-[editable path="F_Liquid2"]
-[editable path="F_Liquid2/ResourceDeposit"]
