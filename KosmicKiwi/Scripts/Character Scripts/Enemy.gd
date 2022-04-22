@@ -1,8 +1,8 @@
 extends Character
 
-const TARGET_ITEM = "Fiber"
-var stinky_texture = load("res://ArtAssets/Characters/friend.png")
-var item_texture = load("res://ArtAssets/ItemIcons/Fiber.png")
+const TARGET_ITEM = "Rock"
+var stinky_texture = load("res://ArtAssets/Characters/emotes/friendthinking.png")
+var item_texture = load("res://ArtAssets/ItemIcons/Rock.png")
 
 export var m_timer_length := 5
 var m_timer

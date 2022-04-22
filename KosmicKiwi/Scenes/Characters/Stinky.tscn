@@ -33,6 +33,16 @@ animations = [ {
 "name": "idle_back",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "idle_front",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "idle_side",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walking_front",
@@ -43,36 +53,28 @@ animations = [ {
 "name": "walking_side",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "idle_front",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "walking_back",
 "speed": 8.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "idle_side",
-"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 500.0
 
 [node name="Stinky" type="KinematicBody2D" groups=["friend", "stinky"]]
+z_index = 1
 collision_layer = 4
 collision_mask = 0
 script = ExtResource( 1 )
+m_speed = 1900.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 79 )
 shape = SubResource( 2 )
 
 [node name="DetectionArea" type="Area2D" parent="."]
-collision_mask = 3
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 shape = SubResource( 1 )
@@ -81,9 +83,8 @@ shape = SubResource( 1 )
 frames = SubResource( 3 )
 animation = "idle_side"
 
-[node name="HomePosition" type="Node2D" parent="."]
-
 [node name="EmoteBubble" parent="." instance=ExtResource( 2 )]
+visible = false
 position = Vector2( 0, -748 )
 
 [node name="TransitionTimer" type="Timer" parent="."]

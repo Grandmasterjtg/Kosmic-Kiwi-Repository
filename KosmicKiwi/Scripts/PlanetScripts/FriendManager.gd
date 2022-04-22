@@ -11,10 +11,14 @@ var joined_seal := false		#1
 var joined_stinky := false		#2
 
 const penguin_found_dialog = "Find_Penguin"
-const seal_found_dialog = "Find_Seal"
 const stinky_found_dialog = "Find_Stinky"
+const seal_found_dialog = "Find_Seal"
+const penguin_image = preload("res://ArtAssets/Characters/emotes/penguinhappy.png")
+const stinky_image = preload("res://ArtAssets/Characters/emotes/friendthinking.png")
+const seal_image = preload("res://ArtAssets/Characters/emotes/sealthinking.png")
 
 var m_current_friend_id = -1
+var m_dialog_disabled := false
 
 func check_friend_found(friend_id: int) -> bool:
 	match friend_id:
@@ -54,7 +58,7 @@ func get_current_friend_node() -> KinematicBody2D:
 		FriendID.STINKY:
 			if !get_tree().get_nodes_in_group("stinky").empty():
 				friend = get_tree().get_nodes_in_group("stinky")[0]
-	print(friend.name)
+#	if friend != null: print(friend.name)
 	return friend
 
 func find_friend(friend_id: int):
@@ -62,18 +66,21 @@ func find_friend(friend_id: int):
 		FriendID.PENGUIN:
 			if !found_penguin:
 				found_penguin = true
-				var dialog = Dialogic.start(penguin_found_dialog)
-				get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
+				if !m_dialog_disabled:
+					var dialog = Dialogic.start(penguin_found_dialog)
+					get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 		FriendID.SEAL:
 			if !found_seal:
 				found_seal = true
-				var dialog = Dialogic.start(seal_found_dialog)
-				get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
+				if !m_dialog_disabled:
+					var dialog = Dialogic.start(seal_found_dialog)
+					get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 		FriendID.STINKY:
 			if !found_stinky:
 				found_stinky = true
-				var dialog = Dialogic.start(stinky_found_dialog)
-				get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
+				if !m_dialog_disabled:
+					var dialog = Dialogic.start(stinky_found_dialog)
+					get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 
 func join_friend(friend_id: int):
 	match friend_id:
@@ -87,12 +94,10 @@ func join_friend(friend_id: int):
 
 func switch_friend(friend_id: int):
 	# check current friend base case
-#	print("switch_friend called")
-	print(m_current_friend_id)
 	if m_current_friend_id < 0:
 		m_current_friend_id = friend_id
 		current_friend_follow_player()
-		update_friend_ability()
+		update_friend_display()
 
 	if m_current_friend_id == friend_id:
 		pass
@@ -107,7 +112,7 @@ func switch_friend(friend_id: int):
 		# set new m_current_friend_id, set to follow, update_friend_ability
 		m_current_friend_id = friend_id
 		current_friend_follow_player()
-		update_friend_ability()
+		update_friend_display()
 
 func current_friend_follow_player():
 #	print("Calling current_friend_follow_player")
@@ -118,12 +123,14 @@ func current_friend_follow_player():
 	if friend != null:
 		friend.set_state(friend.CharacterState.FOLLOW)
 
-func update_friend_ability():
+func update_friend_display():
 	# this will change the UI images and mouse texture
-	match m_current_friend_id:
-		FriendID.PENGUIN:
-			pass
-		FriendID.SEAL:
-			pass
-		FriendID.STINKY:
-			pass
+	var friend_display = get_tree().get_nodes_in_group("canvas")[0].get_node("FriendDisplay")
+	if friend_display != null:
+		match m_current_friend_id:
+			FriendID.PENGUIN:
+				friend_display.set_texture(penguin_image)
+			FriendID.STINKY:
+				friend_display.set_texture(stinky_image)
+			FriendID.SEAL:
+				friend_display.set_texture(seal_image)

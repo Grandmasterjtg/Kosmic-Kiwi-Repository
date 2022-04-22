@@ -43,11 +43,6 @@ animations = [ {
 "name": "idle_side",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "walking_back",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "walking_front",
@@ -56,6 +51,11 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "walking_side",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walking_back",
 "speed": 8.0
 } ]
 
@@ -66,6 +66,7 @@ radius = 300.0
 collision_layer = 4
 collision_mask = 4
 script = ExtResource( 2 )
+m_speed = 1900.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 75 )
@@ -80,8 +81,6 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
-
-[node name="HomePosition" type="Node2D" parent="."]
 
 [node name="EmoteBubble" parent="." instance=ExtResource( 1 )]
 position = Vector2( 11, -487 )

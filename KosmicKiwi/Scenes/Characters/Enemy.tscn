@@ -11,8 +11,8 @@ radius = 100.0
 collision_layer = 4
 collision_mask = 0
 script = ExtResource( 2 )
-m_stop_distance = 600.0
-m_speed = 1800.0
+m_stop_distance = 500.0
+m_speed = 1500.0
 m_start_state = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -22,10 +22,12 @@ shape = SubResource( 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = ExtResource( 1 )
 animation = "idle_side"
+playing = true
 
 [node name="HomePosition" type="Node2D" parent="."]
 
 [node name="EmoteBubble" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 3, -537 )
 
 [node name="TransitionTimer" type="Timer" parent="."]

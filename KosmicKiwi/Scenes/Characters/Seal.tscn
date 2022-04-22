@@ -26,6 +26,7 @@ scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 0
 script = ExtResource( 2 )
+m_speed = 1900.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -39,9 +40,8 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 
-[node name="HomePosition" type="Node2D" parent="."]
-
 [node name="EmoteBubble" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 18, -684 )
 
 [node name="TransitionTimer" type="Timer" parent="."]

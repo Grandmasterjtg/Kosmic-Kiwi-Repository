@@ -5,25 +5,26 @@
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=3]
 
 [node name="Planet_Button" type="Control"]
-margin_right = 153.0
-margin_bottom = 187.0
+margin_right = 190.0
+margin_bottom = 220.0
 rect_scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_right = 155.0
+margin_right = 190.0
 margin_bottom = 33.0
 size_flags_vertical = 1
 theme = ExtResource( 3 )
-text = "Planet 1"
+text = "Planet"
 align = 1
 
 [node name="Button" type="Button" parent="."]
 margin_top = 33.0
-margin_right = 612.0
-margin_bottom = 639.0
+margin_right = 750.0
+margin_bottom = 783.0
 rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 1 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
