@@ -4,8 +4,10 @@ func _ready() -> void:
 	self.friend_id = 0
 
 func use_ability():
-	print("Penguin ability used!")
+	if FriendManager.get_current_friend_id() == self.friend_id:
+		print("Penguin ability used!")
 
-func meet_player():
-	.meet_player()
-	.set_state(self.CharacterState.FOLLOW)
+func join_player():
+	pass
+
+
