@@ -39,7 +39,7 @@ func change_idle_animation():
 		if m_direction.x < 0.01 and m_direction.x > -0.01:
 			animation.play(ANIMATION_IDLE_DOWN)
 			animation.flip_h = false
-	elif m_direction.x > 0.01:
+	if m_direction.x > 0.01:
 		animation.play(ANIMATION_IDLE_LEFT)
 		animation.flip_h = true
 	elif m_direction.x < -0.01:
@@ -55,7 +55,7 @@ func change_walking_animation():
 		if m_direction.x < 0.01 and m_direction.x > -0.01:
 			animation.play(ANIMATION_WALKING_DOWN)
 			animation.flip_h = false
-	elif m_direction.x > 0.01:
+	if m_direction.x > 0.01:
 		animation.play(ANIMATION_WALKING_LEFT)
 		animation.flip_h = true
 	elif m_direction.x < -0.01:
