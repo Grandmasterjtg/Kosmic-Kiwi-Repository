@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/UI/Inventory/Slot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ArtAssets/Menu/CraftItem.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/UIScripts/InventoryScripts/RecipeUI.gd" type="Script" id=3]
 [ext_resource path="res://Sound/SFX/Crafting_SFX.wav" type="AudioStream" id=4]
 [ext_resource path="res://ArtAssets/Menu/IngCraftBox.png" type="Texture" id=5]
-[ext_resource path="res://ArtAssets/Fonts/Themes/tool_tip_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://ArtAssets/Menu/CraftItemHovered.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Menu/CraftItemPressed.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 5 )
@@ -20,18 +21,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Craft" type="Button" parent="."]
+[node name="Craft" type="TextureButton" parent="."]
 margin_left = 452.0
 margin_top = 12.0
 margin_right = 855.0
-margin_bottom = 564.0
+margin_bottom = 558.0
 rect_min_size = Vector2( 1, 1 )
 rect_scale = Vector2( 0.2, 0.2 )
 focus_mode = 0
-custom_fonts/font = ExtResource( 6 )
 enabled_focus_mode = 0
-icon = ExtResource( 2 )
-flat = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

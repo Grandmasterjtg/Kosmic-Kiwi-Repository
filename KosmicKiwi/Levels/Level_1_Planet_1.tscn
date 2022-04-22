@@ -22,7 +22,6 @@ extents = Vector2( 1000, 10 )
 
 [node name="Level_1_Planet_1" type="Node2D" groups=["level_root"]]
 script = ExtResource( 13 )
-m_planet_index = 4
 
 [node name="Map" type="Node2D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/UIScripts/MenuScripts/MainMenu.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ArtAssets/UI/Planet1.png" type="Texture" id=8]
 [ext_resource path="res://ArtAssets/UI/Planet2.png" type="Texture" id=9]
 [ext_resource path="res://ArtAssets/UI/IndicatorBubble.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Mouse/Mouse.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -102,3 +103,5 @@ text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Mouse" parent="." instance=ExtResource( 11 )]

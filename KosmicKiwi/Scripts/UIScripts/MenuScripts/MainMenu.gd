@@ -5,7 +5,7 @@ onready var m_start_button = $StartButton
 
 const LOOP = "Main"
 
-const START_LEVEL_PATH = "res://Levels/Planet_1.tscn"
+const START_LEVEL_PATH = "res://Levels/Animatic.tscn"
 
 
 func _process(delta):
@@ -29,5 +29,5 @@ func _on_CloseButton_pressed():
 func _on_StartButton_pressed():
 	print("StartButton pressed.")
 	PlanetManager.set_active_planet(PlanetManager.get_planet_at_index(0))
-	# get_tree().change_scene(START_LEVEL_PATH)
-	LoadingManager.load_new_scene(START_LEVEL_PATH)
+	get_tree().change_scene(START_LEVEL_PATH)
+	# LoadingManager.load_new_scene(START_LEVEL_PATH)

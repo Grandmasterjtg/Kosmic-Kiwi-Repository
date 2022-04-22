@@ -5,12 +5,14 @@ const SLOT_CLASS = preload("res://Scenes/UI/Inventory/Slot.tscn")
 # display variables
 onready var m_item_to_craft = $ItemToCraft
 onready var m_recipe_display = $Recipes
+onready var m_craft_button = $Craft
 
 # data variables
 var m_recipe : Recipe
 
 func _ready():
-	$Craft.connect("button_down", self, "craft")
+	m_craft_button.connect("button_down", self, "craft")
+	m_craft_button.connect("button_up", self, "reset")
 
 # takes a recipe variable
 # initializes the display with the correct items and amounts
@@ -35,6 +37,7 @@ func craft() -> bool:
 			# if there isn't enough of the item in the inventory
 			if !Inventory.item_exists_in_inventory(
 					m_recipe.get_required_item(i), m_recipe.get_required_amount(i) ):
+				m_craft_button.modulate = Color(1,0,0)
 				return false
 
 		# remove the required items from the inventory
@@ -48,5 +51,9 @@ func craft() -> bool:
 		
 		return true
 	else:
+		m_craft_button.modulate = Color(1,0,0)
 		return false
 
+# reset the modulate of the button
+func reset():
+	m_craft_button.modulate = Color(1,1,1)

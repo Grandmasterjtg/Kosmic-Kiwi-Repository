@@ -44,7 +44,6 @@ margin_bottom = 610.0
 custom_fonts/font = SubResource( 1 )
 custom_styles/fg = SubResource( 2 )
 custom_styles/bg = SubResource( 3 )
-value = 50.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

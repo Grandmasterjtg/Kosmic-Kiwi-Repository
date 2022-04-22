@@ -19,6 +19,7 @@
 
 [node name="Planet_1" type="Node2D" groups=["level_root"]]
 script = ExtResource( 13 )
+m_planet_index = 1
 
 [node name="Map" type="Node2D" parent="."]
 
