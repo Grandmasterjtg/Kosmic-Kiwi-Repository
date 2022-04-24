@@ -2,28 +2,28 @@
 
 [ext_resource path="res://ArtAssets/Environment/Jungle/J_LCRiver.png" type="Texture" id=1]
 [ext_resource path="res://ArtAssets/Environment/Jungle/J_Cave.png" type="Texture" id=2]
-[ext_resource path="res://ArtAssets/Environment/Jungle/Cliffs/J_LCliff.png" type="Texture" id=3]
-[ext_resource path="res://ArtAssets/Environment/Jungle/Cliffs/J_LCliffRight.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LCliff.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LCliffLeft.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/Environment/Jungle/Boulder/J_Boulder_Stage4.png" type="Texture" id=5]
-[ext_resource path="res://ArtAssets/Environment/Jungle/Cliffs/J_LCliffLeft.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LCliffRight.png" type="Texture" id=6]
 [ext_resource path="res://ArtAssets/Environment/Jungle/J_Grounds.png" type="Texture" id=7]
 [ext_resource path="res://ArtAssets/Environment/Jungle/Briar/J_Brair_Stage1.png" type="Texture" id=8]
 [ext_resource path="res://ArtAssets/Environment/Jungle/Cliffs/J_Edge.png" type="Texture" id=9]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 488.062, 523.894, 1000, 269.488, 1000, 1760.09, 495.229, 2000, 0, 1756.51, 0, 258.739 )
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 500.603, 530.463, 494.631, 2000, 0, 1748.74, 0, 273.669 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 502.395, 513.145, 498.812, 2000, 0, 1763.68, 0, 262.322 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 1000, 258.739, 1000, 1770.84, 495.229, 2000, 495.229, 531.06 )
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 500.603, 527.477, 1000, 279.641, 1000, 1745.76, 497.617, 2000 )
 
 [sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 751.426, 712.742, 981.347, 536.569, 1372.51, 393.242, 1793.53, 455.947, 2089.15, 563.443, 2142.9, 644.064, 2695.3, 906.831, 1799.51, 1354.73, 1575.56, 1241.26, 1378.48, 1241.26, 1196.34, 1351.74, 306.514, 903.845 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 1000, 248.8, 1000, 257.2, 490.4, 0, 508.4, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 494.631, 527.477, 1000, 267.697, 1000, 1748.74, 500.603, 2000, 0, 1754.72, 0, 282.627 )
 
 [resource]
 0/name = "Grounds"
@@ -47,69 +47,6 @@ points = PoolVector2Array( 1000, 248.8, 1000, 257.2, 490.4, 0, 508.4, 0 )
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-1/name = "Cliff"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 1000, 2000 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 1 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "Cliff Left"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 1000, 2000 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 2 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
-3/name = "Cliff Right"
-3/texture = ExtResource( 4 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 1000, 2000 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 3 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 3 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-3/z_index = 0
 4/name = "Boulder"
 4/texture = ExtResource( 5 )
 4/tex_offset = Vector2( 0, 0 )
@@ -194,8 +131,8 @@ points = PoolVector2Array( 1000, 248.8, 1000, 257.2, 490.4, 0, 508.4, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
-9/name = "Cliff Left No Collision"
-9/texture = ExtResource( 6 )
+9/name = "Cliff"
+9/texture = ExtResource( 3 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 1000, 2000 )
@@ -204,7 +141,56 @@ points = PoolVector2Array( 1000, 248.8, 1000, 257.2, 490.4, 0, 508.4, 0 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 6 )
 9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 9/z_index = 0
+10/name = "Cliff Left"
+10/texture = ExtResource( 4 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 1000, 2000 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 7 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "Cliff Right"
+11/texture = ExtResource( 6 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 1000, 2000 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 8 )
+11/shape_one_way = false
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
