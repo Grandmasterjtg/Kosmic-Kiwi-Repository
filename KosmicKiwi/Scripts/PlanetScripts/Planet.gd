@@ -4,12 +4,14 @@ class_name Planet
 
 var m_planet_name := "planet name"
 var m_planet_path := "planet path"
+var m_texture : Texture
 var m_required_items = []
 var m_travelable := false
 
-func _init(planet_name : String, planet_path : String):
+func _init(planet_name : String, planet_path : String, texture : Texture):
 	self.m_planet_name = planet_name
 	self.m_planet_path = planet_path
+	self.m_texture = texture
 
 func add_required_item(item_name : String):
 	self.m_required_items.append(item_name)
@@ -43,3 +45,6 @@ func set_planet_path(new_path : String):
 
 func set_travelable(state : bool):
 	self.m_travelable = state
+	
+func get_texture() -> Texture:
+	return m_texture

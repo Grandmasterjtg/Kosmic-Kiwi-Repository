@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://ArtAssets/Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/UIScripts/Loading/LoadingUI.gd" type="Script" id=2]
+[ext_resource path="res://ArtAssets/Characters/ship/ship_states/ship_1.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Menu/Planets/F_Planet.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Menu/Planets/J_Planet.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 54
@@ -36,14 +39,46 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 color = Color( 0, 0, 0, 1 )
 
+[node name="Planet1" type="TextureRect" parent="."]
+margin_left = 10.0
+margin_top = 419.0
+margin_right = 610.0
+margin_bottom = 1019.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 4 )
+
+[node name="Planet2" type="TextureRect" parent="."]
+margin_left = 1670.0
+margin_top = 419.0
+margin_right = 2270.0
+margin_bottom = 1019.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_left = 20.0
+margin_left = 252.0
 margin_top = 470.0
-margin_right = 1900.0
+margin_right = 1668.0
 margin_bottom = 610.0
 custom_fonts/font = SubResource( 1 )
 custom_styles/fg = SubResource( 2 )
 custom_styles/bg = SubResource( 3 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ship" type="TextureRect" parent="ProgressBar"]
+margin_top = 3.0
+margin_right = 1500.0
+margin_bottom = 1503.0
+rect_rotation = 90.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 75, 0 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

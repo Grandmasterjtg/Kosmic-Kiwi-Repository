@@ -30,6 +30,11 @@ func play_loop(music_name: String) -> void:
 	if m_musics.has(music_name):
 		m_current_player.stream = m_musics[music_name]
 		m_current_player.play()
+
+# stops the currently running loop
+func stop_loop():
+	if m_current_player != null:
+		m_current_player.stop()
 	
 
 # takes an integer?/float? volume

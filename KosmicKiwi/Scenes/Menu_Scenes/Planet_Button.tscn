@@ -9,6 +9,9 @@ margin_right = 190.0
 margin_bottom = 220.0
 rect_scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_right = 190.0

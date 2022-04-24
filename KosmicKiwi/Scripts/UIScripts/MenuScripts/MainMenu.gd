@@ -30,4 +30,3 @@ func _on_StartButton_pressed():
 	print("StartButton pressed.")
 	PlanetManager.set_active_planet(PlanetManager.get_planet_at_index(0))
 	get_tree().change_scene(START_LEVEL_PATH)
-	# LoadingManager.load_new_scene(START_LEVEL_PATH)

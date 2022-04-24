@@ -36,7 +36,7 @@ func next_frame():
 		m_current_index += 1
 		texture = m_frames[m_current_index]
 	else:
-		LoadingManager.load_new_scene(PlanetManager.get_planet_at_index(0).get_planet_path())
+		load_game()
 
 # loads the first planet in the planet manager script
 func load_game():
