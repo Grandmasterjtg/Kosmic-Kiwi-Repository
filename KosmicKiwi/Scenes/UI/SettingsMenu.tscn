@@ -1,4 +1,31 @@
-[gd_scene format=2]
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/UIScripts/Settings.gd" type="Script" id=1]
+[ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://ArtAssets/UI_4-13-22/Button.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/UI_4-13-22/PressedButton.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/UI_4-13-22/HoveredButton.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/UI_4-13-22/ScalableBackground.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 4698, 2459 )
+margin_left = 172.361
+margin_right = 172.361
+margin_top = 175.234
+margin_bottom = 169.489
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 600, 600 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 600, 600 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 600, 600 )
 
 [node name="SettingsMenu" type="Control"]
 visible = false
@@ -10,44 +37,134 @@ margin_left = -960.0
 margin_top = -540.0
 margin_right = 960.0
 margin_bottom = 540.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="."]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 52.0
-margin_bottom = 30.0
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -200.0
+margin_right = 320.0
+margin_bottom = 160.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -150.0
+margin_top = 30.0
+margin_right = 250.0
+margin_bottom = 180.0
+rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 text = "Back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Volume Label" type="Label" parent="."]
+[node name="Volume Label" type="Label" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -24.5
-margin_top = -17.0
-margin_right = 24.5
-margin_bottom = -3.0
-text = "Volume"
+margin_left = -128.5
+margin_top = -120.0
+margin_right = 385.5
+margin_bottom = 9.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 2 )
+text = "VOLUME"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HSlider" type="HSlider" parent="."]
+[node name="Master Label" type="Label" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -80.0
-margin_top = 2.0
-margin_right = 80.0
-margin_bottom = 18.0
+margin_left = -240.0
+margin_top = -40.0
+margin_right = 198.0
+margin_bottom = 89.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Master"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Master Slider" type="HSlider" parent="Panel"]
+margin_left = 320.0
+margin_top = 140.0
+margin_right = 570.0
+margin_bottom = 178.7
 focus_mode = 0
-max_value = 10.0
-value = 5.0
+min_value = -40.0
+max_value = 6.0
+
+[node name="Music Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = 20.0
+margin_right = 137.0
+margin_bottom = 149.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music Slider" type="HSlider" parent="Panel"]
+margin_left = 320.0
+margin_top = 200.0
+margin_right = 570.0
+margin_bottom = 238.7
+focus_mode = 0
+min_value = -40.0
+max_value = 6.0
+
+[node name="SFX Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = 80.0
+margin_right = -0.999939
+margin_bottom = 209.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = ExtResource( 2 )
+text = "SFX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFX Slider" type="HSlider" parent="Panel"]
+margin_left = 320.0
+margin_top = 260.0
+margin_right = 570.0
+margin_bottom = 298.7
+focus_mode = 0
+min_value = -40.0
+max_value = 6.0
+
+[connection signal="value_changed" from="Panel/Master Slider" to="." method="_on_Master_Slider_value_changed"]
+[connection signal="value_changed" from="Panel/Music Slider" to="." method="_on_Music_Slider_value_changed"]
+[connection signal="value_changed" from="Panel/SFX Slider" to="." method="_on_SFX_Slider_value_changed"]
