@@ -546,7 +546,7 @@ position = Vector2( -5513, -8035 )
 position = Vector2( -4513, -7785 )
 
 [node name="Boulder4" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
-position = Vector2( -5013, -7785.87 )
+position = Vector2( -5013, -7785 )
 
 [node name="Boulder6" parent="Actors/Puzzles/Boulders" instance=ExtResource( 5 )]
 position = Vector2( -4013, -8035 )
