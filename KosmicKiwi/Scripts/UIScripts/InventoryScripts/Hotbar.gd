@@ -4,6 +4,10 @@ const ACTION_HOTBAR := "hotbar_"
 
 const PLACE := "place"
 const CANCEL := "cancel"
+const UP := "scroll_up"
+const DOWN := "scroll_down"
+
+var m_current_hotbar_index := 0
 
 onready var m_hotbar_slots = $HotbarSlots.get_children()
 const ITEM_FOLDER = "res://Scenes/Props/Items/"
@@ -23,6 +27,19 @@ func _input(event):
 		var action = ACTION_HOTBAR + str(i+1)
 		if event.is_action_pressed(action):
 			set_selected_slot(i)
+			
+	if event.is_action_pressed(DOWN):
+		if m_current_hotbar_index >= len(m_hotbar_slots) - 1:
+			m_current_hotbar_index = 0
+		else:
+			m_current_hotbar_index += 1
+		set_selected_slot(m_current_hotbar_index)
+	elif event.is_action_pressed(UP):
+		if m_current_hotbar_index <= 0:
+			m_current_hotbar_index = len(m_hotbar_slots) - 1
+		else:
+			m_current_hotbar_index -= 1
+		set_selected_slot(m_current_hotbar_index)
 	
 	if m_selected_slot.get_item() != null and ItemData.is_placeable(m_selected_slot.get_item().get_item_name()):
 		if event.is_action_pressed(PLACE) and !m_showing_item and UIManager.menus_closed():
