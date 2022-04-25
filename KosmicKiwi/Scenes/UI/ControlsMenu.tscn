@@ -33,10 +33,12 @@ __meta__ = {
 }
 
 [node name="Back" type="Button" parent="."]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 410.0
-margin_bottom = 160.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -150.0
+margin_top = 30.0
+margin_right = 250.0
+margin_bottom = 180.0
 rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
 custom_fonts/font = ExtResource( 2 )
@@ -64,17 +66,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Move Up"]
-margin_top = 14.0
-margin_right = 507.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 542.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Move Up"
 align = 2
 valign = 1
 
 [node name="Button" parent="Move Up" instance=ExtResource( 1 )]
-margin_left = 707.0
-margin_right = 1507.0
+margin_left = 742.0
+margin_right = 1542.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 text = "move_up"
@@ -96,17 +98,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Move Down"]
-margin_top = 14.0
-margin_right = 666.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 711.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Move Down"
 align = 2
 valign = 1
 
 [node name="Button" parent="Move Down" instance=ExtResource( 1 )]
-margin_left = 866.0
-margin_right = 1666.0
+margin_left = 911.0
+margin_right = 1711.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -129,17 +131,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Move Left"]
-margin_top = 14.0
-margin_right = 575.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 613.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Move Left"
 align = 2
 valign = 1
 
 [node name="Button" parent="Move Left" instance=ExtResource( 1 )]
-margin_left = 775.0
-margin_right = 1575.0
+margin_left = 813.0
+margin_right = 1613.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -162,17 +164,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Move Right"]
-margin_top = 14.0
-margin_right = 651.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 693.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Move Right"
 align = 2
 valign = 1
 
 [node name="Button" parent="Move Right" instance=ExtResource( 1 )]
-margin_left = 851.0
-margin_right = 1651.0
+margin_left = 893.0
+margin_right = 1693.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -195,17 +197,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Interact"]
-margin_top = 14.0
-margin_right = 455.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 484.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Interact"
 align = 2
 valign = 1
 
 [node name="Button" parent="Interact" instance=ExtResource( 1 )]
-margin_left = 655.0
-margin_right = 1455.0
+margin_left = 684.0
+margin_right = 1484.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -228,17 +230,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Inventory"]
-margin_top = 14.0
-margin_right = 539.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 575.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Inventory"
 align = 2
 valign = 1
 
 [node name="Button" parent="Inventory" instance=ExtResource( 1 )]
-margin_left = 739.0
-margin_right = 1539.0
+margin_left = 775.0
+margin_right = 1575.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -261,17 +263,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Craft"]
-margin_top = 14.0
-margin_right = 283.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 302.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Craft"
 align = 2
 valign = 1
 
 [node name="Button" parent="Craft" instance=ExtResource( 1 )]
-margin_left = 483.0
-margin_right = 1283.0
+margin_left = 502.0
+margin_right = 1302.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -293,17 +295,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Pause"]
-margin_top = 14.0
-margin_right = 373.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 398.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Pause"
 align = 2
 valign = 1
 
 [node name="Button" parent="Pause" instance=ExtResource( 1 )]
-margin_left = 573.0
-margin_right = 1373.0
+margin_left = 598.0
+margin_right = 1398.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -326,17 +328,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Friend"]
-margin_top = 14.0
-margin_right = 363.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 387.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Friend"
 align = 2
 valign = 1
 
 [node name="Button" parent="Friend" instance=ExtResource( 1 )]
-margin_left = 563.0
-margin_right = 1363.0
+margin_left = 587.0
+margin_right = 1387.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -359,17 +361,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Hotbar 1"]
-margin_top = 14.0
-margin_right = 493.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 525.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Hotbar 1"
 align = 2
 valign = 1
 
 [node name="Button" parent="Hotbar 1" instance=ExtResource( 1 )]
-margin_left = 693.0
-margin_right = 1493.0
+margin_left = 725.0
+margin_right = 1525.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -392,17 +394,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Hotbar 2"]
-margin_top = 14.0
-margin_right = 493.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 525.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Hotbar 2"
 align = 2
 valign = 1
 
 [node name="Button" parent="Hotbar 2" instance=ExtResource( 1 )]
-margin_left = 693.0
-margin_right = 1493.0
+margin_left = 725.0
+margin_right = 1525.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -425,17 +427,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Hotbar 3"]
-margin_top = 14.0
-margin_right = 493.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 525.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Hotbar 3"
 align = 2
 valign = 1
 
 [node name="Button" parent="Hotbar 3" instance=ExtResource( 1 )]
-margin_left = 693.0
-margin_right = 1493.0
+margin_left = 725.0
+margin_right = 1525.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -458,17 +460,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Hotbar 4"]
-margin_top = 14.0
-margin_right = 493.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 525.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Hotbar 4"
 align = 2
 valign = 1
 
 [node name="Button" parent="Hotbar 4" instance=ExtResource( 1 )]
-margin_left = 693.0
-margin_right = 1493.0
+margin_left = 725.0
+margin_right = 1525.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -491,17 +493,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Place"]
-margin_top = 14.0
-margin_right = 329.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 351.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Place"
 align = 2
 valign = 1
 
 [node name="Button" parent="Place" instance=ExtResource( 1 )]
-margin_left = 529.0
-margin_right = 1329.0
+margin_left = 551.0
+margin_right = 1351.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
@@ -524,17 +526,17 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Cancel"]
-margin_top = 14.0
-margin_right = 404.0
-margin_bottom = 135.0
+margin_top = 10.0
+margin_right = 432.0
+margin_bottom = 139.0
 custom_fonts/font = ExtResource( 2 )
 text = "Cancel"
 align = 2
 valign = 1
 
 [node name="Button" parent="Cancel" instance=ExtResource( 1 )]
-margin_left = 604.0
-margin_right = 1404.0
+margin_left = 632.0
+margin_right = 1432.0
 margin_bottom = 150.0
 rect_scale = Vector2( 1, 1 )
 focus_mode = 2
