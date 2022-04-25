@@ -1,8 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/UIScripts/ChangeInput.gd" type="Script" id=1]
 [ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://ArtAssets/UI_4-13-22/Button.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/UI_4-13-22/HoveredButton.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/UI_4-13-22/PressedButton.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 600, 600 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 600, 600 )
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -15,6 +25,8 @@ rect_min_size = Vector2( 800, 150 )
 rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
 custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 1 )
 script = ExtResource( 1 )
 __meta__ = {

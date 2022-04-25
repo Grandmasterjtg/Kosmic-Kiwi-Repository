@@ -4,6 +4,7 @@ const FILE_PATH := "res://Data/InventoryData.json"
 
 const NUM_SLOTS = "NumSlots"
 const INTERACTABLE = "Interactable"
+const SHOULD_CLEAR = "ShouldClear"
 
 func _ready():
 	m_data = load_data(FILE_PATH)
@@ -30,6 +31,12 @@ func get_num_slots(category: String) -> int:
 func get_is_interactable(category: String) -> bool:
 	if m_data and m_data.has(category):
 		return m_data[category][INTERACTABLE]
+	else:
+		return false
+		
+func should_clear(category: String) -> bool:
+	if m_data and m_data.has(category) and m_data[category].has(SHOULD_CLEAR):
+		return m_data[category][SHOULD_CLEAR]
 	else:
 		return false
 

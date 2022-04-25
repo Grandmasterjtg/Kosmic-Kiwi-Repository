@@ -17,5 +17,4 @@ frames = ExtResource( 1 )
 polygon = PoolVector2Array( -19, 186, -131, 152, -175, 84, -195, 10, -77, -50, 49, -48, 177, 0, 149, 94, 79, 164 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
 autostart = true

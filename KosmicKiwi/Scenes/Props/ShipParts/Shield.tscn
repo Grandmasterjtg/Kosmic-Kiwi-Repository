@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Interactables/ResourceCollection/ResourceDeposit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ArtAssets/SpriteFrames/ShipParts/Shield.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Scripts/PropScripts/ResourceProp.gd" type="Script" id=3]
+
+[node name="ShipPart" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 2 )
+
+[node name="ResourceDeposit" parent="." instance=ExtResource( 1 )]
+m_name = "Shield"

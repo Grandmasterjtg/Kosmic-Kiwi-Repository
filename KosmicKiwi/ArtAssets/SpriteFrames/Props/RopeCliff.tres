@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=29 format=2]
+
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LRopeCliff1.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LRopeCliff1.png" type="Texture" id=2]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LRopeCliff2.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LRopeCliff1.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/F_LRopeCliff1.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LRopeCliff3.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LRopeCliff4.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/F_LRopeCliff5.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/F_LRopeCliff4.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LRopeCliff2.png" type="Texture" id=10]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/F_LRopeCliff6.png" type="Texture" id=11]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LRopeCliff2.png" type="Texture" id=12]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LRopeCliff7.png" type="Texture" id=13]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LRopeCliff6.png" type="Texture" id=14]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LRopeCliff5.png" type="Texture" id=15]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LRopeCliff4.png" type="Texture" id=16]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LRopeCliff3.png" type="Texture" id=17]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LRopeCliff7.png" type="Texture" id=18]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LRopeCliff3.png" type="Texture" id=19]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/F_LRopeCliff7.png" type="Texture" id=20]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/F_LRopeCliff2.png" type="Texture" id=21]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LRopeCliff5.png" type="Texture" id=22]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/F_LRopeCliff3.png" type="Texture" id=23]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LRopeCliff7.png" type="Texture" id=24]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LRopeCliff6.png" type="Texture" id=25]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LRopeCliff6.png" type="Texture" id=26]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LRopeCliff4.png" type="Texture" id=27]
+[ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/J_LRopeCliff5.png" type="Texture" id=28]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "default_Forest",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "default_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "default_Jungle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 19 ), ExtResource( 27 ), ExtResource( 15 ), ExtResource( 25 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "solved_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 14 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "solved_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "solved_Jungle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "default_Wet",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 23 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 20 ) ],
+"loop": false,
+"name": "solved_Forest",
+"speed": 5.0
+} ]

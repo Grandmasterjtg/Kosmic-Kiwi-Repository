@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ArtAssets/SpriteFrames/Props/River.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/Puzzle Scripts/Puzzle.gd" type="Script" id=2]
+
+[node name="RiverLeft" type="StaticBody2D" groups=["river"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "default_Forest"
+playing = true
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -1182, 897, 315, 155, 1195, 597, -305, 1356 )

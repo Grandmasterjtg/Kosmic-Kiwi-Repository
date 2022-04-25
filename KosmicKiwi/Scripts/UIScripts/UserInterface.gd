@@ -8,16 +8,13 @@ onready var m_crafting_ui = $CraftingUI
 
 func _process(delta: float) -> void:
 	# player toggles inventory panel
-	if Input.is_action_just_pressed(INVENTORY):
-		toggle_menu(m_inventory_ui)
-		close_menu(m_crafting_ui)
-#		toggle_inventory()
-#		close_crafting()
-	if Input.is_action_just_pressed(CRAFT):
-		toggle_menu(m_crafting_ui)
-		close_menu(m_inventory_ui)
-#		toggle_crafting()
-#		close_inventory()
+	if UIManager.menus_closed() or m_crafting_ui.visible or m_inventory_ui.visible:
+		if Input.is_action_just_pressed(INVENTORY):
+			toggle_menu(m_inventory_ui)
+			close_menu(m_crafting_ui)
+		if Input.is_action_just_pressed(CRAFT):
+			toggle_menu(m_crafting_ui)
+			close_menu(m_inventory_ui)
 
 # takes a UI menu
 # if the menu is closed, it sets the menu's visibility to true

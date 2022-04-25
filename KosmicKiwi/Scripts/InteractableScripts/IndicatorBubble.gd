@@ -2,6 +2,7 @@ extends AnimatedSprite
 
 onready var m_sprite = $Sprite
 onready var m_timer = $Timer
+
 var m_open := false
 
 func _ready() -> void:
@@ -9,7 +10,7 @@ func _ready() -> void:
 	self.visible = false
 	m_sprite.visible = false
 
-func open_bubble():
+func open_bubble() -> void:
 	m_open = true
 	self.visible = true
 	animation = "open"
@@ -22,6 +23,13 @@ func close_bubble():
 	animation = "close"
 	play()
 	m_timer.start()
+
+func set_texture(texture: Texture):
+	m_sprite.texture = texture
+
+func open_bubble_with_texture(texture: Texture):
+	set_texture(texture)
+	open_bubble()
 
 func _on_Timer_timeout():
 	if m_open:

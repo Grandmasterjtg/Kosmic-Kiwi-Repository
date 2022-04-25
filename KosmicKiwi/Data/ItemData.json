@@ -3,7 +3,7 @@
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "Sturdy, good for crafting"
     },
     "Fiber": {
         "ItemCategory": "Resource",
@@ -15,73 +15,79 @@
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "aaaaaaaaaaaaaaa aaaaa"
+        "ToolTip": "Rock and Stone!"
     },
     "Chemical": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "It's coarse and rough and irritating and it gets everywhere."
     },
     "Liquid": {
         "ItemCategory": "Resource",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "It's wet. Or is it!?!"
     },
     "Rope": {
         "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTip": "test"
+        "ToolTip": "It looks strong enough to hold the weight of a kiwi."
     },
     "Defoilant": {
         "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTip": "test"
+        "ToolTip": "It seems extremely hungry. Good thing it's vegan."
     },
     "Engine": {
         "ItemCategory": "ShipPart",
         "StackSize": 1,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "Used to reach the Jungle and Wet planet."
     },
     "Shield": {
         "ItemCategory": "ShipPart",
         "StackSize": 1,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "Helps you reach the Desert Planet."
     },
     "Solar Sail": {
         "ItemCategory": "ShipPart",
         "StackSize": 1,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "Helps you reach the Desert Planet."
+    },
+    "Warp Core": {
+        "ItemCategory": "ShipPart",
+        "StackSize": 1,
+        "Placeable": false,
+        "ToolTip": "Used to return to your home planet of New Zealand."
     },
     "Pipette": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "It's good at sucking"
     },
     "T'Hermite": {
         "ItemCategory": "Tool",
         "StackSize": 99,
         "Placeable": false,
-        "ToolTip": "test"
+        "ToolTip": "It can reach temperatures up to 2,800 degrees (Fahrenheit)."
     },
     "Foam": {
         "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTip": "test"
+        "ToolTip": "Soft and fluffy. It seems buoyant."
     },
     "Sonic Charge": {
         "ItemCategory": "Gadget",
         "StackSize": 99,
         "Placeable": true,
-        "ToolTip": "test"
+        "ToolTip": "The sound it makes is so loud it could shatter anything. As long as it's a boulder"
     },
     "No Category": {
         "StackSize": 99,

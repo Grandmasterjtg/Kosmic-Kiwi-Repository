@@ -4,6 +4,8 @@ signal interacted
 signal timeout
 signal destroy
 
+var m_should_destroy = false
+
 # collection variables
 export var m_name : String = "Metal Deposit"
 var m_item_name : String = "Metal"
@@ -23,6 +25,8 @@ const INTERACT := "interact"
 var m_in_cooldown := false
 var m_cooldown_time : float = 1.0
 onready var m_timer := $CooldownTimer
+
+var m_id : Vector2
 
 func _ready() -> void:
 	# set up the internal variables for the funcionality 
@@ -44,6 +48,19 @@ func _ready() -> void:
 	m_interactable.connect("entered", m_button, "set_display", [true])
 	m_interactable.connect("exited", m_button, "set_display", [false])
 	
+#	# add resource to resource manager if it is a one time use
+#	if m_once:
+#		m_id = self.get_global_position()
+#		ResourceManager.add_resource(m_id)
+#		if ResourceManager.check_resource_destroyed(m_id):
+#			m_should_destroy = true
+			
+func _process(delta):
+	# if the resource have previousely been destroyed
+	if m_should_destroy:
+		emit_signal("destroy")
+	
+	
 func _on_timeout() -> void:
 	# no longer in cooldown
 	m_in_cooldown = false
@@ -58,7 +75,7 @@ func _on_timeout() -> void:
 func _on_interact() -> void:
 	# show the required tool bubble
 	if !m_in_cooldown and m_required_tool != null:
-		PlayerManager.show_bubble(m_required_tool, load("res://ArtAssets/ItemIcons/" + m_required_tool + ".png"))
+		PlayerManager.emote_with_texture(load("res://ArtAssets/ItemIcons/" + m_required_tool + ".png"))
 	
 	# if the player interacts with the deposit with all requirments met
 	if !m_in_cooldown and (!m_required_tool or Inventory.check_selected_item(m_required_tool)):
@@ -68,6 +85,7 @@ func _on_interact() -> void:
 		
 		# if the resource depsoit is a one time use
 		if m_once:
+			ResourceManager.set_resource_destroyed(m_id, true)
 			emit_signal("destroy")
 		# set respawn and animations
 		else:
@@ -82,6 +100,3 @@ func _on_interact() -> void:
 			# if the depsoit required a tool, remove it form the inventory
 			if m_required_tool:
 				Inventory.remove_item(m_required_tool)
-		
-		
-			

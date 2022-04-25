@@ -1,0 +1,139 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "open_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Huh I wonder what that smell is...\nWait, I see something rustling just over..."
+		},
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "friendhappy",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "There!"
+		},
+		{
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_001",
+			"portrait": "friendhappy",
+			"text": "[shake rate=10 level=10]Yay new friends![/shake]"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwi thinking",
+			"text": "Uh... Hello?"
+		},
+		{
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "[shake rate=10 level=10]Hello! You must be new here![/shake]"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwi thinking",
+			"text": "Who are you?"
+		},
+		{
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_001",
+			"portrait": "friendthinking",
+			"text": "[shake rate=10 level=10]My name is Stinky, I live here.[/shake]"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "I don't understand your language, but do you want to be friends?"
+		},
+		{
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_001",
+			"portrait": "friendhappy",
+			"text": "[shake rate=10 level=10]Yes![/shake]\n[shake rate=10 level=10]It's been so lonely here.[/shake]\n[shake rate=10 level=10]It's nice to make a new friend![/shake]"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "I'll take that as a yes. Let's go!"
+		},
+		{
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_001",
+			"portrait": "friendthinking",
+			"text": "Yay!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "close_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1650467835.json",
+		"name": "Find_Stinky"
+	}
+}

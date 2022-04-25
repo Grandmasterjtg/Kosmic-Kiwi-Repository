@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ArtAssets/Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/UIScripts/Loading/LoadingUI.gd" type="Script" id=2]
+[ext_resource path="res://ArtAssets/Characters/ship/ship_states/ship_1.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Menu/Planets/F_Planet.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Menu/Planets/J_Planet.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0.658824, 0.223529, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="LoadingUI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Planet2" type="TextureRect" parent="."]
+margin_left = 1435.0
+margin_top = 420.0
+margin_right = 2035.0
+margin_bottom = 1020.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 483.0
+margin_top = 513.0
+margin_right = 1434.0
+margin_bottom = 568.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ship" type="TextureRect" parent="ProgressBar"]
+margin_top = -75.0
+margin_right = 1500.0
+margin_bottom = 1425.0
+rect_rotation = 90.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 275, 0 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Planet1" type="TextureRect" parent="."]
+margin_left = 125.0
+margin_top = 355.0
+margin_right = 725.0
+margin_bottom = 955.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
