@@ -169,7 +169,16 @@ position = Vector2( -20500, -17250 )
 position = Vector2( -20000, -13500 )
 
 [node name="Dust2" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
-position = Vector2( -18000, -12750 )
+position = Vector2( -8500, -13082 )
+
+[node name="Dust4" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
+position = Vector2( -18510, -2903 )
+
+[node name="Dust6" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
+position = Vector2( -19158, -2434 )
+
+[node name="Dust5" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
+position = Vector2( -4149, -8000 )
 
 [node name="Dust3" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
 position = Vector2( -17000, -15500 )
@@ -240,46 +249,55 @@ position = Vector2( 2500, -4000 )
 position = Vector2( -1000, -5750 )
 
 [node name="Grass22" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -13500, -4500 )
+position = Vector2( -15138, -5445 )
 
 [node name="Grass23" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -16000, -6250 )
+position = Vector2( -14958, -4153 )
 
 [node name="Grass24" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -19000, -5250 )
+position = Vector2( -19565, -5403 )
+
+[node name="Grass52" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
+position = Vector2( -22000, -3866 )
+
+[node name="Grass53" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
+position = Vector2( -22588, -4010 )
+
+[node name="Grass54" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
+position = Vector2( -20167, -3110 )
 
 [node name="Grass25" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -17000, -2750 )
+position = Vector2( -16565, -6227 )
 
 [node name="Grass26" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -13500, -7000 )
+position = Vector2( -16630, -4082 )
 
 [node name="Grass27" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -9000, -5250 )
+position = Vector2( -10363, -5574 )
 
 [node name="Grass28" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -6000, -6250 )
+position = Vector2( -7596, -6052 )
 
 [node name="Grass29" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -11500, -6750 )
+position = Vector2( -10153, -7586 )
 
 [node name="Grass30" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -10000, -8250 )
+position = Vector2( -9565, -7977 )
 
 [node name="Grass31" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -8000, -6750 )
+position = Vector2( -8233, -7262 )
 
 [node name="Grass32" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -22500, -9750 )
+position = Vector2( -22370, -9848 )
 
 [node name="Grass33" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
 position = Vector2( -24500, -10750 )
 
 [node name="Grass34" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -20000, -9750 )
+position = Vector2( -21010, -10260 )
 
 [node name="Grass35" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -24000, -12000 )
+position = Vector2( -23500, -11707 )
 
 [node name="Grass36" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
 position = Vector2( -23000, -12750 )
@@ -288,16 +306,16 @@ position = Vector2( -23000, -12750 )
 position = Vector2( -21000, -12250 )
 
 [node name="Grass38" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -19500, -11000 )
+position = Vector2( -21356, -9858 )
 
 [node name="Grass39" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -18500, -13500 )
+position = Vector2( -18863, -14203 )
 
 [node name="Grass40" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
 position = Vector2( -16000, -11500 )
 
 [node name="Grass41" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -15500, -14000 )
+position = Vector2( -17732, -14832 )
 
 [node name="Grass42" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
 position = Vector2( -13000, -12750 )
@@ -315,7 +333,7 @@ position = Vector2( -11000, -13750 )
 position = Vector2( -13000, -15250 )
 
 [node name="Grass47" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -15500, -15750 )
+position = Vector2( -16259, -16403 )
 
 [node name="Grass48" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
 position = Vector2( -14500, -16750 )
@@ -327,35 +345,41 @@ position = Vector2( -16000, -17750 )
 position = Vector2( -24500, -14000 )
 
 [node name="Grass51" parent="Actors/ResourcePoints/Grass" instance=ExtResource( 12 )]
-position = Vector2( -25000, -18500 )
+position = Vector2( -17130, -17957 )
 
 [node name="Liquid" type="YSort" parent="Actors/ResourcePoints"]
 
 [node name="Pond" parent="Actors/ResourcePoints/Liquid" instance=ExtResource( 15 )]
-position = Vector2( -22000, -12000 )
+position = Vector2( -22000, -12010 )
 
 [node name="Metal" type="YSort" parent="Actors/ResourcePoints"]
 
 [node name="Metal" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -19500, -4500 )
+position = Vector2( -14565, -11300 )
 
 [node name="Metal2" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -18500, -3750 )
+position = Vector2( -23218, -8105 )
 
 [node name="Metal3" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -17500, -5500 )
+position = Vector2( -20667, -4163 )
 
 [node name="Metal4" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -6000, -9250 )
+position = Vector2( -6208, -9703 )
 
 [node name="Metal5" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -7500, -7750 )
+position = Vector2( -6863, -9848 )
 
 [node name="Metal6" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -18500, -11500 )
 
 [node name="Metal7" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -20000, -12750 )
+position = Vector2( -25500, -18957 )
+
+[node name="Metal9" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
+position = Vector2( -24856, -19338 )
+
+[node name="Metal10" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
+position = Vector2( -24510, -18265 )
 
 [node name="Metal8" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -16500, -12750 )
@@ -411,13 +435,13 @@ position = Vector2( -7000, -1750 )
 position = Vector2( -4000, -1250 )
 
 [node name="Rocks17" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -16000, -4500 )
+position = Vector2( -18356, -3977 )
 
 [node name="Rocks18" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -17500, -1500 )
+position = Vector2( -17565, -1957 )
 
 [node name="Rocks19" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -14500, -2750 )
+position = Vector2( -17667, -3515 )
 
 [node name="Rocks20" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -18000, -6750 )
@@ -432,16 +456,16 @@ position = Vector2( -11500, -5250 )
 position = Vector2( -8000, -4500 )
 
 [node name="Rocks24" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -10000, -6750 )
+position = Vector2( -9523, -6903 )
 
 [node name="Rocks25" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -3500, -6750 )
+position = Vector2( -3350, -7109 )
 
 [node name="Rocks26" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -5500, -8000 )
+position = Vector2( -5023, -7453 )
 
 [node name="Rocks27" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -7500, -9000 )
+position = Vector2( -4690, -8850 )
 
 [node name="Rocks28" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -15000, -7750 )
@@ -456,13 +480,16 @@ position = Vector2( -22000, -8500 )
 position = Vector2( -24000, -9000 )
 
 [node name="Rocks32" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -25000, -16250 )
+position = Vector2( -25089, -17227 )
+
+[node name="Rocks42" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
+position = Vector2( -22718, -19338 )
 
 [node name="Rocks33" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -21500, -13500 )
 
 [node name="Rocks34" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -23500, -19000 )
+position = Vector2( -23856, -18785 )
 
 [node name="Rocks35" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -17500, -18750 )
@@ -491,6 +518,9 @@ position = Vector2( 13, -215 )
 [node name="Briars" type="YSort" parent="Actors/Puzzles"]
 
 [node name="Briar" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -18013, -15535 )
+
+[node name="Briar15" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
 position = Vector2( -18013, -15535 )
 
 [node name="Briar2" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
@@ -530,12 +560,51 @@ position = Vector2( -18513, -16035 )
 position = Vector2( -17513, -16035 )
 
 [node name="Briar14" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
-position = Vector2( -18013, -15785 )
+position = Vector2( -21437, -3262 )
+
+[node name="Briar16" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -20779, -3438 )
+
+[node name="Briar17" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -20971, -5117 )
+
+[node name="Briar18" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -20666, -4762 )
+
+[node name="Briar20" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -15883, -5419 )
+
+[node name="Briar21" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -16680, -4988 )
+
+[node name="Briar22" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -15772, -4738 )
+
+[node name="Briar19" parent="Actors/Puzzles/Briars" instance=ExtResource( 8 )]
+position = Vector2( -20666, -4367 )
 
 [node name="Boulders" type="YSort" parent="Actors/Puzzles"]
 
 [node name="Boulder" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( -5513, -3535 )
+
+[node name="Boulder62" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -4383, -9868 )
+
+[node name="Boulder63" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -4876, -9545 )
+
+[node name="Boulder64" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -5503, -9738 )
+
+[node name="Boulder65" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -8883, -9368 )
+
+[node name="Boulder66" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -8246, -9633 )
+
+[node name="Boulder67" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -7609, -9512 )
 
 [node name="Boulder2" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( -6013, -3535 )
