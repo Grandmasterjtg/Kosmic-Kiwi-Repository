@@ -1,6 +1,6 @@
 extends Control
 
-onready var m_sections = $Sections
+onready var m_sections = $Panel/Sections
 onready var m_inventory_slots = {}
 
 func _ready():

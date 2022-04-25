@@ -198,3 +198,5 @@ func clear_inventory() -> void:
 	# if there is an inventory for the planet, use that inventory
 	else:
 		m_inventory = m_saved_inventories[PlanetManager.get_active_planet().get_planet_name()]
+	
+	m_hotbar = {}

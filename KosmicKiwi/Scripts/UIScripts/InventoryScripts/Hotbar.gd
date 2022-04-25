@@ -28,13 +28,13 @@ func _input(event):
 		if event.is_action_pressed(action):
 			set_selected_slot(i)
 			
-	if event.is_action_pressed(DOWN):
+	if event.is_action_pressed(DOWN) and UIManager.menus_closed():
 		if m_current_hotbar_index >= len(m_hotbar_slots) - 1:
 			m_current_hotbar_index = 0
 		else:
 			m_current_hotbar_index += 1
 		set_selected_slot(m_current_hotbar_index)
-	elif event.is_action_pressed(UP):
+	elif event.is_action_pressed(UP) and UIManager.menus_closed():
 		if m_current_hotbar_index <= 0:
 			m_current_hotbar_index = len(m_hotbar_slots) - 1
 		else:
