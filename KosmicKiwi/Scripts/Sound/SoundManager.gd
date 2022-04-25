@@ -51,3 +51,15 @@ func set_music_volume(volume) -> void:
 # sets the sfx audio server's volume to the passed volume
 func set_sfx_volume(volume) -> void:
 	AudioServer.set_bus_volume_db(2, volume)
+	
+# returns the volume of the master volume bus
+func get_master_volume() -> float:
+	return AudioServer.get_bus_volume_db(0)
+
+# returns the volume of the music volume bus
+func get_music_volume() -> float:
+	return AudioServer.get_bus_volume_db(1)
+	
+# returns the volume of the sfx bus
+func get_sfx_volume() -> float:
+	return AudioServer.get_bus_volume_db(2)
