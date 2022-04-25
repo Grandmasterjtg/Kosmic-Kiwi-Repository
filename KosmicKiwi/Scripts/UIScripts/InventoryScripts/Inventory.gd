@@ -6,6 +6,8 @@ const HOTBAR_SLOTS := 4
 var m_inventory := {} # { ItemCategory: { ItemName: [ItemName, ItemQuantity] } }
 var m_hotbar := {} # { ItemName: [ItemName, ItemQuantity] }
 
+var m_saved_inventories := {}
+
 var m_selected_item = null
 
 signal inventory_updated
@@ -18,6 +20,11 @@ func _ready() -> void:
 		for category in categories:
 			m_inventory[category] = {}
 			m_num_slots[category] = InventoryData.get_num_slots(category)
+			
+	var planets = PlanetManager.get_planets()
+	if planets:
+		for planet in planets:
+			m_saved_inventories[planet.get_planet_name()] = {}
 
 
 # takes the name of an item and the amount of that item
@@ -180,6 +187,14 @@ func _get_sslots_in_hotbar() -> Array:
 	return m_hotbar.keys()
 	
 func clear_inventory() -> void:
-	for category in m_inventory:
-		if InventoryData.should_clear(category):
-			m_inventory[category] = {}
+	# save the current inventory for future use
+	m_saved_inventories[PlanetManager.get_previous_planet().get_planet_name()] = m_inventory.duplicate(true)
+	# if no inventory has been saved, clear the inventory
+	print("Inventory - clear: " + PlanetManager.get_active_planet().get_planet_name())
+	if m_saved_inventories[PlanetManager.get_active_planet().get_planet_name()].empty():
+		for category in m_inventory:
+			if InventoryData.should_clear(category):
+				m_inventory[category] = {}
+	# if there is an inventory for the planet, use that inventory
+	else:
+		m_inventory = m_saved_inventories[PlanetManager.get_active_planet().get_planet_name()]
