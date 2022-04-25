@@ -1,18 +1,22 @@
 {
     "Resource": {
         "NumSlots": 5,
-        "Interactable": false
+        "Interactable": false,
+        "ShouldClear": true
     },
     "Tool": {
         "NumSlots": 2,
-        "Interactable": true
+        "Interactable": true,
+        "ShouldClear": true
     },
     "Gadget": {
         "NumSlots": 4,
-        "Interactable": true
+        "Interactable": true,
+        "ShouldClear": true
     },
     "ShipPart": {
         "NumSlots": 4,
-        "Interactable": false
+        "Interactable": false,
+        "ShouldClear": false
     }
 }

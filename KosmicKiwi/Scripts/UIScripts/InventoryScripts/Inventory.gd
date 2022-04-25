@@ -181,4 +181,5 @@ func _get_sslots_in_hotbar() -> Array:
 	
 func clear_inventory() -> void:
 	for category in m_inventory:
-		m_inventory[category] = {}
+		if InventoryData.should_clear(category):
+			m_inventory[category] = {}
