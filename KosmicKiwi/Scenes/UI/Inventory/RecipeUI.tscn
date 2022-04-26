@@ -39,9 +39,9 @@ __meta__ = {
 
 [node name="ItemToCraft" parent="." instance=ExtResource( 1 )]
 margin_left = 600.0
-margin_top = 13.0
-margin_right = 710.0
-margin_bottom = 123.0
+margin_top = 18.0
+margin_right = 700.0
+margin_bottom = 118.0
 
 [node name="Recipes" type="HBoxContainer" parent="."]
 margin_left = 34.0

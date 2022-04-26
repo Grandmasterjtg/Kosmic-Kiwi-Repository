@@ -1,40 +1,33 @@
-extends TextureRect
+extends AnimatedSprite
 
 const CANCEL = "cancel"
+const CONTINUE = "place"
 
 var m_current_index = 0
 
 var m_frames = [
-	preload("res://ArtAssets/Animatic/Kiwipage1.png"),
-	preload("res://ArtAssets/Animatic/Kiwipage2.png"),
-	preload("res://ArtAssets/Animatic/Kiwipage3.png"),
-	preload("res://ArtAssets/Animatic/Kiwipage4.png"),
-	preload("res://ArtAssets/Animatic/Kiwipage5.png"),
-	preload("res://ArtAssets/Animatic/Kiwipage6.png"),
-	preload("res://ArtAssets/Animatic/Kiwipage7.png"),
-	preload("res://ArtAssets/Animatic/Kiwipage8.png")
+	"0",
+	"1",
+	"2",
+	"3",
+	"4",
+	"5",
+	"6"
 ]
-
-onready var m_timer = $Timer
-
-func _ready():
-	m_timer.connect("timeout", self, "next_frame")
-	
-	if !m_frames.empty():
-		texture = m_frames[0]
-		m_timer.start()
 
 # skip the animatic if the player wants
 func _process(delta):
 	if Input.is_action_just_pressed(CANCEL):
 		load_game()
+	if Input.is_action_just_pressed(CONTINUE):
+		next_frame()
 
 # displays the next image in the animatic
 # loads the first planet if the end is reached
 func next_frame():
 	if m_current_index < len(m_frames) - 1:
 		m_current_index += 1
-		texture = m_frames[m_current_index]
+		play(m_frames[m_current_index])
 	else:
 		load_game()
 

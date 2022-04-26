@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/UIScripts/InventoryScripts/ItemUI.gd" type="Script" id=1]
 [ext_resource path="res://ArtAssets/ItemIcons/Chemical.png" type="Texture" id=2]
-
+[ext_resource path="res://ArtAssets/Fonts/Themes/tool_tip_font.tres" type="DynamicFont" id=3]
 
 [node name="ItemUI" type="TextureRect"]
 margin_right = 80.0
@@ -15,12 +15,15 @@ __meta__ = {
 }
 
 [node name="Count" type="Label" parent="."]
-visible = false
-margin_left = 42.0
-margin_top = 49.0
-margin_right = 58.0
-margin_bottom = 63.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 46.0
+margin_top = 48.0
+margin_right = 78.0
+margin_bottom = 77.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = ExtResource( 3 )
 text = "99"
 align = 2
 valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
