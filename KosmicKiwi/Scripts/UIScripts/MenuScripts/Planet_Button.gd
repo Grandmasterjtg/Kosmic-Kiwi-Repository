@@ -1,12 +1,15 @@
 extends Control
 
-onready var m_button = $Button
+const DEFAULT_TEXTURE = preload("res://ArtAssets/Menu/Planets/F_PlanetB.png")
+
+onready var m_button = $AspectRatioContainer/Button
 onready var m_label = $Label
 
 export var m_planet_index : int
 var m_planet : Planet
 
-export var m_texture : Texture
+export var m_hover_texture : Texture
+export var m_normal_texture : Texture
 
 func _ready() -> void:
 	# setup planet for this button
@@ -14,10 +17,13 @@ func _ready() -> void:
 	
 	# setup button signal and texture
 	m_button.connect("pressed",self,"_on_Button_pressed")
-	if (m_texture == null):
-		m_texture = load("res://ArtAssets/UI/Planet1.png")
-	else:
-		m_button.icon = m_texture
+	if m_hover_texture == null:
+		m_hover_texture = DEFAULT_TEXTURE
+	m_button.texture_hover = m_hover_texture
+	
+	if m_normal_texture == null:
+		m_normal_texture = DEFAULT_TEXTURE
+	m_button.texture_normal = m_normal_texture
 	
 	# update button
 	update_button()

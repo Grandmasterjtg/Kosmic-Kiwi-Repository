@@ -2,8 +2,13 @@ extends Control
 
 var m_close_button
 onready var m_buttons = $Buttons.get_children()
+export var m_start_visible := false
 
 func _ready():
+	if m_start_visible:
+		self.visible = true
+	else:
+		self.visible = false
 	m_close_button = $CloseButton
 	m_close_button.connect("pressed",self,"_on_CloseButton_pressed")
 	update_buttons()

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pg_Front4.png-25dfe5600b060340ff0d8b3ebb447df1.stex"
+path="res://.import/J_PlanetB.png-ea9313563266ba50f7d62b2a25cb891c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArtAssets/Characters/penguin/Pg_Front4.png"
-dest_files=[ "res://.import/Pg_Front4.png-25dfe5600b060340ff0d8b3ebb447df1.stex" ]
+source_file="res://ArtAssets/Menu/Planets/J_PlanetB.png"
+dest_files=[ "res://.import/J_PlanetB.png-ea9313563266ba50f7d62b2a25cb891c.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
