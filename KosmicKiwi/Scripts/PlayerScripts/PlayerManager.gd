@@ -1,13 +1,17 @@
 extends Node
 
-var m_default_texture # preload("emote_path")
-var m_happy_texture
-var m_sad_texture
-var m_thinking_texture
-var m_success_texture
-var m_fail_texture
+const m_neutral_texture = preload("res://ArtAssets/Characters/emotes/kiwineutral.png")
+const m_happy_texture = preload("res://ArtAssets/Characters/emotes/kiwihappy.png")
+const m_sad_texture = preload("res://ArtAssets/Characters/emotes/kiwisad.png")
+const m_thinking_texture = preload("res://ArtAssets/Characters/emotes/kiwi thinking.png")
 
-enum Emote {HAPPY, SAD, THINKING, SUCCESS, FAIL}
+var tutorial_index := -1
+var tutorial_gathering_done := false
+var tutorial_crafting_done := false
+var tutorial_gadget_done := false
+var tutorial_friend_done := false
+
+enum Emote {NEUTRAL, HAPPY, SAD, THINKING}
 
 func get_player():
 	if !get_tree().get_nodes_in_group("player").empty():
@@ -32,16 +36,14 @@ func emote_with_texture(texture: Texture):
 	if player != null and player.bubble != null:
 		player.bubble.open_bubble_with_texture(texture)
 
-func player_emote(emote: int): # 0: happy, 1: sad, 2: thinking, 3: success, 4: fail
+func player_emote(emote: int):
 	# decide the texture for the emote
 	match emote:
+		Emote.NEUTRAL:
+			emote_with_texture(m_neutral_texture)
 		Emote.HAPPY:
 			emote_with_texture(m_happy_texture)
 		Emote.SAD:
 			emote_with_texture(m_sad_texture)
 		Emote.THINKING:
 			emote_with_texture(m_thinking_texture)
-		Emote.SUCCESS:
-			emote_with_texture(m_success_texture)
-		Emote.FAIL:
-			emote_with_texture(m_fail_texture)

@@ -37,15 +37,15 @@
 			"change_z_index": false,
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_002",
-			"mirror_portrait": false,
+			"mirror_portrait": true,
 			"portrait": "penguinthinking",
 			"portrait_definition": "",
 			"position": {
-				"0": true,
+				"0": false,
 				"1": false,
 				"2": false,
 				"3": false,
-				"4": false
+				"4": true
 			},
 			"type": 0,
 			"z_index": 0

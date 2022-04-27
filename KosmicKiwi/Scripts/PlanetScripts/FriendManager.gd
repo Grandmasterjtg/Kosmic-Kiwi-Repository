@@ -1,5 +1,12 @@
 extends Node
 
+const penguin_found_dialog = "Find_Penguin"
+const stinky_found_dialog = "Find_Stinky"
+const seal_found_dialog = "Find_Seal"
+const penguin_image = preload("res://ArtAssets/Characters/emotes/penguinhappy.png")
+const stinky_image = preload("res://ArtAssets/Characters/emotes/friendthinking.png")
+const seal_image = preload("res://ArtAssets/Characters/emotes/sealthinking.png")
+
 enum FriendID {PENGUIN, SEAL, STINKY}
 
 var found_penguin := false		#0
@@ -10,12 +17,6 @@ var joined_penguin := false		#0
 var joined_seal := false		#1
 var joined_stinky := false		#2
 
-const penguin_found_dialog = "Find_Penguin"
-const stinky_found_dialog = "Find_Stinky"
-const seal_found_dialog = "Find_Seal"
-const penguin_image = preload("res://ArtAssets/Characters/emotes/penguinhappy.png")
-const stinky_image = preload("res://ArtAssets/Characters/emotes/friendthinking.png")
-const seal_image = preload("res://ArtAssets/Characters/emotes/sealthinking.png")
 
 var m_current_friend_id = -1
 var m_dialog_disabled := false

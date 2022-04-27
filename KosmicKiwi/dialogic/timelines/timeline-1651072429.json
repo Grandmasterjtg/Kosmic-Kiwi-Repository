@@ -1,0 +1,71 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "open_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "I'm going to need to craft some gadgets if I want to find my friends!"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwi thinking",
+			"text": "And find parts of the ship... I think I saw a part fall on this planet..."
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Looks like there's plenty of Fiber from this planet's grass.\nLet's see if I can gather enough first. I can walk up to a resource and press \"E\" to interact with it.\nI can check how much Fiber I have by pressing \"Q\" to open my Inventory."
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "close_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651072429.json",
+		"name": "Tutorial_Gathering"
+	}
+}

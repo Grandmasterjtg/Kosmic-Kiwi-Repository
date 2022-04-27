@@ -18,7 +18,7 @@
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
-			"portrait": "Default",
+			"portrait": "kiwi thinking",
 			"portrait_definition": "",
 			"position": {
 				"0": true,
@@ -31,44 +31,38 @@
 			"z_index": 0
 		},
 		{
-			"animation": "2-fade_in_up.gd",
+			"animation": "1-fade_in.gd",
 			"animation_length": 1,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1650464990.json",
 			"event_id": "dialogic_002",
-			"mirror_portrait": false,
-			"portrait": "penguinthinking",
+			"mirror_portrait": true,
+			"portrait": "Default",
 			"portrait_definition": "",
 			"position": {
-				"0": true,
+				"0": false,
 				"1": false,
 				"2": false,
 				"3": false,
-				"4": false
+				"4": true
 			},
 			"type": 0,
 			"z_index": 0
 		},
 		{
-			"character": "character-1650465497.json",
+			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
-			"portrait": "Default",
-			"text": "*Static* hello...Kiwi?...Penguin?...*puzzt*"
+			"portrait": "kiwi thinking",
+			"text": "Hmm... I see there's a part of our ship behind that river..."
 		},
 		{
-			"character": "character-1650464990.json",
-			"event_id": "dialogic_001",
-			"portrait": "penguinhappy",
-			"text": "It's Seal!"
-		},
-		{
-			"animation": "wobble.gd",
-			"animation_length": 1,
+			"animation": "[No Animation]",
+			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_position": false,
 			"change_z_index": false,
-			"character": "character-1650464990.json",
+			"character": "character-1650464923.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -84,22 +78,37 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1650464923.json",
+			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
-			"portrait": "kiwihappy",
-			"text": "Seal! Where are you?"
+			"portrait": "penguinhappy",
+			"text": "Oh! I can help with this! Press \"F\" to activate my Friend ability!"
 		},
 		{
-			"character": "character-1650465497.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "*Static*...Uh...very... high up.... *puzzt*......*Click!*"
+			"animation": "bounce.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
 		},
 		{
-			"character": "character-1650464923.json",
+			"character": "character-1650464990.json",
 			"event_id": "dialogic_001",
-			"portrait": "Default",
-			"text": "Seal is on this planet! Let's go find them."
+			"portrait": "penguinhappy",
+			"text": "Click on the river to deploy my personal floatation device. I'll get us across in no time!"
 		},
 		{
 			"call_node": {
@@ -118,7 +127,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.4.1",
-		"file": "timeline-1650597511.json",
-		"name": "Arrive_Desert"
+		"file": "timeline-1651073185.json",
+		"name": "Tutorial_Friend"
 	}
 }

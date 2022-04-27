@@ -23,9 +23,6 @@ region_rect = Rect2( 0, 0, 4698, 2459 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BackPanel" type="Panel" parent="."]
 self_modulate = Color( 0.572549, 0.529412, 0.639216, 1 )

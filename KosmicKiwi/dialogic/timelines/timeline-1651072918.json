@@ -1,0 +1,83 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "open_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "kiwihappy",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "I've made Rope!"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Now that it's in my Inventory, I can assign it to the Hotbar by clicking it in my \"Gadgets\" section of the Inventory."
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "Once it's assigned, I can scroll to it or press '1-4' to highlight it!"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "A highlighted Gadget allows me to click in the world and it'll appear as the cursor.\nClick again to try and place it into the world."
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwi thinking",
+			"text": "I have to be careful where I place it, otherwise I may lose it. \nNow I just gotta find a good place to hook it onto the cliff edge..."
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "close_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651072918.json",
+		"name": "Tutorial_Gadget"
+	}
+}
