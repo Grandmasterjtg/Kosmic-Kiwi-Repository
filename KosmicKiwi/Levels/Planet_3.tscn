@@ -23,6 +23,8 @@ m_planet_index = 2
 [node name="Bounds" type="Node2D" parent="Map"]
 scale = Vector2( 0.999159, 1 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/Bounds"]
+
 [node name="Tilemaps" type="Node2D" parent="Map"]
 
 [node name="Ground" type="TileMap" parent="Map/Tilemaps"]
