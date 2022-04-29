@@ -9,6 +9,9 @@ const SMALL_SIZE := 733
 onready var m_inventory_ui = $InventoryUI
 onready var m_crafting_ui = $CraftingUI
 
+func _ready():
+	pass
+
 func _process(delta: float) -> void:
 	# player toggles inventory panel
 	if UIManager.menus_closed() or m_crafting_ui.visible or m_inventory_ui.visible:

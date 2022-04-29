@@ -5,7 +5,7 @@ const stinky_found_dialog = "Find_Stinky"
 const seal_found_dialog = "Find_Seal"
 const penguin_image = preload("res://ArtAssets/Characters/emotes/penguinhappy.png")
 const stinky_image = preload("res://ArtAssets/Characters/emotes/friendthinking.png")
-const seal_image = preload("res://ArtAssets/Characters/emotes/sealthinking.png")
+const seal_image = preload("res://ArtAssets/Characters/emotes/sealhappy.png")
 
 enum FriendID {PENGUIN, SEAL, STINKY}
 
@@ -123,6 +123,13 @@ func current_friend_follow_player():
 	var friend = get_current_friend_node()
 	if friend != null:
 		friend.set_state(friend.CharacterState.FOLLOW)
+		match m_current_friend_id:
+			0: # Penguin
+				friend.emote.open_bubble_with_texture(penguin_image)
+			1: # Seal
+				friend.emote.open_bubble_with_texture(seal_image)
+			2: # Stinky
+				friend.emote.open_bubble_with_texture(stinky_image)
 
 func update_friend_display():
 	# this will change the UI images and mouse texture
@@ -135,3 +142,15 @@ func update_friend_display():
 				friend_display.set_texture(stinky_image)
 			FriendID.SEAL:
 				friend_display.set_texture(seal_image)
+
+func start_friend_ability():
+	var friend_display = get_tree().get_nodes_in_group("canvas")[0].get_node("FriendDisplay")
+	if friend_display != null:
+		friend_display.start_cooldown()
+
+func friend_ability_on_cooldown() -> bool:
+	var friend_display = get_tree().get_nodes_in_group("canvas")[0].get_node("FriendDisplay")
+	if friend_display != null:
+		return friend_display.on_cooldown()
+	else: 
+		return false

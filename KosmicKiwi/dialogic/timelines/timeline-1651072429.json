@@ -11,8 +11,8 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"animation": "1-fade_in.gd",
-			"animation_length": 1,
+			"animation": "instant_in.gd",
+			"animation_length": 0,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1650464923.json",
