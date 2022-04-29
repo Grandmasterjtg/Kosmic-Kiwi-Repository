@@ -20,10 +20,10 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "idle_back",
-"speed": 5.0
+"name": "walking_front",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 11 ) ],
 "loop": true,
@@ -45,8 +45,8 @@ animations = [ {
 "name": "idle_side",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "walking_front",
-"speed": 8.0
+"name": "idle_back",
+"speed": 5.0
 } ]

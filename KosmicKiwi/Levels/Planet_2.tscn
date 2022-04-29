@@ -217,7 +217,7 @@ position = Vector2( -20500, -17250 )
 [node name="Chemical" type="YSort" parent="Actors/ResourcePoints"]
 
 [node name="Dust" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
-position = Vector2( -20000, -13500 )
+position = Vector2( -20000, -13000 )
 
 [node name="Dust2" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
 position = Vector2( -8500, -13082 )
@@ -231,8 +231,11 @@ position = Vector2( -19158, -2434 )
 [node name="Dust5" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
 position = Vector2( -4149, -8000 )
 
+[node name="Dust7" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
+position = Vector2( -3500, -7500 )
+
 [node name="Dust3" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
-position = Vector2( -17000, -15500 )
+position = Vector2( -19500, -12500 )
 
 [node name="Grass" type="YSort" parent="Actors/ResourcePoints"]
 
@@ -399,6 +402,9 @@ position = Vector2( -14565, -11300 )
 [node name="Metal2" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -23218, -8105 )
 
+[node name="Metal11" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
+position = Vector2( -24500, -8250 )
+
 [node name="Metal3" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -20667, -4163 )
 
@@ -408,9 +414,6 @@ position = Vector2( -6208, -9703 )
 [node name="Metal5" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -6863, -9848 )
 
-[node name="Metal6" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -18500, -11500 )
-
 [node name="Metal7" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -25500, -18957 )
 
@@ -419,9 +422,6 @@ position = Vector2( -24856, -19338 )
 
 [node name="Metal10" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -24510, -18265 )
-
-[node name="Metal8" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
-position = Vector2( -16500, -12750 )
 
 [node name="Rocks" type="YSort" parent="Actors/ResourcePoints"]
 
@@ -482,23 +482,17 @@ position = Vector2( -8000, -4500 )
 [node name="Rocks24" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -9523, -6903 )
 
-[node name="Rocks25" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -3350, -7109 )
-
 [node name="Rocks26" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -5023, -7453 )
+position = Vector2( -5000, -6000 )
 
 [node name="Rocks27" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -4690, -8850 )
+position = Vector2( -3500, -6000 )
 
 [node name="Rocks28" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -15000, -7750 )
 
 [node name="Rocks29" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -24500, -7500 )
-
-[node name="Rocks30" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -22000, -8500 )
 
 [node name="Rocks31" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -24000, -9000 )
@@ -663,6 +657,36 @@ position = Vector2( -10513, -2285 )
 [node name="Boulder12" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( -11013, -2035 )
 
+[node name="Boulder90" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -11513, -2535 )
+
+[node name="Boulder91" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -12513, -1785 )
+
+[node name="Boulder92" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -7513, -3785 )
+
+[node name="Boulder93" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -4513, -4285 )
+
+[node name="Boulder94" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -5013, -4535 )
+
+[node name="Boulder95" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -3513, -4535 )
+
+[node name="Boulder96" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -11513, -1285 )
+
+[node name="Boulder97" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -12013, -785 )
+
+[node name="Boulder98" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -10513, -285 )
+
+[node name="Boulder99" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -11013, 465 )
+
 [node name="Boulder13" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( -11513, -1785 )
 
@@ -820,7 +844,7 @@ position = Vector2( -20513, -18285 )
 position = Vector2( -12013, -1535 )
 
 [node name="Boulder69" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
-position = Vector2( -12513, -1035 )
+position = Vector2( -12513, -1285 )
 
 [node name="Boulder70" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( -12513, -785 )
@@ -875,6 +899,18 @@ position = Vector2( -1513, -4785 )
 
 [node name="Boulder87" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( -1013, -4535 )
+
+[node name="Boulder88" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -13, -4785 )
+
+[node name="Boulder89" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -513, -4785 )
+
+[node name="Boulder100" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -513, -6035 )
+
+[node name="Boulder101" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( -1013, -6535 )
 
 [node name="Cliffs" type="YSort" parent="Actors/Puzzles"]
 
