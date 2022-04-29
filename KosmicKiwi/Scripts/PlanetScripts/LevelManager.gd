@@ -18,7 +18,8 @@ func setup_ship():
 		printerr("Failed to setup Ship and Nav_Menu in LevelManager!")
 
 func play_arrival_dialog():
-	DialogManager.play_planet_arrive_dialog(PlanetManager.get_active_planet().get_planet_name())
+	if DialogManager.get_tutorial_state(PlanetManager.get_active_planet().get_planet_name()):
+		DialogManager.play_dialog(PlanetManager.get_active_planet().get_planet_name())
 
 func get_planet_index() -> int:
 	return m_planet_index

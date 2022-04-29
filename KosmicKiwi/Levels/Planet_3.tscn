@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverRight.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Wet_Tileset.tres" type="TileSet" id=2]
@@ -704,6 +704,9 @@ position = Vector2( 29987, -9285 )
 [node name="Boulder75" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( 28987, -9285 )
 
+[node name="Boulder43" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
+position = Vector2( 30987, -8785 )
+
 [node name="Enemy7" parent="Actors" instance=ExtResource( 11 )]
 position = Vector2( 2201, -3917 )
 
@@ -790,8 +793,6 @@ position = Vector2( 31014, -7668 )
 
 [node name="Seal" parent="Actors" instance=ExtResource( 16 )]
 position = Vector2( -2368, 13481 )
-[node name="Boulder43" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
-position = Vector2( 30987, -8785 )
 
 [node name="Trees" type="YSort" parent="Actors"]
 

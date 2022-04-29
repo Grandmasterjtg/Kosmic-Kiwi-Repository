@@ -1,44 +1,30 @@
 extends Node
 
 var m_tutorial_states = {
-	"Fiber": { "state": true, "dialogue": "Tutorial_Crafting" },
-	"Rope": { "state": true, "dialogue": "Tutorial_Gadget" },
-	"Friend": { "state": true, "dialogue": "Tutorial_Friend"}
+	"Fiber": { "should_play": true, "dialogue": "Tutorial_Crafting" },
+	"Rope": { "should_play": true, "dialogue": "Tutorial_Gadget" },
+	"Friend": { "should_play": true, "dialogue": "Tutorial_Friend"},
+	"Forest": { "should_play": true, "dialogue": "Arrive_Forest"},
+	"Desert": { "should_play": true, "dialogue": "Arrive_Desert"},
+	"Wet": { "should_play": true, "dialogue": "Arrive_Wet"},
 }
 
-var m_arrival_states = {
-	"Forest": { "traveled_to": false, "dialogue": "Arrive_Forest"},
-	"Desert": { "traveled_to": false, "dialogue": "Arrive_Desert"},
-	"Wet": { "traveled_to": false, "dialogue": "Arrive_Wet"},
-}
-
-signal dialog_started
-
-func get_tutorial_state(key: String):
+func get_tutorial_state(key: String) -> bool:
 	if m_tutorial_states.has(key):
-		return m_tutorial_states[key]["state"]
+		return m_tutorial_states[key]["should_play"]
 	else:
 		return false
 
 func set_tutorial_state(key: String, state: bool):
 	if m_tutorial_states.has(key):
-		m_tutorial_states[key]["state"] = state
+		m_tutorial_states[key]["should_play"] = state
 
 func play_dialog(key: String):
-	if m_tutorial_states.has(key) and m_tutorial_states[key]["state"]:
+	if m_tutorial_states.has(key) and m_tutorial_states[key]["should_play"]:
 		var dialog = Dialogic.start(m_tutorial_states[key]["dialogue"])
 		get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 		set_tutorial_state(key, false)
-		emit_signal("dialog_started")
-
-func play_planet_arrive_dialog(key: String):
-	if m_arrival_states.has(key) and !m_arrival_states[key]["traveled_to"]:
-		var dialog = Dialogic.start(m_arrival_states[key]["dialogue"])
-		get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
-		set_tutorial_state(key, true)
-		emit_signal("dialog_started")
 
 func play_end_game_dialog():
 	var dialog = Dialogic.start("End_Game")
 	get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
-	emit_signal("dialog_started")
