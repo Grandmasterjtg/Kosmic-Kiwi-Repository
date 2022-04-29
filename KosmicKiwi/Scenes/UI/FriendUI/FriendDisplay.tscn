@@ -39,7 +39,6 @@ expand = true
 self_modulate = Color( 0.462745, 0.462745, 0.462745, 0.960784 )
 margin_right = 100.0
 margin_bottom = 100.0
-value = 50.0
 texture_progress = ExtResource( 2 )
 fill_mode = 3
 nine_patch_stretch = true
