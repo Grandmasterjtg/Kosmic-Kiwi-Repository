@@ -177,7 +177,7 @@ position = Vector2( -2000, 3250 )
 position = Vector2( -2095, 1321 )
 
 [node name="ShipPart" parent="Actors" instance=ExtResource( 11 )]
-position = Vector2( -6750, -16750 )
+position = Vector2( -8000, -17000 )
 
 [node name="ResourcePoints" type="YSort" parent="Actors"]
 
@@ -656,5 +656,89 @@ position = Vector2( 9487, 3215 )
 
 [node name="Boulder56" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
 position = Vector2( 9987, 2965 )
+
+[node name="Boulder57" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 14487, -5535 )
+
+[node name="Boulder58" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 13987, -5535 )
+
+[node name="Boulder59" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 13487, -5535 )
+
+[node name="Boulder60" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 12987, -5285 )
+
+[node name="Boulder61" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 12487, -5035 )
+
+[node name="Boulder62" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 11987, -4785 )
+
+[node name="Boulder63" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 11987, -4285 )
+
+[node name="Boulder64" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 11487, -4035 )
+
+[node name="Boulder65" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 10987, -4035 )
+
+[node name="Boulder66" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 10487, -3785 )
+
+[node name="Boulder67" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 9987, -3535 )
+
+[node name="Boulder68" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( 9487, -3035 )
+
+[node name="Boulder69" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -7013, -15785 )
+
+[node name="Boulder70" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -7513, -15785 )
+
+[node name="Boulder71" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -8013, -15785 )
+
+[node name="Boulder72" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -8513, -15535 )
+
+[node name="Boulder73" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -9013, -15785 )
+
+[node name="Boulder74" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -9513, -16035 )
+
+[node name="Boulder75" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -9513, -16535 )
+
+[node name="Boulder76" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -9513, -17035 )
+
+[node name="Boulder77" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -9013, -17285 )
+
+[node name="Boulder78" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -8513, -17285 )
+
+[node name="Boulder79" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -8013, -17535 )
+
+[node name="Boulder80" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -7513, -17535 )
+
+[node name="Boulder81" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -7013, -17285 )
+
+[node name="Boulder82" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -6513, -17035 )
+
+[node name="Boulder83" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -6513, -16535 )
+
+[node name="Boulder84" parent="Actors/Puzzles/Boulders" instance=ExtResource( 17 )]
+position = Vector2( -6513, -16035 )
 
 [node name="UI_Layer" parent="." instance=ExtResource( 10 )]
