@@ -19,6 +19,11 @@
 
 [resource]
 animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "default_Forest",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "default_Desert",
@@ -34,19 +39,14 @@ animations = [ {
 "name": "solved_Wet",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
-"loop": false,
-"name": "solved_Forest",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "solved_Jungle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "solved_Desert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "solved_Forest",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ) ],
@@ -54,8 +54,8 @@ animations = [ {
 "name": "default_Wet",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": false,
-"name": "default_Forest",
+"name": "solved_Jungle",
 "speed": 5.0
 } ]
