@@ -119,6 +119,7 @@ custom_fonts/font = ExtResource( 5 )
 text = "Choose a planet to travel to:"
 
 [node name="GoHome" type="Control" parent="."]
+visible = false
 margin_left = 382.0
 margin_top = 643.0
 margin_right = 615.0
@@ -152,6 +153,7 @@ __meta__ = {
 }
 
 [node name="Button" type="TextureButton" parent="GoHome/AspectRatioContainer"]
+margin_top = 0.000198364
 margin_right = 300.0
 margin_bottom = 300.0
 texture_normal = ExtResource( 15 )
