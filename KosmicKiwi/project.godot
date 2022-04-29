@@ -80,6 +80,11 @@ _global_script_classes=[ {
 "path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
 }, {
 "base": "Node",
+"class": "NPC",
+"language": "GDScript",
+"path": "res://Scripts/Classes/NPC.gd"
+}, {
+"base": "Node",
 "class": "Planet",
 "language": "GDScript",
 "path": "res://Scripts/PlanetScripts/Planet.gd"
@@ -92,7 +97,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Recipe",
 "language": "GDScript",
-"path": "res://Scripts/Classes/DataStructures/Recipe.gd"
+"path": "res://Scripts/DataStructures/Recipe.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
@@ -109,6 +114,7 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "Friend": "",
 "HistoryRow": "",
+"NPC": "",
 "Planet": "",
 "Puzzle": "",
 "Recipe": ""

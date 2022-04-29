@@ -1,10 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/UI/ChangeInputButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://ArtAssets/UI_4-13-22/Button.png" type="Texture" id=3]
 [ext_resource path="res://ArtAssets/UI_4-13-22/HoveredButton.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/UI_4-13-22/PressedButton.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/UI_4-13-22/ScalableBackground.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 4698, 2459 )
+margin_left = 190.705
+margin_right = 179.029
+margin_top = 182.921
+margin_bottom = 186.813
 
 [sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 4 )
@@ -32,7 +41,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="."]
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -475.0
+margin_right = 350.0
+margin_bottom = 500.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -131.5
+margin_top = -452.5
+margin_right = 394.5
+margin_bottom = -323.5
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 2 )
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="Panel"]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -150.0
@@ -50,22 +89,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Move Up" type="HBoxContainer" parent="."]
+[node name="Move Up" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -182.1
-margin_top = -420.0
-margin_right = 1324.9
-margin_bottom = -270.0
+margin_top = -362.5
+margin_right = 1359.9
+margin_bottom = -212.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Move Up"]
+[node name="Label" type="Label" parent="Panel/Move Up"]
 margin_top = 10.0
 margin_right = 542.0
 margin_bottom = 139.0
@@ -74,7 +113,7 @@ text = "Move Up"
 align = 2
 valign = 1
 
-[node name="Button" parent="Move Up" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Move Up" instance=ExtResource( 1 )]
 margin_left = 742.0
 margin_right = 1542.0
 margin_bottom = 150.0
@@ -82,22 +121,22 @@ rect_scale = Vector2( 1, 1 )
 text = "move_up"
 m_action_name = "move_up"
 
-[node name="Move Down" type="HBoxContainer" parent="."]
+[node name="Move Down" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -229.8
-margin_top = -360.0
-margin_right = 1436.2
-margin_bottom = -210.0
+margin_top = -307.5
+margin_right = 1481.2
+margin_bottom = -157.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Move Down"]
+[node name="Label" type="Label" parent="Panel/Move Down"]
 margin_top = 10.0
 margin_right = 711.0
 margin_bottom = 139.0
@@ -106,7 +145,7 @@ text = "Move Down"
 align = 2
 valign = 1
 
-[node name="Button" parent="Move Down" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Move Down" instance=ExtResource( 1 )]
 margin_left = 911.0
 margin_right = 1711.0
 margin_bottom = 150.0
@@ -115,22 +154,22 @@ focus_mode = 2
 text = "move_down"
 m_action_name = "move_down"
 
-[node name="Move Left" type="HBoxContainer" parent="."]
+[node name="Move Left" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -202.5
-margin_top = -300.0
+margin_top = -252.5
 margin_right = 1463.5
-margin_bottom = -150.0
+margin_bottom = -102.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Move Left"]
+[node name="Label" type="Label" parent="Panel/Move Left"]
 margin_top = 10.0
 margin_right = 613.0
 margin_bottom = 139.0
@@ -139,7 +178,7 @@ text = "Move Left"
 align = 2
 valign = 1
 
-[node name="Button" parent="Move Left" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Move Left" instance=ExtResource( 1 )]
 margin_left = 813.0
 margin_right = 1613.0
 margin_bottom = 150.0
@@ -148,22 +187,22 @@ focus_mode = 2
 text = "move_left"
 m_action_name = "move_left"
 
-[node name="Move Right" type="HBoxContainer" parent="."]
+[node name="Move Right" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -225.3
-margin_top = -240.0
-margin_right = 1440.7
-margin_bottom = -90.0
+margin_top = -197.5
+margin_right = 1467.7
+margin_bottom = -47.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Move Right"]
+[node name="Label" type="Label" parent="Panel/Move Right"]
 margin_top = 10.0
 margin_right = 693.0
 margin_bottom = 139.0
@@ -172,7 +211,7 @@ text = "Move Right"
 align = 2
 valign = 1
 
-[node name="Button" parent="Move Right" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Move Right" instance=ExtResource( 1 )]
 margin_left = 893.0
 margin_right = 1693.0
 margin_bottom = 150.0
@@ -181,22 +220,22 @@ focus_mode = 2
 text = "move_right"
 m_action_name = "move_right"
 
-[node name="Interact" type="HBoxContainer" parent="."]
+[node name="Interact" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -166.5
-margin_top = -180.0
+margin_top = -142.5
 margin_right = 1499.5
-margin_bottom = -30.0
+margin_bottom = 7.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Interact"]
+[node name="Label" type="Label" parent="Panel/Interact"]
 margin_top = 10.0
 margin_right = 484.0
 margin_bottom = 139.0
@@ -205,7 +244,7 @@ text = "Interact"
 align = 2
 valign = 1
 
-[node name="Button" parent="Interact" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Interact" instance=ExtResource( 1 )]
 margin_left = 684.0
 margin_right = 1484.0
 margin_bottom = 150.0
@@ -214,22 +253,22 @@ focus_mode = 2
 text = "interact"
 m_action_name = "interact"
 
-[node name="Inventory" type="HBoxContainer" parent="."]
+[node name="Inventory" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -191.7
-margin_top = -120.0
+margin_top = -87.5
 margin_right = 1474.3
-margin_bottom = 30.0
+margin_bottom = 62.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Inventory"]
+[node name="Label" type="Label" parent="Panel/Inventory"]
 margin_top = 10.0
 margin_right = 575.0
 margin_bottom = 139.0
@@ -238,7 +277,7 @@ text = "Inventory"
 align = 2
 valign = 1
 
-[node name="Button" parent="Inventory" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Inventory" instance=ExtResource( 1 )]
 margin_left = 775.0
 margin_right = 1575.0
 margin_bottom = 150.0
@@ -247,22 +286,22 @@ focus_mode = 2
 text = "inventory"
 m_action_name = "inventory"
 
-[node name="Craft" type="HBoxContainer" parent="."]
+[node name="Craft" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -114.9
-margin_top = -60.0
+margin_top = -32.5
 margin_right = 1551.1
-margin_bottom = 90.0
+margin_bottom = 117.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Craft"]
+[node name="Label" type="Label" parent="Panel/Craft"]
 margin_top = 10.0
 margin_right = 302.0
 margin_bottom = 139.0
@@ -271,7 +310,7 @@ text = "Craft"
 align = 2
 valign = 1
 
-[node name="Button" parent="Craft" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Craft" instance=ExtResource( 1 )]
 margin_left = 502.0
 margin_right = 1302.0
 margin_bottom = 150.0
@@ -280,21 +319,22 @@ focus_mode = 2
 text = "craft"
 m_action_name = "craft"
 
-[node name="Pause" type="HBoxContainer" parent="."]
+[node name="Pause" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -141.9
+margin_top = 22.5
 margin_right = 1524.1
-margin_bottom = 150.0
+margin_bottom = 172.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Pause"]
+[node name="Label" type="Label" parent="Panel/Pause"]
 margin_top = 10.0
 margin_right = 398.0
 margin_bottom = 139.0
@@ -303,7 +343,7 @@ text = "Pause"
 align = 2
 valign = 1
 
-[node name="Button" parent="Pause" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Pause" instance=ExtResource( 1 )]
 margin_left = 598.0
 margin_right = 1398.0
 margin_bottom = 150.0
@@ -312,22 +352,22 @@ focus_mode = 2
 text = "pause"
 m_action_name = "pause"
 
-[node name="Friend" type="HBoxContainer" parent="."]
+[node name="Friend" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -138.9
-margin_top = 60.0
+margin_top = 77.5
 margin_right = 1527.1
-margin_bottom = 210.0
+margin_bottom = 227.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Friend"]
+[node name="Label" type="Label" parent="Panel/Friend"]
 margin_top = 10.0
 margin_right = 387.0
 margin_bottom = 139.0
@@ -336,7 +376,7 @@ text = "Friend"
 align = 2
 valign = 1
 
-[node name="Button" parent="Friend" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Friend" instance=ExtResource( 1 )]
 margin_left = 587.0
 margin_right = 1387.0
 margin_bottom = 150.0
@@ -345,22 +385,22 @@ focus_mode = 2
 text = "friend"
 m_action_name = "friend"
 
-[node name="Hotbar 1" type="HBoxContainer" parent="."]
+[node name="Hotbar 1" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -177.9
-margin_top = 120.0
+margin_top = 132.5
 margin_right = 1488.1
-margin_bottom = 270.0
+margin_bottom = 282.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Hotbar 1"]
+[node name="Label" type="Label" parent="Panel/Hotbar 1"]
 margin_top = 10.0
 margin_right = 525.0
 margin_bottom = 139.0
@@ -369,7 +409,7 @@ text = "Hotbar 1"
 align = 2
 valign = 1
 
-[node name="Button" parent="Hotbar 1" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Hotbar 1" instance=ExtResource( 1 )]
 margin_left = 725.0
 margin_right = 1525.0
 margin_bottom = 150.0
@@ -378,22 +418,22 @@ focus_mode = 2
 text = "hotbar_1"
 m_action_name = "hotbar_1"
 
-[node name="Hotbar 2" type="HBoxContainer" parent="."]
+[node name="Hotbar 2" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -177.9
-margin_top = 180.0
+margin_top = 187.5
 margin_right = 1488.1
-margin_bottom = 330.0
+margin_bottom = 337.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Hotbar 2"]
+[node name="Label" type="Label" parent="Panel/Hotbar 2"]
 margin_top = 10.0
 margin_right = 525.0
 margin_bottom = 139.0
@@ -402,7 +442,7 @@ text = "Hotbar 2"
 align = 2
 valign = 1
 
-[node name="Button" parent="Hotbar 2" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Hotbar 2" instance=ExtResource( 1 )]
 margin_left = 725.0
 margin_right = 1525.0
 margin_bottom = 150.0
@@ -411,22 +451,22 @@ focus_mode = 2
 text = "hotbar_2"
 m_action_name = "hotbar_2"
 
-[node name="Hotbar 3" type="HBoxContainer" parent="."]
+[node name="Hotbar 3" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -177.9
-margin_top = 240.0
+margin_top = 242.5
 margin_right = 1488.1
-margin_bottom = 390.0
+margin_bottom = 392.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Hotbar 3"]
+[node name="Label" type="Label" parent="Panel/Hotbar 3"]
 margin_top = 10.0
 margin_right = 525.0
 margin_bottom = 139.0
@@ -435,7 +475,7 @@ text = "Hotbar 3"
 align = 2
 valign = 1
 
-[node name="Button" parent="Hotbar 3" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Hotbar 3" instance=ExtResource( 1 )]
 margin_left = 725.0
 margin_right = 1525.0
 margin_bottom = 150.0
@@ -444,22 +484,22 @@ focus_mode = 2
 text = "hotbar_3"
 m_action_name = "hotbar_3"
 
-[node name="Hotbar 4" type="HBoxContainer" parent="."]
+[node name="Hotbar 4" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -177.9
-margin_top = 300.0
+margin_top = 297.5
 margin_right = 1488.1
-margin_bottom = 450.0
+margin_bottom = 447.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Hotbar 4"]
+[node name="Label" type="Label" parent="Panel/Hotbar 4"]
 margin_top = 10.0
 margin_right = 525.0
 margin_bottom = 139.0
@@ -468,7 +508,7 @@ text = "Hotbar 4"
 align = 2
 valign = 1
 
-[node name="Button" parent="Hotbar 4" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Hotbar 4" instance=ExtResource( 1 )]
 margin_left = 725.0
 margin_right = 1525.0
 margin_bottom = 150.0
@@ -477,22 +517,22 @@ focus_mode = 2
 text = "hotbar_4"
 m_action_name = "hotbar_4"
 
-[node name="Place" type="HBoxContainer" parent="."]
+[node name="Place" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -128.7
-margin_top = 360.0
+margin_top = 352.5
 margin_right = 1537.3
-margin_bottom = 510.0
+margin_bottom = 502.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Place"]
+[node name="Label" type="Label" parent="Panel/Place"]
 margin_top = 10.0
 margin_right = 351.0
 margin_bottom = 139.0
@@ -501,7 +541,7 @@ text = "Place"
 align = 2
 valign = 1
 
-[node name="Button" parent="Place" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Place" instance=ExtResource( 1 )]
 margin_left = 551.0
 margin_right = 1351.0
 margin_bottom = 150.0
@@ -510,22 +550,22 @@ focus_mode = 2
 text = "place"
 m_action_name = "place"
 
-[node name="Cancel" type="HBoxContainer" parent="."]
+[node name="Cancel" type="HBoxContainer" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -151.2
-margin_top = 420.0
+margin_top = 407.5
 margin_right = 1514.8
-margin_bottom = 570.0
+margin_bottom = 557.5
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/separation = 200
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Cancel"]
+[node name="Label" type="Label" parent="Panel/Cancel"]
 margin_top = 10.0
 margin_right = 432.0
 margin_bottom = 139.0
@@ -534,7 +574,7 @@ text = "Cancel"
 align = 2
 valign = 1
 
-[node name="Button" parent="Cancel" instance=ExtResource( 1 )]
+[node name="Button" parent="Panel/Cancel" instance=ExtResource( 1 )]
 margin_left = 632.0
 margin_right = 1432.0
 margin_bottom = 150.0
