@@ -925,9 +925,6 @@ position = Vector2( -6000, -7750 )
 [node name="Tree16" parent="Actors/Trees" instance=ExtResource( 17 )]
 position = Vector2( -8500, -8500 )
 
-[node name="Tree17" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -15500, -6750 )
-
 [node name="Tree18" parent="Actors/Trees" instance=ExtResource( 17 )]
 position = Vector2( -18000, -5250 )
 
@@ -948,9 +945,6 @@ position = Vector2( -18500, -19000 )
 
 [node name="Tree24" parent="Actors/Trees" instance=ExtResource( 17 )]
 position = Vector2( -15000, -15500 )
-
-[node name="Tree25" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -16000, -13750 )
 
 [node name="Tree26" parent="Actors/Trees" instance=ExtResource( 17 )]
 position = Vector2( -12000, -14750 )
