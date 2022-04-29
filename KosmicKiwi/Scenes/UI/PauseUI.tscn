@@ -37,7 +37,8 @@ margin_bottom = 1080.0
 [connection signal="pressed" from="PauseMenu/Resume" to="." method="_on_Resume_pressed"]
 [connection signal="pressed" from="PauseMenu/Controls" to="." method="_on_Controls_pressed"]
 [connection signal="pressed" from="PauseMenu/Settings" to="." method="_on_Settings_pressed"]
-[connection signal="pressed" from="PauseMenu/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="PauseMenu/Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="ControlsMenu/Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="SettingsMenu/Panel/Back" to="." method="_on_Back_pressed"]
 

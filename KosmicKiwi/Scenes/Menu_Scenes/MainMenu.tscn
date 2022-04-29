@@ -1,9 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/UIScripts/MenuScripts/MainMenu.gd" type="Script" id=2]
-[ext_resource path="res://ArtAssets/Menu/ScalableBackground.png" type="Texture" id=3]
-[ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/StyleboxTextures/ButtonBackground.tres" type="StyleBox" id=3]
+[ext_resource path="res://ArtAssets/Menu/tital screen.png" type="Texture" id=4]
 [ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://ArtAssets/Menu/Planets/F_Planet.png" type="Texture" id=7]
 [ext_resource path="res://ArtAssets/Menu/Planets/J_Planet.png" type="Texture" id=8]
@@ -14,10 +14,17 @@
 [ext_resource path="res://ArtAssets/Characters/emotes/kiwihappy.png" type="Texture" id=13]
 [ext_resource path="res://ArtAssets/Characters/emotes/sealhappy.png" type="Texture" id=14]
 [ext_resource path="res://ArtAssets/Characters/emotes/friendhappy.png" type="Texture" id=15]
+[ext_resource path="res://ArtAssets/StyleboxTextures/ButtonPressed.tres" type="StyleBox" id=16]
 
 [sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 4698, 2459 )
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -27,18 +34,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackPanel" type="Panel" parent="."]
-self_modulate = Color( 0.572549, 0.529412, 0.639216, 1 )
-margin_left = -29.0
-margin_top = -27.0
-margin_right = 4771.0
-margin_bottom = 2673.0
-rect_scale = Vector2( 0.412148, 0.420036 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_styles/panel = SubResource( 2 )
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 margin_right = 4800.0
 margin_bottom = 2700.0
 rect_scale = Vector2( 0.4, 0.4 )
@@ -53,6 +58,9 @@ margin_right = 850.0
 margin_bottom = 1800.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Planet2" type="TextureRect" parent="Panel"]
 margin_left = 3350.0
@@ -114,6 +122,7 @@ margin_bottom = 1725.0
 texture = ExtResource( 14 )
 
 [node name="GameNameText" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -356.5
@@ -125,12 +134,16 @@ custom_fonts/font = ExtResource( 5 )
 text = "Kosmic Kiwi"
 
 [node name="CloseButton" type="Button" parent="."]
-margin_left = 1757.0
-margin_top = 89.0
-margin_right = 2369.0
-margin_bottom = 695.0
-rect_scale = Vector2( 0.1, 0.1 )
-icon = ExtResource( 4 )
+margin_left = 1421.0
+margin_top = 850.0
+margin_right = 1736.0
+margin_bottom = 985.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 16 )
+custom_styles/normal = SubResource( 3 )
+text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -140,12 +153,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -162.0
-margin_top = -82.0
-margin_right = 153.0
-margin_bottom = 53.0
+margin_left = 461.0
+margin_top = 126.0
+margin_right = 776.0
+margin_bottom = 261.0
+focus_mode = 0
 theme = ExtResource( 1 )
 custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 16 )
+custom_styles/normal = SubResource( 8 )
 text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false

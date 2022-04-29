@@ -10,8 +10,14 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
-animation = "default_Forest"
+animation = "default_Desert"
 playing = true
 
 [node name="Collider" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -1182, 897, 315, 155, 1195, 597, -305, 1356 )
+polygon = PoolVector2Array( -731, 690, 58, 297, 904, 732, 39, 1174 )
+
+[node name="Collider2" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -1199, 901, -731, 691, 33, 1175, -301, 1347 )
+
+[node name="Collider3" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 61, 294, 314, 155, 1195, 597, 909, 729 )

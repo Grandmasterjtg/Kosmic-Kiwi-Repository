@@ -13,7 +13,6 @@ item_to_destroy = "boulder"
 frames = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -24, 226, -211, 226, -264, 119, -208, 10, -26, -25, 195, 2, 214, 47, 192, 146, 104, 218 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

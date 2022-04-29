@@ -185,13 +185,16 @@ func get_items_in_hotbar() -> Array:
 # the key values represent the slots from the inventory that an item is comeing from
 func _get_sslots_in_hotbar() -> Array:
 	return m_hotbar.keys()
-	
+
+# saves the current inventoyr and clears the player's inventory
+# if loading into a planet that the player has previously explored,
+# restore that inventory
 func clear_inventory() -> void:
 	# save the current inventory for future use
 	m_saved_inventories[PlanetManager.get_previous_planet().get_planet_name()] = m_inventory.duplicate(true)
 	# if no inventory has been saved, clear the inventory
-	print("Inventory - clear: " + PlanetManager.get_active_planet().get_planet_name())
 	if m_saved_inventories[PlanetManager.get_active_planet().get_planet_name()].empty():
+		# clear only the inventories that should be cleared
 		for category in m_inventory:
 			if InventoryData.should_clear(category):
 				m_inventory[category] = {}
@@ -199,4 +202,6 @@ func clear_inventory() -> void:
 	else:
 		m_inventory = m_saved_inventories[PlanetManager.get_active_planet().get_planet_name()]
 	
+	# clear the hotbar
+	# doesn't need to be saved
 	m_hotbar = {}
