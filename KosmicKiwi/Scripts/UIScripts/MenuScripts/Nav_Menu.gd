@@ -2,9 +2,10 @@ extends Control
 
 const FOREST_TEXT = "Bright pinks and oranges, this planet is teeming with plant life!"
 const WET_TEXT = "Muddy and moist, perfect conditions for life. Scanners indicate larger lifeforms roaming this planet!"
-const JUNGLE_TEXT = "Toxic rivers and bountiful flora, "
+const JUNGLE_TEXT = "Swampy vines spotted with metal deposits, this planet looks hard to walk through!"
 const DESERT_TEXT = "Dry and arid with rocky cliffs, this planet is dusty and windy!"
-const ENGINE_LOCKED_TEXT = "I need to find the ship's engine before I can travel here!"
+const WET_LOCKED_TEXT = "I need to find the ship's engine before I can travel to the Wet planet!"
+const JUNGLE_LOCKED_TEXT = "I need to find the ship's engine before I can travel to the Junlge planet!"
 const DESERT_LOCKED_TEXT = "I need to find the ship's solar sail and shield rings if I want to make it through that asteroid belt!"
 
 onready var m_buttons = $Buttons.get_children()
@@ -43,12 +44,12 @@ func _on_PlanetButton_hovered(planet_index):
 			if PlanetManager.get_planet_at_index(planet_index).travelable():
 				m_nav_text.text = JUNGLE_TEXT
 			else:
-				m_nav_text.text = ENGINE_LOCKED_TEXT
+				m_nav_text.text = JUNGLE_LOCKED_TEXT
 		2: # wet
 			if PlanetManager.get_planet_at_index(planet_index).travelable():
 				m_nav_text.text = WET_TEXT
 			else:
-				m_nav_text.text = ENGINE_LOCKED_TEXT
+				m_nav_text.text = WET_LOCKED_TEXT
 		3: # desert
 			if PlanetManager.get_planet_at_index(planet_index).travelable():
 				m_nav_text.text = DESERT_TEXT

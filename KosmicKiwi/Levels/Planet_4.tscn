@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Props/World/Puzzles/RopeCliffLeft.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Desert_Tileset.tres" type="TileSet" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Scenes/Props/World/Tree.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Characters/Penguin.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Characters/Stinky.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Characters/Seal.tscn" type="PackedScene" id=21]
 
 [node name="Planet_4" type="Node2D" groups=["level_root"]]
 script = ExtResource( 13 )
@@ -213,6 +214,12 @@ position = Vector2( 9750, -4750 )
 [node name="Dust9" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
 position = Vector2( 8500, -10500 )
 
+[node name="Dust11" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
+position = Vector2( -3907, -13317 )
+
+[node name="Dust12" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
+position = Vector2( -4782, -13737 )
+
 [node name="Dust10" parent="Actors/ResourcePoints/Chemical" instance=ExtResource( 16 )]
 position = Vector2( 6500, -8750 )
 
@@ -303,6 +310,12 @@ position = Vector2( -13750, 4250 )
 [node name="Metal" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -3500, 11875 )
 
+[node name="Metal6" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
+position = Vector2( 2358, -10265 )
+
+[node name="Metal8" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
+position = Vector2( 1411, -10265 )
+
 [node name="Metal2" parent="Actors/ResourcePoints/Metal" instance=ExtResource( 14 )]
 position = Vector2( -4750, 12125 )
 
@@ -379,9 +392,6 @@ position = Vector2( 5500, -7625 )
 
 [node name="Rocks20" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( 8000, -9125 )
-
-[node name="Rocks21" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
-position = Vector2( -4500, -13750 )
 
 [node name="Rocks22" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( -500, -13000 )
@@ -784,5 +794,8 @@ position = Vector2( -500, -16000 )
 
 [node name="Tree11" parent="Actors/Trees" instance=ExtResource( 18 )]
 position = Vector2( 16000, -1500 )
+
+[node name="Seal" parent="Actors" instance=ExtResource( 21 )]
+position = Vector2( 11530, -2430 )
 
 [node name="UI_Layer" parent="." instance=ExtResource( 10 )]

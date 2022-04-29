@@ -33,6 +33,7 @@ region_rect = Rect2( 0, 0, 400, 1000 )
 [node name="NavMenu" type="Control"]
 rect_pivot_offset = Vector2( 804, 604 )
 script = ExtResource( 2 )
+m_start_visible = null
 
 [node name="BackPanel" type="Panel" parent="."]
 margin_left = 180.0
