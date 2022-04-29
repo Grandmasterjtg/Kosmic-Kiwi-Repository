@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=18 format=2]
+[gd_resource type="TileSet" load_steps=17 format=2]
 
 [ext_resource path="res://ArtAssets/Environment/Jungle/J_LCRiver.png" type="Texture" id=1]
 [ext_resource path="res://ArtAssets/Environment/Jungle/J_Cave.png" type="Texture" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://ArtAssets/Environment/Jungle/Briar/J_Brair_Stage1.png" type="Texture" id=8]
 [ext_resource path="res://ArtAssets/Environment/Jungle/Cliffs/J_Edge.png" type="Texture" id=9]
 [ext_resource path="res://ArtAssets/Environment/Jungle/Cliffs/J_Corner_Edge.png" type="Texture" id=10]
-[ext_resource path="res://ArtAssets/Environment/Jungle/Tree.png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 500.603, 530.463, 494.631, 2000, 0, 1748.74, 0, 273.669 )
@@ -234,17 +233,3 @@ points = PoolVector2Array( 494.631, 527.477, 1000, 267.697, 1000, 1748.74, 500.6
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 13/z_index = 0
-14/name = "Tree"
-14/texture = ExtResource( 11 )
-14/tex_offset = Vector2( 0, 0 )
-14/modulate = Color( 1, 1, 1, 1 )
-14/region = Rect2( 0, 0, 1000, 1000 )
-14/tile_mode = 0
-14/occluder_offset = Vector2( 0, 0 )
-14/navigation_offset = Vector2( 0, 0 )
-14/shape_offset = Vector2( 0, 0 )
-14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-14/shape_one_way = false
-14/shape_one_way_margin = 0.0
-14/shapes = [  ]
-14/z_index = 0
