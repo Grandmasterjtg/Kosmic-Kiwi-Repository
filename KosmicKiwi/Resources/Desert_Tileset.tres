@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=17 format=2]
+[gd_resource type="TileSet" load_steps=18 format=2]
 
 [ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/D_LCliffRight.png" type="Texture" id=1]
 [ext_resource path="res://ArtAssets/Environment/Desert/Ground/D_Grounds.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ArtAssets/Environment/Desert/D_Cave.png" type="Texture" id=8]
 [ext_resource path="res://ArtAssets/Environment/Desert/Cliffs/D_Edge.png" type="Texture" id=9]
 [ext_resource path="res://ArtAssets/Environment/Desert/Cliffs/D_Corner_Edge.png" type="Texture" id=10]
+[ext_resource path="res://ArtAssets/Environment/Desert/treesesert.png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 506.575, 527.477, 503.589, 2000, 0, 1754.72, 0, 261.725 )
@@ -247,3 +248,17 @@ points = PoolVector2Array( 494.631, 518.519, 1000, 261.725, 1000, 1754.72, 503.5
 14/shape_one_way_margin = 0.0
 14/shapes = [  ]
 14/z_index = 0
+15/name = "Tree"
+15/texture = ExtResource( 11 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 1000, 1000 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
