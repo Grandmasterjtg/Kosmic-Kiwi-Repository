@@ -68,7 +68,7 @@ func remove_item(item_name: String, amount: int = 1) -> bool:
 		
 		for slot in m_inventory[category]:
 			# if the item name at the slot matches to passed item name and there is enought of the item
-			if inventory[slot][0] == item_name and inventory[slot][1] >= amount:
+			if inventory[slot][0] == item_name:
 				inventory[slot][1] -= amount
 				# if there is no more of the item left in the inventory
 				if inventory[slot][1] <= 0:
@@ -78,7 +78,7 @@ func remove_item(item_name: String, amount: int = 1) -> bool:
 					remove_from_hotbar(item_name)
 				emit_signal("inventory_updated")
 				return true
-		
+				
 	return false
 	
 
