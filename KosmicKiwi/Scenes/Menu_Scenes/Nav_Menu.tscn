@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/UIScripts/MenuScripts/Nav_Menu.gd" type="Script" id=2]
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=3]
 [ext_resource path="res://ArtAssets/Menu/Planets/Asteroids.png" type="Texture" id=4]
-[ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://ArtAssets/Fonts/Themes/nav_menu_label.tres" type="DynamicFont" id=5]
 [ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=6]
 [ext_resource path="res://ArtAssets/Menu/ScalableBackground.png" type="Texture" id=7]
 [ext_resource path="res://ArtAssets/Menu/Planets/J_Planet.png" type="Texture" id=8]
@@ -28,11 +28,9 @@ texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 400, 1000 )
 
 [node name="NavMenu" type="Control"]
+visible = false
 rect_pivot_offset = Vector2( 804, 604 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="BackPanel" type="Panel" parent="."]
 margin_left = 180.0
@@ -54,15 +52,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="TextPanel"]
+[node name="Nav_Text" type="Label" parent="TextPanel"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 88.1719
-margin_bottom = 37.3627
+margin_right = 480.0
+margin_bottom = 180.0
 theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 12 )
-text = "Planets are cool."
+text = "Planets are cool.
+"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -99,18 +99,18 @@ __meta__ = {
 }
 
 [node name="CloseButton" type="Button" parent="."]
-margin_left = 1091.0
-margin_top = 60.0
-margin_right = 1703.0
-margin_bottom = 666.0
+margin_left = 1615.0
+margin_top = 238.0
+margin_right = 2227.0
+margin_bottom = 844.0
 rect_scale = Vector2( 0.1, 0.1 )
 icon = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 123.0
-margin_top = 125.0
-margin_right = 593.0
-margin_bottom = 182.0
+margin_left = 268.0
+margin_top = 246.0
+margin_right = 1153.0
+margin_bottom = 311.0
 rect_scale = Vector2( 0.5, 0.5 )
 theme = ExtResource( 3 )
 custom_fonts/font = ExtResource( 5 )

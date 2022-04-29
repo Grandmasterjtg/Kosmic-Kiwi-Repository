@@ -34,3 +34,16 @@ rect_scale = Vector2( 2.20308, 2.0328 )
 margin_right = 40.0
 margin_bottom = 40.0
 expand = true
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+self_modulate = Color( 0.462745, 0.462745, 0.462745, 0.960784 )
+margin_right = 100.0
+margin_bottom = 100.0
+value = 50.0
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true

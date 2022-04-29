@@ -1,63 +1,14 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Character Scripts/Stinky.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Characters/EmoteBubble.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front2.png" type="Texture" id=3]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back3.png" type="Texture" id=4]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front4.png" type="Texture" id=5]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side2.png" type="Texture" id=6]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front3.png" type="Texture" id=7]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front1.png" type="Texture" id=8]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side1.png" type="Texture" id=9]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side4.png" type="Texture" id=10]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back1.png" type="Texture" id=11]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back4.png" type="Texture" id=12]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side3.png" type="Texture" id=13]
-[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back2.png" type="Texture" id=14]
+[ext_resource path="res://ArtAssets/SpriteFrames/Characters/Stinky.tres" type="SpriteFrames" id=3]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 200.0
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 1500.0
-
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "default",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle_back",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "idle_front",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "idle_side",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "walking_front",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "walking_side",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "walking_back",
-"speed": 8.0
-} ]
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 500.0
@@ -80,7 +31,7 @@ collision_mask = 7
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 3 )
+frames = ExtResource( 3 )
 animation = "idle_side"
 
 [node name="EmoteBubble" parent="." instance=ExtResource( 2 )]
@@ -100,3 +51,7 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 shape = SubResource( 4 )
+
+[node name="AbilityTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true

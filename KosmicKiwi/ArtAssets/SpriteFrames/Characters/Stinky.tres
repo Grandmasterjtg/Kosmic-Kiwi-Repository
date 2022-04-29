@@ -1,0 +1,52 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=2]
+
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side4.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front2.png" type="Texture" id=2]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side2.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back4.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front3.png" type="Texture" id=5]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back3.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side3.png" type="Texture" id=7]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back1.png" type="Texture" id=8]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front1.png" type="Texture" id=9]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Front4.png" type="Texture" id=10]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Back2.png" type="Texture" id=11]
+[ext_resource path="res://ArtAssets/Characters/stinky/PF_Side1.png" type="Texture" id=12]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "idle_back",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle_side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "walking_front",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "walking_back",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walking_side",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "idle_front",
+"speed": 5.0
+} ]

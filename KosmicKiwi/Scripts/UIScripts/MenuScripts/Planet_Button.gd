@@ -6,17 +6,22 @@ onready var m_button = $AspectRatioContainer/Button
 onready var m_label = $Label
 
 export var m_planet_index : int
-var m_planet : Planet
-
 export var m_hover_texture : Texture
 export var m_normal_texture : Texture
+
+var m_planet : Planet
+
+signal hovered(planet_index)
 
 func _ready() -> void:
 	# setup planet for this button
 	m_planet = PlanetManager.m_planets[m_planet_index]
 	
-	# setup button signal and texture
+	# setup button signals
 	m_button.connect("pressed",self,"_on_Button_pressed")
+	m_button.connect("mouse_entered",self,"_on_mouse_entered")
+	
+	# setup button textures
 	if m_hover_texture == null:
 		m_hover_texture = DEFAULT_TEXTURE
 	m_button.texture_hover = m_hover_texture
@@ -45,6 +50,9 @@ func _on_Button_pressed():
 		print("PlanetManager set_active_planet: " + m_planet.get_planet_path())
 	else:
 		printerr("PlanetManager set_active_planet, m_active_planet is NULL")
+
+func _on_mouse_entered():
+	emit_signal("hovered",m_planet_index)
 
 func set_active(state: bool):
 	m_button.disabled = !state
