@@ -1,6 +1,7 @@
 extends Control
 
 const ACTION_PAUSE := "pause"
+const MENU_PATH = "res://Scenes/Menu_Scenes/MainMenu.tscn"
 
 onready var pause_menu := get_node("PauseMenu")
 onready var controls_menu := get_node("ControlsMenu")
@@ -28,7 +29,11 @@ func _on_Controls_pressed():
 	pause_menu.visible = false
 	controls_menu.visible = true
 	
-func _on_Exit_pressed():
+func _on_Menu_pressed():
+	get_tree().paused = false
+	get_tree().change_scene(MENU_PATH)
+
+func _on_Quit_pressed():
 	get_tree().quit()
 
 func _on_Resume_pressed():
@@ -37,3 +42,4 @@ func _on_Resume_pressed():
 func _on_Settings_pressed():
 	pause_menu.visible = false
 	settings_menu.visible = true
+
