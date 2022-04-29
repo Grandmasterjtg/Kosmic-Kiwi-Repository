@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverLeft.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Jungle_Tileset.tres" type="TileSet" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://Scenes/Props/World/Resources/Metal.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Props/World/Resources/Pond.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Props/World/Resources/Dust.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Scenes/Props/World/Tree.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.005, 10 )
@@ -874,124 +873,5 @@ position = Vector2( -1513, -4785 )
 position = Vector2( -1013, -4535 )
 
 [node name="Cliffs" type="YSort" parent="Actors/Puzzles"]
-
-[node name="Trees" type="YSort" parent="Actors"]
-
-[node name="Tree" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -4500, 1500 )
-
-[node name="Tree2" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -5500, 3250 )
-
-[node name="Tree3" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -500, 5000 )
-
-[node name="Tree4" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -6000, 5250 )
-
-[node name="Tree5" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( 0, 1000 )
-
-[node name="Tree6" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -1500, -1000 )
-
-[node name="Tree7" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -7000, 1000 )
-
-[node name="Tree8" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -8500, 2000 )
-
-[node name="Tree9" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -10500, 2750 )
-
-[node name="Tree10" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( 4000, 1750 )
-
-[node name="Tree11" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( 3500, -500 )
-
-[node name="Tree12" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( 500, -2750 )
-
-[node name="Tree13" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -11000, -1000 )
-
-[node name="Tree14" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -8500, -2000 )
-
-[node name="Tree15" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -5500, -2500 )
-
-[node name="Tree16" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -14000, -1750 )
-
-[node name="Tree17" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -16500, -500 )
-
-[node name="Tree18" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -16500, -2750 )
-
-[node name="Tree19" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -13000, -4250 )
-
-[node name="Tree20" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -18500, -5000 )
-
-[node name="Tree21" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -16500, -7250 )
-
-[node name="Tree22" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -14500, -6500 )
-
-[node name="Tree23" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -13000, -8000 )
-
-[node name="Tree24" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -12000, -6750 )
-
-[node name="Tree25" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -6000, -5250 )
-
-[node name="Tree26" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -3000, -6000 )
-
-[node name="Tree27" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -6500, -8000 )
-
-[node name="Tree28" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -9500, -5750 )
-
-[node name="Tree29" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -19500, -9750 )
-
-[node name="Tree30" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -25000, -12250 )
-
-[node name="Tree31" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -18500, -13000 )
-
-[node name="Tree32" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -24500, -6250 )
-
-[node name="Tree33" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -15000, -14000 )
-
-[node name="Tree34" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -12000, -13500 )
-
-[node name="Tree35" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -13500, -16250 )
-
-[node name="Tree36" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -13000, -11500 )
-
-[node name="Tree37" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -9500, -13500 )
-
-[node name="Tree38" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -24500, -15750 )
-
-[node name="Tree39" parent="Actors/Trees" instance=ExtResource( 17 )]
-position = Vector2( -18500, -19250 )
 
 [node name="UI_Layer" parent="." instance=ExtResource( 10 )]
