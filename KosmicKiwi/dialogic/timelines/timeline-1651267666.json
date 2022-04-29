@@ -1,0 +1,124 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "open_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "kiwisad",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "penguinsad",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "I'm scared of what I saw on the lifeform scanner! I'm gonna stay in the ship..."
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwisad",
+			"text": "Aw, I'm sorry Penguin."
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "I'm sure it'll be fine! But, if you want to stay on the ship, that's okay with me."
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "penguinsad",
+			"text": "Okay... Thanks Kiwi..."
+		},
+		{
+			"animation": "shake_x.gd",
+			"animation_length": 2,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "(Don't change)",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "I wonder if I can make any friends!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "close_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651267666.json",
+		"name": "Arrive_Wet"
+	}
+}

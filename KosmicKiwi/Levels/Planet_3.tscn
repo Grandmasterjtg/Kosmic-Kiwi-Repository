@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverRight.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Wet_Tileset.tres" type="TileSet" id=2]
@@ -10,9 +10,12 @@
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverLeft.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/UI/UI_Control.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Characters/Enemy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Props/World/Resources/Grass.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
+[ext_resource path="res://Scenes/Characters/Stinky.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Props/World/Resources/Pond.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Characters/Seal.tscn" type="PackedScene" id=16]
 
 [node name="Planet_3" type="Node2D" groups=["level_root"]]
 script = ExtResource( 13 )
@@ -699,5 +702,92 @@ position = Vector2( 29987, -9285 )
 
 [node name="Boulder75" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( 28987, -9285 )
+
+[node name="Enemy7" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 2201, -3917 )
+
+[node name="Enemy9" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 1023, -3924 )
+
+[node name="Enemy10" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 16051, -14034 )
+
+[node name="Enemy11" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 13092, -12510 )
+
+[node name="Enemy12" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 9727, -10859 )
+
+[node name="Enemy13" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 14141, -10754 )
+
+[node name="Enemy14" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 15086, -11914 )
+
+[node name="Enemy15" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 20412, -13119 )
+
+[node name="Enemy32" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 19412, -9271 )
+
+[node name="Enemy33" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 17768, -9254 )
+
+[node name="Enemy34" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 17446, -13356 )
+
+[node name="Enemy16" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 19338, -12951 )
+
+[node name="Enemy17" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 11771, -11698 )
+
+[node name="Enemy18" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 11060, -11596 )
+
+[node name="Enemy19" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 15098, -13310 )
+
+[node name="Enemy20" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 8436, -15039 )
+
+[node name="Enemy21" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 9419, -15192 )
+
+[node name="Enemy22" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 5385, -13666 )
+
+[node name="Enemy23" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 418, -15039 )
+
+[node name="Enemy24" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 1876, -17768 )
+
+[node name="Enemy25" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 2741, -18293 )
+
+[node name="Enemy26" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( -717, -21887 )
+
+[node name="Enemy27" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( -56, -22345 )
+
+[node name="Enemy28" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 6284, -19158 )
+
+[node name="Enemy29" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 7657, -19107 )
+
+[node name="Enemy30" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 6843, -19649 )
+
+[node name="Enemy31" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 5114, -20683 )
+
+[node name="Stinky" parent="Actors" instance=ExtResource( 14 )]
+position = Vector2( 31014, -7668 )
+
+[node name="Seal" parent="Actors" instance=ExtResource( 16 )]
+position = Vector2( -2368, 13481 )
 
 [node name="UI_Layer" parent="." instance=ExtResource( 10 )]

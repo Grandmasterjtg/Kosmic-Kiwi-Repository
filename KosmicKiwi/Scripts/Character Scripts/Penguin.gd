@@ -4,7 +4,7 @@ const ITEM_NAME = "Foam Charge"
 const PLACE := "place"
 const CANCEL := "cancel"
 const FOAM_TEXTURE = preload("res://ArtAssets/ItemIcons/Foam.png")
-const PENGUIN_HAPPY_TEXTURE = preload("res://ArtAssets/Characters/emotes/penguinhappy.png")
+const PENGUIN_HAPPY_TEXTURE = preload("res://ArtAssets/Characters/emotes/simple/penguineHappy.png")
 const ITEM_SCENE_PATH = "res://Scenes/Props/Items/Foam.tscn"
 
 var m_showing_icon := false

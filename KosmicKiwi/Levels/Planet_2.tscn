@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverLeft.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Jungle_Tileset.tres" type="TileSet" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://Scenes/Props/World/Resources/Metal.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Props/World/Resources/Pond.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Props/World/Resources/Dust.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Characters/Stinky.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Characters/Seal.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Characters/Penguin.tscn" type="PackedScene" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.005, 10 )
@@ -873,5 +876,14 @@ position = Vector2( -1513, -4785 )
 position = Vector2( -1013, -4535 )
 
 [node name="Cliffs" type="YSort" parent="Actors/Puzzles"]
+
+[node name="Seal" parent="Actors/Puzzles" instance=ExtResource( 18 )]
+position = Vector2( -5951, 11970 )
+
+[node name="Penguin" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( -1222, 11744 )
+
+[node name="Stinky" parent="Actors" instance=ExtResource( 17 )]
+position = Vector2( -3507, 11789 )
 
 [node name="UI_Layer" parent="." instance=ExtResource( 10 )]
