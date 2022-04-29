@@ -1,116 +1,53 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Menu_Scenes/Planet_Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/UIScripts/MenuScripts/Nav_Menu.gd" type="Script" id=2]
 [ext_resource path="res://ArtAssets/Fonts/Themes/main_theme.tres" type="Theme" id=3]
-[ext_resource path="res://ArtAssets/Menu/Planets/Asteroids.png" type="Texture" id=4]
-[ext_resource path="res://ArtAssets/Fonts/Themes/nav_menu_label.tres" type="DynamicFont" id=5]
+[ext_resource path="res://ArtAssets/Menu/Planets/F_Planet.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://ArtAssets/UI/ExitButton.png" type="Texture" id=6]
 [ext_resource path="res://ArtAssets/Menu/ScalableBackground.png" type="Texture" id=7]
 [ext_resource path="res://ArtAssets/Menu/Planets/J_Planet.png" type="Texture" id=8]
 [ext_resource path="res://ArtAssets/Menu/Planets/D_Planet.png" type="Texture" id=9]
 [ext_resource path="res://ArtAssets/Menu/Planets/W_Planet.png" type="Texture" id=10]
-[ext_resource path="res://ArtAssets/Menu/Planets/D_PlanetB.png" type="Texture" id=11]
-[ext_resource path="res://ArtAssets/Fonts/Themes/dialog_font.tres" type="DynamicFont" id=12]
-[ext_resource path="res://ArtAssets/Menu/Planets/J_PlanetB.png" type="Texture" id=13]
-[ext_resource path="res://ArtAssets/Menu/Planets/W_PlanetB.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 4698, 2459 )
 
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 7 )
-region_rect = Rect2( 0, 0, 4698, 2459 )
-
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 400, 1000 )
-
 [node name="NavMenu" type="Control"]
 visible = false
+margin_left = 340.0
+margin_top = 180.0
+margin_right = 340.0
+margin_bottom = 180.0
 rect_pivot_offset = Vector2( 804, 604 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="BackPanel" type="Panel" parent="."]
-margin_left = 180.0
-margin_top = 180.0
-margin_right = 1740.0
-margin_bottom = 900.0
+[node name="Panel" type="Panel" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 4807.0
+margin_bottom = 2707.0
+rect_scale = Vector2( 0.25, 0.25 )
 custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextPanel" type="Panel" parent="."]
-margin_left = 1150.0
-margin_top = 636.0
-margin_right = 1650.0
-margin_bottom = 836.0
-custom_styles/panel = SubResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Nav_Text" type="Label" parent="TextPanel"]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 480.0
-margin_bottom = 180.0
-theme = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 12 )
-text = "Planets are cool.
-"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Asteroids3" type="Panel" parent="."]
-margin_left = 1113.0
-margin_top = 387.0
-margin_right = 1213.0
-margin_bottom = 687.0
-rect_scale = Vector2( -1, 1 )
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Asteroids" type="Panel" parent="."]
-margin_left = 954.0
-margin_top = 233.0
-margin_right = 1054.0
-margin_bottom = 533.0
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Asteroids2" type="Panel" parent="."]
-margin_left = 957.0
-margin_top = 533.0
-margin_right = 1057.0
-margin_bottom = 833.0
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CloseButton" type="Button" parent="."]
-margin_left = 1615.0
-margin_top = 238.0
-margin_right = 2227.0
-margin_bottom = 844.0
+margin_left = 1091.0
+margin_top = 60.0
+margin_right = 1703.0
+margin_bottom = 666.0
 rect_scale = Vector2( 0.1, 0.1 )
 icon = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 268.0
-margin_top = 246.0
-margin_right = 1153.0
-margin_bottom = 311.0
+margin_left = 123.0
+margin_top = 125.0
+margin_right = 593.0
+margin_bottom = 182.0
 rect_scale = Vector2( 0.5, 0.5 )
 theme = ExtResource( 3 )
 custom_fonts/font = ExtResource( 5 )
@@ -120,37 +57,35 @@ text = "Choose a planet to travel to:"
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Forest_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 340.0
-margin_top = 429.0
-margin_right = 492.0
-margin_bottom = 619.0
+[node name="Planet_0_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 115.0
+margin_top = 246.0
+margin_right = 267.0
+margin_bottom = 436.0
 size_flags_horizontal = 3
+m_texture = ExtResource( 4 )
 
-[node name="Jungle_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 703.0
-margin_top = 540.0
-margin_right = 860.0
-margin_bottom = 730.0
+[node name="Planet_1_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 400.0
+margin_top = 415.0
+margin_right = 557.0
+margin_bottom = 605.0
 size_flags_horizontal = 3
 m_planet_index = 1
-m_hover_texture = ExtResource( 13 )
-m_normal_texture = ExtResource( 8 )
+m_texture = ExtResource( 8 )
 
-[node name="Wet_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 562.0
-margin_top = 344.0
-margin_right = 715.0
-margin_bottom = 531.0
+[node name="Planet_2_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 608.0
+margin_top = 225.0
+margin_right = 761.0
+margin_bottom = 412.0
 m_planet_index = 2
-m_hover_texture = ExtResource( 14 )
-m_normal_texture = ExtResource( 10 )
+m_texture = ExtResource( 10 )
 
-[node name="Desert_Button" parent="Buttons" instance=ExtResource( 1 )]
-margin_left = 1296.0
-margin_top = 331.0
-margin_right = 1449.0
-margin_bottom = 518.0
+[node name="Planet_3_Button" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 936.0
+margin_top = 299.0
+margin_right = 1089.0
+margin_bottom = 486.0
 m_planet_index = 3
-m_hover_texture = ExtResource( 11 )
-m_normal_texture = ExtResource( 9 )
+m_texture = ExtResource( 9 )

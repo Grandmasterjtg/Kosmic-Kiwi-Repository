@@ -71,16 +71,6 @@
 			"event_id": "dialogic_042"
 		},
 		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": false,
-			"wait_seconds": 1,
-			"waiting_skippable": true
-		},
-		{
-			"change_timeline": "timeline-1651072429.json",
-			"event_id": "dialogic_020"
-		},
-		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
 		}

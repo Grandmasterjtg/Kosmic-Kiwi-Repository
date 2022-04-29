@@ -144,7 +144,6 @@ MouseManager="*res://Scripts/UIScripts/Mouse/MouseManager.gd"
 IsometricVector="*res://Scripts/PlayerScripts/IsometricVector.gd"
 ResourceManager="*res://Scripts/InteractableScripts/ResourceManager.gd"
 LoadingManager="*res://Scripts/UIScripts/Loading/LoadingManager.gd"
-DialogManager="*res://Scripts/ManagerScripts/DialogManager.gd"
 
 [display]
 
