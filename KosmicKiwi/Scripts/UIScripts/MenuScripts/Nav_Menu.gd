@@ -11,6 +11,8 @@ onready var m_buttons = $Buttons.get_children()
 onready var m_go_home_button = $GoHome
 onready var m_nav_text = $TextPanel/Nav_Text
 
+const FINAL_PART = "Warp Core"
+
 export var m_start_visible := false
 var m_close_button
 
@@ -72,6 +74,8 @@ func update_buttons():
 	PlanetManager.update_planets()
 	for button in m_buttons:
 		button.update_button()
+	if Inventory.item_exists_in_inventory(FINAL_PART):
+		m_go_home_button.visible = true
 		
 func show_go_home():
 	m_go_home_button.visible = true
