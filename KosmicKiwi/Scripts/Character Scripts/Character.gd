@@ -54,9 +54,6 @@ func set_state(state):
 	if (state == CharacterState.IDLE):
 		change_idle_animation()
 
-func get_state() -> int:
-	return m_current_state
-
 func handle_state():
 	match m_current_state:
 		CharacterState.FOLLOW:

@@ -7,16 +7,12 @@ onready var m_item_to_craft = $ItemToCraft
 onready var m_recipe_display = $Recipes
 onready var m_craft_button = $Craft
 
-# signals
-signal dialog_check(item_name)
-
 # data variables
 var m_recipe : Recipe
 
 func _ready():
 	m_craft_button.connect("button_down", self, "craft")
 	m_craft_button.connect("button_up", self, "reset")
-	self.connect("dialog_check",DialogManager,"play_dialog")
 
 # takes a recipe variable
 # initializes the display with the correct items and amounts
@@ -52,8 +48,6 @@ func craft() -> bool:
 		Inventory.add_item(m_recipe.get_item_name(), m_recipe.get_quantity())
 		
 		$CraftSFX.play()
-		print(item_name)
-		emit_signal("dialog_check",item_name)
 		
 		return true
 	else:
