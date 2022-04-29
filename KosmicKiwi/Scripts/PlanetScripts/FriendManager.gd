@@ -3,9 +3,12 @@ extends Node
 const penguin_found_dialog = "Find_Penguin"
 const stinky_found_dialog = "Find_Stinky"
 const seal_found_dialog = "Find_Seal"
-const penguin_image = preload("res://ArtAssets/Characters/emotes/penguinhappy.png")
-const stinky_image = preload("res://ArtAssets/Characters/emotes/friendthinking.png")
-const seal_image = preload("res://ArtAssets/Characters/emotes/sealhappy.png")
+const penguin_display_image = preload("res://ArtAssets/Characters/emotes/penguinhappy.png")
+const stinky_display_image = preload("res://ArtAssets/Characters/emotes/friendthinking.png")
+const seal_display_image = preload("res://ArtAssets/Characters/emotes/sealhappy.png")
+const penguin_emote = preload("res://ArtAssets/Characters/emotes/simple/penguineHappy.png")
+const stinky_emote = preload("res://ArtAssets/Characters/emotes/simple/StinkyHappy.png")
+const seal_emote = preload("res://ArtAssets/Characters/emotes/simple/sealHappy.png")
 
 enum FriendID {PENGUIN, SEAL, STINKY}
 
@@ -125,11 +128,11 @@ func current_friend_follow_player():
 		friend.set_state(friend.CharacterState.FOLLOW)
 		match m_current_friend_id:
 			0: # Penguin
-				friend.emote.open_bubble_with_texture(penguin_image)
+				friend.emote.open_bubble_with_texture(penguin_emote)
 			1: # Seal
-				friend.emote.open_bubble_with_texture(seal_image)
+				friend.emote.open_bubble_with_texture(seal_emote)
 			2: # Stinky
-				friend.emote.open_bubble_with_texture(stinky_image)
+				friend.emote.open_bubble_with_texture(stinky_emote)
 
 func update_friend_display():
 	# this will change the UI images and mouse texture
@@ -137,11 +140,11 @@ func update_friend_display():
 	if friend_display != null:
 		match m_current_friend_id:
 			FriendID.PENGUIN:
-				friend_display.set_texture(penguin_image)
+				friend_display.set_texture(penguin_display_image)
 			FriendID.STINKY:
-				friend_display.set_texture(stinky_image)
+				friend_display.set_texture(stinky_display_image)
 			FriendID.SEAL:
-				friend_display.set_texture(seal_image)
+				friend_display.set_texture(seal_display_image)
 
 func start_friend_ability():
 	var friend_display = get_tree().get_nodes_in_group("canvas")[0].get_node("FriendDisplay")

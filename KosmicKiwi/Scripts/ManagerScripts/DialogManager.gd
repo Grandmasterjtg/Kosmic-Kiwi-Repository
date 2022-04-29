@@ -8,7 +8,8 @@ var m_tutorial_states = {
 
 var m_arrival_states = {
 	"Forest": { "traveled_to": false, "dialogue": "Arrive_Forest"},
-	"Desert": { "traveled_to": false, "dialogue": "Arrive_Desert"}
+	"Desert": { "traveled_to": false, "dialogue": "Arrive_Desert"},
+	"Wet": { "traveled_to": false, "dialogue": "Arrive_Wet"},
 }
 
 signal dialog_started

@@ -1,7 +1,8 @@
 extends Character
 
-const TARGET_ITEM = "Rock"
-var stinky_texture = load("res://ArtAssets/Characters/emotes/friendthinking.png")
+const TARGET_ITEM_1 = "Rock"
+const TARGET_ITEM_2 = "Foam"
+var stinky_texture = load("res://ArtAssets/Characters/emotes/simple/StinkyStinky.png")
 var item_texture = load("res://ArtAssets/ItemIcons/Rock.png")
 
 export var m_timer_length := 5
@@ -44,7 +45,10 @@ func handle_state():
 			set_state(CharacterState.HOME)
 
 func steal_from_player():
-	if (Inventory.item_exists_in_inventory(TARGET_ITEM)):
+	var item_1_exists = Inventory.item_exists_in_inventory(TARGET_ITEM_1)
+	var item_2_exists = Inventory.item_exists_in_inventory(TARGET_ITEM_2)
+	
+	if item_1_exists or item_2_exists:
 		if (self.global_position.distance_to(m_player_node.global_position) < m_detection_distance):
 			m_direction = m_player_node.global_position - self.global_position
 			move(m_direction)
@@ -52,7 +56,10 @@ func steal_from_player():
 			if (m_direction.length_squared() < (m_stop_distance * m_stop_distance)):
 				scale += Vector2(0.1,0.1)
 				emote.open_bubble_with_texture(item_texture)
-				Inventory.remove_item(TARGET_ITEM)
+				if item_1_exists:
+					Inventory.remove_item(TARGET_ITEM_1, ItemData.get_stack_size(TARGET_ITEM_1))
+				if item_2_exists:
+					Inventory.remove_item(TARGET_ITEM_2, ItemData.get_stack_size(TARGET_ITEM_2))
 				set_state(CharacterState.HOME)
 		else:
 			.change_idle_animation()
