@@ -1,0 +1,177 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "open_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "kiwihappy",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "penguinhappy",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "3-fade_in_up_big.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "friendhappy",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": true,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650465497.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "sealhappy",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "We've found the last ship part!!"
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "We've got all our pals together too!"
+		},
+		{
+			"character": "character-1650465497.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "And a new smelly pal too!"
+		},
+		{
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_001",
+			"portrait": "friendthinking",
+			"text": "[shake rate=10 level=50]Nice! I have no idea where we're going.[/shake]"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Stinky here seems to want to follow us anywhere! Let's take him back home with us guys, what do ya say?"
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "penguinhappy",
+			"text": "A new alien buddy! [shake rate=10 level=20]Yes![/shake]"
+		},
+		{
+			"character": "character-1650465535.json",
+			"event_id": "dialogic_001",
+			"portrait": "friendhappy",
+			"text": "[shake rate=10 level=50]Adventure! I'm excited.[/shake]"
+		},
+		{
+			"character": "character-1650465497.json",
+			"event_id": "dialogic_001",
+			"portrait": "sealhappy",
+			"text": "I'll fire up the engines!"
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "Time to go home!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "",
+				"target_node_path": "res://Scripts/ManagerScripts/DialogManager.gd"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "close_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651260184.json",
+		"name": "End_Game"
+	}
+}
