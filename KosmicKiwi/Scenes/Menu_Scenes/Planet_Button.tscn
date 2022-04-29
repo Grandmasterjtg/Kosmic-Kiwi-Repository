@@ -20,6 +20,9 @@ size_flags_vertical = 1
 theme = ExtResource( 3 )
 text = "Planet"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button" type="Button" parent="."]
 margin_top = 33.0

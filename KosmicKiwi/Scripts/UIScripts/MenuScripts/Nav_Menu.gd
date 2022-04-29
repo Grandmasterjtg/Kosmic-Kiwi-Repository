@@ -2,6 +2,7 @@ extends Control
 
 var m_close_button
 onready var m_buttons = $Buttons.get_children()
+onready var m_go_home_button = $GoHome
 
 func _ready():
 	m_close_button = $CloseButton
@@ -30,3 +31,6 @@ func update_buttons():
 	PlanetManager.update_planets()
 	for button in m_buttons:
 		button.update_button()
+		
+func show_go_home():
+	m_go_home_button.visible = true
