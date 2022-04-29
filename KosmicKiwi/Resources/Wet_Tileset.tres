@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=17 format=2]
+[gd_resource type="TileSet" load_steps=18 format=2]
 
 [ext_resource path="res://ArtAssets/Environment/Cliffs4-23-22/W_LCliffLeft.png" type="Texture" id=1]
 [ext_resource path="res://ArtAssets/Environment/Wet/Ground/W_Grounds.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ArtAssets/Environment/Wet/Briar/W_Briar_Stage1.png" type="Texture" id=8]
 [ext_resource path="res://ArtAssets/Environment/Wet/Cliffs/W_Edge.png" type="Texture" id=9]
 [ext_resource path="res://ArtAssets/Environment/Wet/Cliffs/W_Corner_Edge.png" type="Texture" id=10]
+[ext_resource path="res://ArtAssets/Environment/Wet/treewet.png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 506.575, 530.463, 500.603, 2000, 0, 1754.72, 0, 282.627 )
@@ -219,3 +220,17 @@ points = PoolVector2Array( 497.617, 527.477, 1000, 270.683, 1000, 1754.72, 506.5
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 12/z_index = 0
+13/name = "Tree"
+13/texture = ExtResource( 11 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 1000, 1000 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
