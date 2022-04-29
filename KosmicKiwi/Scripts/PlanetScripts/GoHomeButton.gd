@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 
 const SCENE_TO_LOAD := "res://Levels/EndScreen.tscn"

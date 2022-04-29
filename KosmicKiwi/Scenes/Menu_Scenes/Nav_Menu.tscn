@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Menu_Scenes/Planet_Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/UIScripts/MenuScripts/Nav_Menu.gd" type="Script" id=2]
@@ -14,6 +14,9 @@
 [ext_resource path="res://ArtAssets/Fonts/Themes/dialog_font.tres" type="DynamicFont" id=12]
 [ext_resource path="res://ArtAssets/Menu/Planets/J_PlanetB.png" type="Texture" id=13]
 [ext_resource path="res://ArtAssets/Menu/Planets/W_PlanetB.png" type="Texture" id=14]
+[ext_resource path="res://ArtAssets/Menu/Planets/GoHomeButtonDark.png" type="Texture" id=15]
+[ext_resource path="res://ArtAssets/Menu/Planets/GoHomeButton.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/PlanetScripts/GoHomeButton.gd" type="Script" id=17]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 7 )
@@ -28,13 +31,6 @@ texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 400, 1000 )
 
 [node name="NavMenu" type="Control"]
-margin_left = 340.0
-margin_top = 180.0
-margin_right = 340.0
-margin_bottom = 180.0
-
-visible = false
-
 rect_pivot_offset = Vector2( 804, 604 )
 script = ExtResource( 2 )
 
@@ -123,40 +119,45 @@ custom_fonts/font = ExtResource( 5 )
 text = "Choose a planet to travel to:"
 
 [node name="GoHome" type="Control" parent="."]
-visible = false
-margin_left = 717.0
-margin_top = 434.0
-margin_right = 870.0
-margin_bottom = 621.0
+margin_left = 382.0
+margin_top = 643.0
+margin_right = 615.0
+margin_bottom = 870.0
 rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="GoHome"]
+margin_left = 30.6666
 margin_top = -2.66669
-margin_right = 190.0
+margin_right = 220.667
 margin_bottom = 30.3333
 size_flags_vertical = 1
 theme = ExtResource( 3 )
-text = "Planet"
+text = "Go Home"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="GoHome"]
-margin_left = 2.0
-margin_top = 35.6665
-margin_right = 752.0
-margin_bottom = 785.667
-rect_scale = Vector2( 0.25, 0.25 )
-icon = ExtResource( 11 )
-expand_icon = true
-script = ExtResource( 12 )
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GoHome"]
+margin_left = 8.0
+margin_top = 26.6666
+margin_right = 308.0
+margin_bottom = 326.667
+rect_scale = Vector2( 0.75, 0.75 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="TextureButton" parent="GoHome/AspectRatioContainer"]
+margin_right = 300.0
+margin_bottom = 300.0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 16 )
+script = ExtResource( 17 )
 
 [node name="Buttons" type="Control" parent="."]
 margin_right = 40.0
