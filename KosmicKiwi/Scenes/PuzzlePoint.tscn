@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Puzzle Scripts/PuzzlePoint.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Puzzle Scripts/PuzzleCollider.gd" type="Script" id=3]
+
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 81.9878
+
+[node name="MainTiles" type="TileMap"]
+mode = 1
+cell_size = Vector2( 1000, 500 )
+collision_layer = 4
+collision_mask = 8
+format = 1
+script = ExtResource( 2 )
+
+[node name="Obstacle" type="TileMap" parent="."]
+mode = 1
+cell_size = Vector2( 1000, 500 )
+collision_layer = 4
+collision_mask = 8
+format = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2( 10, 10 )
+shape = SubResource( 1 )
+script = ExtResource( 3 )
+
+[connection signal="collided" from="Area2D/CollisionShape2D" to="." method="_on_CollisionShape2D_collided"]
