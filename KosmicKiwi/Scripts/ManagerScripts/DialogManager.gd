@@ -36,3 +36,8 @@ func play_planet_arrive_dialog(key: String):
 		get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
 		set_tutorial_state(key, true)
 		emit_signal("dialog_started")
+
+func play_end_game_dialog():
+	var dialog = Dialogic.start("End_Game")
+	get_tree().get_nodes_in_group("canvas")[0].add_child(dialog)
+	emit_signal("dialog_started")

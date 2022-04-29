@@ -40,7 +40,7 @@
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
 			"portrait": "Default",
-			"text": "Now that I've got this Fiber, I can craft it into a Rope! Press \"C\" to open the Crafting Menu."
+			"text": "I just need 2 more Fiber, then I can craft it into a Rope!\nOnce I've gathered enough, press \"C\" to open the Crafting Menu."
 		},
 		{
 			"call_node": {
