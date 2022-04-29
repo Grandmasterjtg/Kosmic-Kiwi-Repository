@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverRight.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Resources/Wet_Tileset.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Props/World/Puzzles/RiverLeft.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Interactables/Ship.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/UI/UI_Control.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Props/World/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Props/World/Resources/Grass.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scripts/PlanetScripts/LevelManager.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/Props/World/Resources/Pond.tscn" type="PackedScene" id=15]
@@ -699,5 +700,91 @@ position = Vector2( 29987, -9285 )
 
 [node name="Boulder75" parent="Actors/Puzzles/Boulders" instance=ExtResource( 4 )]
 position = Vector2( 28987, -9285 )
+
+[node name="Trees" type="YSort" parent="Actors"]
+
+[node name="Tree" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( -5000, 4750 )
+
+[node name="Tree2" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( -7500, 2000 )
+
+[node name="Tree3" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( -8000, 0 )
+
+[node name="Tree4" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( -2000, -1500 )
+
+[node name="Tree5" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 3000, 2750 )
+
+[node name="Tree6" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 7500, -1500 )
+
+[node name="Tree7" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 2000, -2250 )
+
+[node name="Tree8" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 12500, -2250 )
+
+[node name="Tree9" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 14000, 500 )
+
+[node name="Tree10" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 17000, 2250 )
+
+[node name="Tree11" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 25500, 250 )
+
+[node name="Tree12" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 20500, -250 )
+
+[node name="Tree13" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 22000, -6000 )
+
+[node name="Tree14" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 14500, -9250 )
+
+[node name="Tree15" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 25000, -11750 )
+
+[node name="Tree16" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 20000, -14000 )
+
+[node name="Tree17" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 13500, -12250 )
+
+[node name="Tree18" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 20500, -10500 )
+
+[node name="Tree19" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 11000, -15500 )
+
+[node name="Tree20" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 4500, -12750 )
+
+[node name="Tree21" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 1000, -17500 )
+
+[node name="Tree22" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( -500, -22750 )
+
+[node name="Tree23" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 7000, -18750 )
+
+[node name="Tree24" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 7000, -25000 )
+
+[node name="Tree25" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 15000, -21750 )
+
+[node name="Tree26" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 18500, -23750 )
+
+[node name="Tree27" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 13500, -26000 )
+
+[node name="Tree28" parent="Actors/Trees" instance=ExtResource( 11 )]
+position = Vector2( 10500, -21000 )
 
 [node name="UI_Layer" parent="." instance=ExtResource( 10 )]
