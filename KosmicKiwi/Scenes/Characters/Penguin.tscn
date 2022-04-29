@@ -33,11 +33,6 @@ animations = [ {
 "name": "idle_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "idle_front",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "idle_side",
@@ -48,15 +43,20 @@ animations = [ {
 "name": "walking_front",
 "speed": 8.0
 }, {
+"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "walking_back",
+"speed": 8.0
+}, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "walking_side",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "walking_back",
-"speed": 8.0
+"name": "idle_front",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=4]
@@ -79,7 +79,7 @@ collision_mask = 3
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.66, 0.66 )
 frames = SubResource( 3 )
 
 [node name="EmoteBubble" parent="." instance=ExtResource( 1 )]
@@ -98,3 +98,6 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 shape = SubResource( 4 )
+
+[node name="AbilityTimer" type="Timer" parent="."]
+one_shot = true
