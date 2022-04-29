@@ -4,7 +4,8 @@ var m_planets = [ # setup each planet in this array, index is important
 	Planet.new("Forest", "res://Levels/Planet_1.tscn", preload("res://ArtAssets/Menu/Planets/F_Planet.png")),
 	Planet.new("Jungle", "res://Levels/Planet_2.tscn", preload("res://ArtAssets/Menu/Planets/J_Planet.png")),
 	Planet.new("Wet", "res://Levels/Planet_3.tscn", preload("res://ArtAssets/Menu/Planets/W_Planet.png")),
-	Planet.new("Desert", "res://Levels/Planet_4.tscn", preload("res://ArtAssets/Menu/Planets/D_Planet.png"))
+	Planet.new("Desert", "res://Levels/Planet_4.tscn", preload("res://ArtAssets/Menu/Planets/D_Planet.png")),
+	Planet.new("New Zealand", "res://Levels/EndScreen.tscn", preload("res://ArtAssets/Menu/Planets/GoHomeButton.png"))
 ]
 var m_active_planet : Planet = m_planets[0]
 var m_previous_planet : Planet = null

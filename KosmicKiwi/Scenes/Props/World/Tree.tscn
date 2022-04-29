@@ -15,20 +15,24 @@ animation = "Forest"
 
 [node name="DesertCollider" type="CollisionPolygon2D" parent="."]
 visible = false
+position = Vector2( 0, -267 )
 polygon = PoolVector2Array( -2, 352, -56, 360, -66, 341, -100, 328, -71, 292, -51, 282, 36, 284, 70, 313, 45, 327, 23, 360 )
 disabled = true
 
 [node name="ForestCollider" type="CollisionPolygon2D" parent="."]
 visible = false
+position = Vector2( 0, -267 )
 polygon = PoolVector2Array( 10, 327, -23, 309, -84, 302, -86, 272, -64, 258, 74, 258, 93, 274, 97, 293, 61, 297, 49, 311, 32, 311, 24, 329 )
 disabled = true
 
 [node name="JungleCollider" type="CollisionPolygon2D" parent="."]
 visible = false
+position = Vector2( 0, -267 )
 polygon = PoolVector2Array( 34, 336, -2, 356, -17, 341, -43, 335, -36, 316, -50, 302, -31, 279, 90, 279, 94, 287, 108, 291, 107, 308, 95, 314, 90, 324, 76, 328, 72, 344 )
 disabled = true
 
 [node name="WetCollider" type="CollisionPolygon2D" parent="."]
 visible = false
+position = Vector2( 0, -267 )
 polygon = PoolVector2Array( 13, 414, -16, 384, -61, 374, -150, 376, -183, 309, -215, 311, -253, 294, -330, 281, -270, 242, -219, 158, 182, 161, 283, 187, 276, 222, 220, 232, 263, 263, 291, 300, 282, 327, 122, 350, 78, 377, 36, 413 )
 disabled = true
