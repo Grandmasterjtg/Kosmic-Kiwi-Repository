@@ -1,6 +1,7 @@
 extends Node2D
 
 signal interacted
+signal dialog_check(item_name)
 signal timeout
 signal destroy
 
@@ -47,7 +48,7 @@ func _ready() -> void:
 	m_interactable.connect("interacted", self, "_on_interact")
 	m_interactable.connect("entered", m_button, "set_display", [true])
 	m_interactable.connect("exited", m_button, "set_display", [false])
-	
+	self.connect("dialog_check",DialogManager,"play_dialog")
 #	# add resource to resource manager if it is a one time use
 #	if m_once:
 #		m_id = self.get_global_position()
@@ -82,6 +83,7 @@ func _on_interact() -> void:
 		# add the deposit's item to the inventory
 		Inventory.add_item(m_item_name, m_item_quantity)
 		emit_signal("interacted")
+		emit_signal("dialog_check", m_item_name)
 		
 		# if the resource depsoit is a one time use
 		if m_once:
