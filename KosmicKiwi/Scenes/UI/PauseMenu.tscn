@@ -1,4 +1,30 @@
-[gd_scene format=2]
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ArtAssets/UI_4-13-22/ScalableBackground.png" type="Texture" id=1]
+[ext_resource path="res://ArtAssets/UI_4-13-22/HoveredButton.png" type="Texture" id=2]
+[ext_resource path="res://ArtAssets/UI_4-13-22/PressedButton.png" type="Texture" id=3]
+[ext_resource path="res://ArtAssets/UI_4-13-22/Button.png" type="Texture" id=4]
+[ext_resource path="res://ArtAssets/Fonts/Themes/title_font.tres" type="DynamicFont" id=5]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 4698, 2459 )
+margin_left = 158.247
+margin_right = 162.107
+margin_top = 158.247
+margin_bottom = 165.967
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 600, 600 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 600, 600 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 600, 600 )
 
 [node name="PauseMenu" type="Control"]
 visible = false
@@ -14,10 +40,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="ColorRect" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
-color = Color( 0, 0.976563, 1, 0.392157 )
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -150.0
+margin_right = 150.0
+margin_bottom = 150.0
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -27,35 +59,33 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -60.0
-margin_top = -60.0
-margin_right = 60.0
-margin_bottom = -40.0
+margin_left = -112.5
+margin_top = -122.5
+margin_right = 637.5
+margin_bottom = 27.5
+rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
-text = "Resume Game"
-
-[node name="Save" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -60.0
-margin_top = -35.0
-margin_right = 60.0
-margin_bottom = -15.0
-focus_mode = 0
-text = "Save Game"
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Resume"
 
 [node name="Controls" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -60.0
-margin_top = -10.0
-margin_right = 60.0
-margin_bottom = 10.0
+margin_left = -112.5
+margin_top = -72.5
+margin_right = 637.5
+margin_bottom = 77.5
+rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 text = "Controls"
 
 [node name="Settings" type="Button" parent="."]
@@ -63,21 +93,48 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -60.0
-margin_top = 15.0
-margin_right = 60.0
-margin_bottom = 35.0
+margin_left = -112.5
+margin_top = -22.5
+margin_right = 637.5
+margin_bottom = 127.5
+rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 text = "Settings"
 
-[node name="Exit" type="Button" parent="."]
+[node name="Menu" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -60.0
-margin_top = 40.0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_left = -112.5
+margin_top = 27.5
+margin_right = 637.5
+margin_bottom = 177.5
+rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
-text = "Exit Game"
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.5
+margin_top = 77.5
+margin_right = 637.5
+margin_bottom = 227.5
+rect_scale = Vector2( 0.3, 0.3 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Quit Game"
