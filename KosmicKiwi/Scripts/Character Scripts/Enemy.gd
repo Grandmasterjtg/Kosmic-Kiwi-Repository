@@ -65,8 +65,9 @@ func steal_from_player():
 			.change_idle_animation()
 
 func stink_detected():
-	set_state(CharacterState.HOME)
-	emote.open_bubble_with_texture(stinky_texture)
+	if get_state() != CharacterState.HOME and get_state() != CharacterState.IDLE:
+		set_state(CharacterState.HOME)
+		emote.open_bubble_with_texture(stinky_texture)
 
 func _on_Timer_timeout():
 	set_state(CharacterState.STEAL)

@@ -8,14 +8,14 @@
 radius = 150.0
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 1500.0
+radius = 2000.0
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 500.0
 
 [node name="Stinky" type="KinematicBody2D" groups=["friend", "stinky"]]
 z_index = 1
-collision_layer = 4
+collision_layer = 16
 collision_mask = 4
 script = ExtResource( 1 )
 m_speed = 1900.0

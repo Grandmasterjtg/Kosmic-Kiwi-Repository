@@ -445,6 +445,21 @@ position = Vector2( 21000, -2250 )
 [node name="Rocks17" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( 25500, -4000 )
 
+[node name="Rocks30" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 26000, -11750 )
+
+[node name="Rocks31" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 29000, -10500 )
+
+[node name="Rocks33" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 25500, -12500 )
+
+[node name="Rocks34" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 25500, -10250 )
+
+[node name="Rocks35" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
+position = Vector2( 28000, -9000 )
+
 [node name="Rocks18" parent="Actors/ResourcePoints/Rocks" instance=ExtResource( 7 )]
 position = Vector2( 2500, -21000 )
 

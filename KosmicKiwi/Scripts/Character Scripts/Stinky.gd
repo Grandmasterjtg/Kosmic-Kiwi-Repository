@@ -1,7 +1,7 @@
 extends Friend
 
-const STINKY_THINKING_TEXTURE = preload("res://ArtAssets/Characters/emotes/friendthinking.png")
-const STINKY_SAD_TEXTURE = preload("res://ArtAssets/Characters/emotes/friendsad.png")
+const STINKY_THINKING_TEXTURE = preload("res://ArtAssets/Characters/emotes/simple/StinkyStinky.png")
+const STINKY_HAPPY_TEXTURE = preload("res://ArtAssets/Characters/emotes/simple/StinkyHappy.png")
 
 onready var m_ability_timer = $AbilityTimer
 
@@ -23,10 +23,6 @@ func use_ability():
 		print("Stinky ability used!")
 		start_stinking()
 
-func meet_player():
-	.meet_player()
-	set_state(CharacterState.FOLLOW)
-
 func start_stinking():
 	m_ability_timer.start()
 	m_stinking = true
@@ -34,5 +30,5 @@ func start_stinking():
 
 func end_stinking():
 	m_stinking = false
-	$EmoteBubble.open_bubble_with_texture(STINKY_SAD_TEXTURE)
+	$EmoteBubble.open_bubble_with_texture(STINKY_HAPPY_TEXTURE)
 	

@@ -28,10 +28,10 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "idle_back",
-"speed": 5.0
+"name": "walking_front",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 7 ) ],
 "loop": true,
@@ -53,17 +53,17 @@ animations = [ {
 "name": "idle_side",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 12 ) ],
 "loop": true,
-"name": "walking_front",
-"speed": 8.0
+"name": "idle_back",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 300.0
 
 [node name="Penguin" type="KinematicBody2D" groups=["friend", "penguin"]]
-collision_layer = 4
+collision_layer = 16
 collision_mask = 4
 script = ExtResource( 2 )
 m_speed = 1900.0
