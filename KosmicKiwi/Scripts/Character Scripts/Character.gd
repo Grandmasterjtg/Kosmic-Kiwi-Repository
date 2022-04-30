@@ -22,6 +22,7 @@ export(CharacterState) var m_start_state = CharacterState.IDLE
 onready var emote = $EmoteBubble
 onready var animation = $AnimatedSprite
 onready var transition_timer = $TransitionTimer
+onready var stuck_timer = $StuckTimer
 
 var m_current_state
 var m_player_node
@@ -37,8 +38,9 @@ func _ready():
 	if m_player_node == null:
 		printerr("Character: Player node not found!")
 	
-	# setup transition_timer
+	# setup transition_timer and stuck_timer
 	transition_timer.connect("timeout",self,"transition_to_idle")
+	stuck_timer.connect("timeout",self,"teleport_home")
 	
 	# setup m_home_pos
 	m_home_pos = global_position
@@ -77,15 +79,20 @@ func follow_target(target):
 	if (target != null):
 		m_direction = target - self.global_position
 		
+		# maintain a certain distance, with a nice idle transition
 		if (m_direction.length_squared() > (m_follow_distance * m_follow_distance)):
 			move(m_direction)
+			# check if too far for too long
+			stuck_timer.start()
 		else:
+			stuck_timer.stop()
 			if transition_timer.time_left <= 0:
 				transition_timer.start()
 
 func move_home():
 	m_direction = m_home_pos - self.global_position
 	move(m_direction)
+	stuck_timer.start()
 	
 	if (m_direction.length_squared() < (m_stop_distance * m_stop_distance)):
 		set_state(CharacterState.IDLE)
@@ -126,6 +133,11 @@ func change_walking_animation():
 		elif m_direction.y > 0.1:
 			animation.play(ANIMATION_WALKING_DOWN)
 			animation.flip_h = false
+
+func teleport_home():
+#	print("teleport_home called")
+	global_position = m_home_pos
+	set_state(CharacterState.IDLE)
 
 func transition_to_idle():
 	change_idle_animation()

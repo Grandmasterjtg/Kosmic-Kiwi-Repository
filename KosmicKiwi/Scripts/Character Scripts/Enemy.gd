@@ -6,29 +6,29 @@ var stinky_texture = load("res://ArtAssets/Characters/emotes/simple/StinkyStinky
 var item_texture = load("res://ArtAssets/ItemIcons/Rock.png")
 
 export var m_timer_length := 5
-var m_timer
+var m_idle_timer
 
 func _ready():
 	# setup a timer and connect it
-	m_timer = Timer.new()
-	m_timer.one_shot = true
-	m_timer.wait_time = m_timer_length
-	m_timer.connect("timeout",self,"_on_Timer_timeout")
-	.add_child(m_timer)
+	m_idle_timer = Timer.new()
+	m_idle_timer.one_shot = true
+	m_idle_timer.wait_time = m_timer_length
+	m_idle_timer.connect("timeout",self,"_on_Timer_timeout")
+	.add_child(m_idle_timer)
 
 func set_state(state):
 	m_current_state = state
 	match state:
 		CharacterState.IDLE:
 			.change_idle_animation()
-			m_timer.start()
+			m_idle_timer.start()
 		_:
 			pass
 
 func handle_state():
 	match m_current_state:
 		CharacterState.FOLLOW:
-			if (m_timer.time_left > 0):
+			if (m_idle_timer.time_left > 0):
 				pass
 			else:
 				follow_target(m_player_node.global_position)
@@ -37,7 +37,7 @@ func handle_state():
 		CharacterState.IDLE:
 			pass
 		CharacterState.STEAL:
-			if (m_timer.time_left > 0):
+			if (m_idle_timer.time_left > 0):
 				pass
 			else:
 				steal_from_player()

@@ -5,7 +5,6 @@ class_name Friend
 const FRIEND_ACTION = "friend"
 onready var m_detection_area = $DetectionArea
 onready var m_interact_area = $InteractArea
-onready var m_stuck_timer = $StuckTimer
 
 var friend_id := 0
 var m_detected_bodies = []
@@ -20,13 +19,9 @@ func _ready():
 	# connect to InteractArea
 	if m_interact_area != null:
 		m_interact_area.connect("body_entered",self,"_on_InteractArea_body_entered")
-	
-	# connect to StuckTimer
-	if m_stuck_timer != null:
-		m_stuck_timer.connect("timeout",self,"teleport_home")
 
 func _input(event):
-	if event.is_action_pressed(self.FRIEND_ACTION):
+	if event.is_action_pressed(FRIEND_ACTION):
 			use_ability()
 
 func _on_DetectionArea_body_entered(body: Node) -> void:
@@ -39,7 +34,7 @@ func _on_DetectionArea_body_exited(body: Node) -> void:
 	m_detected_bodies.erase(body)
 
 func _on_InteractArea_body_entered(body: Node) -> void:
-	if m_stuck_timer.time_left <= 0:
+	if stuck_timer.time_left <= 0:
 		if body.is_in_group("player"):
 			if !FriendManager.check_friend_joined(friend_id):
 				join_crew()
@@ -60,19 +55,14 @@ func use_ability():
 func set_friend_active(state: bool):
 	if state:
 		m_active_friend = true
-		.set_state(self.CharacterState.FOLLOW)
+		.set_state(CharacterState.FOLLOW)
 	else:
 		m_active_friend = false
-		.set_state(self.CharacterState.HOME)
-		m_stuck_timer.start()
+		.set_state(CharacterState.HOME)
+		stuck_timer.start()
 
 func get_friend_active() -> bool:
 	return m_active_friend
-
-func teleport_home():
-#	print("teleport_home called")
-	global_position = m_home_pos
-	.set_state(CharacterState.IDLE)
 
 func set_home_position(position: Vector2):
 	m_home_pos = position
