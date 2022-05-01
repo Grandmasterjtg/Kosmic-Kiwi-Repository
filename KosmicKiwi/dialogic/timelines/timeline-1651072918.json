@@ -52,7 +52,7 @@
 			"character": "character-1650464923.json",
 			"event_id": "dialogic_001",
 			"portrait": "Default",
-			"text": "A highlighted Gadget allows me to click in the world and it'll appear as the cursor.\nClick again to try and place it into the world, or right-click to cancel."
+			"text": "A highlighted Gadget allows me to click in the world and it'll appear as the cursor.\nClick again to try and place it into the world, or right-click to cancel.\nI can only place a Gadget within a little distance of me, so I'll need to get close!"
 		},
 		{
 			"character": "character-1650464923.json",

@@ -8,6 +8,7 @@ var m_tutorial_states = {
 	"Desert": { "should_play": true, "dialogue": "Arrive_Desert"},
 	"Wet": { "should_play": true, "dialogue": "Arrive_Wet"},
 	"Warp Core": { "should_play": true, "dialogue": "End_Game"},
+	"Engine": { "should_play": true, "dialogue": "Tutorial_ShipParts"}
 }
 
 func get_tutorial_state(key: String) -> bool:

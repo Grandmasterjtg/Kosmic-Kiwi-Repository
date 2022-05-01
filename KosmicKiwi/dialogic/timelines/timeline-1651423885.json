@@ -1,0 +1,160 @@
+{
+	"events": [
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "open_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "kiwihappy",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "bouncing_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "penguinhappy",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Awesome! We found our Engine!"
+		},
+		{
+			"animation": "[No Animation]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "Now we can fly to the other planets to find our friends!"
+		},
+		{
+			"animation": "swing.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "penguinthinking",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "We'll also need the Solar Sail, Shield Rings, and Warp Core if we want to leave this solar system."
+		},
+		{
+			"animation": "bounce.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_position": false,
+			"change_z_index": false,
+			"character": "character-1650464990.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 2,
+			"z_index": 0
+		},
+		{
+			"character": "character-1650464923.json",
+			"event_id": "dialogic_001",
+			"portrait": "kiwihappy",
+			"text": "Let's head back to the ship and open its Navigation Menu!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "close_menu",
+				"target_node_path": "UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.1",
+		"file": "timeline-1651423885.json",
+		"name": "Tutorial_ShipParts"
+	}
+}
