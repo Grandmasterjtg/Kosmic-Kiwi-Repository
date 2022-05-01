@@ -149,8 +149,8 @@
 				"arguments": [
 
 				],
-				"method_name": "",
-				"target_node_path": "res://Scripts/ManagerScripts/DialogManager.gd"
+				"method_name": "close_menu",
+				"target_node_path": "UIManager"
 			},
 			"event_id": "dialogic_042"
 		},
@@ -159,8 +159,8 @@
 				"arguments": [
 
 				],
-				"method_name": "close_menu",
-				"target_node_path": "UIManager"
+				"method_name": "open_nav_menu_finale",
+				"target_node_path": "DialogManager"
 			},
 			"event_id": "dialogic_042"
 		},

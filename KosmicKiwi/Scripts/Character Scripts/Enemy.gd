@@ -13,7 +13,7 @@ func _ready():
 	m_idle_timer = Timer.new()
 	m_idle_timer.one_shot = true
 	m_idle_timer.wait_time = m_timer_length
-	m_idle_timer.connect("timeout",self,"_on_Timer_timeout")
+	m_idle_timer.connect("timeout",self,"start_stealing")
 	.add_child(m_idle_timer)
 
 func set_state(state):
@@ -22,6 +22,7 @@ func set_state(state):
 		CharacterState.IDLE:
 			.change_idle_animation()
 			m_idle_timer.start()
+			.stop_stuck_time()
 		_:
 			pass
 
@@ -67,7 +68,8 @@ func steal_from_player():
 func stink_detected():
 	if get_state() != CharacterState.HOME and get_state() != CharacterState.IDLE:
 		set_state(CharacterState.HOME)
+		stuck_timer.start()
 		emote.open_bubble_with_texture(stinky_texture)
 
-func _on_Timer_timeout():
+func start_stealing():
 	set_state(CharacterState.STEAL)

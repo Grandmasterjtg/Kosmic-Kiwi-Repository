@@ -29,6 +29,7 @@ var m_player_node
 var m_should_move := false
 var m_direction := Vector2(0, 1)
 var m_home_pos : Vector2
+var m_stuck := false
 
 func _ready():
 	# get the player from the scene
@@ -53,8 +54,9 @@ func _physics_process(delta):
 
 func set_state(state):
 	m_current_state = state
-	if (state == CharacterState.IDLE):
+	if m_current_state == CharacterState.IDLE:
 		change_idle_animation()
+		stop_stuck_time()
 
 func get_state() -> int:
 	return m_current_state
@@ -83,18 +85,19 @@ func follow_target(target):
 		if (m_direction.length_squared() > (m_follow_distance * m_follow_distance)):
 			move(m_direction)
 			# check if too far for too long
-			stuck_timer.start()
+			start_stuck_time()
 		else:
-			stuck_timer.stop()
+			stop_stuck_time()
 			if transition_timer.time_left <= 0:
 				transition_timer.start()
 
 func move_home():
 	m_direction = m_home_pos - self.global_position
 	move(m_direction)
-	stuck_timer.start()
+	start_stuck_time()
 	
 	if (m_direction.length_squared() < (m_stop_distance * m_stop_distance)):
+		stop_stuck_time()
 		set_state(CharacterState.IDLE)
 
 func move(direction: Vector2) -> void:
@@ -135,12 +138,25 @@ func change_walking_animation():
 			animation.flip_h = false
 
 func teleport_home():
-#	print("teleport_home called")
-	global_position = m_home_pos
-	set_state(CharacterState.IDLE)
+	# target_home changes to either player.global_pos or m_home_pos
+	var target_home
+	if m_current_state == CharacterState.FOLLOW and PlayerManager.get_player() != null:
+		target_home = PlayerManager.get_player().global_position
+	else:
+		target_home = m_home_pos
+		set_state(CharacterState.IDLE)
+	
+	global_position = target_home
 
 func transition_to_idle():
 	change_idle_animation()
 
+func start_stuck_time():
+	if !m_stuck:
+		m_stuck = true
+		stuck_timer.start()
 
-
+func stop_stuck_time():
+	if m_stuck:
+		m_stuck = false
+		stuck_timer.stop()
