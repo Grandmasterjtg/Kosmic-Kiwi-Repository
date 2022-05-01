@@ -829,6 +829,7 @@ position = Vector2( 5114, -20683 )
 
 [node name="Stinky" parent="Actors" instance=ExtResource( 14 )]
 position = Vector2( 31014, -7668 )
+z_index = 0
 
 [node name="Seal" parent="Actors" instance=ExtResource( 16 )]
 position = Vector2( -2368, 13481 )
