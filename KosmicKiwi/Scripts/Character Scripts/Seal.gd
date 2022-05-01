@@ -4,7 +4,7 @@ const ITEM_NAME = "Sonic Charge"
 const PLACE := "place"
 const CANCEL := "cancel"
 const SONIC_CHARGE_TEXTURE = preload("res://ArtAssets/ItemIcons/Sonic Charge.png")
-const SEAL_HAPPY_TEXTURE = preload("res://ArtAssets/Characters/emotes/simple/StinkyHappy.png")
+const SEAL_HAPPY_TEXTURE = preload("res://ArtAssets/Characters/emotes/simple/sealHappy.png")
 const ITEM_SCENE_PATH = "res://Scenes/Props/Items/Sonic Charge.tscn"
 
 var m_showing_icon := false
