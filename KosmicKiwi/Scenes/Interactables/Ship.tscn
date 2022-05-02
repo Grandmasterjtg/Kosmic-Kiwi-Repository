@@ -1,17 +1,17 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://ArtAssets/SpriteFrames/Ship.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/InteractableScripts/Interactable.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/InteractableScripts/ButtonDisplay.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/PlanetScripts/Ship.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/EmoteScripts/EmoteBubble.gd" type="Script" id=5]
-[ext_resource path="res://ArtAssets/OurArt/ScreenUI.png" type="Texture" id=6]
+[ext_resource path="res://ArtAssets/Fonts/Themes/button_display_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://ArtAssets/ItemIcons/Engine.png" type="Texture" id=7]
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB1-11.png" type="Texture" id=11]
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB6.png" type="Texture" id=12]
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB4-8.png" type="Texture" id=13]
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB2-10.png" type="Texture" id=14]
 [ext_resource path="res://ArtAssets/IndicatorBubble/IB3-5-7-9.png" type="Texture" id=15]
-[ext_resource path="res://ArtAssets/Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=16]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 300.0
@@ -20,12 +20,6 @@ height = 300.0
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 400.0
 height = 800.0
-
-[sub_resource type="DynamicFont" id=5]
-size = 15
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 16 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -84,7 +78,7 @@ margin_bottom = -174.5
 grow_horizontal = 0
 grow_vertical = 0
 rect_scale = Vector2( 4, 4 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = ExtResource( 6 )
 bbcode_enabled = true
 text = "E"
 script = ExtResource( 3 )
@@ -108,7 +102,7 @@ margin_right = 614.0
 margin_bottom = 614.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 expand = true
 stretch_mode = 6
 

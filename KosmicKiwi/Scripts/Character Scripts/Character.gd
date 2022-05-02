@@ -147,6 +147,7 @@ func teleport_home():
 		set_state(CharacterState.IDLE)
 	
 	global_position = target_home
+	change_idle_animation()
 
 func transition_to_idle():
 	change_idle_animation()

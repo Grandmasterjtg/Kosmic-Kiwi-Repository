@@ -5,6 +5,7 @@ var m_should_update := true
 
 func _ready():
 	update_text()
+	self.visible = false
 
 func toggle_display() -> void:
 	if m_should_update:
