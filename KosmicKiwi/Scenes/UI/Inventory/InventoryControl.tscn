@@ -207,18 +207,22 @@ __meta__ = {
 [node name="Slot" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
 margin_right = 100.0
 margin_bottom = 100.0
+m_should_show_tooltip = false
 
 [node name="Slot2" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
 margin_left = 116.0
 margin_right = 216.0
 margin_bottom = 100.0
+m_should_show_tooltip = false
 
 [node name="Slot3" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
 margin_left = 232.0
 margin_right = 332.0
 margin_bottom = 100.0
+m_should_show_tooltip = false
 
 [node name="Slot4" parent="Hotbar/HotbarSlots" instance=ExtResource( 1 )]
 margin_left = 348.0
 margin_right = 448.0
 margin_bottom = 100.0
+m_should_show_tooltip = false

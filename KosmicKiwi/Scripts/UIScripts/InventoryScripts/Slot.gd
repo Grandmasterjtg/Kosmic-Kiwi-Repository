@@ -9,6 +9,11 @@ const TEXTURE_TYPE := ".png"
 const EMPTY_SLOT := preload("res://ArtAssets/InventorySlots/Empty.png")
 const SELECTED_SLOT := preload("res://ArtAssets/InventorySlots/Selected.png")
 
+# tool tip
+const TOOL_TIP_CLASS = preload("res://Scenes/UI/Inventory/ToolTip.tscn")
+
+export var m_should_show_tooltip := true
+
 # styleboxes
 var default_style : StyleBoxTexture = null
 var selected_style : StyleBoxTexture = null
@@ -23,12 +28,18 @@ var m_is_selected := false
 export var m_is_interactable := false
 
 func _ready():
+	# style for unselected slot
 	default_style = StyleBoxTexture.new()
 	default_style.texture = EMPTY_SLOT
 	set("custom_styles/panel", default_style)
 	
+	# style for a selected slot
 	selected_style = StyleBoxTexture.new()
 	selected_style.texture = SELECTED_SLOT
+	
+	# set up signals for showing tooltip
+	connect("mouse_entered", self, "_on_mouse_entered")
+	connect("mouse_exited", self, "_on_mouse_exited")
 
 # takes an item name and the amount of that item
 # sets the slots ItemUI to the inputted item
@@ -84,3 +95,13 @@ func set_selected(is_selected: bool) -> void:
 	
 func get_item():
 	return m_item_ui
+	
+func _on_mouse_entered():
+	if m_should_show_tooltip and m_item_ui != null:
+		var tool_tip = TOOL_TIP_CLASS.instance()
+		tool_tip.initialize_tip(m_item_ui.get_item_name())
+		MouseManager.set_mouse_object(tool_tip)
+		
+func _on_mouse_exited():
+	if m_should_show_tooltip:
+		MouseManager.reset_mouse_texture()
